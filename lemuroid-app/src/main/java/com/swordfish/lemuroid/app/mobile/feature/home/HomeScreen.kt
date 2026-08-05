@@ -121,11 +121,7 @@ private fun HomeScreen(
                 .padding(horizontal = 20.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(20.dp),
     ) {
-        val hasGames = state.recentGames.isNotEmpty() ||
-            state.favoritesGames.isNotEmpty() ||
-            state.discoveryGames.isNotEmpty()
-
-        if (!hasGames) {
+        if (state.gamesCount == 0) {
             HomeEmptyState(
                 scanning = state.indexInProgress,
                 onSetDirectoryClicked = onSetDirectoryClicked,

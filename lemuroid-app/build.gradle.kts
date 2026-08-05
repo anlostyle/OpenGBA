@@ -10,8 +10,8 @@ plugins {
 
 android {
     defaultConfig {
-        versionCode = 5
-        versionName = "0.1.4"
+        versionCode = 6
+        versionName = "0.1.5"
         applicationId = "com.opengba.launcher"
 
         // FIT is an arm64-only device; do not ship emulator cores for other ABIs.

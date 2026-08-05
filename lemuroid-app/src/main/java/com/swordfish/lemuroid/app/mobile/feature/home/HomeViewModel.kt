@@ -28,6 +28,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
 @OptIn(FlowPreview::class)
@@ -55,7 +56,8 @@ class HomeViewModel(
         val favoritesGames: List<Game> = emptyList(),
         val recentGames: List<Game> = emptyList(),
         val discoveryGames: List<Game> = emptyList(),
-        val indexInProgress: Boolean = true,
+        val gamesCount: Int = 0,
+        val indexInProgress: Boolean = false,
         val showNoNotificationPermissionCard: Boolean = false,
         val showNoMicrophonePermissionCard: Boolean = false,
         val showNoGamesCard: Boolean = false,
@@ -107,17 +109,19 @@ class HomeViewModel(
         favoritesGames: List<Game>,
         recentGames: List<Game>,
         discoveryGames: List<Game>,
+        gamesCount: Int,
         indexInProgress: Boolean,
         notificationsPermissionEnabled: Boolean,
         showMicrophoneCard: Boolean,
         showDesmumeWarning: Boolean,
     ): UIState {
-        val noGames = recentGames.isEmpty() && favoritesGames.isEmpty() && discoveryGames.isEmpty()
+        val noGames = gamesCount == 0
 
         return UIState(
             favoritesGames = favoritesGames,
             recentGames = recentGames,
             discoveryGames = discoveryGames,
+            gamesCount = gamesCount,
             indexInProgress = indexInProgress,
             showNoNotificationPermissionCard = !notificationsPermissionEnabled,
             showNoMicrophonePermissionCard = showMicrophoneCard,
@@ -133,6 +137,7 @@ class HomeViewModel(
                     favoritesGames(retrogradeDb),
                     recentGames(retrogradeDb),
                     discoveryGames(retrogradeDb),
+                    gamesCount(retrogradeDb),
                     indexingInProgress(appContext),
                     notificationsPermissionEnabledState,
                     microphoneNotification(retrogradeDb),
@@ -148,10 +153,15 @@ class HomeViewModel(
     }
 
     private fun indexingInProgress(appContext: Context) =
-        PendingOperationsMonitor(appContext).anyLibraryOperationInProgress()
+        PendingOperationsMonitor(appContext).isDirectoryScanInProgress()
 
     private fun discoveryGames(retrogradeDb: RetrogradeDatabase) =
         retrogradeDb.gameDao().selectFirstNotPlayed(CAROUSEL_MAX_ITEMS)
+
+    private fun gamesCount(retrogradeDb: RetrogradeDatabase) =
+        retrogradeDb.gameDao().selectSystemsWithCount()
+            .map { systems -> systems.sumOf { it.count } }
+            .distinctUntilChanged()
 
     private fun recentGames(retrogradeDb: RetrogradeDatabase) =
         retrogradeDb.gameDao().selectFirstUnfavoriteRecents(CAROUSEL_MAX_ITEMS)
@@ -192,6 +202,7 @@ class HomeViewModel(
     private fun desmumeWarningNotification(): Flow<Boolean> {
         return coresSelection.getSelectedCores()
             .map { cores -> cores.any { it.coreConfig.coreID == CoreID.DESMUME } }
+            .onStart { emit(false) }
             .distinctUntilChanged()
     }
 }

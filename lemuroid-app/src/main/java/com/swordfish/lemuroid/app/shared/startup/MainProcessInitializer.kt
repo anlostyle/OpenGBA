@@ -6,6 +6,7 @@ import androidx.work.WorkManagerInitializer
 import com.swordfish.lemuroid.BuildConfig
 import com.swordfish.lemuroid.app.shared.library.LibraryIndexScheduler
 import com.swordfish.lemuroid.app.shared.savesync.SaveSyncWork
+import com.swordfish.lemuroid.lib.preferences.SharedPreferencesHelper
 import timber.log.Timber
 
 class MainProcessInitializer : Initializer<Unit> {
@@ -18,6 +19,14 @@ class MainProcessInitializer : Initializer<Unit> {
 
     private fun scheduleLibraryScanAfterUpgrade(context: Context) {
         val preferences = context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
+        val externalFolderKey =
+            context.getString(com.swordfish.lemuroid.lib.R.string.pref_key_extenral_folder)
+        if (SharedPreferencesHelper.getLegacySharedPreferences(context)
+                .getString(externalFolderKey, null)
+                .isNullOrBlank()
+        ) {
+            return
+        }
         if (preferences.getInt(LAST_SCAN_VERSION, -1) == BuildConfig.VERSION_CODE) return
 
         LibraryIndexScheduler.scheduleLibrarySync(context)

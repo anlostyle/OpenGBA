@@ -26,6 +26,7 @@ import com.alorma.compose.settings.storage.memory.rememberMemoryIntSettingState
 import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.mobile.feature.gamemenu.tilt.TiltConfigurationMenuEntry
 import com.swordfish.lemuroid.app.shared.GameMenuContract
+import com.swordfish.lemuroid.app.shared.game.BaseGameScreenViewModel
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsList
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsMenuLink
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsSwitch
@@ -106,6 +107,19 @@ fun GameMenuHomeScreen(
         )
 
         if (gameMenuRequest.fastForwardSupported) {
+            val fastForwardSpeeds = BaseGameScreenViewModel.FAST_FORWARD_SPEEDS
+            LemuroidSettingsList(
+                title = { Text(text = stringResource(id = R.string.game_menu_fast_forward_speed)) },
+                items = fastForwardSpeeds.map { "$it×" },
+                state = rememberMemoryIntSettingState(
+                    fastForwardSpeeds.indexOf(gameMenuRequest.fastForwardSpeed).coerceAtLeast(0),
+                ),
+                onItemSelected = { index, _ ->
+                    onResult {
+                        putExtra(GameMenuContract.RESULT_FAST_FORWARD_SPEED, fastForwardSpeeds[index])
+                    }
+                },
+            )
             LemuroidSettingsSwitch(
                 title = { Text(text = stringResource(id = R.string.game_menu_fast_forward)) },
                 icon = {

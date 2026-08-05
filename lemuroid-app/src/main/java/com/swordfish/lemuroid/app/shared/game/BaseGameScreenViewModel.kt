@@ -62,6 +62,11 @@ class BaseGameScreenViewModel(
     coreVariablesManager: CoreVariablesManager,
     rumbleManager: RumbleManager,
 ) : ViewModel(), DefaultLifecycleObserver {
+    companion object {
+        val FAST_FORWARD_SPEEDS = listOf(2, 3, 5)
+        const val DEFAULT_FAST_FORWARD_SPEED = 2
+    }
+
     class Factory(
         private val appContext: Context,
         private val game: Game,
@@ -149,6 +154,7 @@ class BaseGameScreenViewModel(
     private var rewindCaptureJob: kotlinx.coroutines.Job? = null
     private var rewindHoldJob: kotlinx.coroutines.Job? = null
     private var rewinding = false
+    private var fastForwardSpeed = DEFAULT_FAST_FORWARD_SPEED
     private var cheatCodes = emptyList<String>()
 
     val loadingState = MutableStateFlow(false)
@@ -278,15 +284,25 @@ class BaseGameScreenViewModel(
     }
 
     fun toggleFastForward() {
-        Timber.d("Loading quick save")
+        Timber.d("Toggling fast forward")
         retroGameView.retroGameView?.apply {
-            frameSpeed = if (frameSpeed == 1) 2 else 1
+            frameSpeed = if (frameSpeed == 1) fastForwardSpeed else 1
         }
     }
 
     fun setFastForward(enabled: Boolean) {
         if (loadingState.value) return
-        retroGameView.retroGameView?.frameSpeed = if (enabled) 2 else 1
+        retroGameView.retroGameView?.frameSpeed = if (enabled) fastForwardSpeed else 1
+    }
+
+    fun getFastForwardSpeed(): Int = fastForwardSpeed
+
+    fun setFastForwardSpeed(speed: Int) {
+        if (loadingState.value || speed !in FAST_FORWARD_SPEEDS) return
+        fastForwardSpeed = speed
+        retroGameView.retroGameView?.let { view ->
+            if (view.frameSpeed > 1) view.frameSpeed = speed
+        }
     }
 
     fun getCheatCodes(): String = cheatCodes.joinToString("\n")

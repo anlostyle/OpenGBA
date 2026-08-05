@@ -49,6 +49,7 @@ import com.swordfish.lemuroid.app.mobile.feature.gamemenu.states.GameMenuStatesV
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.AppTheme
 import com.swordfish.lemuroid.app.shared.GameMenuContract
 import com.swordfish.lemuroid.app.shared.coreoptions.LemuroidCoreOption
+import com.swordfish.lemuroid.app.shared.game.BaseGameScreenViewModel
 import com.swordfish.lemuroid.app.shared.input.InputDeviceManager
 import com.swordfish.lemuroid.common.kotlin.serializable
 import com.swordfish.lemuroid.lib.android.RetrogradeComponentActivity
@@ -78,6 +79,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
         val audioEnabled: Boolean,
         val fastForwardSupported: Boolean,
         val fastForwardEnabled: Boolean,
+        val fastForwardSpeed: Int,
         val numDisks: Int,
         val currentDisk: Int,
         val currentTiltConfiguration: TiltConfiguration,
@@ -117,6 +119,11 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                     extras?.getBoolean(GameMenuContract.EXTRA_FAST_FORWARD_SUPPORTED, false) ?: false,
                 fastForwardEnabled =
                     extras?.getBoolean(GameMenuContract.EXTRA_FAST_FORWARD, false) ?: false,
+                fastForwardSpeed =
+                    extras?.getInt(
+                        GameMenuContract.EXTRA_FAST_FORWARD_SPEED,
+                        BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
+                    ) ?: BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
                 numDisks =
                     extras?.getInt(GameMenuContract.EXTRA_DISKS, 0) ?: 0,
                 currentDisk =

@@ -131,6 +131,7 @@
     <string name="game_menu_edit_touch_controls">Edit Controls</string>
     <string name="game_menu_mute_audio">Mute</string>
     <string name="game_menu_fast_forward">Fast-Forward</string>
+    <string name="game_menu_fast_forward_speed">Fast-Forward Speed</string>
     <string name="game_menu_cheats">Cheats</string>
     <string name="game_menu_cheats_hint">One code per line</string>
     <string name="game_menu_change_disk_disk">Disk %1$s</string>
