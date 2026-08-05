@@ -10,8 +10,8 @@ plugins {
 
 android {
     defaultConfig {
-        versionCode = 2
-        versionName = "0.1.1"
+        versionCode = 3
+        versionName = "0.1.2"
         applicationId = "com.opengba.launcher"
     }
     flavorDimensions += listOf("opensource", "cores")
