@@ -1,13 +1,10 @@
 package com.swordfish.lemuroid.app.mobile.shared.compose.ui
 
-import android.os.Build
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.Color
 
 private val LightColorScheme =
     lightColorScheme(
@@ -44,35 +41,42 @@ private val LightColorScheme =
 
 private val DarkColorScheme =
     darkColorScheme(
-        primary = md_theme_dark_primary,
-        onPrimary = md_theme_dark_onPrimary,
-        primaryContainer = md_theme_dark_primaryContainer,
-        onPrimaryContainer = md_theme_dark_onPrimaryContainer,
-        secondary = md_theme_dark_secondary,
-        onSecondary = md_theme_dark_onSecondary,
-        secondaryContainer = md_theme_dark_secondaryContainer,
-        onSecondaryContainer = md_theme_dark_onSecondaryContainer,
-        tertiary = md_theme_dark_tertiary,
-        onTertiary = md_theme_dark_onTertiary,
-        tertiaryContainer = md_theme_dark_tertiaryContainer,
-        onTertiaryContainer = md_theme_dark_onTertiaryContainer,
-        error = md_theme_dark_error,
-        errorContainer = md_theme_dark_errorContainer,
-        onError = md_theme_dark_onError,
-        onErrorContainer = md_theme_dark_onErrorContainer,
-        background = md_theme_dark_background,
-        onBackground = md_theme_dark_onBackground,
-        surface = md_theme_dark_surface,
-        onSurface = md_theme_dark_onSurface,
-        surfaceVariant = md_theme_dark_surfaceVariant,
-        onSurfaceVariant = md_theme_dark_onSurfaceVariant,
-        outline = md_theme_dark_outline,
-        inverseOnSurface = md_theme_dark_inverseOnSurface,
-        inverseSurface = md_theme_dark_inverseSurface,
-        inversePrimary = md_theme_dark_inversePrimary,
-        surfaceTint = md_theme_dark_surfaceTint,
-        outlineVariant = md_theme_dark_outlineVariant,
-        scrim = md_theme_dark_scrim,
+        primary = Color(0xFF78F08B),
+        onPrimary = Color(0xFF06200D),
+        primaryContainer = Color(0xFF194A24),
+        onPrimaryContainer = Color(0xFFC2FFCA),
+        secondary = Color(0xFFB9C9BA),
+        onSecondary = Color(0xFF1D2B20),
+        secondaryContainer = Color(0xFF304636),
+        onSecondaryContainer = Color(0xFFD4E7D5),
+        tertiary = Color(0xFFFFC861),
+        onTertiary = Color(0xFF372200),
+        tertiaryContainer = Color(0xFF5A4100),
+        onTertiaryContainer = Color(0xFFFFDEA0),
+        error = Color(0xFFFFB4AB),
+        errorContainer = Color(0xFF93000A),
+        onError = Color(0xFF690005),
+        onErrorContainer = Color(0xFFFFDAD6),
+        background = Color(0xFF0B0F0D),
+        onBackground = Color(0xFFE6EDE5),
+        surface = Color(0xFF0F1411),
+        onSurface = Color(0xFFE6EDE5),
+        surfaceVariant = Color(0xFF18211B),
+        onSurfaceVariant = Color(0xFFA7B6A9),
+        outline = Color(0xFF455148),
+        inverseOnSurface = Color(0xFF0B0F0D),
+        inverseSurface = Color(0xFFE6EDE5),
+        inversePrimary = Color(0xFF17652B),
+        surfaceTint = Color(0xFF78F08B),
+        outlineVariant = Color(0xFF29352C),
+        scrim = Color(0xFF000000),
+        surfaceBright = Color(0xFF27322B),
+        surfaceDim = Color(0xFF0B0F0D),
+        surfaceContainer = Color(0xFF141C17),
+        surfaceContainerHigh = Color(0xFF1A251E),
+        surfaceContainerHighest = Color(0xFF202D24),
+        surfaceContainerLow = Color(0xFF0D1310),
+        surfaceContainerLowest = Color(0xFF060A08),
     )
 
 @Composable
@@ -80,14 +84,8 @@ fun AppTheme(
     darkTheme: Boolean = true,
     content: @Composable () -> Unit,
 ) {
-    val dynamicColor = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
-    val colors =
-        when {
-            dynamicColor && darkTheme -> dynamicDarkColorScheme(LocalContext.current)
-            dynamicColor && !darkTheme -> dynamicLightColorScheme(LocalContext.current)
-            darkTheme -> DarkColorScheme
-            else -> LightColorScheme
-        }
+    // Keep the handheld palette stable instead of inheriting the phone's wallpaper colors.
+    val colors = if (darkTheme) DarkColorScheme else LightColorScheme
 
     MaterialTheme(colorScheme = colors) {
         content()

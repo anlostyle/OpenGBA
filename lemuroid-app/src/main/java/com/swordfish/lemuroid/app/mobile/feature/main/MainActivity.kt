@@ -2,6 +2,7 @@ package com.swordfish.lemuroid.app.mobile.feature.main
 
 import android.app.Activity
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.SystemBarStyle
@@ -9,7 +10,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -19,6 +22,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -171,26 +175,41 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     .collectAsState(MainViewModel.UiState())
                     .value
 
-            Scaffold(
-                topBar = {
-                    MainTopBar(
-                        currentRoute = currentRoute,
+            val configuration = LocalConfiguration.current
+            val wideLayout =
+                configuration.orientation == Configuration.ORIENTATION_LANDSCAPE &&
+                    configuration.screenWidthDp >= 600
+
+            Row(modifier = Modifier.fillMaxSize()) {
+                if (wideLayout) {
+                    MainNavigationRail(currentRoute, navController)
+                }
+
+                Scaffold(
+                    modifier = Modifier.weight(1f).fillMaxHeight(),
+                    topBar = {
+                        MainTopBar(
+                            currentRoute = currentRoute,
+                            navController = navController,
+                            onHelpPressed = onHelpPressed,
+                            mainUIState = mainUIState,
+                            onUpdateQueryString = { mainViewModel.changeQueryString(it) },
+                        )
+                    },
+                    bottomBar = {
+                        if (!wideLayout) {
+                            MainNavigationBar(currentRoute, navController)
+                        }
+                    },
+                ) { padding ->
+                    NavHost(
+                        modifier = Modifier.fillMaxSize().padding(padding),
                         navController = navController,
-                        onHelpPressed = onHelpPressed,
-                        mainUIState = mainUIState,
-                        onUpdateQueryString = { mainViewModel.changeQueryString(it) },
-                    )
-                },
-                bottomBar = { MainNavigationBar(currentRoute, navController) },
-            ) { padding ->
-                NavHost(
-                    modifier = Modifier.fillMaxSize(),
-                    navController = navController,
-                    startDestination = MainRoute.HOME.route,
-                ) {
+                        startDestination = MainRoute.HOME.route,
+                    ) {
                     composable(MainRoute.HOME) {
                         HomeScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory =
@@ -207,7 +226,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     }
                     composable(MainRoute.FAVORITES) {
                         FavoritesScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory = FavoritesViewModel.Factory(retrogradeDb),
@@ -218,7 +237,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     }
                     composable(MainRoute.SEARCH) {
                         SearchScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory = SearchViewModel.Factory(retrogradeDb),
@@ -232,7 +251,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     }
                     composable(MainRoute.SYSTEMS) {
                         MetaSystemsScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             navController = navController,
                             viewModel =
                                 viewModel(
@@ -247,7 +266,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     composable(MainRoute.SYSTEM_GAMES) { entry ->
                         val metaSystemId = entry.arguments?.getString("metaSystemId")
                         GamesScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory =
@@ -258,12 +277,11 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                 ),
                             onGameClick = onGameClick,
                             onGameLongClick = onGameLongClick,
-                            onGameFavoriteToggle = onGameFavoriteToggle,
                         )
                     }
                     composable(MainRoute.SETTINGS) {
                         SettingsScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory =
@@ -283,7 +301,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     }
                     composable(MainRoute.SETTINGS_ADVANCED) {
                         AdvancedSettingsScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory =
@@ -297,7 +315,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     }
                     composable(MainRoute.SETTINGS_BIOS) {
                         BiosScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory = BiosSettingsViewModel.Factory(biosManager),
@@ -306,7 +324,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     }
                     composable(MainRoute.SETTINGS_CORES_SELECTION) {
                         CoresSelectionScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory =
@@ -319,7 +337,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     }
                     composable(MainRoute.SETTINGS_INPUT_DEVICES) {
                         InputDevicesSettingsScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory =
@@ -332,7 +350,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     }
                     composable(MainRoute.SETTINGS_SAVE_SYNC) {
                         SaveSyncSettingsScreen(
-                            modifier = Modifier.padding(padding),
+                            modifier = Modifier,
                             viewModel =
                                 viewModel(
                                     factory =
@@ -342,6 +360,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                         ),
                                 ),
                         )
+                    }
                     }
                 }
             }
