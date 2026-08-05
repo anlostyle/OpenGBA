@@ -64,13 +64,21 @@ class LocalStorageProvider(
     override fun findArtworkUri(baseStorageFile: BaseStorageFile): Uri? {
         val rom = baseStorageFile.uri.path?.let(::File) ?: return null
         val baseName = rom.nameWithoutExtension
-        val directories = listOf(rom.parentFile, rom.parentFile?.resolve("covers"), rom.parentFile?.resolve("images"))
-        return directories
-            .asSequence()
-            .filterNotNull()
-            .flatMap { directory -> COVER_EXTENSIONS.asSequence().map { directory.resolve("$baseName.$it") } }
-            .firstOrNull { it.isFile }
-            ?.toUri()
+        val directories = listOf(
+            rom.parentFile,
+            rom.parentFile?.resolve("covers"),
+            rom.parentFile?.resolve("images"),
+            rom.parentFile?.resolve("media")?.let { mediaRoot ->
+                artworkDirectoryNames(baseName).asSequence()
+                    .map(mediaRoot::resolve)
+                    .firstOrNull(File::isDirectory)
+            },
+        )
+        return directories.asSequence().filterNotNull().flatMap { directory ->
+            val names = listOf(baseName, "boxfront", "coverfront", "cover")
+            names.asSequence().flatMap { name -> COVER_EXTENSIONS.asSequence().map { "$name.$it" } }
+                .map { directory.resolve(it) }
+        }.firstOrNull { it.isFile }?.toUri()
     }
 
     private fun getExternalFolder(): File? {

@@ -24,6 +24,7 @@ import timber.log.Timber
 import java.io.File
 import java.io.InputStream
 import java.nio.charset.Charset
+import java.util.Locale
 import java.util.zip.ZipInputStream
 
 class StorageAccessFrameworkProvider(private val context: Context) : StorageProvider {
@@ -54,8 +55,24 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
         }.getOrNull() ?: return null
         if (parentDocumentId.isEmpty()) return null
 
-        val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(baseStorageFile.uri, parentDocumentId)
-        val candidates = COVER_EXTENSIONS.map { "$baseName.$it" }.toSet()
+        val artworkNames = COVER_NAMES.flatMap { name -> COVER_EXTENSIONS.map { "$name.$it" } }
+            .map { it.lowercase(Locale.ROOT) }
+            .toSet()
+        val parentChildrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(baseStorageFile.uri, parentDocumentId)
+        findArtworkInDirectory(baseStorageFile.uri, parentChildrenUri, artworkNames)?.let { return it }
+
+        val mediaId = findDirectory(parentChildrenUri, listOf("media")) ?: return null
+        val mediaChildrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(baseStorageFile.uri, mediaId)
+        val gameMediaId = findDirectory(mediaChildrenUri, artworkDirectoryNames(baseName)) ?: return null
+        val gameMediaChildrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(baseStorageFile.uri, gameMediaId)
+        return findArtworkInDirectory(baseStorageFile.uri, gameMediaChildrenUri, artworkNames)
+    }
+
+    private fun findArtworkInDirectory(
+        treeUri: Uri,
+        childrenUri: Uri,
+        candidates: Set<String>,
+    ): Uri? {
         val projection = arrayOf(
             DocumentsContract.Document.COLUMN_DOCUMENT_ID,
             DocumentsContract.Document.COLUMN_DISPLAY_NAME,
@@ -67,8 +84,26 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
                 val documentId = cursor.getString(0)
                 val name = cursor.getString(1)
                 val mimeType = cursor.getString(2)
-                if (mimeType != DocumentsContract.Document.MIME_TYPE_DIR && name in candidates) {
-                    return@use DocumentsContract.buildDocumentUriUsingTree(baseStorageFile.uri, documentId)
+                if (mimeType != DocumentsContract.Document.MIME_TYPE_DIR && name.lowercase(Locale.ROOT) in candidates) {
+                    return@use DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+                }
+            }
+            null
+        }
+    }
+
+    private fun findDirectory(childrenUri: Uri, names: List<String>): String? {
+        val projection = arrayOf(
+            DocumentsContract.Document.COLUMN_DOCUMENT_ID,
+            DocumentsContract.Document.COLUMN_DISPLAY_NAME,
+            DocumentsContract.Document.COLUMN_MIME_TYPE,
+        )
+        return context.contentResolver.query(childrenUri, projection, null, null, null)?.use { cursor ->
+            while (cursor.moveToNext()) {
+                if (cursor.getString(2) == DocumentsContract.Document.MIME_TYPE_DIR &&
+                    names.any { cursor.getString(1).equals(it, ignoreCase = true) }
+                ) {
+                    return@use cursor.getString(0)
                 }
             }
             null
@@ -274,6 +309,7 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
     companion object {
         const val SAF_CACHE_SUBFOLDER = "storage-framework-games"
         const val VIRTUAL_FILE_PATH = "/virtual/file/path"
+        private val COVER_NAMES = listOf("boxfront", "coverfront", "cover")
         private val COVER_EXTENSIONS = listOf("png", "jpg", "jpeg", "webp")
     }
 }
