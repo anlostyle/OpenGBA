@@ -26,6 +26,9 @@ jobs:
       - name: Install Android SDK packages
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
+      - name: Prepare GBA-only core bundle
+        run: ./scripts/prepare-gba-bundle.sh
+
       - name: Restore release keystore
         env:
           KEYSTORE_BASE64: ${{ secrets.OPEN_GBA_RELEASE_KEYSTORE_BASE64 }}
