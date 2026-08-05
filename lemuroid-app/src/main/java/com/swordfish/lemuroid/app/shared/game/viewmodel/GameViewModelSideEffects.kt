@@ -35,6 +35,10 @@ class GameViewModelSideEffects(private val scope: CoroutineScope) {
         data object StartRewind : UiEffect
 
         data object StopRewind : UiEffect
+
+        data object StartForward : UiEffect
+
+        data object StopForward : UiEffect
     }
 
     private val uiEffects = MutableSharedFlow<UiEffect>()
@@ -133,6 +137,22 @@ class GameViewModelSideEffects(private val scope: CoroutineScope) {
         scope.launch {
             withContext(Dispatchers.Main) {
                 uiEffects.emit(UiEffect.StopRewind)
+            }
+        }
+    }
+
+    fun startForward() {
+        scope.launch {
+            withContext(Dispatchers.Main) {
+                uiEffects.emit(UiEffect.StartForward)
+            }
+        }
+    }
+
+    fun stopForward() {
+        scope.launch {
+            withContext(Dispatchers.Main) {
+                uiEffects.emit(UiEffect.StopForward)
             }
         }
     }

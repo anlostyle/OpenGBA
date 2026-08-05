@@ -259,6 +259,8 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                     is GameViewModelSideEffects.UiEffect.StopFastForward -> baseGameScreenViewModel.setFastForward(false)
                     is GameViewModelSideEffects.UiEffect.StartRewind -> baseGameScreenViewModel.startRewind()
                     is GameViewModelSideEffects.UiEffect.StopRewind -> baseGameScreenViewModel.stopRewind()
+                    is GameViewModelSideEffects.UiEffect.StartForward -> baseGameScreenViewModel.startForward()
+                    is GameViewModelSideEffects.UiEffect.StopForward -> baseGameScreenViewModel.stopForward()
                 }
             }
     }

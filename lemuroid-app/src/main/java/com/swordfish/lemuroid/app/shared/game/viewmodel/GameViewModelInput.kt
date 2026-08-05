@@ -58,6 +58,7 @@ class GameViewModelInput(
     private val tilt: GameViewModelTilt,
     private val sideEffects: GameViewModelSideEffects,
     private val scope: CoroutineScope,
+    private val onGameplayInput: () -> Unit,
 ) : DefaultLifecycleObserver {
     private data class SingleAxisEvent(val axis: Int, val action: Int, val keyCode: Int, val port: Int)
 
@@ -326,6 +327,7 @@ class GameViewModelInput(
                         deviceShortcuts.filter {
                             it.keys.isNotEmpty() &&
                                 (it.type == GameShortcutType.REWIND ||
+                                    it.type == GameShortcutType.FORWARD ||
                                     it.type == GameShortcutType.TOGGLE_FAST_FORWARD)
                         }
 
@@ -337,6 +339,7 @@ class GameViewModelInput(
                         if (matchedHold != null) {
                             when (matchedHold.type) {
                                 GameShortcutType.REWIND -> sideEffects.startRewind()
+                                GameShortcutType.FORWARD -> sideEffects.startForward()
                                 GameShortcutType.TOGGLE_FAST_FORWARD -> sideEffects.startFastForward()
                                 else -> Unit
                             }
@@ -348,6 +351,7 @@ class GameViewModelInput(
                             deviceShortcuts.firstOrNull {
                                 it.keys.isNotEmpty() && pressedKeys.containsAll(it.keys) &&
                                     it.type != GameShortcutType.REWIND &&
+                                    it.type != GameShortcutType.FORWARD &&
                                     it.type != GameShortcutType.TOGGLE_FAST_FORWARD
                             }
                         if (matchedAction != null) {
@@ -357,6 +361,7 @@ class GameViewModelInput(
                                 GameShortcutType.QUICK_SAVE -> sideEffects.saveQuickSave()
                                 GameShortcutType.TOGGLE_FAST_FORWARD -> sideEffects.toggleFastForward()
                                 GameShortcutType.REWIND -> Unit
+                                GameShortcutType.FORWARD -> Unit
                             }
                             consumedKeys.add(keyCode)
                             return@safeCollect
@@ -369,6 +374,7 @@ class GameViewModelInput(
                         if (releasedHold != null) {
                             when (releasedHold.type) {
                                 GameShortcutType.REWIND -> sideEffects.stopRewind()
+                                GameShortcutType.FORWARD -> sideEffects.stopForward()
                                 GameShortcutType.TOGGLE_FAST_FORWARD -> sideEffects.stopFastForward()
                                 else -> Unit
                             }
@@ -380,6 +386,7 @@ class GameViewModelInput(
                 }
 
                 if (bindKeyCode != KeyEvent.KEYCODE_UNKNOWN) {
+                    onGameplayInput()
                     port?.let {
                         retroGameView.retroGameView?.sendKeyEvent(action, bindKeyCode, it)
                     }
@@ -432,6 +439,7 @@ class GameViewModelInput(
         events
             .safeCollect { (ports, event) ->
                 ports(event.device)?.let {
+                    onGameplayInput()
                     sendStickMotions(event, it)
                 }
             }

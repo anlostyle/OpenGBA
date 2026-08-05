@@ -125,6 +125,7 @@ class BaseGameScreenViewModel(
             tilt,
             sideEffects,
             viewModelScope,
+            ::commitTimeline,
         )
     private val touchControls =
         GameViewModelTouchControls(
@@ -151,9 +152,14 @@ class BaseGameScreenViewModel(
         )
 
     private val rewindStates = ArrayDeque<ByteArray>()
+    private val forwardStates = ArrayDeque<ByteArray>()
     private var rewindCaptureJob: kotlinx.coroutines.Job? = null
     private var rewindHoldJob: kotlinx.coroutines.Job? = null
+    private var forwardHoldJob: kotlinx.coroutines.Job? = null
     private var rewinding = false
+    private var forwarding = false
+    private var timelineBrowsing = false
+    private var timelineAnchor: ByteArray? = null
     private var fastForwardSpeed = DEFAULT_FAST_FORWARD_SPEED
     private var cheatCodes = emptyList<String>()
 
@@ -262,6 +268,7 @@ class BaseGameScreenViewModel(
 
     suspend fun loadSlot(index: Int) {
         if (loadingState.value) return
+        commitTimeline()
         withLoading {
             saves.loadSlot(index)
         }
@@ -278,6 +285,7 @@ class BaseGameScreenViewModel(
     fun loadQuickSave() {
         Timber.d("Loading quick save")
         if (loadingState.value) return
+        commitTimeline()
         withLoading {
             saves.loadQuickSave()
         }
@@ -309,6 +317,7 @@ class BaseGameScreenViewModel(
 
     fun applyCheats(rawCodes: String) {
         if (loadingState.value) return
+        commitTimeline()
         val nextCodes =
             rawCodes
                 .lineSequence()
@@ -330,6 +339,7 @@ class BaseGameScreenViewModel(
 
     fun startRewind() {
         if (loadingState.value || rewindHoldJob != null) return
+        stopForward()
         rewinding = true
         rewindHoldJob = viewModelScope.launch {
             while (isActive) {
@@ -345,6 +355,24 @@ class BaseGameScreenViewModel(
         rewindHoldJob = null
     }
 
+    fun startForward() {
+        if (loadingState.value || forwardHoldJob != null) return
+        stopRewind()
+        forwarding = true
+        forwardHoldJob = viewModelScope.launch {
+            while (isActive) {
+                forwardStep()
+                delay(100)
+            }
+        }
+    }
+
+    fun stopForward() {
+        forwarding = false
+        forwardHoldJob?.cancel()
+        forwardHoldJob = null
+    }
+
     private fun startRewindCapture() {
         if (system.id != SystemID.GBA || rewindCaptureJob != null) return
         rewindCaptureJob = viewModelScope.launch {
@@ -352,18 +380,24 @@ class BaseGameScreenViewModel(
             // libretro cores may not have allocated their state buffer until the first frame.
             retroGameView.waitGLEvent<GLRetroView.GLRetroEvents.FrameRendered>()
             while (isActive) {
-                if (!rewinding) {
+                if (!rewinding && !forwarding) {
                     retroGameView.retroGameView?.let { view ->
                         runCatching { view.serializeState(true) }
                             .getOrNull()
                             ?.takeIf { it.isNotEmpty() }
                             ?.let {
-                                // ponytail: fixed 60-state window (~30s); tune only after measuring real state sizes.
-                                if (rewindStates.size >= 60) rewindStates.removeFirst()
-                                rewindStates.addLast(it)
+                                if (timelineBrowsing && timelineAnchor?.contentEquals(it) != true) {
+                                    commitTimeline()
+                                }
+
+                                if (!timelineBrowsing) {
+                                    // ponytail: fixed 60-state window (~30s); tune only after measuring real state sizes.
+                                    if (rewindStates.size >= 60) rewindStates.removeFirst()
+                                    rewindStates.addLast(it)
+                                }
                             }
                     }
-                }
+                    }
                 delay(500)
             }
         }
@@ -371,13 +405,40 @@ class BaseGameScreenViewModel(
 
     private fun rewindStep() {
         if (rewindStates.size < 2) return
-        rewindStates.removeLast()
-        retroGameView.retroGameView?.unserializeState(rewindStates.last(), true)
+        val current = rewindStates.removeLast()
+        val target = rewindStates.last()
+        if (retroGameView.retroGameView?.unserializeState(target, true) == true) {
+            forwardStates.addFirst(current)
+            timelineBrowsing = true
+            timelineAnchor = target
+        } else {
+            rewindStates.addLast(current)
+        }
+    }
+
+    private fun forwardStep() {
+        if (forwardStates.isEmpty()) return
+        val target = forwardStates.removeFirst()
+        if (retroGameView.retroGameView?.unserializeState(target, true) == true) {
+            rewindStates.addLast(target)
+            timelineBrowsing = true
+            timelineAnchor = target
+        } else {
+            forwardStates.addFirst(target)
+        }
+    }
+
+    private fun commitTimeline() {
+        if (!timelineBrowsing && forwardStates.isEmpty()) return
+        timelineBrowsing = false
+        timelineAnchor = null
+        forwardStates.clear()
     }
 
     suspend fun reset() =
         withLoading {
             try {
+                commitTimeline()
                 delay(appContext.longAnimationDuration().toLong())
                 retroGameView.retroGameViewFlow().reset()
             } catch (e: Throwable) {

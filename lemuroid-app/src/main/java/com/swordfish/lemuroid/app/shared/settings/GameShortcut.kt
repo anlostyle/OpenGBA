@@ -36,6 +36,7 @@ data class GameShortcut(
             val keyCode =
                 when (type) {
                     GameShortcutType.REWIND -> KeyEvent.KEYCODE_BUTTON_X
+                    GameShortcutType.FORWARD -> KeyEvent.KEYCODE_BUTTON_Y
                     GameShortcutType.TOGGLE_FAST_FORWARD -> KeyEvent.KEYCODE_BUTTON_R2
                     else -> return null
                 }
@@ -48,6 +49,7 @@ data class GameShortcut(
 enum class GameShortcutType {
     MENU,
     REWIND,
+    FORWARD,
     QUICK_LOAD,
     QUICK_SAVE,
     TOGGLE_FAST_FORWARD,

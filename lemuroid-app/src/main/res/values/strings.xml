@@ -139,10 +139,10 @@
     <string name="game_menu_fast_forward">Fast-Forward</string>
     <string name="game_menu_fast_forward_speed">Fast-Forward Speed</string>
     <string name="game_menu_rewind">Rewind</string>
-    <string name="game_menu_rewind_description">Hold X to rewind through the last 30 seconds. The shortcut can be changed in Settings &gt; Input.</string>
+    <string name="game_menu_rewind_description">Hold X to rewind through the last 30 seconds. Hold Y to move forward through the rewind timeline. The shortcuts can be changed in Settings &gt; Input.</string>
     <string name="game_menu_cheats">Cheats</string>
     <string name="game_menu_shortcuts">Default Shortcuts</string>
-    <string name="game_menu_shortcuts_description">A: GBA A\nB: GBA B\nL1/R1: GBA L/R\nL2: Menu\nHold X: Rewind\nHold R2: Fast-forward\n\nShortcuts can be customized in Settings &gt; Input.</string>
+    <string name="game_menu_shortcuts_description">A: GBA A\nB: GBA B\nL1/R1: GBA L/R\nL2: Menu\nHold X: Rewind\nHold Y: Forward\nHold R2: Fast-forward\n\nShortcuts can be customized in Settings &gt; Input.</string>
     <string name="game_menu_cheats_hint">One code per line</string>
     <string name="game_menu_change_disk_disk">Disk %1$s</string>
     <string name="game_menu_tilt_sensor">Tilt Sensor</string>
@@ -225,7 +225,7 @@
         <b>&#8226;How do I use OpenGBA?</b><br/>
         Copy your GBA ROM files into a directory on your device and select it within OpenGBA. Subdirectories are supported. After the scan completes you should see your games.<br/><br/>
         <b>&#8226;Handheld shortcuts</b><br/>
-        L2 opens the menu. Hold X to rewind through the last 30 seconds. Hold R2 to fast-forward.<br/><br/>
+        L2 opens the menu. Hold X to rewind through the last 30 seconds. Hold Y to move forward through the rewind timeline. Hold R2 to fast-forward.<br/><br/>
         <b>&#8226;Why aren\'t my games detected?</b><br/>
         If your games are compressed, try uncompressing them. If this doesn\'t work try putting ROMs into separate directories, one for each system with the following names: $SYSTEMS.
     ]]></string>
