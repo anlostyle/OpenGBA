@@ -51,6 +51,7 @@
     <string name="settings_gamepad_category_general">常规</string>
     <string name="settings_gamepad_title_reset_bindings">重置绑定</string>
     <string name="settings_gamepad_unbound">未绑定</string>
+    <string name="settings_gamepad_clear_binding">取消绑定</string>
     <string name="settings_gamepad_title_game_menu">菜单</string>
     <string name="settings_title_open_cores_selection">更改核心</string>
     <string name="settings_description_open_cores_selection">选择与系统关联的核心</string>
@@ -167,7 +168,7 @@
     <string name="gamepad_binding_update_title">关联 \"RetroPad %1$s\"</string>
     <string name="gamepad_binding_update_description">按下你的 \"%1$s\" 上的一个按钮</string>
     <string name="shortcut_binding_update_title">关联 \"快捷方式 %1$s\"</string>
-    <string name="shortcut_binding_update_description">按下要绑定到\"%1$s\"的按钮</string>
+    <string name="shortcut_binding_update_description">按住快捷键组合中的按键，松开任意一个即可保存（\"%1$s\"）</string>
     <string name="tv_search_results">游戏</string>
     <string name="tv_game_message_missing_gamepad">需要手柄才能玩。 请连接手柄。</string>
     <string name="game_edit_touch_controls_error_not_visible">您需要断开手柄来编辑您的触摸控制</string>

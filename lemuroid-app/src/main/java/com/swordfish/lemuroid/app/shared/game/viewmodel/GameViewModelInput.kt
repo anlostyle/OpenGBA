@@ -12,6 +12,7 @@ import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.shared.input.InputDeviceManager
 import com.swordfish.lemuroid.app.shared.input.InputKey
 import com.swordfish.lemuroid.app.shared.input.inputclass.getInputClass
+import com.swordfish.lemuroid.app.shared.input.normalizeInputKeyCode
 import com.swordfish.lemuroid.app.shared.settings.ControllerConfigsManager
 import com.swordfish.lemuroid.app.shared.settings.GameShortcutType
 import com.swordfish.lemuroid.common.coroutines.launchOnState
@@ -286,7 +287,7 @@ class GameViewModelInput(
             keyEventsFlow
                 .filterNotNull()
                 .filter { it.repeatCount == 0 }
-                .map { Triple(it.device, it.action, it.keyCode) }
+                .map { Triple(it.device, it.action, it.device.normalizeInputKeyCode(it.keyCode)) }
                 .distinctUntilChanged()
 
         val combinedObservable =
@@ -325,7 +326,7 @@ class GameViewModelInput(
                         deviceShortcuts.filter {
                             it.keys.isNotEmpty() &&
                                 (it.type == GameShortcutType.REWIND ||
-                                    (it.type == GameShortcutType.TOGGLE_FAST_FORWARD && it.keys.size == 1))
+                                    it.type == GameShortcutType.TOGGLE_FAST_FORWARD)
                         }
 
                     if (action == KeyEvent.ACTION_DOWN) {
@@ -347,7 +348,7 @@ class GameViewModelInput(
                             deviceShortcuts.firstOrNull {
                                 it.keys.isNotEmpty() && pressedKeys.containsAll(it.keys) &&
                                     it.type != GameShortcutType.REWIND &&
-                                    !(it.type == GameShortcutType.TOGGLE_FAST_FORWARD && it.keys.size == 1)
+                                    it.type != GameShortcutType.TOGGLE_FAST_FORWARD
                             }
                         if (matchedAction != null) {
                             when (matchedAction.type) {
@@ -378,8 +379,10 @@ class GameViewModelInput(
                     }
                 }
 
-                port?.let {
-                    retroGameView.retroGameView?.sendKeyEvent(action, bindKeyCode, it)
+                if (bindKeyCode != KeyEvent.KEYCODE_UNKNOWN) {
+                    port?.let {
+                        retroGameView.retroGameView?.sendKeyEvent(action, bindKeyCode, it)
+                    }
                 }
             }
     }

@@ -13,7 +13,7 @@ import kotlinx.coroutines.runBlocking
 class ShortcutBindingUpdater(private val inputDeviceManager: InputDeviceManager, intent: Intent) {
     val extras = parseExtras(intent)
 
-    private var keyCode: Int? = null
+    private val pressedKeys = linkedSetOf<Int>()
 
     fun getTitle(context: Context): String {
         return context.getString(R.string.shortcut_binding_update_title, extras.shortcutType.displayName())
@@ -33,20 +33,23 @@ class ShortcutBindingUpdater(private val inputDeviceManager: InputDeviceManager,
 
     private fun onKeyDown(event: KeyEvent): Boolean {
         if (!isTargetedDevice(event.device) || event.repeatCount != 0) return false
-        keyCode = event.keyCode
+        pressedKeys += event.device.normalizeInputKeyCode(event.keyCode)
         return true
     }
 
     private fun onKeyUp(event: KeyEvent): Boolean {
         if (!isTargetedDevice(event.device)) return false
-        if (keyCode != event.keyCode) return true
+        val keyCode = event.device.normalizeInputKeyCode(event.keyCode)
+        if (keyCode !in pressedKeys) return true
+        val inputKeys = pressedKeys.map(::InputKey).toSet()
+        pressedKeys.remove(keyCode)
 
         // TODO runBlocking here should go away.
         runBlocking {
             inputDeviceManager.updateShortcutBinding(
                 event.device,
                 extras.shortcutType,
-                setOf(InputKey(event.keyCode)),
+                inputKeys,
             )
         }
         return true

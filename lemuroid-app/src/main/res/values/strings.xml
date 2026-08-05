@@ -57,6 +57,7 @@
     <string name="settings_gamepad_category_general">General</string>
     <string name="settings_gamepad_title_reset_bindings">Reset bindings</string>
     <string name="settings_gamepad_unbound">Not bound</string>
+    <string name="settings_gamepad_clear_binding">Clear</string>
     <string name="settings_gamepad_title_game_menu">Menu</string>
 
     <string name="settings_title_open_cores_selection">Change Cores</string>
@@ -204,7 +205,7 @@
     <string name="gamepad_binding_update_title">Associate \"RetroPad %1$s\"</string>
     <string name="gamepad_binding_update_description">Press a button on your \"%1$s\"</string>
     <string name="shortcut_binding_update_title">Associate \"Shortcut %1$s\"</string>
-    <string name="shortcut_binding_update_description">Press the button to bind on your \"%1$s\"</string>
+    <string name="shortcut_binding_update_description">Hold the buttons for the shortcut on your \"%1$s\", then release one to save</string>
 
     <string name="tv_search_results">Games</string>
     <string name="tv_game_message_missing_gamepad">Gamepads are required to play. Please connect one.</string>

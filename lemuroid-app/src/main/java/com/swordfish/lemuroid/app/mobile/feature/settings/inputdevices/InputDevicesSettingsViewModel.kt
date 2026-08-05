@@ -57,6 +57,24 @@ class InputDevicesSettingsViewModel(
         }
     }
 
+    fun clearBinding(
+        device: InputDevice,
+        retroKey: RetroKey,
+    ) {
+        viewModelScope.launch {
+            inputDeviceManager.clearBinding(device, retroKey)
+        }
+    }
+
+    fun clearShortcutBinding(
+        device: InputDevice,
+        shortcut: GameShortcut,
+    ) {
+        viewModelScope.launch {
+            inputDeviceManager.clearShortcutBinding(device, shortcut.type)
+        }
+    }
+
     private fun initializeState(context: Context): Flow<State> {
         val devicesViews = getEnabledDevicesViews(context)
         val bindingsViews = getDevicesBindingViews()
