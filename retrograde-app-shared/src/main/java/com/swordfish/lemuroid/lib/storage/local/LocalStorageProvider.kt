@@ -61,6 +61,18 @@ class LocalStorageProvider(
         return DocumentFileParser.parseDocumentFile(context, baseStorageFile)
     }
 
+    override fun findArtworkUri(baseStorageFile: BaseStorageFile): Uri? {
+        val rom = baseStorageFile.uri.path?.let(::File) ?: return null
+        val baseName = rom.nameWithoutExtension
+        val directories = listOf(rom.parentFile, rom.parentFile?.resolve("covers"), rom.parentFile?.resolve("images"))
+        return directories
+            .asSequence()
+            .filterNotNull()
+            .flatMap { directory -> COVER_EXTENSIONS.asSequence().map { directory.resolve("$baseName.$it") } }
+            .firstOrNull { it.isFile }
+            ?.toUri()
+    }
+
     private fun getExternalFolder(): File? {
         val prefString = context.getString(R.string.pref_key_legacy_external_folder)
         val preferenceManager = SharedPreferencesHelper.getLegacySharedPreferences(context)
@@ -127,5 +139,6 @@ class LocalStorageProvider(
 
     companion object {
         const val LOCAL_STORAGE_CACHE_SUBFOLDER = "local-storage-games"
+        private val COVER_EXTENSIONS = listOf("png", "jpg", "jpeg", "webp")
     }
 }

@@ -1,12 +1,12 @@
 <resources>
     <string name="title_home">Home</string>
     <string name="title_search">Search</string>
-    <string name="title_systems">Systems</string>
+    <string name="title_systems">Game Library</string>
     <string name="title_games">Games</string>
     <string name="title_settings">Settings</string>
     <string name="recent">Recents</string>
     <string name="favorites">Favorites</string>
-    <string name="discover">Discover</string>
+    <string name="discover">All Games</string>
     <string name="rescan">Rescan</string>
     <string name="stop">Stop</string>
     <string name="none">None</string>
@@ -26,6 +26,14 @@
     <string name="settings_category_general">General</string>
     <string name="settings_category_input">Input</string>
     <string name="settings_category_misc">Miscellaneous</string>
+    <string name="settings_category_update">Updates</string>
+    <string name="settings_title_app_update">OpenGBA updates</string>
+    <string name="settings_description_app_update">Check GitHub for a signed APK update</string>
+    <string name="settings_update_checking">Checking for updates…</string>
+    <string name="settings_update_none">You are up to date</string>
+    <string name="settings_update_available">Downloading OpenGBA %1$s…</string>
+    <string name="settings_update_install_permission">Allow OpenGBA to install updates, then try again</string>
+    <string name="settings_update_failed">Update failed: %1$s</string>
     <string name="settings_title_enable_autosave">Autosave state</string>
     <string name="settings_description_enable_autosave">Save state when exiting via game menu</string>
     <string name="settings_title_enable_touch_feedback">Vibrate on touch</string>
@@ -60,7 +68,7 @@
     <string name="settings_bios_category_not_detected">Supported</string>
 
     <string name="settings_title_reset_settings">Factory reset</string>
-    <string name="settings_description_reset_settings">Reset Lemuroid to its factory settings</string>
+    <string name="settings_description_reset_settings">Reset OpenGBA to its factory settings</string>
 
     <string name="settings_title_advanced_settings">Advanced settings</string>
     <string name="settings_description_advanced_settings">Display advanced settings</string>
@@ -77,7 +85,7 @@
     <string name="settings_description_enable_device_rumble">When no controller is connected vibrate the device instead</string>
 
     <string name="reset_settings_warning_message_title">Are you sure?</string>
-    <string name="reset_settings_warning_message_description">This will reset Lemuroid to its factory settings. Saves and States will be preserved.</string>
+    <string name="reset_settings_warning_message_description">This will reset OpenGBA to its factory settings. Saves and States will be preserved.</string>
 
     <string name="settings_title_save_sync">Cloud saves</string>
     <string name="settings_description_save_sync">Back up and Sync your saves on the cloud</string>
@@ -98,7 +106,7 @@
     <string name="game_context_menu_create_shortcut">Pin to launcher</string>
 
     <string name="home_notification_title">Enable notifications</string>
-    <string name="home_notification_message">Lemuroid uses notifications to let you know when a game or operation is running in background.</string>
+    <string name="home_notification_message">OpenGBA uses notifications to show when a game or operation is running in background.</string>
     <string name="home_notification_action">Enable</string>
 
     <string name="home_microphone_title">Enable microphone</string>
@@ -106,7 +114,7 @@
     <string name="home_microphone_action">Enable</string>
 
     <string name="home_empty_title">Select ROMs directory</string>
-    <string name="home_empty_message">Lemuroid needs to scan a directory containing ROM files.\nThis might take up to a few minutes.</string>
+    <string name="home_empty_message">OpenGBA needs to scan a directory containing GBA ROM files.\nThis might take up to a few minutes.</string>
     <string name="home_empty_action">Select Directory</string>
 
     <string name="home_notification_desmume_deprecated_title">DeSmuME is being retired</string>
@@ -123,6 +131,8 @@
     <string name="game_menu_edit_touch_controls">Edit Controls</string>
     <string name="game_menu_mute_audio">Mute</string>
     <string name="game_menu_fast_forward">Fast-Forward</string>
+    <string name="game_menu_cheats">Cheats</string>
+    <string name="game_menu_cheats_hint">One code per line</string>
     <string name="game_menu_change_disk_disk">Disk %1$s</string>
     <string name="game_menu_tilt_sensor">Tilt Sensor</string>
 
@@ -152,14 +162,14 @@
     <string name="game_running_notification_message">Make sure to save your progress</string>
 
     <string name="game_loader_error_gl_incompatible">This Core requires an OpenGL ES version which is not supported by your device.</string>
-    <string name="game_loader_error_load_game">Something bad happened while loading your game. Make sure the ROM is supported by Lemuroid and rescan your games.</string>
+    <string name="game_loader_error_load_game">Something bad happened while loading your game. Make sure the ROM is a supported GBA file and rescan your games.</string>
     <string name="game_loader_error_save">Something bad happened with your save file. If the issue persists, try disabling auto-save.</string>
     <string name="game_loader_error_unsupported_architecture">This Core is not supported by your device.</string>
 
     <string name="game_loader_error_generic">Something bad happened. Try the following:\n
         \n\u2022 Disable auto-save and re-run the game
         \n\u2022 Go into Android settings and clear the app cache
-        \n\u2022 Go into Lemuroid settings and perform a Factory Reset
+        \n\u2022 Go into OpenGBA settings and perform a Factory Reset
         \n\nIf none of the above works, it might be possible that this Game/Core is not supported by this device.
     </string>
 
@@ -201,8 +211,10 @@
     <string name="mobile_settings_help">Help</string>
     <string name="mobile_settings_support">Support</string>
     <string name="lemuroid_help_content"><![CDATA[
-        <b>&#8226;How do I use Lemuroid?</b><br/>
-        Copy all your ROMs files into a directory on your device and select it within Lemuroid. This directory is allowed to have subdirectories. After the scan completes you should see your games.<br/><br/>
+        <b>&#8226;How do I use OpenGBA?</b><br/>
+        Copy your GBA ROM files into a directory on your device and select it within OpenGBA. Subdirectories are supported. After the scan completes you should see your games.<br/><br/>
+        <b>&#8226;Handheld shortcuts</b><br/>
+        Hold R2 to fast-forward and L2 to rewind through the last 30 seconds.<br/><br/>
         <b>&#8226;Why aren\'t my games detected?</b><br/>
         If your games are compressed, try uncompressing them. If this doesn\'t work try putting ROMs into separate directories, one for each system with the following names: $SYSTEMS.
     ]]></string>
@@ -210,11 +222,11 @@
     <string name="lemuroid_crash_disclamer">It looks like the Libretro core has experienced an unexpected issue. If it\'s persistent please try the following:\n
         \n\u2022 Disable auto-save and re-run the game
         \n\u2022 Go into Android settings and clear the app cache
-        \n\u2022 Go into Lemuroid settings and perform a Factory Reset
+        \n\u2022 Go into OpenGBA settings and perform a Factory Reset
         \n\n If none of the above works, it might be possible that this Game/Core is not supported by this device.
     </string>
 
-    <string name="error_message_incompatible_state">This save state is not compatible with the current core version. Please load the latest in-game save or use a previous Lemuroid version.</string>
+    <string name="error_message_incompatible_state">This save state is not compatible with the current mGBA core version. Please load the latest in-game save.</string>
 
     <string name="shader_filter_names_auto">Auto</string>
     <string name="shader_filter_names_sharp">Sharp</string>

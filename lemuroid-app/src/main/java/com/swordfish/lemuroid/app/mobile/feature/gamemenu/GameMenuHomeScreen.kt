@@ -6,9 +6,17 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Sensors
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -29,6 +37,9 @@ fun GameMenuHomeScreen(
     gameMenuRequest: GameMenuActivity.GameMenuRequest,
     onResult: KFunction1<Intent.() -> Unit, Unit>,
 ) {
+    var showCheatsDialog by remember { mutableStateOf(false) }
+    var cheatText by remember(gameMenuRequest.cheats) { mutableStateOf(gameMenuRequest.cheats) }
+
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
         if (gameMenuRequest.coreConfig.statesSupported) {
             LemuroidSettingsMenuLink(
@@ -110,6 +121,11 @@ fun GameMenuHomeScreen(
             )
         }
 
+        LemuroidSettingsMenuLink(
+            title = { Text(text = stringResource(id = R.string.game_menu_cheats)) },
+            onClick = { showCheatsDialog = true },
+        )
+
         if (gameMenuRequest.numDisks > 1) {
             LemuroidSettingsList(
                 title = { Text(text = stringResource(id = R.string.game_menu_change_disk_button)) },
@@ -184,5 +200,36 @@ fun GameMenuHomeScreen(
                 },
             )
         }
+    }
+
+    if (showCheatsDialog) {
+        AlertDialog(
+            onDismissRequest = { showCheatsDialog = false },
+            title = { Text(stringResource(R.string.game_menu_cheats)) },
+            text = {
+                OutlinedTextField(
+                    value = cheatText,
+                    onValueChange = { cheatText = it },
+                    minLines = 4,
+                    maxLines = 8,
+                    label = { Text(stringResource(R.string.game_menu_cheats_hint)) },
+                )
+            },
+            dismissButton = {
+                TextButton(onClick = { showCheatsDialog = false }) {
+                    Text(stringResource(R.string.cancel))
+                }
+            },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        showCheatsDialog = false
+                        onResult { putExtra(GameMenuContract.RESULT_CHEATS, cheatText) }
+                    },
+                ) {
+                    Text(stringResource(R.string.ok))
+                }
+            },
+        )
     }
 }

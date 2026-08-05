@@ -29,6 +29,7 @@ import com.swordfish.lemuroid.lib.core.CoreVariablesManager
 import com.swordfish.lemuroid.lib.game.GameLoader
 import com.swordfish.lemuroid.lib.library.GameSystem
 import com.swordfish.lemuroid.lib.library.SystemCoreConfig
+import com.swordfish.lemuroid.lib.library.SystemID
 import com.swordfish.lemuroid.lib.library.db.entity.Game
 import com.swordfish.lemuroid.lib.saves.SavesManager
 import com.swordfish.lemuroid.lib.saves.StatesManager
@@ -41,8 +42,10 @@ import gg.padkit.inputstate.InputState
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.util.ArrayDeque
 
 class BaseGameScreenViewModel(
     private val appContext: Context,
@@ -50,7 +53,7 @@ class BaseGameScreenViewModel(
     settingsManager: SettingsManager,
     inputDeviceManager: InputDeviceManager,
     controllerConfigsManager: ControllerConfigsManager,
-    system: GameSystem,
+    private val system: GameSystem,
     systemCoreConfig: SystemCoreConfig,
     sharedPreferences: SharedPreferences,
     savesManager: SavesManager,
@@ -142,6 +145,12 @@ class BaseGameScreenViewModel(
             sideEffects,
         )
 
+    private val rewindStates = ArrayDeque<ByteArray>()
+    private var rewindCaptureJob: kotlinx.coroutines.Job? = null
+    private var rewindHoldJob: kotlinx.coroutines.Job? = null
+    private var rewinding = false
+    private var cheatCodes = emptyList<String>()
+
     val loadingState = MutableStateFlow(false)
 
     private inline fun withLoading(block: () -> Unit) {
@@ -187,6 +196,7 @@ class BaseGameScreenViewModel(
                 saves.restoreAutoSaveAsync(it)
             }
         }
+        startRewindCapture()
         return result
     }
 
@@ -272,6 +282,81 @@ class BaseGameScreenViewModel(
         retroGameView.retroGameView?.apply {
             frameSpeed = if (frameSpeed == 1) 2 else 1
         }
+    }
+
+    fun setFastForward(enabled: Boolean) {
+        if (loadingState.value) return
+        retroGameView.retroGameView?.frameSpeed = if (enabled) 2 else 1
+    }
+
+    fun getCheatCodes(): String = cheatCodes.joinToString("\n")
+
+    fun applyCheats(rawCodes: String) {
+        if (loadingState.value) return
+        val nextCodes =
+            rawCodes
+                .lineSequence()
+                .map(String::trim)
+                .filter(String::isNotEmpty)
+                .map { it.take(128) }
+                .take(32)
+                .toList()
+        retroGameView.retroGameView?.let { view ->
+            cheatCodes.forEachIndexed { index, code ->
+                runCatching { view.setCheat(index, false, code, true) }
+            }
+            nextCodes.forEachIndexed { index, code ->
+                runCatching { view.setCheat(index, true, code, true) }
+            }
+        }
+        cheatCodes = nextCodes
+    }
+
+    fun startRewind() {
+        if (loadingState.value || rewindHoldJob != null) return
+        rewinding = true
+        rewindHoldJob = viewModelScope.launch {
+            while (isActive) {
+                rewindStep()
+                delay(100)
+            }
+        }
+    }
+
+    fun stopRewind() {
+        rewinding = false
+        rewindHoldJob?.cancel()
+        rewindHoldJob = null
+    }
+
+    private fun startRewindCapture() {
+        if (system.id != SystemID.GBA || rewindCaptureJob != null) return
+        rewindCaptureJob = viewModelScope.launch {
+            retroGameView.waitRetroGameViewInitialized()
+            // libretro cores may not have allocated their state buffer until the first frame.
+            retroGameView.waitGLEvent<GLRetroView.GLRetroEvents.FrameRendered>()
+            while (isActive) {
+                if (!rewinding) {
+                    retroGameView.retroGameView?.let { view ->
+                        runCatching { view.serializeState(true) }
+                            .getOrNull()
+                            ?.takeIf { it.isNotEmpty() }
+                            ?.let {
+                                // ponytail: fixed 60-state window (~30s); tune only after measuring real state sizes.
+                                if (rewindStates.size >= 60) rewindStates.removeFirst()
+                                rewindStates.addLast(it)
+                            }
+                    }
+                }
+                delay(500)
+            }
+        }
+    }
+
+    private fun rewindStep() {
+        if (rewindStates.size < 2) return
+        rewindStates.removeLast()
+        retroGameView.retroGameView?.unserializeState(rewindStates.last(), true)
     }
 
     suspend fun reset() =

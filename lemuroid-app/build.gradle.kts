@@ -10,9 +10,9 @@ plugins {
 
 android {
     defaultConfig {
-        versionCode = 252
-        versionName = "1.17.0" // Always remember to update Cores Tag!
-        applicationId = "com.swordfish.lemuroid"
+        versionCode = 1
+        versionName = "0.1.0"
+        applicationId = "com.opengba.launcher"
     }
     flavorDimensions += listOf("opensource", "cores")
 
@@ -84,10 +84,14 @@ android {
         }
 
         maybeCreate("release").apply {
-            storeFile = file("$rootDir/release.jks")
-            keyAlias = "lemuroid"
-            storePassword = "lemuroid"
-            keyPassword = "lemuroid"
+            storeFile = file(
+                providers.environmentVariable("OPEN_GBA_RELEASE_KEYSTORE_FILE")
+                    .orElse("$rootDir/release.jks")
+                    .get(),
+            )
+            keyAlias = providers.environmentVariable("OPEN_GBA_KEY_ALIAS").orElse("opengba").get()
+            storePassword = providers.environmentVariable("OPEN_GBA_KEYSTORE_PASSWORD").getOrNull()
+            keyPassword = providers.environmentVariable("OPEN_GBA_KEY_PASSWORD").getOrNull()
         }
     }
 
@@ -96,12 +100,12 @@ android {
             isMinifyEnabled = true
             signingConfig = signingConfigs["release"]
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
-            resValue("string", "lemuroid_name", "Lemuroid")
+            resValue("string", "lemuroid_name", "OpenGBA")
         }
         getByName("debug") {
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-DEBUG"
-            resValue("string", "lemuroid_name", "LemuroiDebug")
+            resValue("string", "lemuroid_name", "OpenGBA Debug")
         }
     }
 
@@ -201,10 +205,8 @@ dependencies {
     implementation(deps.libs.composeSettings.diskStorage)
     implementation(deps.libs.composeSettings.memoryStorage)
 
-    implementation(deps.libs.libretrodroid)
-
-    // Uncomment this when using a local aar file.
-    // implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
+    // Local build keeps the GBA output nearest-filtered for the 4x pixel-perfect target.
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
 
     kapt(deps.libs.dagger.android.processor)
     kapt(deps.libs.dagger.compiler)

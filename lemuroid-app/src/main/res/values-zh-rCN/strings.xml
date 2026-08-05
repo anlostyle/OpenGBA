@@ -2,12 +2,12 @@
 <resources>
     <string name="title_home">首页</string>
     <string name="title_search">搜索</string>
-    <string name="title_systems">系统</string>
+    <string name="title_systems">游戏库</string>
     <string name="title_games">游戏</string>
     <string name="title_settings">设置</string>
     <string name="recent">最近</string>
     <string name="favorites">收藏</string>
-    <string name="discover">发现</string>
+    <string name="discover">全部游戏</string>
     <string name="rescan">重新扫描</string>
     <string name="stop">停止</string>
     <string name="none">无</string>
@@ -25,6 +25,14 @@
     <string name="settings_category_general">常规</string>
     <string name="settings_category_input">输入</string>
     <string name="settings_category_misc">其它</string>
+    <string name="settings_category_update">更新</string>
+    <string name="settings_title_app_update">OpenGBA 在线更新</string>
+    <string name="settings_description_app_update">从 GitHub 检查签名 APK 更新</string>
+    <string name="settings_update_checking">正在检查更新…</string>
+    <string name="settings_update_none">当前已是最新版本</string>
+    <string name="settings_update_available">正在下载 OpenGBA %1$s…</string>
+    <string name="settings_update_install_permission">请允许 OpenGBA 安装更新后再试</string>
+    <string name="settings_update_failed">更新失败：%1$s</string>
     <string name="settings_title_enable_autosave">自动保存</string>
     <string name="settings_description_enable_autosave">通过游戏菜单退出时保存进度</string>
     <string name="settings_title_enable_touch_feedback">触摸振动</string>
@@ -51,7 +59,7 @@
     <string name="settings_bios_category_detected">已检测到</string>
     <string name="settings_bios_category_not_detected">已支持</string>
     <string name="settings_title_reset_settings">恢复出厂</string>
-    <string name="settings_description_reset_settings">重置 Lemuroid 为出厂设置</string>
+    <string name="settings_description_reset_settings">重置 OpenGBA 为出厂设置</string>
     <string name="settings_title_advanced_settings">高级设置</string>
     <string name="settings_description_advanced_settings">显示高级设置</string>
     <string name="settings_title_low_latency_audio">偏好低延迟音频</string>
@@ -63,7 +71,7 @@
     <string name="settings_title_enable_device_rumble">设备振动</string>
     <string name="settings_description_enable_device_rumble">当没有控制器连接时启用设备振动</string>
     <string name="reset_settings_warning_message_title">您确定吗？</string>
-    <string name="reset_settings_warning_message_description">这将会重置 Lemuroid 所有数据。存档和保存状态将被保留。</string>
+    <string name="reset_settings_warning_message_description">这将会重置 OpenGBA 所有数据。存档和保存状态将被保留。</string>
     <string name="settings_title_save_sync">云端保存</string>
     <string name="settings_description_save_sync">备份并同步您在云端上的存档</string>
     <string name="settings_save_sync_refresh">手动同步</string>
@@ -81,13 +89,13 @@
     <string name="game_context_menu_restart">重新开始</string>
     <string name="game_context_menu_create_shortcut">添加到桌面</string>
     <string name="home_notification_title">开启推送</string>
-    <string name="home_notification_message">Lemuroid 使用通知让您知道游戏或操作正在后台运行。</string>
+    <string name="home_notification_message">OpenGBA 使用通知让您知道游戏或操作正在后台运行。</string>
     <string name="home_notification_action">启用</string>
     <string name="home_microphone_title">启用麦克风</string>
     <string name="home_microphone_message">Nintendo DS 游戏可以利用麦克风提供一些功能。</string>
     <string name="home_microphone_action">启用</string>
     <string name="home_empty_title">选择 ROM 目录</string>
-    <string name="home_empty_message">Lemuroid 需要扫描一个包含 ROM 文件的目录。\n这可能需要几分钟的时间。</string>
+    <string name="home_empty_message">OpenGBA 需要扫描一个包含 GBA ROM 文件的目录。\n这可能需要几分钟的时间。</string>
     <string name="home_empty_action">选择目录</string>
     <string name="home_notification_desmume_deprecated_title">Désmume 即将退出</string>
     <string name="home_notification_desmume_deprecated_message">在游戏中保存，切换到melondDS，进度将会传输。保存状态将保持与 DeSmuME 的绑定。</string>
@@ -102,6 +110,8 @@
     <string name="game_menu_edit_touch_controls">编辑触控按键</string>
     <string name="game_menu_mute_audio">静音</string>
     <string name="game_menu_fast_forward">快进</string>
+    <string name="game_menu_cheats">金手指</string>
+    <string name="game_menu_cheats_hint">每行输入一个代码</string>
     <string name="game_menu_change_disk_disk">碟片 %1$s</string>
     <string name="game_menu_tilt_sensor">倾斜传感器</string>
     <string name="game_loading_preparing_game">正在准备游戏…</string>
@@ -123,13 +133,13 @@
     <string name="game_running_notification_title_alternative">游戏正在运行</string>
     <string name="game_running_notification_message">请务必及时保存您的游戏进度</string>
     <string name="game_loader_error_gl_incompatible">您的设备不支持此核心需要的 OpenGL ES 版本。</string>
-    <string name="game_loader_error_load_game">在加载您的游戏时发生了异常。请确保该 ROM 受 Lemuroid 支持，并重新扫描您的游戏。</string>
+    <string name="game_loader_error_load_game">加载游戏时发生了异常。请确保这是受支持的 GBA ROM，并重新扫描游戏。</string>
     <string name="game_loader_error_save">您的存档文件出了点问题。如果问题仍然存在，请尝试关闭自动存档功能。</string>
     <string name="game_loader_error_unsupported_architecture">您的设备不支持该核心。</string>
     <string name="game_loader_error_generic">发生了异常。 请尝试以下方法：\n
         \n\u2022 禁用自动保存并重新运行游戏
         \n\u2022 进入 Android 设置并清除应用缓存
-        \n\u2022 进入 Lemuroid 设置并执行重置数据
+        \n\u2022 进入 OpenGBA 设置并执行重置数据
         \n\n如果上述方法都不起作用，可能是该设备不支持此游戏/核心。
     </string>
     <string name="game_loader_error_missing_bios">似乎您缺少所需的 BIOS，把它们放到您的 ROM 目录并重新扫描。所需文件：%1$s</string>
@@ -156,18 +166,20 @@
     <string name="game_interactory_busy">等待进行中的操作完成</string>
     <string name="mobile_settings_help">帮助</string>
     <string name="mobile_settings_support">支持</string>
-    <string name="lemuroid_help_content"><![CDATA[        <b>&#8226;我如何使用 Lemuroid？</b><br/>
-        将您所有的 ROM 文件复制到您设备上的一个目录里，并在 Lemuroid 中选择它。这个目录允许具有子目录。扫描完成后，您应该会看到自己的游戏。<br/><br/>
+    <string name="lemuroid_help_content"><![CDATA[        <b>&#8226;我如何使用 OpenGBA？</b><br/>
+        将 GBA ROM 文件复制到设备上的一个目录里，并在 OpenGBA 中选择它。目录可以包含子目录。扫描完成后，您应该会看到自己的游戏。<br/><br/>
+        <b>&#8226;掌机快捷操作</b><br/>
+        按住 R2 快进，按住 L2 回溯最近 30 秒。<br/><br/>
         <b>&#8226;为什么检测不到我的游戏？</b><br/>
         如果您的游戏是被压缩过的，请尝试将其解压缩。 如果这样做不起作用，请尝试将 ROM 放入单独的目录里，每个系统都有一个目录，其名称如下：$SYSTEMS。
     ]]></string>
     <string name="lemuroid_crash_disclamer">Libretro 核心似乎出现了异常。 如果该问题持续出现，请尝试以下方法：\n
         \n\u2022 禁用自动存档并重新运行游戏
         \n\u2022 进入 Android 设置并清除应用缓存
-        \n\u2022 进入 Lemuroid 设置并执行重置数据
+        \n\u2022 进入 OpenGBA 设置并执行重置数据
         \n\n 如果上述方法都不起作用，可能是该设备不支持这个游戏/核心。
     </string>
-    <string name="error_message_incompatible_state">此保存状态与当前核心版本不兼容。请加载游戏内最新的保存状态或使用以前的 Lemuroid 版本。</string>
+    <string name="error_message_incompatible_state">此保存状态与当前 mGBA 核心版本不兼容。请加载游戏内最新的保存进度。</string>
     <string name="shader_filter_names_auto">自动</string>
     <string name="shader_filter_names_sharp">锐利</string>
     <string name="shader_filter_names_smooth">平滑</string>

@@ -311,6 +311,16 @@ class GameViewModelInput(
                         return@safeCollect
                     }
 
+                    // GBA leaves L2/R2 free; holding them provides handheld-friendly rewind/fast-forward.
+                    if (keyCode == KeyEvent.KEYCODE_BUTTON_L2) {
+                        if (action == KeyEvent.ACTION_DOWN) sideEffects.startRewind() else sideEffects.stopRewind()
+                        return@safeCollect
+                    }
+                    if (keyCode == KeyEvent.KEYCODE_BUTTON_R2) {
+                        if (action == KeyEvent.ACTION_DOWN) sideEffects.startFastForward() else sideEffects.stopFastForward()
+                        return@safeCollect
+                    }
+
                     if (action == KeyEvent.ACTION_DOWN) {
                         pressedKeys.add(keyCode)
                     } else if (action == KeyEvent.ACTION_UP) {

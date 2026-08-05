@@ -14,25 +14,17 @@ import androidx.tvprovider.media.tv.ChannelLogoUtils
 import androidx.tvprovider.media.tv.PreviewProgram
 import androidx.tvprovider.media.tv.TvContractCompat
 import com.swordfish.lemuroid.R
-import com.swordfish.lemuroid.app.shared.covers.CoverUtils
 import com.swordfish.lemuroid.app.shared.deeplink.DeepLink
 import com.swordfish.lemuroid.lib.library.db.RetrogradeDatabase
 import com.swordfish.lemuroid.lib.library.db.entity.Game
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.toList
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.http.HEAD
-import retrofit2.http.Url
 
 class ChannelHandler(
     private val appContext: Context,
     private val retrogradeDatabase: RetrogradeDatabase,
-    retrofit: Retrofit,
 ) {
-    private val thumbnailsApi = retrofit.create(ThumbnailsApi::class.java)
-
     private val appName = appContext.getString(R.string.lemuroid_name)
 
     private val channelsProjection =
@@ -136,10 +128,7 @@ class ChannelHandler(
     }
 
     private suspend fun getChannelEntry(game: Game): ChannelEntry {
-        val hasThumbnail =
-            game.coverFrontUrl
-                ?.let { thumbnailsApi.thumbnailExists(it).isSuccessful }
-                ?: false
+        val hasThumbnail = game.coverFrontUrl?.let { Uri.parse(it).scheme in setOf("file", "content") } ?: false
         return ChannelEntry(game, hasThumbnail)
     }
 
@@ -163,8 +152,6 @@ class ChannelHandler(
 
         if (game.coverFrontUrl != null && thumbnailExists) {
             preview.setPosterArtUri(Uri.parse(game.coverFrontUrl))
-        } else {
-            preview.setPosterArtUri(Uri.parse(CoverUtils.getFallbackRemoteUrl(game)))
         }
 
         return preview.build()
@@ -195,10 +182,4 @@ class ChannelHandler(
 
     private data class ChannelEntry(val game: Game, val hasThumbnail: Boolean)
 
-    interface ThumbnailsApi {
-        @HEAD
-        suspend fun thumbnailExists(
-            @Url url: String,
-        ): Response<Void>
-    }
 }

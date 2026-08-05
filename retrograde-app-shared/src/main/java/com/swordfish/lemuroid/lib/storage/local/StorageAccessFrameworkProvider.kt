@@ -2,6 +2,7 @@ package com.swordfish.lemuroid.lib.storage.local
 
 import android.content.Context
 import android.net.Uri
+import android.os.Build
 import android.provider.DocumentsContract
 import androidx.documentfile.provider.DocumentFile
 import androidx.leanback.preference.LeanbackPreferenceFragment
@@ -22,6 +23,7 @@ import kotlinx.coroutines.flow.flow
 import timber.log.Timber
 import java.io.File
 import java.io.InputStream
+import java.nio.charset.Charset
 import java.util.zip.ZipInputStream
 
 class StorageAccessFrameworkProvider(private val context: Context) : StorageProvider {
@@ -43,6 +45,34 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
 
     override fun getStorageFile(baseStorageFile: BaseStorageFile): StorageFile? {
         return DocumentFileParser.parseDocumentFile(context, baseStorageFile)
+    }
+
+    override fun findArtworkUri(baseStorageFile: BaseStorageFile): Uri? {
+        val baseName = baseStorageFile.name.substringBeforeLast('.', baseStorageFile.name)
+        val parentDocumentId = runCatching {
+            DocumentsContract.getDocumentId(baseStorageFile.uri).substringBeforeLast('/')
+        }.getOrNull() ?: return null
+        if (parentDocumentId.isEmpty()) return null
+
+        val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(baseStorageFile.uri, parentDocumentId)
+        val candidates = COVER_EXTENSIONS.map { "$baseName.$it" }.toSet()
+        val projection = arrayOf(
+            DocumentsContract.Document.COLUMN_DOCUMENT_ID,
+            DocumentsContract.Document.COLUMN_DISPLAY_NAME,
+            DocumentsContract.Document.COLUMN_MIME_TYPE,
+        )
+
+        return context.contentResolver.query(childrenUri, projection, null, null, null)?.use { cursor ->
+            while (cursor.moveToNext()) {
+                val documentId = cursor.getString(0)
+                val name = cursor.getString(1)
+                val mimeType = cursor.getString(2)
+                if (mimeType != DocumentsContract.Document.MIME_TYPE_DIR && name in candidates) {
+                    return@use DocumentsContract.buildDocumentUriUsingTree(baseStorageFile.uri, documentId)
+                }
+            }
+            null
+        }
     }
 
     private fun getExternalFolder(): String? {
@@ -161,11 +191,20 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
             return RomFiles.Standard(listOf(cacheFile))
         }
 
-        val stream =
+        runCatching {
             ZipInputStream(
                 context.contentResolver.openInputStream(originalDocument.uri),
-            )
-        stream.extractEntryToFile(game.fileName, cacheFile)
+            ).extractEntryToFile(game.fileName, cacheFile)
+        }.getOrElse { error ->
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N || error !is IllegalArgumentException) {
+                throw error
+            }
+            cacheFile.delete()
+            ZipInputStream(
+                context.contentResolver.openInputStream(originalDocument.uri),
+                Charset.forName("GBK"),
+            ).extractEntryToFile(game.fileName, cacheFile)
+        }
         return RomFiles.Standard(listOf(cacheFile))
     }
 
@@ -235,5 +274,6 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
     companion object {
         const val SAF_CACHE_SUBFOLDER = "storage-framework-games"
         const val VIRTUAL_FILE_PATH = "/virtual/file/path"
+        private val COVER_EXTENSIONS = listOf("png", "jpg", "jpeg", "webp")
     }
 }

@@ -217,6 +217,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 this.putExtra(GameMenuContract.EXTRA_CURRENT_TILT_CONFIG, currentTiltConfiguration)
                 // TODO PADS... Make sure to avoid passing this if a physical pad is connected.
                 this.putExtra(GameMenuContract.EXTRA_TILT_ALL_CONFIGS, tiltConfigurations.toTypedArray())
+                this.putExtra(GameMenuContract.EXTRA_CHEATS, baseGameScreenViewModel.getCheatCodes())
             }
         startActivityForResult(intent, DIALOG_REQUEST)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -250,6 +251,10 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                     is GameViewModelSideEffects.UiEffect.SaveQuickSave -> performSaveQuickSave()
                     is GameViewModelSideEffects.UiEffect.LoadQuickSave -> performLoadQuickSave()
                     is GameViewModelSideEffects.UiEffect.ToggleFastForward -> performToggleFastForward()
+                    is GameViewModelSideEffects.UiEffect.StartFastForward -> baseGameScreenViewModel.setFastForward(true)
+                    is GameViewModelSideEffects.UiEffect.StopFastForward -> baseGameScreenViewModel.setFastForward(false)
+                    is GameViewModelSideEffects.UiEffect.StartRewind -> baseGameScreenViewModel.startRewind()
+                    is GameViewModelSideEffects.UiEffect.StopRewind -> baseGameScreenViewModel.stopRewind()
                 }
             }
     }
@@ -408,6 +413,9 @@ abstract class BaseGameActivity : ImmersiveActivity() {
             }
             if (data?.getBooleanExtra(GameMenuContract.RESULT_EDIT_TOUCH_CONTROLS, false) == true) {
                 baseGameScreenViewModel.showEditControls(true)
+            }
+            if (data?.hasExtra(GameMenuContract.RESULT_CHEATS) == true) {
+                baseGameScreenViewModel.applyCheats(data.getStringExtra(GameMenuContract.RESULT_CHEATS).orEmpty())
             }
             if (data?.hasExtra(GameMenuContract.RESULT_CHANGE_TILT_CONFIG) == true) {
                 val tiltConfig = data.serializable<TiltConfiguration>(GameMenuContract.RESULT_CHANGE_TILT_CONFIG)

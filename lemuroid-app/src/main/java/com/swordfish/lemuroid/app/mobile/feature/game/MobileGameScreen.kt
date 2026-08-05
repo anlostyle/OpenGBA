@@ -64,6 +64,10 @@ import gg.padkit.PadKit
 import gg.padkit.config.HapticFeedbackType
 import gg.padkit.inputstate.InputState
 
+// Target hardware is 960x640: GBA's 240x160 frame at an exact 4x scale.
+private const val PIXEL_PERFECT_WIDTH = 960f
+private const val PIXEL_PERFECT_HEIGHT = 640f
+
 @Composable
 fun MobileGameScreen(viewModel: BaseGameScreenViewModel) {
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
@@ -120,7 +124,6 @@ fun MobileGameScreen(viewModel: BaseGameScreenViewModel) {
             val lifecycle = LocalLifecycleOwner.current
 
             val fullScreenPosition = remember { mutableStateOf<Rect?>(null) }
-            val viewportPosition = remember { mutableStateOf<Rect?>(null) }
 
             AndroidView(
                 modifier =
@@ -133,17 +136,21 @@ fun MobileGameScreen(viewModel: BaseGameScreenViewModel) {
             )
 
             val fullPos = fullScreenPosition.value
-            val viewPos = viewportPosition.value
 
-            LaunchedEffect(fullPos, viewPos) {
+            LaunchedEffect(fullPos) {
                 val gameView = viewModel.retroGameView.retroGameViewFlow()
-                if (fullPos == null || viewPos == null) return@LaunchedEffect
+                if (fullPos == null || fullPos.width <= 0f || fullPos.height <= 0f) return@LaunchedEffect
+
+                val width = minOf(PIXEL_PERFECT_WIDTH, fullPos.width)
+                val height = minOf(PIXEL_PERFECT_HEIGHT, fullPos.height)
+                val left = (fullPos.width - width) / 2f
+                val top = (fullPos.height - height) / 2f
                 val viewport =
                     RectF(
-                        (viewPos.left - fullPos.left) / fullPos.width,
-                        (viewPos.top - fullPos.top) / fullPos.height,
-                        (viewPos.right - fullPos.left) / fullPos.width,
-                        (viewPos.bottom - fullPos.top) / fullPos.height,
+                        left / fullPos.width,
+                        top / fullPos.height,
+                        (left + width) / fullPos.width,
+                        (top + height) / fullPos.height,
                     )
                 gameView.viewport = viewport
             }
@@ -160,8 +167,7 @@ fun MobileGameScreen(viewModel: BaseGameScreenViewModel) {
                     modifier =
                         Modifier
                             .layoutId(GameScreenLayout.CONSTRAINTS_GAME_VIEW)
-                            .windowInsetsPadding(WindowInsets.displayCutout.only(WindowInsetsSides.Top))
-                            .onGloballyPositioned { viewportPosition.value = it.boundsInRoot() },
+                            .windowInsetsPadding(WindowInsets.displayCutout.only(WindowInsetsSides.Top)),
                 )
 
                 val isVisible =

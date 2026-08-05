@@ -337,10 +337,7 @@ abstract class LemuroidApplicationModule {
         @Provides
         @PerApp
         @JvmStatic
-        fun shortcutsGenerator(
-            context: Context,
-            retrofit: Retrofit,
-        ) = ShortcutsGenerator(context, retrofit)
+        fun shortcutsGenerator(context: Context) = ShortcutsGenerator(context)
 
         @Provides
         @PerApp
@@ -348,8 +345,7 @@ abstract class LemuroidApplicationModule {
         fun channelHandler(
             context: Context,
             retrogradeDatabase: RetrogradeDatabase,
-            retrofit: Retrofit,
-        ) = ChannelHandler(context, retrogradeDatabase, retrofit)
+        ) = ChannelHandler(context, retrogradeDatabase)
 
         @Provides
         @PerApp

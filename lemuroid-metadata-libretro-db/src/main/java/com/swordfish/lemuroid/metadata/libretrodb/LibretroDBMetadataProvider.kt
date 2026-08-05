@@ -2,7 +2,6 @@ package com.swordfish.lemuroid.metadata.libretrodb
 
 import com.swordfish.lemuroid.common.kotlin.filterNullable
 import com.swordfish.lemuroid.lib.library.GameSystem
-import com.swordfish.lemuroid.lib.library.SystemID
 import com.swordfish.lemuroid.lib.library.metadata.GameMetadata
 import com.swordfish.lemuroid.lib.library.metadata.GameMetadataProvider
 import com.swordfish.lemuroid.lib.storage.StorageFile
@@ -14,16 +13,6 @@ import java.util.Locale
 
 class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
     GameMetadataProvider {
-    companion object {
-        private val THUMB_REPLACE = Regex("[&*/:`<>?\\\\|]")
-    }
-
-    private val sortedSystemIds: List<String> by lazy {
-        SystemID.values()
-            .map { it.dbname }
-            .sortedByDescending { it.length }
-    }
-
     override suspend fun retrieveMetadata(storageFile: StorageFile): GameMetadata? {
         val db = ovgdbManager.dbInstance
 
@@ -48,12 +37,12 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
         return metadata
     }
 
-    private fun convertToGameMetadata(rom: LibretroRom): GameMetadata {
-        val system = GameSystem.findById(rom.system!!)
+    private fun convertToGameMetadata(rom: LibretroRom): GameMetadata? {
+        val system = GameSystem.all().firstOrNull { it.id.dbname == rom.system } ?: return null
         return GameMetadata(
             name = rom.name,
             romName = rom.romName,
-            thumbnail = computeCoverUrl(system, rom.name),
+            thumbnail = null,
             system = rom.system,
             developer = rom.developer,
         )
@@ -64,7 +53,7 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
         file: StorageFile,
     ): GameMetadata? {
         return db.gameDao().findByFileName(file.name)
-            .filterNullable { extractGameSystem(it).scanOptions.scanByFilename }
+            .filterNullable { extractGameSystem(it)?.scanOptions?.scanByFilename == true }
             ?.let { convertToGameMetadata(it) }
     }
 
@@ -73,16 +62,15 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
         file: StorageFile,
     ): GameMetadata? {
         return db.gameDao().findByFileName(file.name)
-            .filterNullable { extractGameSystem(it).scanOptions.scanByPathAndFilename }
-            .filterNullable { parentContainsSystem(file.path, extractGameSystem(it).id.dbname) }
+            .filterNullable { extractGameSystem(it)?.scanOptions?.scanByPathAndFilename == true }
+            .filterNullable { extractGameSystem(it)?.let { system -> parentContainsSystem(file.path, system.id.dbname) } == true }
             ?.let { convertToGameMetadata(it) }
     }
 
     private fun findByPathAndSupportedExtension(file: StorageFile): GameMetadata? {
         val system =
-            sortedSystemIds
-                .filter { parentContainsSystem(file.path, it) }
-                .map { GameSystem.findById(it) }
+            GameSystem.all()
+                .filter { parentContainsSystem(file.path, it.id.dbname) }
                 .filter { it.scanOptions.scanByPathAndSupportedExtensions }
                 .firstOrNull { it.supportedExtensions.contains(file.extension) }
 
@@ -155,29 +143,7 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
         return result
     }
 
-    private fun extractGameSystem(rom: LibretroRom): GameSystem {
-        return GameSystem.findById(rom.system!!)
-    }
+    private fun extractGameSystem(rom: LibretroRom): GameSystem? =
+        GameSystem.all().firstOrNull { it.id.dbname == rom.system }
 
-    private fun computeCoverUrl(
-        system: GameSystem,
-        name: String?,
-    ): String? {
-        var systemName = system.libretroFullName
-
-        // Specific mame version don't have any thumbnails in Libretro database
-        if (system.id == SystemID.MAME2003PLUS) {
-            systemName = "MAME"
-        }
-
-        if (name == null) {
-            return null
-        }
-
-        val imageType = "Named_Boxarts"
-
-        val thumbGameName = name.replace(THUMB_REPLACE, "_")
-
-        return "http://thumbnails.libretro.com/$systemName/$imageType/$thumbGameName.png"
-    }
 }

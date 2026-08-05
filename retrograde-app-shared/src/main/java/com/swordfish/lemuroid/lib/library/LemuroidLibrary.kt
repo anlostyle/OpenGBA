@@ -95,7 +95,7 @@ class LemuroidLibrary(
         val entries = batch.map { fetchEntriesFromDatabase(it) }
 
         val existingEntries = entries.filterIsInstance<ScanEntry.GameFile>()
-        handleExistingEntries(existingEntries, startedAtMs)
+        handleExistingEntries(existingEntries, startedAtMs, provider)
 
         val newEntries =
             entries.filterIsInstance<ScanEntry.File>()
@@ -124,18 +124,25 @@ class LemuroidLibrary(
     private fun handleExistingEntries(
         entries: List<ScanEntry.GameFile>,
         startedAtMs: Long,
+        provider: StorageProvider,
     ) {
-        updateGames(entries, startedAtMs)
+        updateGames(entries, startedAtMs, provider)
         updateDataFiles(entries, startedAtMs)
     }
 
     private fun updateGames(
         entries: List<ScanEntry.GameFile>,
         startedAtMs: Long,
+        provider: StorageProvider,
     ) {
         val updatedGames =
             entries
-                .map { it.game.copy(lastIndexedAt = startedAtMs) }
+                .map {
+                    it.game.copy(
+                        lastIndexedAt = startedAtMs,
+                        coverFrontUrl = provider.findArtworkUri(it.file.primaryFile)?.toString(),
+                    )
+                }
 
         updatedGames
             .forEach { Timber.d("Updating game: $it") }
@@ -240,7 +247,7 @@ class LemuroidLibrary(
                 .mapNotNull { safeStorageFile(provider, it) }
                 .mapNotNull { storageFile ->
                     val metadata = metadataProvider.retrieveMetadata(storageFile)
-                    convertGameMetadataToGame(groupedStorageFile, storageFile, metadata, startedAtMs)
+                    convertGameMetadataToGame(groupedStorageFile, storageFile, provider, metadata, startedAtMs)
                 }
                 .firstOrNull()
 
@@ -278,6 +285,7 @@ class LemuroidLibrary(
     private fun convertGameMetadataToGame(
         groupedStorageFile: GroupedStorageFiles,
         storageFile: StorageFile,
+        provider: StorageProvider,
         gameMetadata: GameMetadata?,
         lastIndexedAt: Long,
     ): Game? {
@@ -301,7 +309,7 @@ class LemuroidLibrary(
             title = gameMetadata.name ?: groupedStorageFile.primaryFile.name,
             systemId = gameSystem.id.dbname,
             developer = gameMetadata.developer,
-            coverFrontUrl = gameMetadata.thumbnail,
+            coverFrontUrl = provider.findArtworkUri(groupedStorageFile.primaryFile)?.toString(),
             lastIndexedAt = lastIndexedAt,
         )
     }

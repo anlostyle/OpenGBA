@@ -15,19 +15,10 @@ import com.swordfish.lemuroid.common.bitmap.toBitmap
 import com.swordfish.lemuroid.lib.library.db.entity.Game
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.http.GET
-import retrofit2.http.Streaming
-import retrofit2.http.Url
-import java.io.InputStream
 
 class ShortcutsGenerator(
     private val appContext: Context,
-    retrofit: Retrofit,
 ) {
-    private val thumbnailsApi = retrofit.create(ThumbnailsApi::class.java)
-
     suspend fun pinShortcutForGame(game: Game) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
             return
@@ -51,8 +42,11 @@ class ShortcutsGenerator(
         withContext(Dispatchers.IO) {
             val result =
                 runCatching {
-                    val response = thumbnailsApi.downloadThumbnail(game.coverFrontUrl!!)
-                    BitmapFactory.decodeStream(response.body()).cropToSquare()
+                    val uri = android.net.Uri.parse(game.coverFrontUrl!!)
+                    appContext.contentResolver.openInputStream(uri).use { input ->
+                        requireNotNull(input)
+                        requireNotNull(BitmapFactory.decodeStream(input)).cropToSquare()
+                    }
                 }
             result.getOrElse { retrieveFallbackBitmap(game) }
         }
@@ -74,13 +68,5 @@ class ShortcutsGenerator(
 
         val shortcutManager = appContext.getSystemService(ShortcutManager::class.java)!!
         return shortcutManager.isRequestPinShortcutSupported
-    }
-
-    interface ThumbnailsApi {
-        @GET
-        @Streaming
-        suspend fun downloadThumbnail(
-            @Url url: String,
-        ): Response<InputStream>
     }
 }
