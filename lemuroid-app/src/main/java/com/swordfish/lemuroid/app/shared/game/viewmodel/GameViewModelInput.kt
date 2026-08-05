@@ -329,7 +329,10 @@ class GameViewModelInput(
                         }
 
                     if (action == KeyEvent.ACTION_DOWN) {
-                        val matchedHold = holds.firstOrNull { pressedKeys.containsAll(it.keys) }
+                        val matchedHold =
+                            holds.firstOrNull {
+                                keyCode in it.keys && pressedKeys.containsAll(it.keys)
+                            }
                         if (matchedHold != null) {
                             when (matchedHold.type) {
                                 GameShortcutType.REWIND -> sideEffects.startRewind()
@@ -358,7 +361,10 @@ class GameViewModelInput(
                             return@safeCollect
                         }
                     } else if (action == KeyEvent.ACTION_UP) {
-                        val releasedHold = holds.firstOrNull { keysBeforeEvent.containsAll(it.keys) }
+                        val releasedHold =
+                            holds.firstOrNull {
+                                keyCode in it.keys && keysBeforeEvent.containsAll(it.keys)
+                            }
                         if (releasedHold != null) {
                             when (releasedHold.type) {
                                 GameShortcutType.REWIND -> sideEffects.stopRewind()
