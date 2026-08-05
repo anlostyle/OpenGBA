@@ -51,6 +51,8 @@
     <string name="settings_description_reset_settings">將 Lemuroid 重置為出廠設置</string>
     <string name="settings_title_advanced_settings">進階設定</string>
     <string name="settings_description_advanced_settings">顯示進階設定</string>
+    <string name="settings_title_restore_system_launcher">恢復系統桌面</string>
+    <string name="settings_description_restore_system_launcher">開啟 Android 主畫面應用程式設定，選擇原始桌面</string>
     <string name="settings_title_low_latency_audio">偏好低延遲音頻</string>
     <string name="settings_description_low_latency_audio">在支持的設備上減少音頻延遲。可能會增加音頻閃爍。</string>
     <string name="settings_title_direct_game_load">直接加載遊戲</string>

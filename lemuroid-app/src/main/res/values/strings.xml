@@ -74,6 +74,8 @@
 
     <string name="settings_title_advanced_settings">Advanced settings</string>
     <string name="settings_description_advanced_settings">Display advanced settings</string>
+    <string name="settings_title_restore_system_launcher">Restore system launcher</string>
+    <string name="settings_description_restore_system_launcher">Open Android Home app settings to choose the original launcher</string>
     <string name="settings_title_low_latency_audio">Prefer low-latency audio</string>
     <string name="settings_description_low_latency_audio">Reduce audio latency on supported devices. Might increase audio glitches.</string>
 

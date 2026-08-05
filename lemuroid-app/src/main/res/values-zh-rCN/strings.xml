@@ -64,6 +64,8 @@
     <string name="settings_description_reset_settings">重置 OpenGBA 为出厂设置</string>
     <string name="settings_title_advanced_settings">高级设置</string>
     <string name="settings_description_advanced_settings">显示高级设置</string>
+    <string name="settings_title_restore_system_launcher">恢复系统桌面</string>
+    <string name="settings_description_restore_system_launcher">打开 Android 主屏幕应用设置，选择原始桌面</string>
     <string name="settings_title_low_latency_audio">偏好低延迟音频</string>
     <string name="settings_description_low_latency_audio">在支持的设备上减少音频延迟。可能会增加音频闪烁。</string>
     <string name="settings_title_direct_game_load">直接加载游戏</string>

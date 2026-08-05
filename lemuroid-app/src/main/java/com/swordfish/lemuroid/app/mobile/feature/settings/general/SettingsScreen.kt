@@ -1,6 +1,8 @@
 package com.swordfish.lemuroid.app.mobile.feature.settings.general
 
+import android.content.Intent
 import android.net.Uri
+import android.provider.Settings
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -123,6 +125,8 @@ private fun MiscSettings(
     isSaveSyncSupported: Boolean,
     navController: NavController,
 ) {
+    val context = LocalContext.current
+
     LemuroidCardSettingsGroup(
         title = { Text(text = stringResource(id = R.string.settings_category_misc)) },
     ) {
@@ -156,6 +160,15 @@ private fun MiscSettings(
                 Text(text = stringResource(id = R.string.settings_description_advanced_settings))
             },
             onClick = { navController.navigateToRoute(MainRoute.SETTINGS_ADVANCED) },
+        )
+        LemuroidSettingsMenuLink(
+            title = { Text(text = stringResource(id = R.string.settings_title_restore_system_launcher)) },
+            subtitle = {
+                Text(text = stringResource(id = R.string.settings_description_restore_system_launcher))
+            },
+            onClick = {
+                context.startActivity(Intent(Settings.ACTION_HOME_SETTINGS))
+            },
         )
     }
 }
