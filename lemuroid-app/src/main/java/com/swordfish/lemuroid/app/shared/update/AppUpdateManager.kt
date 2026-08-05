@@ -68,7 +68,7 @@ class AppUpdateManager(private val context: Context) {
         Build.VERSION.SDK_INT < Build.VERSION_CODES.O || context.packageManager.canRequestPackageInstalls()
 
     private fun fetchManifest(): UpdateManifest {
-        val connection = openConnection(MANIFEST_URL)
+        val connection = openConnection("$MANIFEST_URL?ts=${System.currentTimeMillis()}")
         return connection.inputStream.use { input ->
             val json = JSONObject(input.bufferedReader().use { it.readText() })
             UpdateManifest(
@@ -99,6 +99,8 @@ class AppUpdateManager(private val context: Context) {
             requestMethod = "GET"
             connectTimeout = NETWORK_TIMEOUT_MS
             readTimeout = NETWORK_TIMEOUT_MS
+            useCaches = false
+            setRequestProperty("Cache-Control", "no-cache")
             instanceFollowRedirects = true
             connect()
             check(responseCode in 200..299) { "Update server returned HTTP $responseCode" }

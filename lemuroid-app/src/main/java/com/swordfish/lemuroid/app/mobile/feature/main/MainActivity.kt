@@ -51,8 +51,6 @@ import com.swordfish.lemuroid.app.mobile.feature.settings.inputdevices.InputDevi
 import com.swordfish.lemuroid.app.mobile.feature.settings.savesync.SaveSyncSettingsScreen
 import com.swordfish.lemuroid.app.mobile.feature.settings.savesync.SaveSyncSettingsViewModel
 import com.swordfish.lemuroid.app.mobile.feature.shortcuts.ShortcutsGenerator
-import com.swordfish.lemuroid.app.mobile.feature.systems.MetaSystemsScreen
-import com.swordfish.lemuroid.app.mobile.feature.systems.MetaSystemsViewModel
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.AppTheme
 import com.swordfish.lemuroid.app.shared.GameInteractor
 import com.swordfish.lemuroid.app.shared.game.BaseGameActivity
@@ -250,17 +248,14 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                         )
                     }
                     composable(MainRoute.SYSTEMS) {
-                        MetaSystemsScreen(
+                        GamesScreen(
                             modifier = Modifier,
-                            navController = navController,
                             viewModel =
                                 viewModel(
-                                    factory =
-                                        MetaSystemsViewModel.Factory(
-                                            retrogradeDb,
-                                            applicationContext,
-                                        ),
+                                    factory = GamesViewModel.Factory(retrogradeDb, MetaSystemID.GBA),
                                 ),
+                            onGameClick = onGameClick,
+                            onGameLongClick = onGameLongClick,
                         )
                     }
                     composable(MainRoute.SYSTEM_GAMES) { entry ->

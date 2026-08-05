@@ -39,10 +39,38 @@ fun GameMenuHomeScreen(
     onResult: KFunction1<Intent.() -> Unit, Unit>,
 ) {
     var showCheatsDialog by remember { mutableStateOf(false) }
+    var showRewindHelp by remember { mutableStateOf(false) }
+    var showShortcutHelp by remember { mutableStateOf(false) }
     var cheatText by remember(gameMenuRequest.cheats) { mutableStateOf(gameMenuRequest.cheats) }
 
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
         if (gameMenuRequest.coreConfig.statesSupported) {
+            LemuroidSettingsMenuLink(
+                title = { Text(text = stringResource(id = R.string.game_menu_quick_save)) },
+                icon = {
+                    Icon(
+                        painterResource(R.drawable.ic_menu_save),
+                        contentDescription = stringResource(id = R.string.game_menu_quick_save),
+                    )
+                },
+                onClick = {
+                    onResult { putExtra(GameMenuContract.RESULT_QUICK_SAVE, true) }
+                },
+            )
+
+            LemuroidSettingsMenuLink(
+                title = { Text(text = stringResource(id = R.string.game_menu_quick_load)) },
+                icon = {
+                    Icon(
+                        painterResource(R.drawable.ic_menu_load),
+                        contentDescription = stringResource(id = R.string.game_menu_quick_load),
+                    )
+                },
+                onClick = {
+                    onResult { putExtra(GameMenuContract.RESULT_QUICK_LOAD, true) }
+                },
+            )
+
             LemuroidSettingsMenuLink(
                 title = { Text(text = stringResource(id = R.string.game_menu_save)) },
                 icon = {
@@ -136,8 +164,18 @@ fun GameMenuHomeScreen(
         }
 
         LemuroidSettingsMenuLink(
+            title = { Text(text = stringResource(id = R.string.game_menu_rewind)) },
+            onClick = { showRewindHelp = true },
+        )
+
+        LemuroidSettingsMenuLink(
             title = { Text(text = stringResource(id = R.string.game_menu_cheats)) },
             onClick = { showCheatsDialog = true },
+        )
+
+        LemuroidSettingsMenuLink(
+            title = { Text(text = stringResource(id = R.string.game_menu_shortcuts)) },
+            onClick = { showShortcutHelp = true },
         )
 
         if (gameMenuRequest.numDisks > 1) {
@@ -241,6 +279,32 @@ fun GameMenuHomeScreen(
                         onResult { putExtra(GameMenuContract.RESULT_CHEATS, cheatText) }
                     },
                 ) {
+                    Text(stringResource(R.string.ok))
+                }
+            },
+        )
+    }
+
+    if (showRewindHelp) {
+        AlertDialog(
+            onDismissRequest = { showRewindHelp = false },
+            title = { Text(stringResource(R.string.game_menu_rewind)) },
+            text = { Text(stringResource(R.string.game_menu_rewind_description)) },
+            confirmButton = {
+                TextButton(onClick = { showRewindHelp = false }) {
+                    Text(stringResource(R.string.ok))
+                }
+            },
+        )
+    }
+
+    if (showShortcutHelp) {
+        AlertDialog(
+            onDismissRequest = { showShortcutHelp = false },
+            title = { Text(stringResource(R.string.game_menu_shortcuts)) },
+            text = { Text(stringResource(R.string.game_menu_shortcuts_description)) },
+            confirmButton = {
+                TextButton(onClick = { showShortcutHelp = false }) {
                     Text(stringResource(R.string.ok))
                 }
             },

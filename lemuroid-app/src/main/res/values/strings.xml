@@ -1,7 +1,7 @@
 <resources>
     <string name="title_home">Home</string>
     <string name="title_search">Search</string>
-    <string name="title_systems">Game Library</string>
+    <string name="title_systems">All Games</string>
     <string name="title_games">Games</string>
     <string name="title_settings">Settings</string>
     <string name="recent">Recents</string>
@@ -56,6 +56,7 @@
     <string name="settings_gamepad_category_enabled">Enabled devices</string>
     <string name="settings_gamepad_category_general">General</string>
     <string name="settings_gamepad_title_reset_bindings">Reset bindings</string>
+    <string name="settings_gamepad_unbound">Not bound</string>
     <string name="settings_gamepad_title_game_menu">Menu</string>
 
     <string name="settings_title_open_cores_selection">Change Cores</string>
@@ -121,8 +122,10 @@
     <string name="home_notification_desmume_deprecated_message">Save in-game, then switch to melonDS to keep your progress. Save states won\’t transfer and will remain usable only in DeSmuME.</string>
     <string name="home_notification_desmume_deprecated_action">Switch to melonDS</string>
 
-    <string name="game_menu_save">Save</string>
-    <string name="game_menu_load">Load</string>
+    <string name="game_menu_quick_save">Quick Save</string>
+    <string name="game_menu_quick_load">Quick Load</string>
+    <string name="game_menu_save">Save State</string>
+    <string name="game_menu_load">Load State</string>
     <string name="game_menu_restart">Restart</string>
     <string name="game_menu_quit">Quit</string>
     <string name="game_menu_settings">Settings</string>
@@ -132,7 +135,11 @@
     <string name="game_menu_mute_audio">Mute</string>
     <string name="game_menu_fast_forward">Fast-Forward</string>
     <string name="game_menu_fast_forward_speed">Fast-Forward Speed</string>
+    <string name="game_menu_rewind">Rewind</string>
+    <string name="game_menu_rewind_description">Hold X to rewind through the last 30 seconds. The shortcut can be changed in Settings &gt; Input.</string>
     <string name="game_menu_cheats">Cheats</string>
+    <string name="game_menu_shortcuts">Default Shortcuts</string>
+    <string name="game_menu_shortcuts_description">A: GBA A\nB: GBA B\nL1/R1: GBA L/R\nL2: Menu\nHold X: Rewind\nHold R2: Fast-forward\n\nShortcuts can be customized in Settings &gt; Input.</string>
     <string name="game_menu_cheats_hint">One code per line</string>
     <string name="game_menu_change_disk_disk">Disk %1$s</string>
     <string name="game_menu_tilt_sensor">Tilt Sensor</string>
@@ -197,7 +204,7 @@
     <string name="gamepad_binding_update_title">Associate \"RetroPad %1$s\"</string>
     <string name="gamepad_binding_update_description">Press a button on your \"%1$s\"</string>
     <string name="shortcut_binding_update_title">Associate \"Shortcut %1$s\"</string>
-    <string name="shortcut_binding_update_description">Press the first, then second button to bind a combo on your \"%1$s\"</string>
+    <string name="shortcut_binding_update_description">Press the button to bind on your \"%1$s\"</string>
 
     <string name="tv_search_results">Games</string>
     <string name="tv_game_message_missing_gamepad">Gamepads are required to play. Please connect one.</string>
@@ -215,7 +222,7 @@
         <b>&#8226;How do I use OpenGBA?</b><br/>
         Copy your GBA ROM files into a directory on your device and select it within OpenGBA. Subdirectories are supported. After the scan completes you should see your games.<br/><br/>
         <b>&#8226;Handheld shortcuts</b><br/>
-        Hold R2 to fast-forward and L2 to rewind through the last 30 seconds.<br/><br/>
+        L2 opens the menu. Hold X to rewind through the last 30 seconds. Hold R2 to fast-forward.<br/><br/>
         <b>&#8226;Why aren\'t my games detected?</b><br/>
         If your games are compressed, try uncompressing them. If this doesn\'t work try putting ROMs into separate directories, one for each system with the following names: $SYSTEMS.
     ]]></string>

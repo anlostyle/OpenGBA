@@ -379,6 +379,12 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                     baseGameScreenViewModel.reset()
                 }
             }
+            if (data?.getBooleanExtra(GameMenuContract.RESULT_QUICK_SAVE, false) == true) {
+                baseGameScreenViewModel.saveQuickSave()
+            }
+            if (data?.getBooleanExtra(GameMenuContract.RESULT_QUICK_LOAD, false) == true) {
+                baseGameScreenViewModel.loadQuickSave()
+            }
             if (data?.hasExtra(GameMenuContract.RESULT_SAVE) == true) {
                 GlobalScope.launch {
                     baseGameScreenViewModel.saveSlot(data.getIntExtra(GameMenuContract.RESULT_SAVE, 0))

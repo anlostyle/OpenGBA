@@ -16,6 +16,8 @@ object GameMenuContract {
     const val EXTRA_CHEATS = "EXTRA_CHEATS"
 
     const val RESULT_RESET = "RESULT_RESET"
+    const val RESULT_QUICK_SAVE = "RESULT_QUICK_SAVE"
+    const val RESULT_QUICK_LOAD = "RESULT_QUICK_LOAD"
     const val RESULT_SAVE = "RESULT_SAVE"
     const val RESULT_LOAD = "RESULT_LOAD"
     const val RESULT_QUIT = "RESULT_QUIT"

@@ -2,7 +2,7 @@
 <resources>
     <string name="title_home">首页</string>
     <string name="title_search">搜索</string>
-    <string name="title_systems">游戏库</string>
+    <string name="title_systems">全部游戏</string>
     <string name="title_games">游戏</string>
     <string name="title_settings">设置</string>
     <string name="recent">最近</string>
@@ -50,6 +50,7 @@
     <string name="settings_gamepad_category_enabled">已启用的设备</string>
     <string name="settings_gamepad_category_general">常规</string>
     <string name="settings_gamepad_title_reset_bindings">重置绑定</string>
+    <string name="settings_gamepad_unbound">未绑定</string>
     <string name="settings_gamepad_title_game_menu">菜单</string>
     <string name="settings_title_open_cores_selection">更改核心</string>
     <string name="settings_description_open_cores_selection">选择与系统关联的核心</string>
@@ -100,8 +101,10 @@
     <string name="home_notification_desmume_deprecated_title">Désmume 即将退出</string>
     <string name="home_notification_desmume_deprecated_message">在游戏中保存，切换到melondDS，进度将会传输。保存状态将保持与 DeSmuME 的绑定。</string>
     <string name="home_notification_desmume_deprecated_action">切换到熔化</string>
-    <string name="game_menu_save">保存</string>
-    <string name="game_menu_load">载入</string>
+    <string name="game_menu_quick_save">快速存档</string>
+    <string name="game_menu_quick_load">快速读取</string>
+    <string name="game_menu_save">存档槽</string>
+    <string name="game_menu_load">读取存档</string>
     <string name="game_menu_restart">重新开始</string>
     <string name="game_menu_quit">退出</string>
     <string name="game_menu_settings">设置</string>
@@ -111,7 +114,11 @@
     <string name="game_menu_mute_audio">静音</string>
     <string name="game_menu_fast_forward">快进</string>
     <string name="game_menu_fast_forward_speed">快进速度</string>
+    <string name="game_menu_rewind">回溯</string>
+    <string name="game_menu_rewind_description">按住 X 回溯最近 30 秒。可以在“设置 &gt; 输入”中自定义按键。</string>
     <string name="game_menu_cheats">金手指</string>
+    <string name="game_menu_shortcuts">默认快捷键</string>
+    <string name="game_menu_shortcuts_description">A：GBA A\nB：GBA B\nL1/R1：GBA L/R\nL2：菜单\n按住 X：回溯\n按住 R2：加速\n\n可以在“设置 &gt; 输入”中自定义快捷键。</string>
     <string name="game_menu_cheats_hint">每行输入一个代码</string>
     <string name="game_menu_change_disk_disk">碟片 %1$s</string>
     <string name="game_menu_tilt_sensor">倾斜传感器</string>
@@ -160,7 +167,7 @@
     <string name="gamepad_binding_update_title">关联 \"RetroPad %1$s\"</string>
     <string name="gamepad_binding_update_description">按下你的 \"%1$s\" 上的一个按钮</string>
     <string name="shortcut_binding_update_title">关联 \"快捷方式 %1$s\"</string>
-    <string name="shortcut_binding_update_description">按第一个按钮，然后按第二个按钮将组合绑定到您的\"%1$s\"</string>
+    <string name="shortcut_binding_update_description">按下要绑定到\"%1$s\"的按钮</string>
     <string name="tv_search_results">游戏</string>
     <string name="tv_game_message_missing_gamepad">需要手柄才能玩。 请连接手柄。</string>
     <string name="game_edit_touch_controls_error_not_visible">您需要断开手柄来编辑您的触摸控制</string>
@@ -170,7 +177,7 @@
     <string name="lemuroid_help_content"><![CDATA[        <b>&#8226;我如何使用 OpenGBA？</b><br/>
         将 GBA ROM 文件复制到设备上的一个目录里，并在 OpenGBA 中选择它。目录可以包含子目录。扫描完成后，您应该会看到自己的游戏。<br/><br/>
         <b>&#8226;掌机快捷操作</b><br/>
-        按住 R2 快进，按住 L2 回溯最近 30 秒。<br/><br/>
+        L2 呼出菜单，按住 X 回溯最近 30 秒，按住 R2 加速。<br/><br/>
         <b>&#8226;为什么检测不到我的游戏？</b><br/>
         如果您的游戏是被压缩过的，请尝试将其解压缩。 如果这样做不起作用，请尝试将 ROM 放入单独的目录里，每个系统都有一个目录，其名称如下：$SYSTEMS。
     ]]></string>

@@ -86,10 +86,10 @@ class InputDevicesSettingsViewModel(
 
         return combine(devicesFlow, bindingsFlow, shortcutsFlow) { devices, allBindings, allShortcuts ->
             devices.associateWith { device ->
+                val configuredShortcuts = allShortcuts[device].orEmpty().associateBy { it.type }
                 val shortcuts =
-                    allShortcuts[device]?.filter {
-                        it.type in device.getLemuroidInputDevice().getSupportedShortcuts()
-                    } ?: emptyList()
+                    device.getLemuroidInputDevice().getSupportedShortcuts()
+                        .map { type -> configuredShortcuts[type] ?: GameShortcut(type, emptySet()) }
                 val keys = allBindings(device).reverseLookup()
 
                 BindingsView(keys, shortcuts)
