@@ -1,10 +1,17 @@
 package com.swordfish.lemuroid.app.mobile.shared.compose.ui
 
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 private val LightColorScheme =
     lightColorScheme(
@@ -41,42 +48,79 @@ private val LightColorScheme =
 
 private val DarkColorScheme =
     darkColorScheme(
-        primary = Color(0xFF78F08B),
-        onPrimary = Color(0xFF06200D),
-        primaryContainer = Color(0xFF194A24),
-        onPrimaryContainer = Color(0xFFC2FFCA),
-        secondary = Color(0xFFB9C9BA),
-        onSecondary = Color(0xFF1D2B20),
-        secondaryContainer = Color(0xFF304636),
-        onSecondaryContainer = Color(0xFFD4E7D5),
-        tertiary = Color(0xFFFFC861),
-        onTertiary = Color(0xFF372200),
-        tertiaryContainer = Color(0xFF5A4100),
-        onTertiaryContainer = Color(0xFFFFDEA0),
-        error = Color(0xFFFFB4AB),
+        primary = PixelGreen,
+        onPrimary = PixelInk,
+        primaryContainer = Color(0xFF354D1B),
+        onPrimaryContainer = PixelGreen,
+        secondary = PixelPaper,
+        onSecondary = PixelInk,
+        secondaryContainer = PixelPanelLight,
+        onSecondaryContainer = PixelPaper,
+        tertiary = PixelAmber,
+        onTertiary = PixelInk,
+        tertiaryContainer = Color(0xFF604717),
+        onTertiaryContainer = PixelPaper,
+        error = PixelRed,
         errorContainer = Color(0xFF93000A),
-        onError = Color(0xFF690005),
+        onError = PixelInk,
         onErrorContainer = Color(0xFFFFDAD6),
-        background = Color(0xFF0B0F0D),
-        onBackground = Color(0xFFE6EDE5),
-        surface = Color(0xFF0F1411),
-        onSurface = Color(0xFFE6EDE5),
-        surfaceVariant = Color(0xFF18211B),
-        onSurfaceVariant = Color(0xFFA7B6A9),
-        outline = Color(0xFF455148),
-        inverseOnSurface = Color(0xFF0B0F0D),
-        inverseSurface = Color(0xFFE6EDE5),
-        inversePrimary = Color(0xFF17652B),
-        surfaceTint = Color(0xFF78F08B),
-        outlineVariant = Color(0xFF29352C),
+        background = PixelInk,
+        onBackground = PixelPaper,
+        surface = PixelInk,
+        onSurface = PixelPaper,
+        surfaceVariant = PixelPanel,
+        onSurfaceVariant = PixelMuted,
+        outline = PixelOutline,
+        inverseOnSurface = PixelInk,
+        inverseSurface = PixelPaper,
+        inversePrimary = Color(0xFF5F7F21),
+        surfaceTint = PixelGreen,
+        outlineVariant = PixelOutline,
         scrim = Color(0xFF000000),
-        surfaceBright = Color(0xFF27322B),
-        surfaceDim = Color(0xFF0B0F0D),
-        surfaceContainer = Color(0xFF141C17),
-        surfaceContainerHigh = Color(0xFF1A251E),
-        surfaceContainerHighest = Color(0xFF202D24),
-        surfaceContainerLow = Color(0xFF0D1310),
-        surfaceContainerLowest = Color(0xFF060A08),
+        surfaceBright = PixelPanelLight,
+        surfaceDim = PixelInk,
+        surfaceContainer = PixelPanel,
+        surfaceContainerHigh = PixelPanelLight,
+        surfaceContainerHighest = Color(0xFF2A3C46),
+        surfaceContainerLow = Color(0xFF10191E),
+        surfaceContainerLowest = PixelShadow,
+    )
+
+private val PixelTypography =
+    Typography().let { base ->
+        base.copy(
+            headlineLarge =
+                base.headlineLarge.copy(
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Black,
+                    letterSpacing = 0.sp,
+                ),
+            headlineMedium =
+                base.headlineMedium.copy(
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Black,
+                    letterSpacing = 0.sp,
+                ),
+            titleLarge = base.titleLarge.copy(fontWeight = FontWeight.Bold),
+            titleMedium = base.titleMedium.copy(fontWeight = FontWeight.Bold),
+            labelLarge =
+                base.labelLarge.copy(
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Bold,
+                    letterSpacing = 0.sp,
+                ),
+            labelMedium = base.labelMedium.copy(fontFamily = FontFamily.Monospace),
+            labelSmall = base.labelSmall.copy(fontFamily = FontFamily.Monospace),
+        )
+    }
+
+private val PixelShapes =
+    Shapes(
+        extraSmall = CutCornerShape(2.dp),
+        small = CutCornerShape(3.dp),
+        medium = CutCornerShape(4.dp),
+        large = CutCornerShape(6.dp),
+        extraLarge = CutCornerShape(8.dp),
     )
 
 @Composable
@@ -87,7 +131,11 @@ fun AppTheme(
     // Keep the handheld palette stable instead of inheriting the phone's wallpaper colors.
     val colors = if (darkTheme) DarkColorScheme else LightColorScheme
 
-    MaterialTheme(colorScheme = colors) {
+    MaterialTheme(
+        colorScheme = colors,
+        typography = PixelTypography,
+        shapes = PixelShapes,
+    ) {
         content()
     }
 }

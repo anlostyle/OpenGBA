@@ -218,6 +218,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                     GameMenuContract.EXTRA_FAST_FORWARD_SPEED,
                     baseGameScreenViewModel.getFastForwardSpeed(),
                 )
+                this.putExtra(GameMenuContract.EXTRA_SCREEN_FILTER, baseGameScreenViewModel.getScreenFilter())
                 this.putExtra(GameMenuContract.EXTRA_CURRENT_TILT_CONFIG, currentTiltConfiguration)
                 // TODO PADS... Make sure to avoid passing this if a physical pad is connected.
                 this.putExtra(GameMenuContract.EXTRA_TILT_ALL_CONFIGS, tiltConfigurations.toTypedArray())
@@ -424,6 +425,11 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                         GameMenuContract.RESULT_FAST_FORWARD_SPEED,
                         BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
                     ),
+                )
+            }
+            if (data?.hasExtra(GameMenuContract.RESULT_SCREEN_FILTER) == true) {
+                baseGameScreenViewModel.setScreenFilter(
+                    data.getStringExtra(GameMenuContract.RESULT_SCREEN_FILTER).orEmpty(),
                 )
             }
             if (data?.getBooleanExtra(GameMenuContract.RESULT_EDIT_TOUCH_CONTROLS, false) == true) {

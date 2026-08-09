@@ -1,5 +1,7 @@
 package com.swordfish.lemuroid.app.utils.android.settings
 
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -9,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ListItemColors
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
@@ -23,6 +26,10 @@ import com.alorma.compose.settings.storage.base.SettingValueState
 import com.alorma.compose.settings.ui.SettingsMenuLink
 import com.alorma.compose.settings.ui.SettingsSlider
 import com.alorma.compose.settings.ui.SettingsSwitch
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelInk
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelOutline
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPanel
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelShape
 import kotlin.math.roundToInt
 
 @Composable
@@ -34,6 +41,7 @@ fun LemuroidSettingsPage(
         modifier =
             modifier
                 .fillMaxWidth()
+                .background(PixelInk)
                 .verticalScroll(rememberScrollState())
                 .padding(top = 16.dp, bottom = 16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -91,7 +99,7 @@ fun LemuroidSettingsGroup(
     title: @Composable (() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit,
 ) {
-    Surface {
+    Surface(color = PixelPanel) {
         Column(
             modifier = modifier.fillMaxWidth(),
         ) {
@@ -109,14 +117,18 @@ fun LemuroidCardSettingsGroup(
     title: @Composable (() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit,
 ) {
-    Surface {
+    Surface(color = PixelInk) {
         Column(
             modifier =
                 modifier
                     .fillMaxWidth()
                     .padding(start = 16.dp, end = 16.dp),
         ) {
-            OutlinedCard {
+            OutlinedCard(
+                shape = PixelShape,
+                colors = CardDefaults.outlinedCardColors(containerColor = PixelPanel),
+                border = BorderStroke(1.dp, PixelOutline),
+            ) {
                 if (title != null) {
                     SettingsGroupTitleSmall(title)
                 }

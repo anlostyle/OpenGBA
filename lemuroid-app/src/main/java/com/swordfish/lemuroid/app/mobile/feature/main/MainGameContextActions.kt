@@ -1,52 +1,63 @@
 package com.swordfish.lemuroid.app.mobile.feature.main
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
+import android.view.KeyEvent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeContent
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AppShortcut
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.RestartAlt
-import androidx.compose.material3.BottomSheetDefaults
-import androidx.compose.material3.Divider
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.SheetState
-import androidx.compose.material3.SheetValue
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.key.onPreviewKeyEvent
+import androidx.compose.ui.input.key.type
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.swordfish.lemuroid.R
-import com.swordfish.lemuroid.app.mobile.shared.compose.ui.LemuroidGameTexts
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.LemuroidSmallGameImage
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelGreen
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelInk
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelKeyHint
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelOutline
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPanel
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPanelLight
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPaper
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelRed
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelShape
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.pixelFocusBrackets
 import com.swordfish.lemuroid.lib.library.db.entity.Game
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainGameContextActions(
     selectedGameState: MutableState<Game?>,
@@ -56,99 +67,96 @@ fun MainGameContextActions(
     onFavoriteToggle: (Game, Boolean) -> Unit,
     onCreateShortcut: (Game) -> Unit,
 ) {
-    val modalSheetState = rememberModalBottomSheetState(true)
-    val selectedGame = selectedGameState.value
+    val selectedGame = selectedGameState.value ?: return
+    val firstAction = remember { FocusRequester() }
 
-    LaunchedEffect(selectedGame) {
-        if (selectedGame != null) {
-            modalSheetState.show()
-        } else {
-            modalSheetState.hide()
-        }
+    LaunchedEffect(selectedGame.id) {
+        firstAction.requestFocus()
     }
 
-    if (selectedGame != null) {
-        ModalBottomSheet(
-            sheetState = modalSheetState,
-            onDismissRequest = { selectedGameState.value = null },
-        ) {
-            ContextActionContent(
-                selectedGame = selectedGame,
-                onGamePlay = onGamePlay,
-                selectedGameState = selectedGameState,
-                onGameRestart = onGameRestart,
-                onFavoriteToggle = onFavoriteToggle,
-                shortcutSupported = shortcutSupported,
-                onCreateShortcut = onCreateShortcut,
-            )
-        }
-    }
-}
-
-@Composable
-private fun ContextActionContent(
-    selectedGame: Game,
-    onGamePlay: (Game) -> Unit,
-    selectedGameState: MutableState<Game?>,
-    onGameRestart: (Game) -> Unit,
-    onFavoriteToggle: (Game, Boolean) -> Unit,
-    shortcutSupported: Boolean,
-    onCreateShortcut: (Game) -> Unit,
-) {
-    Column(
+    Box(
         modifier =
             Modifier
-                .fillMaxWidth()
-                .windowInsetsPadding(WindowInsets.safeContent.only(WindowInsetsSides.Bottom)),
+                .fillMaxSize()
+                .background(Color.Black.copy(alpha = 0.76f))
+                .onPreviewKeyEvent { event ->
+                    val keyCode = event.nativeKeyEvent.keyCode
+                    if (
+                        event.type == KeyEventType.KeyUp &&
+                        (keyCode == KeyEvent.KEYCODE_BUTTON_B || keyCode == KeyEvent.KEYCODE_BACK)
+                    ) {
+                        selectedGameState.value = null
+                        true
+                    } else {
+                        false
+                    }
+                }
+                .clickable { selectedGameState.value = null },
+        contentAlignment = Alignment.Center,
     ) {
-        ContextActionHeader(game = selectedGame)
-        Divider()
-        ContextActionEntry(
-            label = stringResource(id = R.string.game_context_menu_resume),
-            icon = Icons.Default.PlayArrow,
-            onClick = {
-                onGamePlay(selectedGame)
-                selectedGameState.value = null
-            },
-        )
-        ContextActionEntry(
-            label = stringResource(id = R.string.game_context_menu_restart),
-            icon = Icons.Default.RestartAlt,
-            onClick = {
-                onGameRestart(selectedGame)
-                selectedGameState.value = null
-            },
-        )
-
-        if (selectedGame.isFavorite) {
+        Column(
+            modifier =
+                Modifier
+                    .fillMaxWidth(0.58f)
+                    .widthIn(max = 620.dp)
+                    .background(PixelPanel, PixelShape)
+                    .border(2.dp, PixelGreen, PixelShape)
+                    .clickable { },
+        ) {
+            ContextActionHeader(selectedGame)
             ContextActionEntry(
-                label = stringResource(id = R.string.game_context_menu_remove_from_favorites),
-                icon = Icons.Default.FavoriteBorder,
+                modifier = Modifier.focusRequester(firstAction),
+                label = stringResource(R.string.game_context_menu_resume),
+                icon = Icons.Default.PlayArrow,
                 onClick = {
-                    onFavoriteToggle(selectedGame, false)
+                    onGamePlay(selectedGame)
                     selectedGameState.value = null
                 },
             )
-        } else {
             ContextActionEntry(
-                label = stringResource(id = R.string.game_context_menu_add_to_favorites),
-                icon = Icons.Default.Favorite,
+                label = stringResource(R.string.game_context_menu_restart),
+                icon = Icons.Default.RestartAlt,
                 onClick = {
-                    onFavoriteToggle(selectedGame, true)
+                    onGameRestart(selectedGame)
                     selectedGameState.value = null
                 },
             )
-        }
-
-        if (shortcutSupported) {
             ContextActionEntry(
-                label = stringResource(id = R.string.game_context_menu_create_shortcut),
-                icon = Icons.Default.AppShortcut,
+                label =
+                    stringResource(
+                        if (selectedGame.isFavorite) {
+                            R.string.game_context_menu_remove_from_favorites
+                        } else {
+                            R.string.game_context_menu_add_to_favorites
+                        },
+                    ),
+                icon = if (selectedGame.isFavorite) Icons.Default.FavoriteBorder else Icons.Default.Favorite,
                 onClick = {
-                    onCreateShortcut(selectedGame)
+                    onFavoriteToggle(selectedGame, !selectedGame.isFavorite)
                     selectedGameState.value = null
                 },
             )
+            if (shortcutSupported) {
+                ContextActionEntry(
+                    label = stringResource(R.string.game_context_menu_create_shortcut),
+                    icon = Icons.Default.AppShortcut,
+                    onClick = {
+                        onCreateShortcut(selectedGame)
+                        selectedGameState.value = null
+                    },
+                )
+            }
+            Row(
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        .border(1.dp, PixelOutline)
+                        .padding(horizontal = 16.dp, vertical = 9.dp),
+                horizontalArrangement = Arrangement.spacedBy(28.dp),
+            ) {
+                PixelKeyHint("A", stringResource(R.string.launcher_confirm), PixelGreen)
+                PixelKeyHint("B", stringResource(R.string.cancel), PixelRed)
+            }
         }
     }
 }
@@ -157,28 +165,32 @@ private fun ContextActionContent(
 private fun ContextActionHeader(game: Game) {
     Row(
         modifier =
-            Modifier.padding(
-                start = 16.dp,
-                top = 8.dp,
-                bottom = 8.dp,
-                end = 16.dp,
-            ),
+            Modifier
+                .fillMaxWidth()
+                .background(PixelPaper, PixelShape)
+                .padding(12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         LemuroidSmallGameImage(
-            modifier =
-                Modifier
-                    .width(40.dp)
-                    .height(40.dp)
-                    .align(Alignment.CenterVertically),
+            modifier = Modifier.size(54.dp).border(2.dp, PixelInk, PixelShape),
             game = game,
         )
-        LemuroidGameTexts(
-            modifier =
-                Modifier
-                    .weight(1f)
-                    .padding(start = 8.dp),
-            game = game,
-        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = game.title,
+                color = PixelInk,
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Black,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                text = game.systemId.uppercase(),
+                color = PixelInk.copy(alpha = 0.68f),
+                style = MaterialTheme.typography.labelMedium,
+            )
+        }
     }
 }
 
@@ -189,39 +201,31 @@ private fun ContextActionEntry(
     icon: ImageVector,
     onClick: () -> Unit,
 ) {
+    var focused by remember { mutableStateOf(false) }
+
     Row(
         modifier =
             modifier
                 .fillMaxWidth()
+                .height(52.dp)
+                .onFocusChanged { focused = it.isFocused }
+                .pixelFocusBrackets(focused)
+                .background(if (focused) PixelPanelLight else PixelPanel)
                 .clickable(onClick = onClick)
-                .height(56.dp),
+                .padding(horizontal = 16.dp),
         verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(14.dp),
     ) {
         Icon(
-            modifier = Modifier.padding(start = 16.dp),
             imageVector = icon,
-            contentDescription = label,
+            contentDescription = null,
+            tint = if (focused) PixelGreen else PixelPaper,
         )
         Text(
-            modifier = Modifier.padding(start = 16.dp),
             text = label,
-        )
-    }
-}
-
-@Composable
-@OptIn(ExperimentalMaterial3Api::class)
-private fun FakeScrim(modalSheetState: SheetState) {
-    AnimatedVisibility(
-        visible = modalSheetState.targetValue != SheetValue.Hidden,
-        enter = fadeIn(),
-        exit = fadeOut(),
-    ) {
-        Box(
-            modifier =
-                Modifier
-                    .fillMaxSize()
-                    .background(BottomSheetDefaults.ScrimColor),
+            color = if (focused) PixelGreen else PixelPaper,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold,
         )
     }
 }

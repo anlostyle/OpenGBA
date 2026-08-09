@@ -27,6 +27,7 @@ import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.mobile.feature.gamemenu.tilt.TiltConfigurationMenuEntry
 import com.swordfish.lemuroid.app.shared.GameMenuContract
 import com.swordfish.lemuroid.app.shared.game.BaseGameScreenViewModel
+import com.swordfish.lemuroid.app.utils.android.stringListResource
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsList
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsMenuLink
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsSwitch
@@ -131,6 +132,19 @@ fun GameMenuHomeScreen(
             state = rememberMemoryBooleanSettingState(!gameMenuRequest.audioEnabled),
             onCheckedChange = {
                 onResult { putExtra(GameMenuContract.RESULT_ENABLE_AUDIO, !it) }
+            },
+        )
+
+        val screenFilters = stringListResource(R.array.pref_key_shader_filter_values)
+        LemuroidSettingsList(
+            title = { Text(text = stringResource(id = R.string.display_filter)) },
+            items = stringListResource(R.array.pref_key_shader_filter_display_names),
+            state =
+                rememberMemoryIntSettingState(
+                    screenFilters.indexOf(gameMenuRequest.screenFilter).coerceAtLeast(0),
+                ),
+            onItemSelected = { index, _ ->
+                onResult { putExtra(GameMenuContract.RESULT_SCREEN_FILTER, screenFilters[index]) }
             },
         )
 

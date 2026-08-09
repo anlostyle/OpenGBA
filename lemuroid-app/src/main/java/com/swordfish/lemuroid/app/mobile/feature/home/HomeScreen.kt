@@ -1,58 +1,67 @@
 package com.swordfish.lemuroid.app.mobile.feature.home
 
-import android.Manifest
-import android.os.Build
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.ExperimentalFoundationApi
+import android.text.format.DateUtils
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.border
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Button
-import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.Lifecycle
 import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.LemuroidGameCard
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.LemuroidGameImage
-import com.swordfish.lemuroid.app.utils.android.ComposableLifecycle
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelGreen
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelInk
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelMuted
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelOutline
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPanel
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPaper
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelShadow
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelShape
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.onLauncherMenu
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.pixelFocusBrackets
 import com.swordfish.lemuroid.app.utils.games.GameUtils
-import com.swordfish.lemuroid.common.displayDetailsSettingsScreen
 import com.swordfish.lemuroid.lib.library.db.entity.Game
+import java.text.DateFormat
+import java.util.Date
 
 @Composable
 fun HomeScreen(
@@ -60,180 +69,126 @@ fun HomeScreen(
     viewModel: HomeViewModel,
     onGameClick: (Game) -> Unit,
     onGameLongClick: (Game) -> Unit,
-    onOpenCoreSelection: () -> Unit,
 ) {
     val context = LocalContext.current
-    val applicationContext = context.applicationContext
 
-    ComposableLifecycle { _, event ->
-        when (event) {
-            Lifecycle.Event.ON_RESUME -> {
-                viewModel.updatePermissions(applicationContext)
-            }
-            else -> { }
-        }
-    }
-
-    val permissionsLauncher =
-        rememberLauncherForActivityResult(
-            ActivityResultContracts.RequestPermission(),
-        ) { isGranted: Boolean ->
-            if (!isGranted) {
-                context.displayDetailsSettingsScreen()
-            }
-        }
-
-    val state = viewModel.getViewStates().collectAsState(HomeViewModel.UIState())
-    HomeScreen(
-        modifier,
-        state.value,
-        onGameClick,
-        onGameLongClick,
-        onOpenCoreSelection,
-        {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-                return@HomeScreen
-            }
-
-            permissionsLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-        },
-        { permissionsLauncher.launch(Manifest.permission.RECORD_AUDIO) },
-        { viewModel.changeLocalStorageFolder(context) },
-    ) // TODO COMPOSE We need to understand what's going to happen here.
+    val state = viewModel.getViewStates().collectAsState(HomeViewModel.UIState()).value
+    HomeContent(
+        modifier = modifier,
+        state = state,
+        onGameClicked = onGameClick,
+        onGameLongClick = onGameLongClick,
+        onSetDirectoryClicked = { viewModel.changeLocalStorageFolder(context) },
+    )
 }
 
 @Composable
-private fun HomeScreen(
-    modifier: Modifier = Modifier,
+private fun HomeContent(
+    modifier: Modifier,
     state: HomeViewModel.UIState,
     onGameClicked: (Game) -> Unit,
     onGameLongClick: (Game) -> Unit,
-    onOpenCoreSelection: () -> Unit,
-    onEnableNotificationsClicked: () -> Unit,
-    onEnableMicrophoneClicked: () -> Unit,
     onSetDirectoryClicked: () -> Unit,
 ) {
-    Column(
-        modifier =
-            modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 20.dp, vertical = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(20.dp),
-    ) {
+    Box(modifier = modifier.fillMaxSize().padding(10.dp)) {
         if (state.gamesCount == 0) {
             HomeEmptyState(
+                modifier = Modifier.fillMaxSize(),
                 scanning = state.indexInProgress,
                 onSetDirectoryClicked = onSetDirectoryClicked,
             )
         } else {
-            val featuredGame = state.recentGames.firstOrNull() ?: state.favoritesGames.firstOrNull()
-            featuredGame?.let {
-                HomeFeaturedGame(
-                    game = it,
-                    onClick = { onGameClicked(it) },
-                    onLongClick = { onGameLongClick(it) },
-                )
+            val featuredGame =
+                state.recentGames.firstOrNull()
+                    ?: state.favoritesGames.firstOrNull()
+                    ?: state.discoveryGames.firstOrNull()
+            val shelfGames =
+                (state.recentGames + state.favoritesGames + state.discoveryGames)
+                    .distinctBy { it.id }
+                    .take(HomeViewModel.CAROUSEL_MAX_ITEMS)
+
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(9.dp),
+            ) {
+                featuredGame?.let { game ->
+                    HomeFeaturedGame(
+                        modifier = Modifier.weight(1.1f),
+                        game = game,
+                        onClick = { onGameClicked(game) },
+                        onLongClick = { onGameLongClick(game) },
+                    )
+                }
+                if (shelfGames.isNotEmpty()) {
+                    HomeShelf(
+                        modifier = Modifier.weight(0.9f),
+                        games = shelfGames,
+                        onGameClicked = onGameClicked,
+                        onGameLongClick = onGameLongClick,
+                    )
+                }
             }
-
-            HomeRow(stringResource(R.string.recent), state.recentGames, onGameClicked, onGameLongClick)
-            HomeRow(stringResource(R.string.favorites), state.favoritesGames, onGameClicked, onGameLongClick)
-            HomeRow(stringResource(R.string.discover), state.discoveryGames, onGameClicked, onGameLongClick)
-        }
-
-        AnimatedVisibility(state.showNoNotificationPermissionCard) {
-            HomeNotification(
-                titleId = R.string.home_notification_title,
-                messageId = R.string.home_notification_message,
-                actionId = R.string.home_notification_action,
-                onAction = onEnableNotificationsClicked,
-            )
-        }
-        AnimatedVisibility(state.showNoMicrophonePermissionCard) {
-            HomeNotification(
-                titleId = R.string.home_microphone_title,
-                messageId = R.string.home_microphone_message,
-                actionId = R.string.home_microphone_action,
-                onAction = onEnableMicrophoneClicked,
-            )
-        }
-        AnimatedVisibility(state.showDesmumeDeprecatedCard) {
-            HomeNotification(
-                titleId = R.string.home_notification_desmume_deprecated_title,
-                messageId = R.string.home_notification_desmume_deprecated_message,
-                actionId = R.string.home_notification_desmume_deprecated_action,
-                onAction = onOpenCoreSelection,
-            )
         }
     }
 }
 
 @Composable
 private fun HomeEmptyState(
+    modifier: Modifier = Modifier,
     scanning: Boolean,
     onSetDirectoryClicked: () -> Unit,
 ) {
     Surface(
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
-        color = MaterialTheme.colorScheme.surfaceVariant,
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
+        modifier = modifier,
+        shape = PixelShape,
+        color = PixelPanel,
+        border = BorderStroke(2.dp, PixelOutline),
     ) {
         Column(
-            modifier = Modifier.padding(20.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp),
+            modifier = Modifier.padding(24.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-            ) {
-                Surface(
-                    shape = RoundedCornerShape(10.dp),
-                    color = MaterialTheme.colorScheme.primaryContainer,
-                ) {
-                    Text(
-                        text = "GBA",
-                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp),
-                        color = MaterialTheme.colorScheme.onPrimaryContainer,
-                        style = MaterialTheme.typography.labelLarge,
-                        fontWeight = FontWeight.Bold,
-                    )
-                }
-                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                    Text(
-                        text = "GBA LIBRARY",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.primary,
-                        fontWeight = FontWeight.Bold,
-                    )
-                    Text(
-                        text = stringResource(R.string.home_empty_title),
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.SemiBold,
-                    )
-                }
-            }
+            Text(
+                text = "GBA // LIBRARY",
+                color = PixelGreen,
+                style = MaterialTheme.typography.labelLarge,
+                fontFamily = FontFamily.Monospace,
+                fontWeight = FontWeight.Black,
+            )
+            Text(
+                text = stringResource(R.string.home_empty_title),
+                modifier = Modifier.padding(top = 8.dp),
+                color = PixelPaper,
+                style = MaterialTheme.typography.headlineMedium,
+                fontWeight = FontWeight.Black,
+            )
             Text(
                 text = stringResource(R.string.home_empty_message),
+                modifier = Modifier.padding(top = 8.dp),
+                color = PixelMuted,
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             if (scanning) {
-                LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
-                Text(
-                    text = stringResource(R.string.library_index_notification_title),
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.primary,
+                LinearProgressIndicator(
+                    modifier = Modifier.fillMaxWidth(0.5f).padding(top = 18.dp),
+                    color = PixelGreen,
+                    trackColor = PixelInk,
                 )
             } else {
-                Button(
-                    onClick = onSetDirectoryClicked,
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.primary,
-                        contentColor = MaterialTheme.colorScheme.onPrimary,
-                    ),
+                Surface(
+                    modifier = Modifier.padding(top = 18.dp).clickable(onClick = onSetDirectoryClicked),
+                    shape = PixelShape,
+                    color = PixelGreen,
+                    border = BorderStroke(2.dp, PixelInk),
                 ) {
-                    Text(stringResource(R.string.home_empty_action))
+                    Text(
+                        text = "A  ${stringResource(R.string.home_empty_action)}",
+                        modifier = Modifier.padding(horizontal = 18.dp, vertical = 10.dp),
+                        color = PixelInk,
+                        style = MaterialTheme.typography.labelLarge,
+                        fontWeight = FontWeight.Black,
+                    )
                 }
             }
         }
@@ -243,153 +198,174 @@ private fun HomeEmptyState(
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun HomeFeaturedGame(
+    modifier: Modifier = Modifier,
     game: Game,
     onClick: () -> Unit,
     onLongClick: () -> Unit,
 ) {
     val context = LocalContext.current
-    val subtitle = remember(game.id) { GameUtils.getGameSubtitle(context, game) }
-    val shape = RoundedCornerShape(16.dp)
+    val subtitle =
+        remember(game.id, game.lastPlayedAt) {
+            game.lastPlayedAt?.let { playedAt ->
+                val formatted = DateFormat.getTimeInstance(DateFormat.SHORT).format(Date(playedAt))
+                val time =
+                    if (DateUtils.isToday(playedAt)) {
+                        context.getString(R.string.home_today_time, formatted)
+                    } else {
+                        DateFormat.getDateInstance(DateFormat.MEDIUM).format(Date(playedAt))
+                    }
+                context.getString(R.string.home_last_played, time)
+            } ?: GameUtils.getGameSubtitle(context, game)
+        }
+    var focused by remember { mutableStateOf(false) }
 
-    Surface(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(shape)
-            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, shape)
-            .combinedClickable(onClick = onClick, onLongClick = onLongClick),
-        shape = shape,
-        color = MaterialTheme.colorScheme.surfaceVariant,
-    ) {
+    Box(modifier = modifier.padding(end = 4.dp, bottom = 4.dp)) {
+        Box(
+            modifier =
+                Modifier
+                    .matchParentSize()
+                    .offset(4.dp, 4.dp)
+                    .background(PixelShadow, PixelShape),
+        )
         Row(
-            modifier = Modifier.heightIn(min = 160.dp).padding(12.dp),
+            modifier =
+                Modifier
+                    .fillMaxSize()
+                    .onFocusChanged { focused = it.isFocused }
+                    .pixelFocusBrackets(true)
+                    .clip(PixelShape)
+                    .border(if (focused) 3.dp else 2.dp, if (focused) PixelGreen else PixelOutline, PixelShape)
+                    .background(PixelPaper, PixelShape)
+                    .onLauncherMenu(onLongClick)
+                    .combinedClickable(onClick = onClick, onLongClick = onLongClick)
+                    .padding(10.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            LemuroidGameImage(
-                modifier = Modifier
-                    .width(116.dp)
-                    .clip(RoundedCornerShape(10.dp)),
-                game = game,
-            )
+            Box(
+                modifier =
+                    Modifier
+                        .fillMaxHeight()
+                        .aspectRatio(0.72f)
+                        .clip(PixelShape)
+                        .border(2.dp, PixelInk, PixelShape),
+            ) {
+                LemuroidGameImage(modifier = Modifier.fillMaxSize(), game = game)
+            }
+
             Column(
-                modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(6.dp),
+                modifier = Modifier.weight(1f).fillMaxHeight().padding(vertical = 3.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 Text(
-                    text = stringResource(R.string.game_context_menu_resume),
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.primary,
+                    text = stringResource(R.string.home_continue_game),
+                    color = PixelInk,
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.Bold,
                 )
                 Text(
                     text = game.title,
+                    color = PixelInk,
                     style = MaterialTheme.typography.headlineSmall,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Text(
-                    text = subtitle,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    fontWeight = FontWeight.Black,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
-                Text(
-                    text = "▶  ${stringResource(R.string.game_context_menu_resume)}",
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurface,
+                Spacer(
+                    modifier =
+                        Modifier
+                            .fillMaxWidth()
+                            .height(2.dp)
+                            .background(PixelInk.copy(alpha = 0.28f)),
                 )
+                Text(
+                    text = subtitle,
+                    color = PixelInk.copy(alpha = 0.78f),
+                    style = MaterialTheme.typography.bodyMedium,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                Spacer(modifier = Modifier.weight(1f))
+                PixelStartButton()
             }
         }
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun HomeRow(
-    title: String,
+private fun PixelStartButton() {
+    Box(modifier = Modifier.wrapContentWidth().padding(end = 3.dp, bottom = 3.dp)) {
+        Box(
+            modifier =
+                Modifier
+                    .matchParentSize()
+                    .offset(3.dp, 3.dp)
+                    .background(PixelInk, PixelShape),
+        )
+        Row(
+            modifier =
+                Modifier
+                    .background(PixelGreen, PixelShape)
+                    .border(2.dp, PixelInk, PixelShape)
+                    .padding(horizontal = 14.dp, vertical = 7.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(9.dp),
+        ) {
+            Text(
+                text = "A",
+                modifier = Modifier.background(PixelInk, PixelShape).padding(horizontal = 7.dp, vertical = 2.dp),
+                color = PixelGreen,
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.Black,
+            )
+            Text(
+                text = stringResource(R.string.home_start_game),
+                color = PixelInk,
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Black,
+            )
+        }
+    }
+}
+
+@Composable
+private fun HomeShelf(
+    modifier: Modifier = Modifier,
     games: List<Game>,
     onGameClicked: (Game) -> Unit,
     onGameLongClick: (Game) -> Unit,
 ) {
-    if (games.isEmpty()) {
-        return
-    }
-
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-        ) {
-            Spacer(
-                modifier = Modifier
-                    .size(width = 4.dp, height = 18.dp)
-                    .clip(RoundedCornerShape(2.dp))
-                    .background(MaterialTheme.colorScheme.primary),
-            )
-            Text(
-                text = title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
-            )
-        }
-        LazyRow(
-            modifier =
-                Modifier
-                    .fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(14.dp),
-            contentPadding = PaddingValues(top = 12.dp, end = 2.dp),
-        ) {
-            items(games.size, key = { games[it].id }) { index ->
-                val game = games[index]
-                LemuroidGameCard(
-                    modifier =
-                        Modifier
-                            .widthIn(0.dp, 136.dp)
-                            .animateItem(),
-                    game = game,
-                    onClick = { onGameClicked(game) },
-                    onLongClick = { onGameLongClick(game) },
+    BoxWithConstraints(modifier = modifier.fillMaxWidth()) {
+        val cardWidth = (maxHeight - 62.dp).coerceIn(64.dp, 110.dp)
+        Column(modifier = Modifier.fillMaxSize()) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(9.dp),
+            ) {
+                Box(modifier = Modifier.size(6.dp).background(PixelGreen))
+                Text(
+                    text = stringResource(R.string.home_recent_games),
+                    color = PixelPaper,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Black,
                 )
             }
-        }
-    }
-}
-
-@Composable
-private fun HomeNotification(
-    titleId: Int,
-    messageId: Int,
-    actionId: Int,
-    enabled: Boolean = true,
-    onAction: () -> Unit = { },
-) {
-    ElevatedCard(
-        modifier =
-            Modifier
-                .fillMaxWidth()
-                .padding(start = 16.dp, end = 16.dp),
-    ) {
-        Column(
-            modifier =
-                Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            Text(
-                text = stringResource(titleId),
-                style = MaterialTheme.typography.titleMedium,
-            )
-            Text(
-                text = stringResource(messageId),
-                style = MaterialTheme.typography.bodyMedium,
-            )
-            OutlinedButton(
-                modifier = Modifier.align(Alignment.End),
-                onClick = onAction,
-                enabled = enabled,
+            LazyRow(
+                modifier = Modifier.fillMaxSize(),
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                contentPadding = PaddingValues(top = 7.dp, end = 3.dp),
             ) {
-                Text(stringResource(id = actionId))
+                items(games.size, key = { games[it].id }) { index ->
+                    val game = games[index]
+                    LemuroidGameCard(
+                        modifier = Modifier.width(cardWidth),
+                        game = game,
+                        onClick = { onGameClicked(game) },
+                        onLongClick = { onGameLongClick(game) },
+                        imageAspectRatio = 1f,
+                        showSubtitle = false,
+                    )
+                }
             }
         }
     }

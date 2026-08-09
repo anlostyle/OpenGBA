@@ -57,6 +57,7 @@ enum class GameShortcutType {
 
     fun displayName() =
         when (this) {
+            FORWARD -> "Undo Rewind"
             TOGGLE_FAST_FORWARD -> "Fast Forward"
             else -> name.split('_').joinToString(" ") { it.lowercase().replaceFirstChar { it.uppercase() } }
         }

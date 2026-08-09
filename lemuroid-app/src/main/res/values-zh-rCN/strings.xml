@@ -21,6 +21,15 @@
     <string name="show_all">全部显示</string>
     <string name="back">返回</string>
     <string name="close">关闭</string>
+    <string name="launcher_continue">继续</string>
+    <string name="launcher_library">游戏库</string>
+    <string name="launcher_confirm">确认</string>
+    <string name="launcher_menu">菜单</string>
+    <string name="home_continue_game">继续游戏</string>
+    <string name="home_start_game">启动游戏</string>
+    <string name="home_last_played">上次游玩  %1$s</string>
+    <string name="home_today_time">今天 %1$s</string>
+    <string name="home_recent_games">最近游玩</string>
     <string name="game_page_search_suggestion">搜索游戏</string>
     <string name="settings_category_general">常规</string>
     <string name="settings_category_input">输入</string>
@@ -118,10 +127,10 @@
     <string name="game_menu_fast_forward">快进</string>
     <string name="game_menu_fast_forward_speed">快进速度</string>
     <string name="game_menu_rewind">回溯</string>
-    <string name="game_menu_rewind_description">按住 X 回溯最近 30 秒，按住 Y 在回溯时间线上前进。可以在“设置 &gt; 输入”中自定义按键。</string>
+    <string name="game_menu_rewind_description">按住 X 回溯最近 30 秒，按 Y 可直接回到本次回溯前的位置。可以在“设置 &gt; 输入”中自定义按键。</string>
     <string name="game_menu_cheats">金手指</string>
     <string name="game_menu_shortcuts">默认快捷键</string>
-    <string name="game_menu_shortcuts_description">A：GBA A\nB：GBA B\nL1/R1：GBA L/R\nL2：菜单\n按住 X：回溯\n按住 Y：前进\n按住 R2：加速\n\n可以在“设置 &gt; 输入”中自定义快捷键。</string>
+    <string name="game_menu_shortcuts_description">A：GBA A\nB：GBA B\nL1/R1：GBA L/R\nL2：菜单\n按住 X：回溯\nY：回到回溯前\n按住 R2：加速\n\n可以在“设置 &gt; 输入”中自定义快捷键。</string>
     <string name="game_menu_cheats_hint">每行输入一个代码</string>
     <string name="game_menu_change_disk_disk">碟片 %1$s</string>
     <string name="game_menu_tilt_sensor">倾斜传感器</string>
@@ -180,7 +189,7 @@
     <string name="lemuroid_help_content"><![CDATA[        <b>&#8226;我如何使用 OpenGBA？</b><br/>
         将 GBA ROM 文件复制到设备上的一个目录里，并在 OpenGBA 中选择它。目录可以包含子目录。扫描完成后，您应该会看到自己的游戏。<br/><br/>
         <b>&#8226;掌机快捷操作</b><br/>
-        L2 呼出菜单，按住 X 回溯最近 30 秒，按住 R2 加速。<br/><br/>
+        L2 呼出菜单，按住 X 回溯最近 30 秒，按 Y 回到本次回溯前的位置，按住 R2 加速。<br/><br/>
         <b>&#8226;为什么检测不到我的游戏？</b><br/>
         如果您的游戏是被压缩过的，请尝试将其解压缩。 如果这样做不起作用，请尝试将 ROM 放入单独的目录里，每个系统都有一个目录，其名称如下：$SYSTEMS。
     ]]></string>

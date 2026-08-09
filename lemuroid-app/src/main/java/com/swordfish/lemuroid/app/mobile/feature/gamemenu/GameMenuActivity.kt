@@ -80,6 +80,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
         val fastForwardSupported: Boolean,
         val fastForwardEnabled: Boolean,
         val fastForwardSpeed: Int,
+        val screenFilter: String,
         val numDisks: Int,
         val currentDisk: Int,
         val currentTiltConfiguration: TiltConfiguration,
@@ -124,6 +125,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                         GameMenuContract.EXTRA_FAST_FORWARD_SPEED,
                         BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
                     ) ?: BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
+                screenFilter = extras?.getString(GameMenuContract.EXTRA_SCREEN_FILTER) ?: "auto",
                 numDisks =
                     extras?.getInt(GameMenuContract.EXTRA_DISKS, 0) ?: 0,
                 currentDisk =
