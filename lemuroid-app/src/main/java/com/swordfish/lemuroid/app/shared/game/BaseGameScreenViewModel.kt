@@ -347,8 +347,8 @@ class BaseGameScreenViewModel(
                 .lineSequence()
                 .map(String::trim)
                 .filter(String::isNotEmpty)
-                .map { it.take(128) }
-                .take(32)
+                .map { it.take(1024) }
+                .take(512)
                 .toList()
         retroGameView.retroGameView?.let { view ->
             cheatCodes.forEachIndexed { index, code ->

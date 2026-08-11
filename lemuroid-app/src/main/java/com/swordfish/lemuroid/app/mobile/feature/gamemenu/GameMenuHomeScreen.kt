@@ -12,12 +12,14 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
@@ -27,10 +29,10 @@ import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.mobile.feature.gamemenu.tilt.TiltConfigurationMenuEntry
 import com.swordfish.lemuroid.app.shared.GameMenuContract
 import com.swordfish.lemuroid.app.shared.game.BaseGameScreenViewModel
-import com.swordfish.lemuroid.app.utils.android.stringListResource
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsList
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsMenuLink
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsSwitch
+import com.swordfish.lemuroid.app.utils.android.stringListResource
 import kotlin.reflect.KFunction1
 
 @Composable
@@ -39,10 +41,34 @@ fun GameMenuHomeScreen(
     gameMenuRequest: GameMenuActivity.GameMenuRequest,
     onResult: KFunction1<Intent.() -> Unit, Unit>,
 ) {
+    val context = LocalContext.current
     var showCheatsDialog by remember { mutableStateOf(false) }
     var showRewindHelp by remember { mutableStateOf(false) }
     var showShortcutHelp by remember { mutableStateOf(false) }
-    var cheatText by remember(gameMenuRequest.cheats) { mutableStateOf(gameMenuRequest.cheats) }
+    val currentCheatCodes =
+        remember(gameMenuRequest.cheats) {
+            gameMenuRequest.cheats
+                .lineSequence()
+                .map(String::trim)
+                .filter(String::isNotEmpty)
+                .toList()
+        }
+    val builtInCheats =
+        remember(gameMenuRequest.game) {
+            runCatching { GbaCheatDatabase.load(context.assets, gameMenuRequest.game) }.getOrNull()
+        }
+    val builtInCodes =
+        remember(builtInCheats) {
+            builtInCheats?.cheats?.map(GbaCheat::code)?.toSet().orEmpty()
+        }
+    var enabledBuiltInCodes by
+        remember(gameMenuRequest.cheats, builtInCheats) {
+            mutableStateOf(currentCheatCodes.filter { it in builtInCodes }.toSet())
+        }
+    var cheatText by
+        remember(gameMenuRequest.cheats, builtInCheats) {
+            mutableStateOf(currentCheatCodes.filterNot { it in builtInCodes }.joinToString("\n"))
+        }
 
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
         if (gameMenuRequest.coreConfig.statesSupported) {
@@ -153,9 +179,10 @@ fun GameMenuHomeScreen(
             LemuroidSettingsList(
                 title = { Text(text = stringResource(id = R.string.game_menu_fast_forward_speed)) },
                 items = fastForwardSpeeds.map { "$it×" },
-                state = rememberMemoryIntSettingState(
-                    fastForwardSpeeds.indexOf(gameMenuRequest.fastForwardSpeed).coerceAtLeast(0),
-                ),
+                state =
+                    rememberMemoryIntSettingState(
+                        fastForwardSpeeds.indexOf(gameMenuRequest.fastForwardSpeed).coerceAtLeast(0),
+                    ),
                 onItemSelected = { index, _ ->
                     onResult {
                         putExtra(GameMenuContract.RESULT_FAST_FORWARD_SPEED, fastForwardSpeeds[index])
@@ -273,13 +300,37 @@ fun GameMenuHomeScreen(
             onDismissRequest = { showCheatsDialog = false },
             title = { Text(stringResource(R.string.game_menu_cheats)) },
             text = {
-                OutlinedTextField(
-                    value = cheatText,
-                    onValueChange = { cheatText = it },
-                    minLines = 4,
-                    maxLines = 8,
-                    label = { Text(stringResource(R.string.game_menu_cheats_hint)) },
-                )
+                Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+                    if (builtInCheats == null) {
+                        Text(stringResource(R.string.game_menu_cheats_builtin_empty))
+                    } else {
+                        Text(stringResource(R.string.game_menu_cheats_builtin_source, builtInCheats.source))
+                        Text(stringResource(R.string.game_menu_cheats_builtin_hint))
+                        builtInCheats.cheats.forEachIndexed { index, cheat ->
+                            key(index, cheat.code) {
+                                LemuroidSettingsSwitch(
+                                    title = { Text(cheat.description) },
+                                    state = rememberMemoryBooleanSettingState(cheat.code in enabledBuiltInCodes),
+                                    onCheckedChange = { enabled ->
+                                        enabledBuiltInCodes =
+                                            if (enabled) {
+                                                enabledBuiltInCodes + cheat.code
+                                            } else {
+                                                enabledBuiltInCodes - cheat.code
+                                            }
+                                    },
+                                )
+                            }
+                        }
+                    }
+                    OutlinedTextField(
+                        value = cheatText,
+                        onValueChange = { cheatText = it },
+                        minLines = 3,
+                        maxLines = 6,
+                        label = { Text(stringResource(R.string.game_menu_cheats_hint)) },
+                    )
+                }
             },
             dismissButton = {
                 TextButton(onClick = { showCheatsDialog = false }) {
@@ -290,7 +341,17 @@ fun GameMenuHomeScreen(
                 Button(
                     onClick = {
                         showCheatsDialog = false
-                        onResult { putExtra(GameMenuContract.RESULT_CHEATS, cheatText) }
+                        val selectedCodes =
+                            builtInCheats?.cheats.orEmpty()
+                                .map(GbaCheat::code)
+                                .filter { it in enabledBuiltInCodes }
+                        val manualCodes =
+                            cheatText.lineSequence().map(String::trim).filter(String::isNotEmpty)
+                        val codes =
+                            (selectedCodes.asSequence() + manualCodes)
+                                .distinct()
+                                .joinToString("\n")
+                        onResult { putExtra(GameMenuContract.RESULT_CHEATS, codes) }
                     },
                 ) {
                     Text(stringResource(R.string.ok))

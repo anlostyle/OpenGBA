@@ -69,11 +69,13 @@ class GameSearchDao(private val internalDao: Internal) {
             SimpleSQLiteQuery(
                 """
                 SELECT games.*
-                    FROM fts_games
-                    JOIN games ON games.id = fts_games.docid
-                    WHERE fts_games MATCH ?
+                    FROM games
+                    WHERE title LIKE '%' || ? || '%' COLLATE NOCASE
+                       OR fileName LIKE '%' || ? || '%' COLLATE NOCASE
+                    ORDER BY title COLLATE NOCASE
                 """,
-                arrayOf(query),
+                // ponytail: a GBA-only library is small; restore FTS if measured libraries outgrow LIKE.
+                arrayOf(query, query),
             ),
         )
 

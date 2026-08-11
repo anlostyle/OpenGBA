@@ -129,6 +129,9 @@
     <string name="game_menu_rewind">回溯</string>
     <string name="game_menu_rewind_description">按住 X 回溯最近 30 秒，按 Y 可直接回到本次回溯前的位置。可以在“设置 &gt; 输入”中自定义按键。</string>
     <string name="game_menu_cheats">金手指</string>
+    <string name="game_menu_cheats_builtin_source">内置数据库：%1$s</string>
+    <string name="game_menu_cheats_builtin_hint">所有代码默认关闭，请只开启与当前 ROM 版本匹配的代码。</string>
+    <string name="game_menu_cheats_builtin_empty">未找到匹配的内置代码，仍可手动输入。</string>
     <string name="game_menu_shortcuts">默认快捷键</string>
     <string name="game_menu_shortcuts_description">A：GBA A\nB：GBA B\nL1/R1：GBA L/R\nL2：菜单\n按住 X：回溯\nY：回到回溯前\n按住 R2：加速\n\n可以在“设置 &gt; 输入”中自定义快捷键。</string>
     <string name="game_menu_cheats_hint">每行输入一个代码</string>

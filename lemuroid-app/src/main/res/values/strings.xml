@@ -150,6 +150,9 @@
     <string name="game_menu_rewind">Rewind</string>
     <string name="game_menu_rewind_description">Hold X to rewind through the last 30 seconds. Press Y to return to the position before the current rewind. The shortcuts can be changed in Settings &gt; Input.</string>
     <string name="game_menu_cheats">Cheats</string>
+    <string name="game_menu_cheats_builtin_source">Built-in database: %1$s</string>
+    <string name="game_menu_cheats_builtin_hint">All codes start disabled. Enable only codes made for this ROM version.</string>
+    <string name="game_menu_cheats_builtin_empty">No matching built-in codes were found. You can enter codes manually.</string>
     <string name="game_menu_shortcuts">Default Shortcuts</string>
     <string name="game_menu_shortcuts_description">A: GBA A\nB: GBA B\nL1/R1: GBA L/R\nL2: Menu\nHold X: Rewind\nY: Undo rewind\nHold R2: Fast-forward\n\nShortcuts can be customized in Settings &gt; Input.</string>
     <string name="game_menu_cheats_hint">One code per line</string>

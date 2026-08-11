@@ -128,6 +128,17 @@ private fun MainRoute.pixelIcon(): List<String> =
                 "111000111",
                 "010000010",
             )
+        MainRoute.SEARCH ->
+            listOf(
+                "001111000",
+                "011001100",
+                "110000110",
+                "110000110",
+                "011001100",
+                "001111000",
+                "000011000",
+                "000001100",
+            )
         MainRoute.FAVORITES ->
             listOf(
                 "010000010",

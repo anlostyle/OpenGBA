@@ -10,8 +10,8 @@ plugins {
 
 android {
     defaultConfig {
-        versionCode = 11
-        versionName = "0.1.10"
+        versionCode = 12
+        versionName = "0.1.11"
         applicationId = "com.opengba.launcher"
 
         // FIT is an arm64-only device; do not ship emulator cores for other ABIs.
@@ -89,11 +89,12 @@ android {
         }
 
         maybeCreate("release").apply {
-            storeFile = file(
-                providers.environmentVariable("OPEN_GBA_RELEASE_KEYSTORE_FILE")
-                    .orElse("$rootDir/release.jks")
-                    .get(),
-            )
+            storeFile =
+                file(
+                    providers.environmentVariable("OPEN_GBA_RELEASE_KEYSTORE_FILE")
+                        .orElse("$rootDir/release.jks")
+                        .get(),
+                )
             keyAlias = providers.environmentVariable("OPEN_GBA_KEY_ALIAS").orElse("opengba").get()
             storePassword = providers.environmentVariable("OPEN_GBA_KEYSTORE_PASSWORD").getOrNull()
             keyPassword = providers.environmentVariable("OPEN_GBA_KEY_PASSWORD").getOrNull()

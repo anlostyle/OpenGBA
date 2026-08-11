@@ -16,6 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.documentfile.provider.DocumentFile
 import androidx.navigation.NavController
+import com.swordfish.lemuroid.BuildConfig
 import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.mobile.feature.main.MainRoute
 import com.swordfish.lemuroid.app.mobile.feature.main.navigateToRoute
@@ -83,7 +84,13 @@ private fun UpdateSettings() {
         title = { Text(text = stringResource(id = R.string.settings_category_update)) },
     ) {
         LemuroidSettingsMenuLink(
-            title = { Text(text = stringResource(id = R.string.settings_title_app_update)) },
+            title = {
+                Text(
+                    text =
+                        "${stringResource(id = R.string.settings_title_app_update)}  " +
+                            "v${BuildConfig.VERSION_NAME}",
+                )
+            },
             subtitle = {
                 Text(
                     text = status ?: stringResource(id = R.string.settings_description_app_update),
