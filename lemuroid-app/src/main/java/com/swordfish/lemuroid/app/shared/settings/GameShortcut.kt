@@ -53,12 +53,14 @@ enum class GameShortcutType {
     QUICK_LOAD,
     QUICK_SAVE,
     TOGGLE_FAST_FORWARD,
+    PERSISTENT_FAST_FORWARD,
     ;
 
     fun displayName() =
         when (this) {
             FORWARD -> "Undo Rewind"
-            TOGGLE_FAST_FORWARD -> "Fast Forward"
+            TOGGLE_FAST_FORWARD -> "Hold Fast Forward"
+            PERSISTENT_FAST_FORWARD -> "Toggle Fast Forward"
             else -> name.split('_').joinToString(" ") { it.lowercase().replaceFirstChar { it.uppercase() } }
         }
 }

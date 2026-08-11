@@ -81,6 +81,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
         val fastForwardEnabled: Boolean,
         val fastForwardSpeed: Int,
         val screenFilter: String,
+        val currentSaveSlot: Int,
         val numDisks: Int,
         val currentDisk: Int,
         val currentTiltConfiguration: TiltConfiguration,
@@ -126,6 +127,10 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                         BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
                     ) ?: BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
                 screenFilter = extras?.getString(GameMenuContract.EXTRA_SCREEN_FILTER) ?: "auto",
+                currentSaveSlot =
+                    extras?.getInt(GameMenuContract.EXTRA_CURRENT_SAVE_SLOT, 0)
+                        ?.coerceIn(0, StatesManager.MAX_STATES - 1)
+                        ?: 0,
                 numDisks =
                     extras?.getInt(GameMenuContract.EXTRA_DISKS, 0) ?: 0,
                 currentDisk =
@@ -195,7 +200,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                     composable(GameMenuRoute.HOME) {
                         GameMenuHomeScreen(navController, gameMenuRequest, ::onResult)
                     }
-                    composable(GameMenuRoute.SAVE) {
+                    composable(GameMenuRoute.STATES) {
                         GameMenuStatesScreen(
                             viewModel(
                                 factory =
@@ -203,29 +208,18 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                                         application,
                                         gameMenuRequest,
                                         statesManager,
-                                        false,
                                         statesPreviewManager,
                                     ),
                             ),
-                            onStateClicked = {
+                            currentSlot = gameMenuRequest.currentSaveSlot,
+                            onSave = {
                                 onResult { putExtra(GameMenuContract.RESULT_SAVE, it) }
                             },
-                        )
-                    }
-                    composable(GameMenuRoute.LOAD) {
-                        GameMenuStatesScreen(
-                            viewModel(
-                                factory =
-                                    GameMenuStatesViewModel.Factory(
-                                        application,
-                                        gameMenuRequest,
-                                        statesManager,
-                                        true,
-                                        statesPreviewManager,
-                                    ),
-                            ),
-                            onStateClicked = {
+                            onLoad = {
                                 onResult { putExtra(GameMenuContract.RESULT_LOAD, it) }
+                            },
+                            onDelete = {
+                                onResult { putExtra(GameMenuContract.RESULT_DELETE, it) }
                             },
                         )
                     }

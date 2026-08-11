@@ -212,13 +212,14 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 this.putExtra(GameMenuContract.EXTRA_FAST_FORWARD_SUPPORTED, system.fastForwardSupport)
                 this.putExtra(
                     GameMenuContract.EXTRA_FAST_FORWARD,
-                    (baseGameScreenViewModel.retroGameView.retroGameView?.frameSpeed ?: 1) > 1,
+                    baseGameScreenViewModel.isPersistentFastForwardEnabled(),
                 )
                 this.putExtra(
                     GameMenuContract.EXTRA_FAST_FORWARD_SPEED,
                     baseGameScreenViewModel.getFastForwardSpeed(),
                 )
                 this.putExtra(GameMenuContract.EXTRA_SCREEN_FILTER, baseGameScreenViewModel.getScreenFilter())
+                this.putExtra(GameMenuContract.EXTRA_CURRENT_SAVE_SLOT, baseGameScreenViewModel.getCurrentSaveSlot())
                 this.putExtra(GameMenuContract.EXTRA_CURRENT_TILT_CONFIG, currentTiltConfiguration)
                 // TODO PADS... Make sure to avoid passing this if a physical pad is connected.
                 this.putExtra(GameMenuContract.EXTRA_TILT_ALL_CONFIGS, tiltConfigurations.toTypedArray())
@@ -256,8 +257,10 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                     is GameViewModelSideEffects.UiEffect.SaveQuickSave -> performSaveQuickSave()
                     is GameViewModelSideEffects.UiEffect.LoadQuickSave -> performLoadQuickSave()
                     is GameViewModelSideEffects.UiEffect.ToggleFastForward -> performToggleFastForward()
-                    is GameViewModelSideEffects.UiEffect.StartFastForward -> baseGameScreenViewModel.setFastForward(true)
-                    is GameViewModelSideEffects.UiEffect.StopFastForward -> baseGameScreenViewModel.setFastForward(false)
+                    is GameViewModelSideEffects.UiEffect.StartFastForward ->
+                        baseGameScreenViewModel.setHeldFastForward(true)
+                    is GameViewModelSideEffects.UiEffect.StopFastForward ->
+                        baseGameScreenViewModel.setHeldFastForward(false)
                     is GameViewModelSideEffects.UiEffect.StartRewind -> baseGameScreenViewModel.startRewind()
                     is GameViewModelSideEffects.UiEffect.StopRewind -> baseGameScreenViewModel.stopRewind()
                     is GameViewModelSideEffects.UiEffect.StartForward -> baseGameScreenViewModel.startForward()
@@ -397,6 +400,9 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 GlobalScope.launch {
                     baseGameScreenViewModel.loadSlot(data.getIntExtra(GameMenuContract.RESULT_LOAD, 0))
                 }
+            }
+            if (data?.hasExtra(GameMenuContract.RESULT_DELETE) == true) {
+                baseGameScreenViewModel.deleteSlot(data.getIntExtra(GameMenuContract.RESULT_DELETE, 0))
             }
             if (data?.getBooleanExtra(GameMenuContract.RESULT_QUIT, false) == true) {
                 baseGameScreenViewModel.requestFinish()

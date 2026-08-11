@@ -51,7 +51,7 @@ import java.util.ArrayDeque
 
 class BaseGameScreenViewModel(
     private val appContext: Context,
-    game: Game,
+    private val game: Game,
     settingsManager: SettingsManager,
     inputDeviceManager: InputDeviceManager,
     controllerConfigsManager: ControllerConfigsManager,
@@ -67,6 +67,8 @@ class BaseGameScreenViewModel(
     companion object {
         val FAST_FORWARD_SPEEDS = listOf(2, 3, 5)
         const val DEFAULT_FAST_FORWARD_SPEED = 2
+        private const val FAST_FORWARD_SPEED_PREFERENCE = "opengba_fast_forward_speed"
+        private const val CURRENT_SAVE_SLOT_PREFERENCE = "opengba_current_save_slot_"
     }
 
     class Factory(
@@ -158,10 +160,19 @@ class BaseGameScreenViewModel(
     private var rewindHoldJob: kotlinx.coroutines.Job? = null
     private var rewinding = false
     private var rewindOrigin: ByteArray? = null
-    private var fastForwardSpeed = DEFAULT_FAST_FORWARD_SPEED
+    private var fastForwardSpeed =
+        sharedPreferences.getInt(FAST_FORWARD_SPEED_PREFERENCE, DEFAULT_FAST_FORWARD_SPEED)
+            .takeIf { it in FAST_FORWARD_SPEEDS }
+            ?: DEFAULT_FAST_FORWARD_SPEED
+    private var persistentFastForward = false
+    private var heldFastForward = false
+    private var currentSaveSlot =
+        sharedPreferences.getInt(CURRENT_SAVE_SLOT_PREFERENCE + game.fileUri, 0)
+            .coerceIn(0, StatesManager.MAX_STATES - 1)
     private var cheatCodes = emptyList<String>()
 
     val loadingState = MutableStateFlow(false)
+    val fastForwardMultiplier = MutableStateFlow(1)
 
     private inline fun withLoading(block: () -> Unit) {
         loadingState.value = true
@@ -206,6 +217,7 @@ class BaseGameScreenViewModel(
                 saves.restoreAutoSaveAsync(it)
             }
         }
+        updateFastForward()
         startRewindCapture()
         return result
     }
@@ -259,24 +271,43 @@ class BaseGameScreenViewModel(
 
     suspend fun saveSlot(index: Int) {
         if (loadingState.value) return
+        var saved = false
         withLoading {
-            saves.saveSlot(index)
+            saved = saves.saveSlot(index)
         }
+        if (saved) setCurrentSaveSlot(index)
     }
 
     suspend fun loadSlot(index: Int) {
         if (loadingState.value) return
         commitTimeline()
+        var loaded = false
         withLoading {
-            saves.loadSlot(index)
+            loaded = saves.loadSlot(index)
+        }
+        if (loaded) setCurrentSaveSlot(index)
+    }
+
+    fun deleteSlot(index: Int) {
+        if (loadingState.value) return
+        viewModelScope.launch {
+            var deleted = false
+            withLoading {
+                deleted = saves.deleteSlot(index)
+            }
+            val message =
+                if (deleted) R.string.game_toast_state_deleted else R.string.game_toast_state_delete_failed
+            sideEffects.showToast(appContext.getString(message, index + 1))
         }
     }
 
     fun saveQuickSave() {
         Timber.d("Saving quick save")
         if (loadingState.value) return
-        withLoading {
-            saves.saveQuickSave()
+        viewModelScope.launch {
+            withLoading {
+                saves.saveQuickSave(currentSaveSlot)
+            }
         }
     }
 
@@ -284,31 +315,54 @@ class BaseGameScreenViewModel(
         Timber.d("Loading quick save")
         if (loadingState.value) return
         commitTimeline()
-        withLoading {
-            saves.loadQuickSave()
+        viewModelScope.launch {
+            withLoading {
+                saves.loadQuickSave(currentSaveSlot)
+            }
         }
+    }
+
+    fun getCurrentSaveSlot(): Int = currentSaveSlot
+
+    private fun setCurrentSaveSlot(index: Int) {
+        if (index !in 0 until StatesManager.MAX_STATES) return
+        currentSaveSlot = index
+        sharedPreferences.edit()
+            .putInt(CURRENT_SAVE_SLOT_PREFERENCE + game.fileUri, index)
+            .apply()
     }
 
     fun toggleFastForward() {
         Timber.d("Toggling fast forward")
-        retroGameView.retroGameView?.apply {
-            frameSpeed = if (frameSpeed == 1) fastForwardSpeed else 1
-        }
+        persistentFastForward = !persistentFastForward
+        updateFastForward()
     }
 
     fun setFastForward(enabled: Boolean) {
-        if (loadingState.value) return
-        retroGameView.retroGameView?.frameSpeed = if (enabled) fastForwardSpeed else 1
+        persistentFastForward = enabled
+        updateFastForward()
     }
+
+    fun setHeldFastForward(enabled: Boolean) {
+        heldFastForward = enabled
+        updateFastForward()
+    }
+
+    fun isPersistentFastForwardEnabled(): Boolean = persistentFastForward
 
     fun getFastForwardSpeed(): Int = fastForwardSpeed
 
     fun setFastForwardSpeed(speed: Int) {
         if (loadingState.value || speed !in FAST_FORWARD_SPEEDS) return
         fastForwardSpeed = speed
-        retroGameView.retroGameView?.let { view ->
-            if (view.frameSpeed > 1) view.frameSpeed = speed
-        }
+        sharedPreferences.edit().putInt(FAST_FORWARD_SPEED_PREFERENCE, speed).apply()
+        updateFastForward()
+    }
+
+    private fun updateFastForward() {
+        val multiplier = if (persistentFastForward || heldFastForward) fastForwardSpeed else 1
+        retroGameView.retroGameView?.frameSpeed = multiplier
+        fastForwardMultiplier.value = multiplier
     }
 
     fun getScreenFilter(): String {
@@ -438,6 +492,9 @@ class BaseGameScreenViewModel(
     suspend fun reset() =
         withLoading {
             try {
+                persistentFastForward = false
+                heldFastForward = false
+                updateFastForward()
                 commitTimeline()
                 delay(appContext.longAnimationDuration().toLong())
                 retroGameView.retroGameViewFlow().reset()

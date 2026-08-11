@@ -32,43 +32,35 @@ class GameViewModelSaves(
     private val statesPreviewManager: StatesPreviewManager,
     private val sideEffects: GameViewModelSideEffects,
 ) {
-    private var currentQuickSave: SaveState? = null
-
     data class SaveSnapshot(
         val sram: ByteArray,
         val autoSave: SaveState?,
     )
 
-    suspend fun saveSlot(index: Int) {
-        getCurrentSaveState()?.let {
-            statesManager.setSlotSave(game, it, systemCoreConfig.coreID, index)
-            runCatching {
-                takeScreenshotPreview(index)
-            }
+    suspend fun saveSlot(index: Int): Boolean {
+        val saveState = getCurrentSaveState() ?: return false
+        statesManager.setSlotSave(game, saveState, systemCoreConfig.coreID, index)
+        runCatching {
+            takeScreenshotPreview(index)
         }
+        return true
     }
 
-    suspend fun loadSlot(index: Int) {
+    suspend fun loadSlot(index: Int): Boolean =
         try {
-            statesManager.getSlotSave(game, systemCoreConfig.coreID, index)?.let {
-                val loaded =
-                    withContext(Dispatchers.IO) {
-                        loadSaveState(it)
-                    }
-
-                if (!loaded) {
-                    sideEffects.showToast(appContext.getString(R.string.game_toast_load_state_failed))
-                }
-            }
+            val saveState = statesManager.getSlotSave(game, systemCoreConfig.coreID, index) ?: return false
+            loadSlot(saveState)
         } catch (e: Throwable) {
-            val errorMessageId =
-                when (e) {
-                    is IncompatibleStateException -> R.string.error_message_incompatible_state
-                    else -> R.string.game_toast_load_state_failed
-                }
-            sideEffects.showToast(appContext.getString(errorMessageId))
+            showLoadError(e)
+            false
         }
-    }
+
+    suspend fun deleteSlot(index: Int): Boolean =
+        runCatching {
+            val deleted = statesManager.deleteSlotSave(game, systemCoreConfig.coreID, index)
+            statesPreviewManager.deletePreviewForSlot(game, systemCoreConfig.coreID, index)
+            deleted
+        }.getOrDefault(false)
 
     suspend fun captureSaveSnapshot(useEmulationThread: Boolean): SaveSnapshot? {
         val retroGameView = retroGameView.retroGameView ?: return null
@@ -158,13 +150,45 @@ class GameViewModelSaves(
         return retroGameView.unserializeState(saveState.state)
     }
 
-    fun saveQuickSave() {
-        currentQuickSave = getCurrentSaveState()
-        sideEffects.showToast(appContext.getString(R.string.game_toast_quick_save_saved))
+    suspend fun saveQuickSave(index: Int) {
+        if (saveSlot(index)) {
+            sideEffects.showToast(appContext.getString(R.string.game_toast_quick_save_slot_saved, index + 1))
+        }
     }
 
-    fun loadQuickSave() {
-        loadSaveState(currentQuickSave ?: return)
-        sideEffects.showToast(appContext.getString(R.string.game_toast_quick_save_loaded))
+    suspend fun loadQuickSave(index: Int) {
+        val saveState = statesManager.getSlotSave(game, systemCoreConfig.coreID, index)
+        if (saveState == null) {
+            sideEffects.showToast(appContext.getString(R.string.game_toast_quick_load_empty, index + 1))
+            return
+        }
+
+        try {
+            if (loadSlot(saveState)) {
+                sideEffects.showToast(appContext.getString(R.string.game_toast_quick_save_slot_loaded, index + 1))
+            }
+        } catch (e: Throwable) {
+            showLoadError(e)
+        }
+    }
+
+    private suspend fun loadSlot(saveState: SaveState): Boolean {
+        val loaded =
+            withContext(Dispatchers.IO) {
+                loadSaveState(saveState)
+            }
+        if (!loaded) {
+            sideEffects.showToast(appContext.getString(R.string.game_toast_load_state_failed))
+        }
+        return loaded
+    }
+
+    private fun showLoadError(error: Throwable) {
+        val errorMessageId =
+            when (error) {
+                is IncompatibleStateException -> R.string.error_message_incompatible_state
+                else -> R.string.game_toast_load_state_failed
+            }
+        sideEffects.showToast(appContext.getString(errorMessageId))
     }
 }

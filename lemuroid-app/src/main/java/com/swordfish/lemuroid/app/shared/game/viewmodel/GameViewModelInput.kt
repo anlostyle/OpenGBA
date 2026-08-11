@@ -359,7 +359,8 @@ class GameViewModelInput(
                                 GameShortcutType.MENU -> sideEffects.showMenu(tilt, this)
                                 GameShortcutType.QUICK_LOAD -> sideEffects.loadQuickSave()
                                 GameShortcutType.QUICK_SAVE -> sideEffects.saveQuickSave()
-                                GameShortcutType.TOGGLE_FAST_FORWARD -> sideEffects.toggleFastForward()
+                                GameShortcutType.PERSISTENT_FAST_FORWARD -> sideEffects.toggleFastForward()
+                                GameShortcutType.TOGGLE_FAST_FORWARD -> Unit
                                 GameShortcutType.REWIND -> Unit
                                 GameShortcutType.FORWARD -> Unit
                             }

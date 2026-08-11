@@ -5,7 +5,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Sensors
+import androidx.compose.material.icons.filled.Code
+import androidx.compose.material.icons.filled.FilterAlt
+import androidx.compose.material.icons.filled.Speed
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
@@ -26,7 +28,6 @@ import androidx.navigation.NavController
 import com.alorma.compose.settings.storage.memory.rememberMemoryBooleanSettingState
 import com.alorma.compose.settings.storage.memory.rememberMemoryIntSettingState
 import com.swordfish.lemuroid.R
-import com.swordfish.lemuroid.app.mobile.feature.gamemenu.tilt.TiltConfigurationMenuEntry
 import com.swordfish.lemuroid.app.shared.GameMenuContract
 import com.swordfish.lemuroid.app.shared.game.BaseGameScreenViewModel
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsList
@@ -43,8 +44,7 @@ fun GameMenuHomeScreen(
 ) {
     val context = LocalContext.current
     var showCheatsDialog by remember { mutableStateOf(false) }
-    var showRewindHelp by remember { mutableStateOf(false) }
-    var showShortcutHelp by remember { mutableStateOf(false) }
+    var showRestartConfirmation by remember { mutableStateOf(false) }
     val currentCheatCodes =
         remember(gameMenuRequest.cheats) {
             gameMenuRequest.cheats
@@ -73,7 +73,15 @@ fun GameMenuHomeScreen(
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
         if (gameMenuRequest.coreConfig.statesSupported) {
             LemuroidSettingsMenuLink(
-                title = { Text(text = stringResource(id = R.string.game_menu_quick_save)) },
+                title = {
+                    Text(
+                        text =
+                            stringResource(
+                                R.string.game_menu_quick_save_slot,
+                                gameMenuRequest.currentSaveSlot + 1,
+                            ),
+                    )
+                },
                 icon = {
                     Icon(
                         painterResource(R.drawable.ic_menu_save),
@@ -86,7 +94,15 @@ fun GameMenuHomeScreen(
             )
 
             LemuroidSettingsMenuLink(
-                title = { Text(text = stringResource(id = R.string.game_menu_quick_load)) },
+                title = {
+                    Text(
+                        text =
+                            stringResource(
+                                R.string.game_menu_quick_load_slot,
+                                gameMenuRequest.currentSaveSlot + 1,
+                            ),
+                    )
+                },
                 icon = {
                     Icon(
                         painterResource(R.drawable.ic_menu_load),
@@ -99,72 +115,38 @@ fun GameMenuHomeScreen(
             )
 
             LemuroidSettingsMenuLink(
-                title = { Text(text = stringResource(id = R.string.game_menu_save)) },
+                title = { Text(text = stringResource(id = R.string.game_menu_states)) },
                 icon = {
                     Icon(
                         painterResource(R.drawable.ic_menu_save),
-                        contentDescription = stringResource(id = R.string.game_menu_save),
+                        contentDescription = stringResource(id = R.string.game_menu_states),
                     )
                 },
-                onClick = { navController.navigateToRoute(GameMenuRoute.SAVE) },
-            )
-
-            LemuroidSettingsMenuLink(
-                title = { Text(text = stringResource(id = R.string.game_menu_load)) },
-                icon = {
-                    Icon(
-                        painterResource(R.drawable.ic_menu_load),
-                        contentDescription = stringResource(id = R.string.game_menu_load),
-                    )
-                },
-                onClick = { navController.navigateToRoute(GameMenuRoute.LOAD) },
+                onClick = { navController.navigateToRoute(GameMenuRoute.STATES) },
             )
         }
 
         LemuroidSettingsMenuLink(
-            title = { Text(text = stringResource(id = R.string.game_menu_quit)) },
+            title = { Text(text = stringResource(id = R.string.game_menu_cheats)) },
             icon = {
                 Icon(
-                    painterResource(R.drawable.ic_menu_quit),
-                    contentDescription = stringResource(id = R.string.game_menu_quit),
+                    Icons.Default.Code,
+                    contentDescription = stringResource(id = R.string.game_menu_cheats),
                 )
             },
-            onClick = {
-                onResult { putExtra(GameMenuContract.RESULT_QUIT, true) }
-            },
-        )
-
-        LemuroidSettingsMenuLink(
-            title = { Text(text = stringResource(id = R.string.game_menu_restart)) },
-            icon = {
-                Icon(
-                    painterResource(R.drawable.ic_menu_restart),
-                    contentDescription = stringResource(id = R.string.game_menu_restart),
-                )
-            },
-            onClick = {
-                onResult { putExtra(GameMenuContract.RESULT_RESET, true) }
-            },
-        )
-
-        LemuroidSettingsSwitch(
-            title = { Text(text = stringResource(id = R.string.game_menu_mute_audio)) },
-            icon = {
-                Icon(
-                    painterResource(R.drawable.ic_menu_mute),
-                    contentDescription = stringResource(id = R.string.game_menu_mute_audio),
-                )
-            },
-            state = rememberMemoryBooleanSettingState(!gameMenuRequest.audioEnabled),
-            onCheckedChange = {
-                onResult { putExtra(GameMenuContract.RESULT_ENABLE_AUDIO, !it) }
-            },
+            onClick = { showCheatsDialog = true },
         )
 
         val screenFilters = stringListResource(R.array.pref_key_shader_filter_values)
         LemuroidSettingsList(
             title = { Text(text = stringResource(id = R.string.display_filter)) },
             items = stringListResource(R.array.pref_key_shader_filter_display_names),
+            icon = {
+                Icon(
+                    Icons.Default.FilterAlt,
+                    contentDescription = stringResource(id = R.string.display_filter),
+                )
+            },
             state =
                 rememberMemoryIntSettingState(
                     screenFilters.indexOf(gameMenuRequest.screenFilter).coerceAtLeast(0),
@@ -179,6 +161,12 @@ fun GameMenuHomeScreen(
             LemuroidSettingsList(
                 title = { Text(text = stringResource(id = R.string.game_menu_fast_forward_speed)) },
                 items = fastForwardSpeeds.map { "$it×" },
+                icon = {
+                    Icon(
+                        Icons.Default.Speed,
+                        contentDescription = stringResource(id = R.string.game_menu_fast_forward_speed),
+                    )
+                },
                 state =
                     rememberMemoryIntSettingState(
                         fastForwardSpeeds.indexOf(gameMenuRequest.fastForwardSpeed).coerceAtLeast(0),
@@ -205,94 +193,28 @@ fun GameMenuHomeScreen(
         }
 
         LemuroidSettingsMenuLink(
-            title = { Text(text = stringResource(id = R.string.game_menu_rewind)) },
-            onClick = { showRewindHelp = true },
-        )
-
-        LemuroidSettingsMenuLink(
-            title = { Text(text = stringResource(id = R.string.game_menu_cheats)) },
-            onClick = { showCheatsDialog = true },
-        )
-
-        LemuroidSettingsMenuLink(
-            title = { Text(text = stringResource(id = R.string.game_menu_shortcuts)) },
-            onClick = { showShortcutHelp = true },
-        )
-
-        if (gameMenuRequest.numDisks > 1) {
-            LemuroidSettingsList(
-                title = { Text(text = stringResource(id = R.string.game_menu_change_disk_button)) },
-                items = (1..gameMenuRequest.numDisks).map { stringResource(R.string.game_menu_change_disk_disk, it) },
-                useSelectedValueAsSubtitle = false,
-                icon = {
-                    Icon(
-                        painterResource(R.drawable.ic_menu_disk),
-                        contentDescription = stringResource(id = R.string.game_menu_change_disk_button),
-                    )
-                },
-                state = rememberMemoryIntSettingState(gameMenuRequest.currentDisk),
-                onItemSelected = { index, _ ->
-                    onResult { putExtra(GameMenuContract.RESULT_CHANGE_DISK, index) }
-                },
-            )
-        }
-
-        LemuroidSettingsMenuLink(
-            title = { Text(text = stringResource(id = R.string.game_menu_edit_touch_controls)) },
+            title = { Text(text = stringResource(id = R.string.game_menu_restart)) },
             icon = {
                 Icon(
-                    painterResource(R.drawable.ic_menu_controls),
-                    contentDescription = stringResource(id = R.string.game_menu_edit_touch_controls),
+                    painterResource(R.drawable.ic_menu_restart),
+                    contentDescription = stringResource(id = R.string.game_menu_restart),
+                )
+            },
+            onClick = { showRestartConfirmation = true },
+        )
+
+        LemuroidSettingsMenuLink(
+            title = { Text(text = stringResource(id = R.string.game_menu_quit)) },
+            icon = {
+                Icon(
+                    painterResource(R.drawable.ic_menu_quit),
+                    contentDescription = stringResource(id = R.string.game_menu_quit),
                 )
             },
             onClick = {
-                onResult { putExtra(GameMenuContract.RESULT_EDIT_TOUCH_CONTROLS, true) }
+                onResult { putExtra(GameMenuContract.RESULT_QUIT, true) }
             },
         )
-
-        if (gameMenuRequest.advancedCoreOptions.isNotEmpty() || gameMenuRequest.coreOptions.isNotEmpty()) {
-            LemuroidSettingsMenuLink(
-                title = { Text(text = stringResource(id = R.string.game_menu_settings)) },
-                icon = {
-                    Icon(
-                        painterResource(R.drawable.ic_menu_settings),
-                        contentDescription = stringResource(id = R.string.game_menu_settings),
-                    )
-                },
-                onClick = { navController.navigateToRoute(GameMenuRoute.OPTIONS) },
-            )
-        }
-
-        if (gameMenuRequest.allTiltConfigurations.isNotEmpty()) {
-            val tiltConfigurationEntries =
-                gameMenuRequest.allTiltConfigurations
-                    .map { TiltConfigurationMenuEntry.fromTiltConfiguration(it) }
-
-            val selectedIndex =
-                gameMenuRequest.allTiltConfigurations
-                    .indexOf(gameMenuRequest.currentTiltConfiguration)
-
-            LemuroidSettingsList(
-                title = { Text(text = stringResource(id = R.string.game_menu_tilt_sensor)) },
-                items = tiltConfigurationEntries.map { stringResource(it.descriptionId) },
-                useSelectedValueAsSubtitle = false,
-                icon = {
-                    Icon(
-                        imageVector = Icons.Default.Sensors,
-                        contentDescription = stringResource(id = R.string.game_menu_tilt_sensor),
-                    )
-                },
-                state = rememberMemoryIntSettingState(selectedIndex),
-                onItemSelected = { index, _ ->
-                    onResult {
-                        putExtra(
-                            GameMenuContract.RESULT_CHANGE_TILT_CONFIG,
-                            tiltConfigurationEntries[index].configuration,
-                        )
-                    }
-                },
-            )
-        }
     }
 
     if (showCheatsDialog) {
@@ -360,27 +282,24 @@ fun GameMenuHomeScreen(
         )
     }
 
-    if (showRewindHelp) {
+    if (showRestartConfirmation) {
         AlertDialog(
-            onDismissRequest = { showRewindHelp = false },
-            title = { Text(stringResource(R.string.game_menu_rewind)) },
-            text = { Text(stringResource(R.string.game_menu_rewind_description)) },
-            confirmButton = {
-                TextButton(onClick = { showRewindHelp = false }) {
-                    Text(stringResource(R.string.ok))
+            onDismissRequest = { showRestartConfirmation = false },
+            title = { Text(stringResource(R.string.game_menu_restart)) },
+            text = { Text(stringResource(R.string.game_menu_restart_confirmation)) },
+            dismissButton = {
+                TextButton(onClick = { showRestartConfirmation = false }) {
+                    Text(stringResource(R.string.cancel))
                 }
             },
-        )
-    }
-
-    if (showShortcutHelp) {
-        AlertDialog(
-            onDismissRequest = { showShortcutHelp = false },
-            title = { Text(stringResource(R.string.game_menu_shortcuts)) },
-            text = { Text(stringResource(R.string.game_menu_shortcuts_description)) },
             confirmButton = {
-                TextButton(onClick = { showShortcutHelp = false }) {
-                    Text(stringResource(R.string.ok))
+                TextButton(
+                    onClick = {
+                        showRestartConfirmation = false
+                        onResult { putExtra(GameMenuContract.RESULT_RESET, true) }
+                    },
+                ) {
+                    Text(stringResource(R.string.game_menu_restart))
                 }
             },
         )

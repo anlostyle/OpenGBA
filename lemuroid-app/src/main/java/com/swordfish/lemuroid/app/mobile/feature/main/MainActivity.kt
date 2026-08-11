@@ -262,6 +262,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                     ),
                                 onGameClick = onGameClick,
                                 onGameLongClick = onGameLongClick,
+                                onSearchClick = { navController.navigateToRoute(MainRoute.SEARCH) },
                             )
                         }
                         composable(MainRoute.SYSTEM_GAMES) { entry ->
@@ -278,6 +279,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                     ),
                                 onGameClick = onGameClick,
                                 onGameLongClick = onGameLongClick,
+                                onSearchClick = { navController.navigateToRoute(MainRoute.SEARCH) },
                             )
                         }
                         composable(MainRoute.SETTINGS) {

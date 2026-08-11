@@ -86,7 +86,10 @@ private fun PixelNavigationItem(
             Modifier
                 .fillMaxWidth()
                 .heightIn(min = 58.dp)
-                .onFocusChanged { focused = it.isFocused }
+                .onFocusChanged {
+                    focused = it.isFocused
+                    if (it.isFocused && !selected) onClick()
+                }
                 .pixelFocusBrackets(active, color)
                 .clickable(onClick = onClick)
                 .padding(horizontal = 5.dp, vertical = 7.dp),

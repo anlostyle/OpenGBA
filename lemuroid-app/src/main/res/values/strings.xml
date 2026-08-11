@@ -136,16 +136,29 @@
 
     <string name="game_menu_quick_save">Quick Save</string>
     <string name="game_menu_quick_load">Quick Load</string>
+    <string name="game_menu_quick_save_slot">Quick Save (Slot %1$d)</string>
+    <string name="game_menu_quick_load_slot">Quick Load (Slot %1$d)</string>
     <string name="game_menu_save">Save State</string>
     <string name="game_menu_load">Load State</string>
+    <string name="game_menu_states">Save States</string>
     <string name="game_menu_restart">Restart</string>
+    <string name="game_menu_restart_confirmation">Restart the game from the beginning?</string>
     <string name="game_menu_quit">Quit</string>
     <string name="game_menu_settings">Settings</string>
-    <string name="game_menu_state">State %1$s</string>
+    <string name="game_menu_state">Slot %1$s</string>
+    <string name="game_menu_state_current">Slot %1$d (Current)</string>
+    <string name="game_menu_state_empty">Empty</string>
+    <string name="game_menu_state_action_save">Save</string>
+    <string name="game_menu_state_action_load">Load</string>
+    <string name="game_menu_state_action_delete">Delete</string>
+    <string name="game_menu_state_overwrite_title">Overwrite Save State</string>
+    <string name="game_menu_state_overwrite_confirmation">Overwrite slot %1$d?</string>
+    <string name="game_menu_state_delete_title">Delete Save State</string>
+    <string name="game_menu_state_delete_confirmation">Delete slot %1$d? This cannot be undone.</string>
     <string name="game_menu_change_disk_button">Change Disk</string>
     <string name="game_menu_edit_touch_controls">Edit Controls</string>
     <string name="game_menu_mute_audio">Mute</string>
-    <string name="game_menu_fast_forward">Fast-Forward</string>
+    <string name="game_menu_fast_forward">Persistent Fast-Forward</string>
     <string name="game_menu_fast_forward_speed">Fast-Forward Speed</string>
     <string name="game_menu_rewind">Rewind</string>
     <string name="game_menu_rewind_description">Hold X to rewind through the last 30 seconds. Press Y to return to the position before the current rewind. The shortcuts can be changed in Settings &gt; Input.</string>
@@ -165,6 +178,11 @@
     <string name="game_toast_load_state_failed">Cannot load this state</string>
     <string name="game_toast_quick_save_loaded">Quick loaded</string>
     <string name="game_toast_quick_save_saved">Quick saved</string>
+    <string name="game_toast_quick_save_slot_loaded">Loaded slot %1$d</string>
+    <string name="game_toast_quick_save_slot_saved">Saved to slot %1$d</string>
+    <string name="game_toast_quick_load_empty">Slot %1$d is empty</string>
+    <string name="game_toast_state_deleted">Deleted slot %1$d</string>
+    <string name="game_toast_state_delete_failed">Could not delete slot %1$d</string>
 
     <string name="empty_view_default">No Items</string>
 

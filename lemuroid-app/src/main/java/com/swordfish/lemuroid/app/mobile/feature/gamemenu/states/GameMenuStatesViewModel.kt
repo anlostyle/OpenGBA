@@ -15,14 +15,12 @@ class GameMenuStatesViewModel(
     private val application: Application,
     private val gameMenuRequest: GameMenuActivity.GameMenuRequest,
     private val statesManager: StatesManager,
-    private val disableMissingEntries: Boolean,
     private val statesPreviewManager: StatesPreviewManager,
 ) : ViewModel() {
     class Factory(
         private val application: Application,
         private val gameMenuRequest: GameMenuActivity.GameMenuRequest,
         private val statesManager: StatesManager,
-        private val disableMissingEntries: Boolean,
         private val statesPreviewManager: StatesPreviewManager,
     ) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -30,7 +28,6 @@ class GameMenuStatesViewModel(
                 application,
                 gameMenuRequest,
                 statesManager,
-                disableMissingEntries,
                 statesPreviewManager,
             ) as T
         }
@@ -39,7 +36,7 @@ class GameMenuStatesViewModel(
     data class StateEntry(
         val title: String,
         val description: String,
-        val enabled: Boolean,
+        val exists: Boolean,
         val preview: Bitmap?,
     )
 
@@ -56,8 +53,12 @@ class GameMenuStatesViewModel(
                             R.string.game_menu_state,
                             (index + 1).toString(),
                         )
-                    val description = GameMenuHelper.getSaveStateDescription(slotInfo)
-                    val isEnabled = !disableMissingEntries || slotInfo.exists
+                    val description =
+                        if (slotInfo.exists) {
+                            GameMenuHelper.getSaveStateDescription(slotInfo)
+                        } else {
+                            application.applicationContext.getString(R.string.game_menu_state_empty)
+                        }
                     val preview =
                         GameMenuHelper.getSaveStateBitmap(
                             application.applicationContext,
@@ -68,7 +69,7 @@ class GameMenuStatesViewModel(
                             index,
                         )
 
-                    StateEntry(title, description, isEnabled, preview)
+                    StateEntry(title, description, slotInfo.exists, preview)
                 }
 
             emit(State(entries))

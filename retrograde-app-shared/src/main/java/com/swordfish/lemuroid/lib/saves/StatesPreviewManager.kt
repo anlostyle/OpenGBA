@@ -38,6 +38,14 @@ class StatesPreviewManager(private val directoriesManager: DirectoriesManager) {
         }
     }
 
+    suspend fun deletePreviewForSlot(
+        game: Game,
+        coreID: CoreID,
+        index: Int,
+    ) = withContext(Dispatchers.IO) {
+        getPreviewFile(getSlotScreenshotName(game, index), coreID.coreName).delete()
+    }
+
     private fun getPreviewFile(
         fileName: String,
         coreName: String,
