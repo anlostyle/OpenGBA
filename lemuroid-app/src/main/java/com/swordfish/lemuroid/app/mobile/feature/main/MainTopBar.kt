@@ -6,18 +6,19 @@ import android.view.KeyEvent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -35,6 +36,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.SolidColor
@@ -44,7 +46,10 @@ import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -56,10 +61,10 @@ import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelGreen
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelInk
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelMatrixIcon
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelMuted
-import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelOutline
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPanel
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPaper
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelShape
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.pixelFocusBrackets
 import kotlinx.coroutines.delay
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -71,13 +76,17 @@ fun MainTopBar(
     navController: NavHostController,
     onUpdateQueryString: (String) -> Unit,
     mainUIState: MainViewModel.UiState,
+    pageIndicator: String?,
+    onSearchClick: () -> Unit,
 ) {
     Column {
         PixelTopBar(
             route = currentRoute,
             navController = navController,
             mainUIState = mainUIState,
+            pageIndicator = pageIndicator,
             onUpdateQueryString = onUpdateQueryString,
+            onSearchClick = onSearchClick,
         )
 
         AnimatedVisibility(mainUIState.operationInProgress) {
@@ -95,25 +104,26 @@ private fun PixelTopBar(
     route: MainRoute,
     navController: NavController,
     mainUIState: MainViewModel.UiState,
+    pageIndicator: String?,
     onUpdateQueryString: (String) -> Unit,
+    onSearchClick: () -> Unit,
 ) {
     Row(
         modifier =
             Modifier
                 .fillMaxWidth()
                 .height(46.dp)
-                .background(PixelInk)
-                .border(1.dp, PixelOutline)
-                .padding(horizontal = 14.dp),
+                .background(PixelPanel)
+                .padding(horizontal = 13.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        if (route.parent != null) {
+        if (route.parent != null && route != MainRoute.SEARCH && route != MainRoute.SYSTEM_GAMES) {
             Box(
                 modifier =
                     Modifier
                         .size(28.dp)
-                        .background(PixelPanel, PixelShape)
+                        .background(PixelInk, PixelShape)
                         .clickable { navController.popBackStack() },
                 contentAlignment = Alignment.Center,
             ) {
@@ -139,19 +149,45 @@ private fun PixelTopBar(
             style = MaterialTheme.typography.labelLarge,
             fontFamily = FontFamily.Monospace,
         )
+        Text(
+            text = stringResource(if (route == MainRoute.HOME) R.string.launcher_continue else route.titleId),
+            color = PixelPaper,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold,
+            maxLines = 1,
+        )
 
-        if (route == MainRoute.SEARCH) {
-            PixelSearchView(
-                modifier = Modifier.weight(1f),
-                mainUIState = mainUIState,
-                onUpdateQueryString = onUpdateQueryString,
-            )
-        } else {
+        Box(
+            modifier = Modifier.weight(1f).padding(start = 10.dp),
+            contentAlignment = Alignment.CenterStart,
+        ) {
+            when (route) {
+                MainRoute.SYSTEMS, MainRoute.SYSTEM_GAMES -> {
+                    PixelSearchLauncher(
+                        modifier = Modifier.fillMaxWidth().widthIn(max = 234.dp),
+                        onClick = onSearchClick,
+                    )
+                }
+
+                MainRoute.SEARCH -> {
+                    PixelSearchView(
+                        modifier = Modifier.fillMaxWidth().widthIn(max = 234.dp),
+                        mainUIState = mainUIState,
+                        onUpdateQueryString = onUpdateQueryString,
+                    )
+                }
+
+                else -> Spacer(modifier = Modifier)
+            }
+        }
+
+        pageIndicator?.let {
             Text(
-                text = stringResource(if (route == MainRoute.HOME) R.string.launcher_library else route.titleId),
-                modifier = Modifier.weight(1f),
-                color = PixelPaper,
-                style = MaterialTheme.typography.titleMedium,
+                text = it,
+                modifier = Modifier.width(54.dp),
+                color = PixelMuted,
+                style = MaterialTheme.typography.labelLarge,
+                fontFamily = FontFamily.Monospace,
                 fontWeight = FontWeight.Bold,
                 maxLines = 1,
             )
@@ -159,6 +195,102 @@ private fun PixelTopBar(
 
         PixelSystemStatus()
     }
+}
+
+@Composable
+private fun PixelSearchLauncher(
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
+) {
+    var focused by remember { mutableStateOf(false) }
+
+    Row(
+        modifier =
+            modifier
+                .height(30.dp)
+                .onFocusChanged { focused = it.isFocused }
+                .pixelFocusBrackets(focused)
+                .background(PixelInk)
+                .clickable(onClick = onClick)
+                .semantics { contentDescription = "Search games" }
+                .padding(horizontal = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        PixelMatrixIcon(
+            pixels = SEARCH_PIXELS,
+            color = PixelGreen,
+            modifier = Modifier.size(18.dp),
+        )
+        Text(
+            text = stringResource(R.string.game_page_search_suggestion),
+            color = PixelMuted,
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.Bold,
+            maxLines = 1,
+        )
+    }
+}
+
+@Composable
+private fun PixelSearchView(
+    modifier: Modifier = Modifier,
+    mainUIState: MainViewModel.UiState,
+    onUpdateQueryString: (String) -> Unit,
+) {
+    val focusRequester = remember { FocusRequester() }
+    val focusManager = LocalFocusManager.current
+    val keyboardController = LocalSoftwareKeyboardController.current
+
+    LaunchedEffect(Unit) {
+        focusRequester.requestFocus()
+    }
+
+    BasicTextField(
+        value = mainUIState.searchQuery,
+        modifier =
+            modifier
+                .height(30.dp)
+                .focusRequester(focusRequester)
+                .onPreviewKeyEvent { event ->
+                    val moveToResults = event.nativeKeyEvent.keyCode == KeyEvent.KEYCODE_DPAD_DOWN
+                    if (moveToResults && event.type == KeyEventType.KeyDown) {
+                        keyboardController?.hide()
+                        focusManager.moveFocus(FocusDirection.Down)
+                    }
+                    moveToResults
+                }
+                .background(PixelInk)
+                .padding(horizontal = 10.dp),
+        textStyle = MaterialTheme.typography.bodyMedium.copy(color = PixelPaper),
+        onValueChange = onUpdateQueryString,
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+        keyboardActions =
+            KeyboardActions(
+                onDone = {
+                    keyboardController?.hide()
+                    focusManager.moveFocus(FocusDirection.Down)
+                },
+            ),
+        cursorBrush = SolidColor(PixelGreen),
+        decorationBox = { innerTextField ->
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.CenterStart,
+            ) {
+                if (mainUIState.searchQuery.isEmpty()) {
+                    Text(
+                        text = stringResource(R.string.game_page_search_suggestion),
+                        color = PixelMuted,
+                        style = MaterialTheme.typography.bodyMedium,
+                        maxLines = 1,
+                    )
+                }
+                innerTextField()
+            }
+        },
+    )
 }
 
 @Composable
@@ -223,59 +355,6 @@ private fun PixelBattery(level: Int) {
 }
 
 @Composable
-private fun PixelSearchView(
-    modifier: Modifier = Modifier,
-    mainUIState: MainViewModel.UiState,
-    onUpdateQueryString: (String) -> Unit,
-) {
-    val focusRequester = remember { FocusRequester() }
-    val focusManager = LocalFocusManager.current
-
-    LaunchedEffect(Unit) {
-        focusRequester.requestFocus()
-    }
-
-    BasicTextField(
-        value = mainUIState.searchQuery,
-        modifier =
-            modifier
-                .height(36.dp)
-                .focusRequester(focusRequester)
-                .onPreviewKeyEvent { event ->
-                    val moveToResults = event.nativeKeyEvent.keyCode == KeyEvent.KEYCODE_DPAD_DOWN
-                    if (moveToResults && event.type == KeyEventType.KeyDown) {
-                        focusManager.moveFocus(FocusDirection.Down)
-                    }
-                    moveToResults
-                }
-                .background(PixelPanel, PixelShape)
-                .padding(horizontal = 12.dp),
-        textStyle = MaterialTheme.typography.bodyMedium.copy(color = PixelPaper),
-        onValueChange = onUpdateQueryString,
-        singleLine = true,
-        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
-        keyboardActions = KeyboardActions(onDone = { focusManager.moveFocus(FocusDirection.Down) }),
-        cursorBrush = SolidColor(PixelGreen),
-        decorationBox = { innerTextField ->
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.CenterStart,
-            ) {
-                if (mainUIState.searchQuery.isEmpty()) {
-                    Text(
-                        text = stringResource(R.string.game_page_search_suggestion),
-                        color = PixelMuted,
-                        style = MaterialTheme.typography.bodyMedium,
-                        maxLines = 1,
-                    )
-                }
-                innerTextField()
-            }
-        },
-    )
-}
-
-@Composable
 private fun rememberClock(): String {
     var currentTime by remember { mutableStateOf(formatTime()) }
     LaunchedEffect(Unit) {
@@ -288,6 +367,17 @@ private fun rememberClock(): String {
 }
 
 private fun formatTime(): String = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
+
+private val SEARCH_PIXELS =
+    listOf(
+        "0111000",
+        "1101100",
+        "1000100",
+        "1101100",
+        "0111000",
+        "0001100",
+        "0000110",
+    )
 
 private val WIFI_PIXELS =
     listOf(

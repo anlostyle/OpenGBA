@@ -25,6 +25,7 @@
     <string name="launcher_library">游戏库</string>
     <string name="launcher_confirm">确认</string>
     <string name="launcher_menu">菜单</string>
+    <string name="launcher_page">翻页</string>
     <string name="home_continue_game">继续游戏</string>
     <string name="home_start_game">启动游戏</string>
     <string name="home_last_played">上次游玩  %1$s</string>

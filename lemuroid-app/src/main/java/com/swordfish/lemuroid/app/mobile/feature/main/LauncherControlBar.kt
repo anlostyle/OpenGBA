@@ -1,7 +1,6 @@
 package com.swordfish.lemuroid.app.mobile.feature.main
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelGreen
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelKeyHint
-import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelOutline
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelKeyPairHint
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPanel
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPaper
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelRed
@@ -26,12 +25,12 @@ fun LauncherControlBar(currentRoute: MainRoute) {
         modifier =
             Modifier
                 .fillMaxWidth()
-                .height(44.dp)
+                .height(46.dp)
                 .background(PixelPanel)
-                .border(1.dp, PixelOutline)
-                .padding(horizontal = 18.dp),
+                .padding(horizontal = if (currentRoute == MainRoute.HOME) 18.dp else 66.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceEvenly,
+        horizontalArrangement =
+            if (currentRoute == MainRoute.HOME) Arrangement.SpaceEvenly else Arrangement.SpaceBetween,
     ) {
         PixelKeyHint(
             key = "A",
@@ -43,6 +42,19 @@ fun LauncherControlBar(currentRoute: MainRoute) {
                 key = "B",
                 label = stringResource(R.string.back),
                 color = PixelRed,
+            )
+        }
+        if (
+            currentRoute == MainRoute.SYSTEMS ||
+            currentRoute == MainRoute.SYSTEM_GAMES ||
+            currentRoute == MainRoute.FAVORITES ||
+            currentRoute == MainRoute.SEARCH
+        ) {
+            PixelKeyPairHint(
+                firstKey = "L",
+                secondKey = "R",
+                label = stringResource(R.string.launcher_page),
+                color = PixelPaper,
             )
         }
         PixelKeyHint(

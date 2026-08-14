@@ -30,8 +30,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 
-val PixelInk = Color(0xFF0B1114)
-val PixelPanel = Color(0xFF162229)
+val PixelInk = Color(0xFF091014)
+val PixelPanel = Color(0xFF0F191E)
 val PixelPanelLight = Color(0xFF22323B)
 val PixelPaper = Color(0xFFF1E7C9)
 val PixelGreen = Color(0xFFA8D944)
@@ -74,6 +74,27 @@ val PixelShape =
                     close()
                 }
             return Outline.Generic(path)
+        }
+    }
+
+val PixelCoverShape =
+    object : Shape {
+        override fun createOutline(
+            size: Size,
+            layoutDirection: LayoutDirection,
+            density: Density,
+        ): Outline {
+            val cut = with(density) { 5.33.dp.toPx() }
+            return Outline.Generic(
+                Path().apply {
+                    moveTo(cut, 0f)
+                    lineTo(size.width, 0f)
+                    lineTo(size.width, size.height)
+                    lineTo(0f, size.height)
+                    lineTo(0f, cut)
+                    close()
+                },
+            )
         }
     }
 
@@ -142,26 +163,65 @@ fun PixelKeyHint(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(7.dp),
     ) {
-        Box(
-            modifier =
-                Modifier
-                    .background(color, PixelShape)
-                    .padding(horizontal = 8.dp, vertical = 4.dp),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = key,
-                color = PixelInk,
-                style = MaterialTheme.typography.labelLarge,
-                fontFamily = FontFamily.Monospace,
-                fontWeight = FontWeight.Black,
-            )
-        }
+        PixelKeyCap(key, color)
         Text(
             text = label,
             color = PixelPaper,
             style = MaterialTheme.typography.labelLarge,
             fontWeight = FontWeight.Bold,
+        )
+    }
+}
+
+@Composable
+fun PixelKeyPairHint(
+    firstKey: String,
+    secondKey: String,
+    label: String,
+    color: Color,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        PixelKeyCap(firstKey, color)
+        Text(
+            text = "/",
+            color = PixelMuted,
+            style = MaterialTheme.typography.labelLarge,
+            fontFamily = FontFamily.Monospace,
+            fontWeight = FontWeight.Black,
+        )
+        PixelKeyCap(secondKey, color)
+        Text(
+            text = label,
+            color = PixelPaper,
+            style = MaterialTheme.typography.labelLarge,
+            fontWeight = FontWeight.Bold,
+        )
+    }
+}
+
+@Composable
+private fun PixelKeyCap(
+    key: String,
+    color: Color,
+) {
+    Box(
+        modifier =
+            Modifier
+                .background(color, PixelShape)
+                .padding(horizontal = 8.dp, vertical = 4.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = key,
+            color = PixelInk,
+            style = MaterialTheme.typography.labelLarge,
+            fontFamily = FontFamily.Monospace,
+            fontWeight = FontWeight.Black,
         )
     }
 }

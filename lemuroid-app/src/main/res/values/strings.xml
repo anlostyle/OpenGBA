@@ -24,6 +24,7 @@
     <string name="launcher_library">Game Library</string>
     <string name="launcher_confirm">Confirm</string>
     <string name="launcher_menu">Menu</string>
+    <string name="launcher_page">Page</string>
     <string name="home_continue_game">Continue game</string>
     <string name="home_start_game">Start game</string>
     <string name="home_last_played">Last played  %1$s</string>

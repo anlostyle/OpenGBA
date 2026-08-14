@@ -10,8 +10,8 @@ plugins {
 
 android {
     defaultConfig {
-        versionCode = 14
-        versionName = "0.1.13"
+        versionCode = 15
+        versionName = "0.1.14"
         applicationId = "com.opengba.launcher"
 
         // FIT is an arm64-only device; do not ship emulator cores for other ABIs.
@@ -135,6 +135,8 @@ android {
 }
 
 dependencies {
+    testImplementation(kotlin("test"))
+
     implementation(project(":retrograde-util"))
     implementation(project(":retrograde-app-shared"))
     implementation(project(":lemuroid-metadata-libretro-db"))

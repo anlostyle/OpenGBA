@@ -3,29 +3,21 @@ package com.swordfish.lemuroid.app.mobile.feature.home
 import android.text.format.DateUtils
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -39,23 +31,26 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.swordfish.lemuroid.R
-import com.swordfish.lemuroid.app.mobile.shared.compose.ui.LemuroidGameCard
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.LemuroidGameImage
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelCoverShape
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelGreen
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelInk
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelMuted
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelOutline
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPanel
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPaper
-import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelShadow
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelShape
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.onLauncherMenu
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.pixelFocusBrackets
@@ -68,15 +63,17 @@ import java.util.Date
 fun HomeScreen(
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel,
+    leftNavigationRequester: FocusRequester,
     onGameClick: (Game) -> Unit,
     onGameLongClick: (Game) -> Unit,
 ) {
     val context = LocalContext.current
-
     val state = viewModel.getViewStates().collectAsState(HomeViewModel.UIState()).value
+
     HomeContent(
         modifier = modifier,
         state = state,
+        leftNavigationRequester = leftNavigationRequester,
         onGameClicked = onGameClick,
         onGameLongClick = onGameLongClick,
         onSetDirectoryClicked = { viewModel.changeLocalStorageFolder(context) },
@@ -87,47 +84,57 @@ fun HomeScreen(
 private fun HomeContent(
     modifier: Modifier,
     state: HomeViewModel.UIState,
+    leftNavigationRequester: FocusRequester,
     onGameClicked: (Game) -> Unit,
     onGameLongClick: (Game) -> Unit,
     onSetDirectoryClicked: () -> Unit,
 ) {
-    Box(modifier = modifier.fillMaxSize().padding(10.dp)) {
+    Box(
+        modifier =
+            modifier
+                .fillMaxSize()
+                .background(PixelInk)
+                .padding(horizontal = 32.dp, vertical = 14.dp),
+    ) {
         if (state.gamesCount == 0) {
             HomeEmptyState(
                 modifier = Modifier.fillMaxSize(),
                 scanning = state.indexInProgress,
                 onSetDirectoryClicked = onSetDirectoryClicked,
             )
-        } else {
-            val featuredGame =
-                state.recentGames.firstOrNull()
-                    ?: state.favoritesGames.firstOrNull()
-                    ?: state.discoveryGames.firstOrNull()
-            val shelfGames =
-                (state.recentGames + state.favoritesGames + state.discoveryGames)
-                    .distinctBy { it.id }
-                    .take(HomeViewModel.CAROUSEL_MAX_ITEMS)
+            return@Box
+        }
 
-            Column(
+        val featuredGame =
+            state.recentGames.firstOrNull()
+                ?: state.favoritesGames.firstOrNull()
+                ?: state.discoveryGames.firstOrNull()
+        val recentGames =
+            (state.recentGames + state.favoritesGames + state.discoveryGames)
+                .distinctBy { it.id }
+                .filterNot { it.id == featuredGame?.id }
+                .take(4)
+
+        featuredGame?.let { game ->
+            Row(
                 modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.spacedBy(9.dp),
+                horizontalArrangement = Arrangement.spacedBy(32.dp),
             ) {
-                featuredGame?.let { game ->
-                    HomeFeaturedGame(
-                        modifier = Modifier.weight(1.1f),
-                        game = game,
-                        onClick = { onGameClicked(game) },
-                        onLongClick = { onGameLongClick(game) },
-                    )
-                }
-                if (shelfGames.isNotEmpty()) {
-                    HomeShelf(
-                        modifier = Modifier.weight(0.9f),
-                        games = shelfGames,
-                        onGameClicked = onGameClicked,
-                        onGameLongClick = onGameLongClick,
-                    )
-                }
+                FeaturedGame(
+                    modifier =
+                        Modifier
+                            .width(214.dp)
+                            .focusProperties { left = leftNavigationRequester },
+                    game = game,
+                    onClick = { onGameClicked(game) },
+                    onLongClick = { onGameLongClick(game) },
+                )
+                RecentGamesGrid(
+                    modifier = Modifier.weight(1f),
+                    games = recentGames,
+                    onGameClicked = onGameClicked,
+                    onGameLongClick = onGameLongClick,
+                )
             }
         }
     }
@@ -198,9 +205,9 @@ private fun HomeEmptyState(
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun HomeFeaturedGame(
-    modifier: Modifier = Modifier,
+private fun FeaturedGame(
     game: Game,
+    modifier: Modifier = Modifier,
     onClick: () -> Unit,
     onLongClick: () -> Unit,
 ) {
@@ -220,155 +227,149 @@ private fun HomeFeaturedGame(
         }
     var focused by remember { mutableStateOf(false) }
 
-    Box(modifier = modifier.padding(end = 4.dp, bottom = 4.dp)) {
-        Box(
-            modifier =
-                Modifier
-                    .matchParentSize()
-                    .offset(4.dp, 4.dp)
-                    .background(PixelShadow, PixelShape),
+    Column(
+        modifier =
+            modifier
+                .fillMaxHeight()
+                .onFocusChanged { focused = it.isFocused }
+                .pixelFocusBrackets(focused)
+                .onLauncherMenu(onLongClick)
+                .combinedClickable(onClick = onClick, onLongClick = onLongClick),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        LemuroidGameImage(
+            modifier = Modifier.fillMaxWidth().clip(PixelCoverShape),
+            game = game,
+            aspectRatio = 1f,
         )
-        Row(
-            modifier =
-                Modifier
-                    .fillMaxSize()
-                    .onFocusChanged { focused = it.isFocused }
-                    .pixelFocusBrackets(true)
-                    .clip(PixelShape)
-                    .border(if (focused) 3.dp else 2.dp, if (focused) PixelGreen else PixelOutline, PixelShape)
-                    .background(PixelPaper, PixelShape)
-                    .onLauncherMenu(onLongClick)
-                    .combinedClickable(onClick = onClick, onLongClick = onLongClick)
-                    .padding(10.dp),
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Box(
-                modifier =
-                    Modifier
-                        .fillMaxHeight()
-                        .aspectRatio(0.72f)
-                        .clip(PixelShape)
-                        .border(2.dp, PixelInk, PixelShape),
-            ) {
-                LemuroidGameImage(modifier = Modifier.fillMaxSize(), game = game)
-            }
-
-            Column(
-                modifier = Modifier.weight(1f).fillMaxHeight().padding(vertical = 3.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                Text(
-                    text = stringResource(R.string.home_continue_game),
-                    color = PixelInk,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Bold,
-                )
-                Text(
-                    text = game.displayName,
-                    modifier = Modifier.basicMarquee(),
-                    color = PixelInk,
-                    style = MaterialTheme.typography.headlineSmall,
-                    fontWeight = FontWeight.Black,
-                    maxLines = 1,
-                    overflow = TextOverflow.Clip,
-                )
-                Spacer(
-                    modifier =
-                        Modifier
-                            .fillMaxWidth()
-                            .height(2.dp)
-                            .background(PixelInk.copy(alpha = 0.28f)),
-                )
-                Text(
-                    text = subtitle,
-                    color = PixelInk.copy(alpha = 0.78f),
-                    style = MaterialTheme.typography.bodyMedium,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Spacer(modifier = Modifier.weight(1f))
-                PixelStartButton()
-            }
-        }
+        Text(
+            text = game.displayName,
+            modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+            color = PixelPaper,
+            fontSize = 16.sp,
+            lineHeight = 20.sp,
+            fontWeight = FontWeight.Black,
+            textAlign = TextAlign.Center,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+        Text(
+            text = subtitle,
+            modifier = Modifier.fillMaxWidth(),
+            color = PixelMuted,
+            fontSize = 12.sp,
+            lineHeight = 18.sp,
+            textAlign = TextAlign.Center,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+        Spacer(modifier = Modifier.height(12.dp))
+        StartGameButton()
     }
 }
 
 @Composable
-private fun PixelStartButton() {
-    Box(modifier = Modifier.wrapContentWidth().padding(end = 3.dp, bottom = 3.dp)) {
+private fun StartGameButton() {
+    Row(
+        modifier =
+            Modifier
+                .width(143.dp)
+                .height(28.dp)
+                .background(PixelGreen, PixelShape)
+                .padding(horizontal = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center,
+    ) {
         Box(
-            modifier =
-                Modifier
-                    .matchParentSize()
-                    .offset(3.dp, 3.dp)
-                    .background(PixelInk, PixelShape),
-        )
-        Row(
-            modifier =
-                Modifier
-                    .background(PixelGreen, PixelShape)
-                    .border(2.dp, PixelInk, PixelShape)
-                    .padding(horizontal = 14.dp, vertical = 7.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(9.dp),
+            modifier = Modifier.size(22.dp).background(PixelInk, PixelShape),
+            contentAlignment = Alignment.Center,
         ) {
             Text(
                 text = "A",
-                modifier = Modifier.background(PixelInk, PixelShape).padding(horizontal = 7.dp, vertical = 2.dp),
                 color = PixelGreen,
-                style = MaterialTheme.typography.labelLarge,
-                fontWeight = FontWeight.Black,
-            )
-            Text(
-                text = stringResource(R.string.home_start_game),
-                color = PixelInk,
-                style = MaterialTheme.typography.titleMedium,
+                fontFamily = FontFamily.Monospace,
                 fontWeight = FontWeight.Black,
             )
         }
+        Text(
+            text = stringResource(R.string.home_start_game),
+            modifier = Modifier.padding(start = 8.dp),
+            color = PixelInk,
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Black,
+        )
     }
 }
 
 @Composable
-private fun HomeShelf(
-    modifier: Modifier = Modifier,
+private fun RecentGamesGrid(
     games: List<Game>,
+    modifier: Modifier = Modifier,
     onGameClicked: (Game) -> Unit,
     onGameLongClick: (Game) -> Unit,
 ) {
-    BoxWithConstraints(modifier = modifier.fillMaxWidth()) {
-        val cardWidth = (maxHeight - 62.dp).coerceIn(64.dp, 110.dp)
-        Column(modifier = Modifier.fillMaxSize()) {
+    Column(
+        modifier = modifier.fillMaxHeight(),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        repeat(2) { row ->
             Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(9.dp),
+                modifier = Modifier.weight(1f).fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(32.dp),
             ) {
-                Box(modifier = Modifier.size(6.dp).background(PixelGreen))
-                Text(
-                    text = stringResource(R.string.home_recent_games),
-                    color = PixelPaper,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Black,
-                )
-            }
-            LazyRow(
-                modifier = Modifier.fillMaxSize(),
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
-                contentPadding = PaddingValues(top = 7.dp, end = 3.dp),
-            ) {
-                items(games.size, key = { games[it].id }) { index ->
-                    val game = games[index]
-                    LemuroidGameCard(
-                        modifier = Modifier.width(cardWidth),
-                        game = game,
-                        onClick = { onGameClicked(game) },
-                        onLongClick = { onGameLongClick(game) },
-                        imageAspectRatio = 1f,
-                        showSubtitle = false,
-                    )
+                repeat(2) { column ->
+                    val game = games.getOrNull(row * 2 + column)
+                    if (game == null) {
+                        Spacer(modifier = Modifier.weight(1f))
+                    } else {
+                        RecentGameCard(
+                            modifier = Modifier.weight(1f),
+                            game = game,
+                            onClick = { onGameClicked(game) },
+                            onLongClick = { onGameLongClick(game) },
+                        )
+                    }
                 }
             }
         }
+    }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun RecentGameCard(
+    game: Game,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
+    onLongClick: () -> Unit,
+) {
+    var focused by remember { mutableStateOf(false) }
+
+    Column(
+        modifier =
+            modifier
+                .fillMaxHeight()
+                .onFocusChanged { focused = it.isFocused }
+                .pixelFocusBrackets(focused)
+                .onLauncherMenu(onLongClick)
+                .combinedClickable(onClick = onClick, onLongClick = onLongClick),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        LemuroidGameImage(
+            modifier = Modifier.fillMaxWidth().clip(PixelCoverShape),
+            game = game,
+            aspectRatio = 1f,
+        )
+        Text(
+            text = game.displayName,
+            modifier = Modifier.fillMaxWidth().padding(top = 3.dp),
+            color = PixelPaper,
+            fontSize = 12.sp,
+            lineHeight = 16.sp,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
     }
 }

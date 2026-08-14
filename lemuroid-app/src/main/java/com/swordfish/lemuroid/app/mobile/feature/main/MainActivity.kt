@@ -19,6 +19,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
@@ -147,9 +148,12 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                 currentDestination?.route
                     ?.let { MainRoute.findByRoute(it) }
                     ?: MainRoute.HOME
+            val pageIndicatorState = remember { mutableStateOf<String?>(null) }
+            val navigationFocusRequester = remember { FocusRequester() }
 
             LaunchedEffect(currentRoute) {
                 mainViewModel.changeRoute(currentRoute)
+                pageIndicatorState.value = null
             }
 
             val selectedGameState =
@@ -165,8 +169,9 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                 gameInteractor.onGamePlay(game)
             }
 
-            val onGameFavoriteToggle = { game: Game, isFavorite: Boolean ->
-                gameInteractor.onFavoriteToggle(game, isFavorite)
+            val onPageChanged = { page: Int, pageCount: Int ->
+                pageIndicatorState.value =
+                    if (pageCount == 0) null else "$page / $pageCount"
             }
 
             val mainUIState =
@@ -199,12 +204,14 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     currentRoute = currentRoute,
                     navController = navController,
                     mainUIState = mainUIState,
+                    pageIndicator = pageIndicatorState.value,
                     onUpdateQueryString = { mainViewModel.changeQueryString(it) },
+                    onSearchClick = { navController.navigateToRoute(MainRoute.SEARCH) },
                 )
 
                 Row(modifier = Modifier.fillMaxWidth().weight(1f)) {
                     if (wideLayout) {
-                        MainNavigationRail(currentRoute, navController)
+                        MainNavigationRail(currentRoute, navController, navigationFocusRequester)
                     }
 
                     NavHost(
@@ -224,6 +231,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                                 coresSelection,
                                             ),
                                     ),
+                                leftNavigationRequester = navigationFocusRequester,
                                 onGameClick = onGameClick,
                                 onGameLongClick = onGameLongClick,
                             )
@@ -235,8 +243,10 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                     viewModel(
                                         factory = FavoritesViewModel.Factory(retrogradeDb),
                                     ),
+                                leftNavigationRequester = navigationFocusRequester,
                                 onGameClick = onGameClick,
                                 onGameLongClick = onGameLongClick,
+                                onPageChanged = onPageChanged,
                             )
                         }
                         composable(MainRoute.SEARCH) {
@@ -247,10 +257,11 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                         factory = SearchViewModel.Factory(retrogradeDb),
                                     ),
                                 searchQuery = mainUIState.searchQuery,
+                                leftNavigationRequester = navigationFocusRequester,
                                 onGameClick = onGameClick,
                                 onGameLongClick = onGameLongClick,
-                                onGameFavoriteToggle = onGameFavoriteToggle,
                                 onResetSearchQuery = { mainViewModel.changeQueryString("") },
+                                onPageChanged = onPageChanged,
                             )
                         }
                         composable(MainRoute.SYSTEMS) {
@@ -260,9 +271,10 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                     viewModel(
                                         factory = GamesViewModel.Factory(retrogradeDb, MetaSystemID.GBA),
                                     ),
+                                leftNavigationRequester = navigationFocusRequester,
                                 onGameClick = onGameClick,
                                 onGameLongClick = onGameLongClick,
-                                onSearchClick = { navController.navigateToRoute(MainRoute.SEARCH) },
+                                onPageChanged = onPageChanged,
                             )
                         }
                         composable(MainRoute.SYSTEM_GAMES) { entry ->
@@ -277,9 +289,10 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                                 MetaSystemID.valueOf(metaSystemId!!),
                                             ),
                                     ),
+                                leftNavigationRequester = navigationFocusRequester,
                                 onGameClick = onGameClick,
                                 onGameLongClick = onGameLongClick,
-                                onSearchClick = { navController.navigateToRoute(MainRoute.SEARCH) },
+                                onPageChanged = onPageChanged,
                             )
                         }
                         composable(MainRoute.SETTINGS) {
