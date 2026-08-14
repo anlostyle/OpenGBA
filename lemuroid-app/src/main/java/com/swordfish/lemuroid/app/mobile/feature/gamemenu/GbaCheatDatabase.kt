@@ -9,7 +9,13 @@ import java.util.Properties
 internal data class GbaCheat(
     val description: String,
     val code: String,
-)
+) {
+    fun displayDescription(): String = description.replace(technicalPrefix, "")
+
+    private companion object {
+        val technicalPrefix = Regex("^direct_v\\d+\\s+", RegexOption.IGNORE_CASE)
+    }
+}
 
 internal data class GbaCheatSet(
     val source: String,

@@ -139,6 +139,7 @@
     <string name="game_menu_quick_load">Quick Load</string>
     <string name="game_menu_quick_save_slot">Quick Save (Slot %1$d)</string>
     <string name="game_menu_quick_load_slot">Quick Load (Slot %1$d)</string>
+    <string name="game_menu_slot_value">Slot %1$d</string>
     <string name="game_menu_save">Save State</string>
     <string name="game_menu_load">Load State</string>
     <string name="game_menu_states">Save States</string>
@@ -171,6 +172,11 @@
     <string name="game_menu_shortcuts">Default Shortcuts</string>
     <string name="game_menu_shortcuts_description">A: GBA A\nB: GBA B\nL1/R1: GBA L/R\nL2: Menu\nHold X: Rewind\nY: Undo rewind\nHold R2: Fast-forward\n\nShortcuts can be customized in Settings &gt; Input.</string>
     <string name="game_menu_cheats_hint">One code per line</string>
+    <string name="game_menu_cheats_summary">%1$d codes · %2$d enabled</string>
+    <string name="game_menu_cheats_filter_all">All</string>
+    <string name="game_menu_cheats_filter_enabled">Enabled</string>
+    <string name="game_menu_cheats_search">Search cheats</string>
+    <string name="game_menu_cheats_apply">Apply and return</string>
     <string name="game_menu_change_disk_disk">Disk %1$s</string>
     <string name="game_menu_tilt_sensor">Tilt Sensor</string>
 

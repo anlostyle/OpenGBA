@@ -34,6 +34,11 @@ enum class GameMenuRoute(
         titleId = R.string.game_menu_states,
         parent = HOME,
     ),
+    CHEATS(
+        route = "cheats",
+        titleId = R.string.game_menu_cheats,
+        parent = HOME,
+    ),
     OPTIONS(
         route = "options",
         titleId = R.string.game_menu_settings,

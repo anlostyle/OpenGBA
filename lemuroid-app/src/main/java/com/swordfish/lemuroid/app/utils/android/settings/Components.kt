@@ -52,6 +52,7 @@ fun LemuroidSettingsPage(
 
 @Composable
 fun LemuroidSettingsSwitch(
+    modifier: Modifier = Modifier,
     enabled: Boolean = true,
     state: SettingValueState<Boolean>,
     icon: @Composable (() -> Unit)? = null,
@@ -60,6 +61,7 @@ fun LemuroidSettingsSwitch(
     onCheckedChange: (Boolean) -> Unit = {},
 ) {
     SettingsSwitch(
+        modifier = modifier,
         enabled = enabled,
         state = state.value,
         icon = icon,
@@ -75,6 +77,7 @@ fun LemuroidSettingsSwitch(
 
 @Composable
 fun LemuroidSettingsMenuLink(
+    modifier: Modifier = Modifier,
     enabled: Boolean = true,
     icon: (@Composable () -> Unit)? = null,
     title: @Composable () -> Unit,
@@ -83,6 +86,7 @@ fun LemuroidSettingsMenuLink(
     onClick: () -> Unit,
 ) {
     SettingsMenuLink(
+        modifier = modifier,
         enabled = enabled,
         icon = icon,
         title = title,

@@ -118,6 +118,7 @@
     <string name="game_menu_quick_load">快速读取</string>
     <string name="game_menu_quick_save_slot">快速存档（槽位 %1$d）</string>
     <string name="game_menu_quick_load_slot">快速读取（槽位 %1$d）</string>
+    <string name="game_menu_slot_value">槽位 %1$d</string>
     <string name="game_menu_save">存档槽</string>
     <string name="game_menu_load">读取存档</string>
     <string name="game_menu_states">存档管理</string>
@@ -150,6 +151,11 @@
     <string name="game_menu_shortcuts">默认快捷键</string>
     <string name="game_menu_shortcuts_description">A：GBA A\nB：GBA B\nL1/R1：GBA L/R\nL2：菜单\n按住 X：回溯\nY：回到回溯前\n按住 R2：加速\n\n可以在“设置 &gt; 输入”中自定义快捷键。</string>
     <string name="game_menu_cheats_hint">每行输入一个代码</string>
+    <string name="game_menu_cheats_summary">共 %1$d 项 · 已开启 %2$d</string>
+    <string name="game_menu_cheats_filter_all">全部</string>
+    <string name="game_menu_cheats_filter_enabled">已开启</string>
+    <string name="game_menu_cheats_search">搜索金手指</string>
+    <string name="game_menu_cheats_apply">应用并返回</string>
     <string name="game_menu_change_disk_disk">碟片 %1$s</string>
     <string name="game_menu_tilt_sensor">倾斜传感器</string>
     <string name="game_loading_preparing_game">正在准备游戏…</string>

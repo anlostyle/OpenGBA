@@ -6,6 +6,14 @@ import kotlin.test.assertNull
 
 class GbaCheatDatabaseTest {
     @Test
+    fun hidesTechnicalPrefixWithoutChangingStoredCheat() {
+        val cheat = GbaCheat("direct_v1 获得999经验", "12345678 0001")
+
+        assertEquals("获得999经验", cheat.displayDescription())
+        assertEquals("direct_v1 获得999经验", cheat.description)
+    }
+
+    @Test
     fun matchesChineseDisplayNameWithoutGuessingAnotherEdition() {
         val fireRed = GbaCheatDatabase.nameAssetFile("口袋妖怪 火红")!!
         val leafGreen = GbaCheatDatabase.nameAssetFile("口袋妖怪 叶绿")!!

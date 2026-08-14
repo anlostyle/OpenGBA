@@ -32,6 +32,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -179,6 +180,10 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                         }
                     },
                     windowInsets = WindowInsets(0.dp),
+                    colors =
+                        TopAppBarDefaults.topAppBarColors(
+                            containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.88f),
+                        ),
                     navigationIcon = {
                         AnimatedContent(targetState = currentRoute.canGoBack(), label = "Back") { canGoBack ->
                             if (canGoBack) {
@@ -235,6 +240,9 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                             },
                         )
                     }
+                    composable(GameMenuRoute.CHEATS) {
+                        GameMenuCheatsScreen(gameMenuRequest, ::onResult)
+                    }
                     composable(GameMenuRoute.OPTIONS) {
                         GameMenuCoreOptionsScreen(
                             viewModel(
@@ -256,10 +264,11 @@ class GameMenuActivity : RetrogradeComponentActivity() {
         ) {
             val panelWidth =
                 remember(maxWidth) {
-                    minOf(maxWidth * 0.8f, 400f.dp)
+                    maxWidth * (5f / 12f)
                 }
 
             Surface(
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.88f),
                 modifier =
                     Modifier
                         .padding()
