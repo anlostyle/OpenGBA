@@ -1,0 +1,21 @@
+cheats = 5
+
+cheat0_desc = "direct_v1 各种资源"
+cheat0_code = "32fc1B68+000F+32fc1B69+0027+32fc1B6C+000F+32fc1B6D+0027+32fc1B70+000F+32fc1B71+0027"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 基地HP"
+cheat1_code = "32fc9648+000F+32fc9649+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 P"
+cheat2_code = "32fc1BDC+000F+32fc1BDD+0027"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 MR"
+cheat3_code = "32fc1B69+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 ES"
+cheat4_code = "32fc1B6D+0003"
+cheat4_enable = false

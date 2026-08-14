@@ -1,0 +1,137 @@
+cheats = 34
+
+cheat0_desc = "direct_v1 HP"
+cheat0_code = "33000CD4+00E7+33000CD5+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 MP"
+cheat1_code = "33000CD6+00E7+33000CD7+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 HP MAX"
+cheat2_code = "33004AE2+00E7+33004AE3+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 MP MAX"
+cheat3_code = "33004AE6+00E7+33004AE7+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 无敌"
+cheat4_code = "33000CE2+0064"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 LV"
+cheat5_code = "33004AD1+0032"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 攻"
+cheat6_code = "33004AE8+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 防"
+cheat7_code = "33004AE9+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 运"
+cheat8_code = "33004AEA+00FF"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 金"
+cheat9_code = "33004AEC+007F+33004AED+0096+33004AEE+0098"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 EXP"
+cheat10_code = "33004AD8+009F+33004AD9+0086+33004ADA+0001"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 副武器?? 鞋1"
+cheat11_code = "33004ACD+0000"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 副武器?? 鞋2"
+cheat12_code = "33004ACD+0001"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 副武器?? 火球"
+cheat13_code = "33004ACD+0002"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 副武器?? 回旋火球"
+cheat14_code = "33004ACD+0003"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 副武器?? 回旋护身"
+cheat15_code = "33004ACD+0004"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 副武器?? 飞衫"
+cheat16_code = "33004ACD+0005"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 副武器?? 放电"
+cheat17_code = "33004ACD+0006"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 副武器?? 暴POW"
+cheat18_code = "33004ACD+0007"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 大招,用后解锁 大招1"
+cheat19_code = "33004ACE+0000"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 大招,用后解锁 大招2"
+cheat20_code = "33004ACE+0001"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 大招,用后解锁 大招3"
+cheat21_code = "33004ACE+0002"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 大招,用后解锁 大招4"
+cheat22_code = "33004ACE+0003"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 大招,用后解锁 大招5"
+cheat23_code = "33004ACE+0004"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 大招,用后解锁 大招6"
+cheat24_code = "33004ACE+0005"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 全物品"
+cheat25_code = "33004AF0+0063+33004AF1+0063+33004AF2+0063+33004AF3+0063+33004AF4+0063+33004AF5+0063+33004AF6+0063+33004AF7+0063+33004AF8+0063+33004AF9+0063+33004AFA+0063+33004AFB+0063+33004AFC+0063+33004AFD+0063+33004AFE+0063+33004AFF+0063+33004B00+0063+33004B01+0063"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 全特殊物品"
+cheat26_code = "33004B02+0001+33004B03+0001+33004B04+0001+33004B05+0001+33004B06+0001+33004B07+0001+33004B08+0001+33004B09+0001+33004B0A+0001+33004B0B+0001+33004B0C+0001+33004B0D+0001+33004B0E+0001+33004B0F+0001+33004B10+0001+33004B11+0001+33004B12+0001+33004B13+0001+33004B14+0001+33004B15+0001+33004B16+0001"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 命"
+cheat27_code = "33004AE0+00E7+33004AE1+0003+33004AE2+00E7+33004AE3+0003"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 妖力"
+cheat28_code = "33004AE4+00F3+33004AE5+0001+33004AE6+00F3+33004AE7+0001"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 ?#092;"
+cheat29_code = "33004AEA+00FF"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 经验值"
+cheat30_code = "33004AD8+009F+33004AD9+0086+33004ADA+0001"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 金钱"
+cheat31_code = "33004AEC+003F+33004AED+0042+33004AEE+000F"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 全道具"
+cheat32_code = "33004AF0+0063+33004AF1+0063+33004AF2+0063+33004AF3+0063+33004AF4+0063+33004AF5+0063+33004AF6+0063+33004AF7+0063+33004AF8+0063+33004AF9+0063+33004AFA+0063+33004AFB+0063+33004AFC+0063+33004AFD+0063+33004AFE+0063+33004AFF+0063"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 全装备"
+cheat33_code = "33004B02+0001+33004B03+0001+33004B04+0001+33004B05+0001+33004B06+0001+33004B07+0001+33004B08+0001+33004B09+0001+33004B0A+0001+33004B0B+0001+33004B0C+0001+33004B0D+0001+33004B0E+0001+33004B0F+0001+33004B10+0001+33004B11+0001+33004B12+0001+33004B13+0001+33004B14+0001+33004B15+0001+33004B16+0001"
+cheat33_enable = false

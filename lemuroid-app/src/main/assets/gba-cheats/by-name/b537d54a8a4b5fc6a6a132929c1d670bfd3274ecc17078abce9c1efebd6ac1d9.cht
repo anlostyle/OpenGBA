@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 氧气不减"
+cheat0_code = "3300107E+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 生命不减"
+cheat1_code = "33001087+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 隐藏角色 外星兔"
+cheat2_code = "32fc1191+0006"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐藏角色 剑士"
+cheat3_code = "32fc1191+0008"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 米数"
+cheat4_code = "32fc2124+0088+32fc2125+0013"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 超强砖"
+cheat5_code = "32fc1191+000A"
+cheat5_enable = false

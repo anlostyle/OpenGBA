@@ -1,0 +1,29 @@
+cheats = 7
+
+cheat0_desc = "direct_v1 Have All Weapons"
+cheat0_code = "32fc0013+0002"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 Have All Shields"
+cheat1_code = "32fc0013+0002"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 Have All Helmets"
+cheat2_code = "32fc0013+0004"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 Have All Access."
+cheat3_code = "32fc0013+0004"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 Have All Items"
+cheat4_code = "32fc00C5+0004"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 Inf Money"
+cheat5_code = "64ffBC98 05F5E0FF"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 Max Stats"
+cheat6_code = "32fc03E7+0002"
+cheat6_enable = false

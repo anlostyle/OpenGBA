@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "32fcDA64+00E7+0200DA65+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 全道具"
+cheat1_code = "32fcDCD5+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 最后1关"
+cheat2_code = "32fc0158+000E"
+cheat2_enable = false

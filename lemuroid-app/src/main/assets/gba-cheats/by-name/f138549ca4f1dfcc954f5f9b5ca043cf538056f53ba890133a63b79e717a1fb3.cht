@@ -1,0 +1,37 @@
+cheats = 9
+
+cheat0_desc = "direct_v1 子弹数"
+cheat0_code = "32fc0070+0007"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 DNA"
+cheat1_code = "33006D78+0063+33006D79+0063+33006D7A+0063+33006D7B+0063"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 生命值"
+cheat2_code = "32fc0069+007F"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐身"
+cheat3_code = "32fc0039+0008+32fc0067+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 武器种类 小刀"
+cheat4_code = "32fc0071+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 武器种类 手枪"
+cheat5_code = "32fc0071+0002"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 武器种类 肉"
+cheat6_code = "32fc0071+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 武器种类 炸弹"
+cheat7_code = "32fc0071+0004"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 武器种类 电击枪"
+cheat8_code = "32fc0071+0005"
+cheat8_enable = false

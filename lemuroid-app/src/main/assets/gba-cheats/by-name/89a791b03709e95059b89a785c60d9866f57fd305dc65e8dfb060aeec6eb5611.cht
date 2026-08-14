@@ -1,0 +1,29 @@
+cheats = 7
+
+cheat0_desc = "direct_v1 气力"
+cheat0_code = "32fc0E64+00C8"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 体力"
+cheat1_code = "32fc0E5C+0032"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 全道具"
+cheat2_code = "32fc0F52+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 全员满生命"
+cheat3_code = "32fc0E5C+0050+02000E6C+0050+02000E7C+0050"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 全员满生命上限"
+cheat4_code = "32fc0E60+0050+02000E70+0050+02000E80+0050"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全员满气力"
+cheat5_code = "32fc0E64+0064+02000E74+0064+02000E84+0064"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全员满技能"
+cheat6_code = "32fc0E6B+00FF+02000E7B+00FF+02000E8B+00FF"
+cheat6_enable = false

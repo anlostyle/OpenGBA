@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 钱"
+cheat0_code = "32fdAB9C+007F+32fdAB9D+0096+32fdAB9E+0098"
+cheat0_enable = false

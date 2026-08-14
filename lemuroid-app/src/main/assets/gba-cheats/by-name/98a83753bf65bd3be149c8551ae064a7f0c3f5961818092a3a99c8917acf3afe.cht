@@ -1,0 +1,157 @@
+cheats = 39
+
+cheat0_desc = "direct_v1 我方HP"
+cheat0_code = "33000D04+0000+02040D05+0028"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 我方PS"
+cheat1_code = "33000D06+0000+02040D07+001C"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 我方TH"
+cheat2_code = "33000D08+0000+02040D09+0020"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 我方必杀无限 KIRA"
+cheat3_code = "33000CFE+002B"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 我方必杀无限 ATHRUN/G"
+cheat4_code = "33000CFE+0022"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 我方必杀无限 DEARKA/G"
+cheat5_code = "33000CFE+0023"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 我方必杀无限 CROT"
+cheat6_code = "33000CFE+0024"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 我方必杀无限 ORGA"
+cheat7_code = "33000CFE+0025"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 我方必杀无限 SHANI"
+cheat8_code = "33000CFE+0026"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 我方必杀无限 YZAK/G"
+cheat9_code = "33000CFE+0027"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 我方必杀无限 NICOL"
+cheat10_code = "33000CFE+0028"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 我方必杀无限 RAWW/515"
+cheat11_code = "33000CFE+0029"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 我方必杀无限 LOWE"
+cheat12_code = "33000CFE+002A"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 我方必杀无限 ATHRUN/Z-09A"
+cheat13_code = "33000CFE+002C"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 我方必杀无限 SHINN/α"
+cheat14_code = "33000CFE+002D"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 我方必杀无限 SHINN/β"
+cheat15_code = "33000CFE+002E"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 我方必杀无限 SHINN/γ"
+cheat16_code = "33000CFE+002F"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 我方必杀无限 STING"
+cheat17_code = "33000CFE+0030"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 我方必杀无限 STELLAR"
+cheat18_code = "33000CFE+0031"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 我方必杀无限 AUEL"
+cheat19_code = "33000CFE+0032"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 我方必杀无限 ATHRUN/Z-235"
+cheat20_code = "33000CFE+0033"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 我方必杀无限 YZAK/Z"
+cheat21_code = "33000CFE+0034"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 我方必杀无限 RAWW/13A"
+cheat22_code = "33000CFE+0035"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 我方必杀无限 MINA"
+cheat23_code = "33000CFE+0036"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 我方必杀无限 LUNAMARIA"
+cheat24_code = "33000CFE+0037"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 我方必杀无限 DEARKA/Z"
+cheat25_code = "33000CFE+0038"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 我方必杀无限 REY"
+cheat26_code = "33000CFE+0039"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 我方必杀无限 MWU"
+cheat27_code = "33000CFE+003A"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 我方必杀无限 CAGALLI"
+cheat28_code = "33000CFE+003B"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 对方HP"
+cheat29_code = "33000D64+0000+02040D65+0000"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 对方PS"
+cheat30_code = "33000D66+0000+02040D67+0000"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 对方TH"
+cheat31_code = "33000D68+0000+02040D69+0000"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 时间"
+cheat32_code = "33000CF4+0004+02040CF5+0054"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 最后一关"
+cheat33_code = "3300763A+000D"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 点数"
+cheat34_code = "33007664+0096+02047665+0086+02047666+0001"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 全难度"
+cheat35_code = "33007670+00FF"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 全人物"
+cheat36_code = "33007671+00FF+02047672+00FF+02047678+00FF"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 商店全购物"
+cheat37_code = "3300766C+00FF+0204766D+00FF+0204766E+00FF+0204766F+00FF+02047670+00FF+02047671+00FF+02047672+00FF+02047673+00FF"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 挑战模式关开全开"
+cheat38_code = "3300768C+00FF+0204768D+00FF+0204768E+00FF+0204768F+00FF+02047690+00FF+02047691+00FF+02047692+00FF+02047693+00FF+02047694+00FF+02047695+00FF+02047696+00FF+02047697+00FF+02047698+00FF+02047699+00FF+0204769A+00FF+0204769B+00FF+0204769C+00FF+0204769D+00FF+0204769E+00FF+0204769F+00FF+020476A0+00FF+020476A1+00FF+020476A2+00FF+020476A3+00FF+020476A4+00FF"
+cheat38_enable = false

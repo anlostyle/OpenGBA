@@ -1,0 +1,249 @@
+cheats = 62
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "32fe0646+0000+32fe0647+0004"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 生命上限"
+cheat1_code = "32fe0648+0000+32fe0649+0004"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 人数"
+cheat2_code = "32fe9F36+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐身"
+cheat3_code = "32fe0658+0020"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 无敌"
+cheat4_code = "32fe0651+0002"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 必杀"
+cheat5_code = "32fe064B+0004"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 积分"
+cheat6_code = "32fe0660+00FF+32fe0661+00E0+32fe0662+00F5+32fe0663+0005"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全道具"
+cheat7_code = "32fe9F58+00FF+32fe9F59+00FF+32fe9F5A+00FF+32fe9F5B+00FF+32fe9F5C+00FF+32fe9F5D+00FF+32fe9F5E+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全关卡"
+cheat8_code = "32fc0541+0010"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 限时关卡时间"
+cheat9_code = "32fe8128+002C+32fe8129+0001"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 ACTBOSS一击死"
+cheat10_code = "33004174+0000+33004175+0000"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 对战关卡我方体力"
+cheat11_code = "32fe9986+0000+32fe9987+0001"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 对战关卡我方气量"
+cheat12_code = "32fe9988+0010"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 对战关卡我方必杀"
+cheat13_code = "32fe998D+0002"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 对战关卡对方体力"
+cheat14_code = "32fe9A56+0000+32fe9A57+0000"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 对战关卡对方气量"
+cheat15_code = "32fe9A58+0000"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 对战关卡对方必杀"
+cheat16_code = "32fe9A5D+0000"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 对战全人物"
+cheat17_code = "32fe9F55+00FF+32fe9F56+00FF+32fe9F57+00FF"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 附加项开启"
+cheat18_code = "32fe9F50+00FF"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 全人物"
+cheat19_code = "32fe9F70+00FF+32fe9F71+00FF+32fe9F72+00FF+32fe9F73+00FF"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 ACT选人"
+cheat20_code = "32fe066A+0000"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 ACT选人 孙悟空"
+cheat21_code = "32fe066A+0000"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 ACT选人 小林"
+cheat22_code = "32fe066A+0001"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 ACT选人 乐平"
+cheat23_code = "32fe066A+0002"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 ACT选人 第1关BOSS"
+cheat24_code = "32fe066A+0003"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 ACT选人 人造人？"
+cheat25_code = "32fe066A+0004"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 ACT选人 忍者"
+cheat26_code = "32fe066A+0005"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 ACT选人 骷髅兵"
+cheat27_code = "32fe066A+0006"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 ACT选人 蓝将军"
+cheat28_code = "32fe066A+0007"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 ACT选人 蓝色机器人"
+cheat29_code = "32fe066A+0008"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 ACT选人 绿色机器人"
+cheat30_code = "32fe066A+0009"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 ACT选人 紫色机器人"
+cheat31_code = "32fe066A+000A"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 ACT选人 蝙蝠"
+cheat32_code = "32fe066A+000B"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 ACT选人 恶魔？"
+cheat33_code = "32fe066A+000C"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 ACT选人 魔族战士1"
+cheat34_code = "32fe066A+000D"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 ACT选人 魔族战士2"
+cheat35_code = "32fe066A+000E"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 ACT选人 龟仙人"
+cheat36_code = "32fe066A+000F"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 ACT选人 天津饭"
+cheat37_code = "32fe066A+0010"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 ACT选人 饺子"
+cheat38_code = "32fe066A+0011"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 ACT选人 孙悟饭"
+cheat39_code = "32fe066A+0012"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 ACT选人 短笛"
+cheat40_code = "32fe066A+0013"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 ACT选人 桃白白"
+cheat41_code = "32fe066A+0014"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 ACT选人 基兰"
+cheat42_code = "32fe066A+0015"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 ACT选人 南无"
+cheat43_code = "32fe066A+0016"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 ACT选人 飞龙"
+cheat44_code = "32fe066A+0017"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 ACT选人 猪士兵"
+cheat45_code = "32fe066A+0018"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 ACT选人 狗士兵"
+cheat46_code = "32fe066A+0019"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 ACT选人 狼"
+cheat47_code = "32fe066A+001A"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 ACT选人 机器人"
+cheat48_code = "32fe066A+001B"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 ACT选人 飞行器"
+cheat49_code = "32fe066A+001C"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 ACT选人 魔族士兵"
+cheat50_code = "32fe066A+001D"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 对战选人 孙悟空"
+cheat51_code = "32fe9F82+0000"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 对战选人 龟仙人"
+cheat52_code = "32fe9F82+0001"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 对战选人 天津饭"
+cheat53_code = "32fe9F82+0002"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 对战选人 桃白白"
+cheat54_code = "32fe9F82+0003"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 对战选人 孙悟饭"
+cheat55_code = "32fe9F82+0004"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 对战选人 小林"
+cheat56_code = "32fe9F82+0005"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 对战选人 短笛"
+cheat57_code = "32fe9F82+0006"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 对战选人 机械桃白白"
+cheat58_code = "32fe9F82+0007"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 对战选人 基兰"
+cheat59_code = "32fe9F82+0008"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 对战选人 南无"
+cheat60_code = "32fe9F82+0009"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 对战选人 饺子"
+cheat61_code = "32fe9F82+000A"
+cheat61_enable = false

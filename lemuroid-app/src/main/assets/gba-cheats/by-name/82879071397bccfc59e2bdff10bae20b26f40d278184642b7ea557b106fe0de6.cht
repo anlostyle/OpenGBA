@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 游戏时间"
+cheat0_code = "32fd0000+0000+0200FFFF+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 セ-プすう"
+cheat1_code = "32fd069C+0009"
+cheat1_enable = false

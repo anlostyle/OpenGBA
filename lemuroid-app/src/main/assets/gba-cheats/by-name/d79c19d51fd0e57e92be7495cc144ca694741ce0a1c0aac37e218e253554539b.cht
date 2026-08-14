@@ -1,0 +1,53 @@
+cheats = 13
+
+cheat0_desc = "direct_v1 得分"
+cheat0_code = "32ffDF4E+000F"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 车里的绵羊数"
+cheat1_code = "32ffDF55+0063"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 时间"
+cheat2_code = "32ffDF50+00FF+0203DF51+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 糖果"
+cheat3_code = "32fc4EBB+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 音乐"
+cheat4_code = "32fc4EF2+00AC+02004EF3+000B"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 快速过关"
+cheat5_code = "32ffDF55+0063"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 积分"
+cheat6_code = "32ffDF4C+009F+0203DF4D+0086+0203DF4E+0001"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 选关 第一关"
+cheat7_code = "32ffDE3A+00C0+0203DE3B+00C0+0203DE3C+00C0+0203DE3D+00C0"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 选关 第二关"
+cheat8_code = "32ffDE3A+00FF+0203DE3B+00C0+0203DE3C+00C0+0203DE3D+00C0"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 选关 第三关"
+cheat9_code = "32ffDE3A+00FF+0203DE3B+00FF+0203DE3C+00C0+0203DE3D+00C0"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 选关 第四关"
+cheat10_code = "32ffDE3A+00FF+0203DE3B+00FF+0203DE3C+00FF+0203DE3D+00C0"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 选关 附加关"
+cheat11_code = "32ffDE3A+00FF+0203DE3B+00FF+0203DE3C+00FF+0203DE3D+00FF"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 全奖杯"
+cheat12_code = "32ffDE40+00FF+0203DE41+00FF+0203DE42+00FF+0203DE43+00FF"
+cheat12_enable = false

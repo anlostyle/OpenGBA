@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 体力"
+cheat0_code = "32fd767E+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 タフ"
+cheat1_code = "32fd7686+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 基础能力（筋力、技术、变化球）"
+cheat2_code = "32fd6BA6+00E7+32fd6BA7+0003+32fd6BA8+00E7+32fd6BA9+0003+32fd6BAA+00E7+32fd6BAB+0003+32fd6BAC+00E7+32fd6BAD+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 活力（不懂日语蒙的，就是体力边上的那个）"
+cheat3_code = "32fd6B9E+000A"
+cheat3_enable = false

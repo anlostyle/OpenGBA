@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 钱"
+cheat0_code = "33002ABC+00FF+02042ABD+00E0+02042ABE+00F5+02042ABF+0005"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 时间"
+cheat1_code = "33002AB3+0000+02042AB4+0010"
+cheat1_enable = false

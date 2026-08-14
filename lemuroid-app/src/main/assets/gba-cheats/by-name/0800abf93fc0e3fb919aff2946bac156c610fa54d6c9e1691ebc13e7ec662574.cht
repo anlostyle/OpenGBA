@@ -1,0 +1,49 @@
+cheats = 12
+
+cheat0_desc = "direct_v1 隐藏要素开启"
+cheat0_code = "32fd0480+0001+32fd0484+0001"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 焰火全开"
+cheat1_code = "32fd048C+0001+32fd0490+0001+32fd0494+0001+32fd0498+0001+32fd049C+0001+32fd04A0+0001+32fd04A4+0001+32fd04A8+0001+32fd04AC+0001+32fd04B0+0001+32fd04B4+0001+32fd04B8+0001+32fd04BC+0001+32fd04C0+0001+32fd04C4+0001+32fd04C8+0001+32fd04CC+0001+32fd04D0+0001+32fd04D4+0001+32fd04D8+0001+32fd04DC+0001+32fd04E0+0001+32fd04E4+0001+32fd04E8+0001"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 我方火药"
+cheat2_code = "330026DE+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 我方能量"
+cheat3_code = "330029AA+000F+330029AB+0027"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 对方火药"
+cheat4_code = "3300293A+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 对方能量"
+cheat5_code = "3300274E+0000+3300274F+0000"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 点数"
+cheat6_code = "33003A60+00FF+33003A61+00E0+33003A62+00F5+33003A63+0005"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全收集"
+cheat7_code = "33003A90+00FF+33003A91+00FF+33003A92+00FF+33003A93+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 对战难度"
+cheat8_code = "33003A75+0007"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 进阶难度"
+cheat9_code = "33003A74+0003"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 花火大祭"
+cheat10_code = "33003AA8+00FF"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 连放花数"
+cheat11_code = "33002DB4+00E7+33002DB5+0003"
+cheat11_enable = false

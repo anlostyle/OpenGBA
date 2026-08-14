@@ -1,0 +1,45 @@
+cheats = 11
+
+cheat0_desc = "direct_v1 生命 OM"
+cheat0_code = "330007B5+0048"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 隐身"
+cheat1_code = "3300090A+0048"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 敌人一击死"
+cheat2_code = "33001314+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 全水晶"
+cheat3_code = "33003BF8+0064+33003BFE+0064+33003C04+0064+33003C0A+0064"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 剧情关卡全开"
+cheat4_code = "32fc2DB8+00FF+32fc2DB9+00FF"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 竞赛关卡全开"
+cheat5_code = "32fc2F18+00FF+32fc2F19+00FF+32fc2F1A+00FF"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 战斗关卡全开"
+cheat6_code = "32fc2DE4+00FF+32fc2DE5+00FF+32fc2DE6+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 选人 LED"
+cheat7_code = "33003CA0+0000"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 选人 RAPH"
+cheat8_code = "33003CA0+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 选人 DON"
+cheat9_code = "33003CA0+0002"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 选人 MIKEY"
+cheat10_code = "33003CA0+0003"
+cheat10_enable = false

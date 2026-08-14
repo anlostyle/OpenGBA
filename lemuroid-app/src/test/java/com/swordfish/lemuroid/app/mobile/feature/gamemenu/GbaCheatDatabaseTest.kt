@@ -1,0 +1,29 @@
+package com.swordfish.lemuroid.app.mobile.feature.gamemenu
+
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNull
+
+class GbaCheatDatabaseTest {
+    @Test
+    fun matchesChineseDisplayNameWithoutGuessingAnotherEdition() {
+        val fireRed = GbaCheatDatabase.nameAssetFile("口袋妖怪 火红")!!
+        val leafGreen = GbaCheatDatabase.nameAssetFile("口袋妖怪 叶绿")!!
+        val finalFight = GbaCheatDatabase.nameAssetFile("快打旋风ONE")!!
+        val files = setOf(fireRed, leafGreen, finalFight)
+
+        assertEquals(
+            "ee7753c0c7f9719d66d7e6e656a51705c035700a36454f10c791d770413a661a.cht",
+            fireRed,
+        )
+        assertEquals(
+            fireRed to "口袋妖怪 火红",
+            GbaCheatDatabase.findNameMatch(files, listOf("口袋妖怪 火红", "Pokemon FireRed")),
+        )
+        assertEquals(
+            finalFight to "快打旋风One.zip",
+            GbaCheatDatabase.findNameMatch(files, listOf("快打旋风One.zip")),
+        )
+        assertNull(GbaCheatDatabase.findNameMatch(files, listOf("口袋妖怪 火红 改版")))
+    }
+}

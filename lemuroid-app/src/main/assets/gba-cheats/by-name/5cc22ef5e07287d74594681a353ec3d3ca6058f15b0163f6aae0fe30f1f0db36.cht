@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 游戏1人数"
+cheat0_code = "32fd4B5E+0006"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 游戏1变身时间"
+cheat1_code = "32fd31EC+0055+020131ED+0001"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 游戏2人数"
+cheat2_code = "32fcCF48+0006"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 游戏3等级"
+cheat3_code = "32fcF110+0009"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 游戏3REST"
+cheat4_code = "32fcF0D8+0009"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 游戏4人数"
+cheat5_code = "32fd6C71+0006"
+cheat5_enable = false

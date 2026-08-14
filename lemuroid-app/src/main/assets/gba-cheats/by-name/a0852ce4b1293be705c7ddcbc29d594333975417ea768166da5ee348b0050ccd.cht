@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 1P不败"
+cheat0_code = "32fd3CD9+00FF+02013CDD+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 时间"
+cheat1_code = "32fd44F7+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 2P无体力"
+cheat2_code = "32fd4061+0000+02014065+0000+02014083+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 制造人物可用分数999"
+cheat3_code = "32fd3EC4+00E7+02013EC5+0003"
+cheat3_enable = false

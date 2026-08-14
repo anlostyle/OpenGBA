@@ -1,0 +1,81 @@
+cheats = 20
+
+cheat0_desc = "direct_v1 生命数"
+cheat0_code = "330042A4+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 生命数 OFF"
+cheat1_code = "32fc0000+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 金币数"
+cheat2_code = "330042E7+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 金币数 OFF"
+cheat3_code = "32fc0000+0000"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 星星数(只是好看.实际没用)"
+cheat4_code = "330042E5+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 星星数(只是好看.实际没用) OFF"
+cheat5_code = "32fc0000+0000"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 人物状态 普通"
+cheat6_code = "330042E8+0000"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 人物状态 吃到蘑菇"
+cheat7_code = "330042E8+0001"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 人物状态 吃到羽毛"
+cheat8_code = "330042E8+0002"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 人物状态 吃到火力花"
+cheat9_code = "330042E8+0003"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 人物状态 OFF"
+cheat10_code = "32fc0000+0000"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 备用物品 无"
+cheat11_code = "330042E9+0000"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 备用物品 蘑菇"
+cheat12_code = "330042E9+0001"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 备用物品 火力花"
+cheat13_code = "330042E9+0002"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 备用物品 星星"
+cheat14_code = "330042E9+0003"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 备用物品 羽毛"
+cheat15_code = "330042E9+0004"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 备用物品 1UP"
+cheat16_code = "330042E9+0005"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 备用物品 OFF"
+cheat17_code = "32fc0000+0000"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 乘骑状态"
+cheat18_code = "330042EA+000A+330042EB+0001"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 乘骑状态 OFF"
+cheat19_code = "32fc0000+0000"
+cheat19_enable = false

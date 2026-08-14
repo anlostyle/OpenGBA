@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 全弹药"
+cheat0_code = "330057D5+0007+020457DD+0009+020457DF+0063+020457E5+0015+020457E7+0063+020457ED+0010+020457EF+0063+020457F5+000F+020457F7+0063+020457FD+000F+020457FF+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 生命"
+cheat1_code = "33002ADC+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 积分"
+cheat2_code = "33002A90+00FF+02042A91+00E0+02042A92+00F5+02042A93+0005"
+cheat2_enable = false

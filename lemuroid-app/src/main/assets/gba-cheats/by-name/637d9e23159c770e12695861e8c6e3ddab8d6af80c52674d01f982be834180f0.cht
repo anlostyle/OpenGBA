@@ -1,0 +1,37 @@
+cheats = 9
+
+cheat0_desc = "direct_v1 怒"
+cheat0_code = "330021A0+0080+330021A1+0002"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血"
+cheat1_code = "330021A4+0040"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 隐身"
+cheat2_code = "330021C4+0064"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 能力球 第一种"
+cheat3_code = "33000BD0+003A+33000BD1+0001+3300081C+0001"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 能力球 第二种"
+cheat4_code = "33000BD0+003A+33000BD1+0001+3300081C+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 能力球 第三种（不推荐）"
+cheat5_code = "33000BD0+003A+33000BD1+0001+3300081C+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 能力球 第四种"
+cheat6_code = "33000BD0+003A+33000BD1+0001+3300081C+0001"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 能力球 第五种"
+cheat7_code = "33000BD0+003A+33000BD1+0001+3300081C+0001"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 能力球 第六种（不推荐）"
+cheat8_code = "33000BD0+003A+33000BD1+0001+3300081C+0001"
+cheat8_enable = false

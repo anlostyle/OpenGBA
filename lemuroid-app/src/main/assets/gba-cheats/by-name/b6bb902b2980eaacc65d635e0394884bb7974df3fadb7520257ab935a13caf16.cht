@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 手雷"
+cheat0_code = "33001A02+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血"
+cheat1_code = "330019D8+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 无敌"
+cheat2_code = "330019CD+0002"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 机枪子弹"
+cheat3_code = "330019EC+0063+020419EE+0005"
+cheat3_enable = false

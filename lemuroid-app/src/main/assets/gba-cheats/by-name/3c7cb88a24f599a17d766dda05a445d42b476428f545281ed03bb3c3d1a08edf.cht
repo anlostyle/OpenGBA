@@ -1,0 +1,309 @@
+cheats = 77
+
+cheat0_desc = "direct_v1 金钱MAX"
+cheat0_code = "33003B3A+007E+33003B3B+0096+33003B3C+0098"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 不遇敌"
+cheat1_code = "33003115+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 第1角色LV"
+cheat2_code = "33003C35+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 第1角色当前HP"
+cheat3_code = "33003C0D+000F+33003C0E+0027"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 第1角色最大HP"
+cheat4_code = "33003C0F+000F+33003C10+0027"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 第1角色攻击力"
+cheat5_code = "33003C11+000F+33003C12+0027"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 第1角色守备力"
+cheat6_code = "33003C13+000F+33003C14+0027"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 第1角色腕力"
+cheat7_code = "33003C36+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 第1角色智力"
+cheat8_code = "33003C37+00FF"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 第1角色体力"
+cheat9_code = "33003C38+00FF"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 第1角色敏捷"
+cheat10_code = "33003C39+00FF"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 第1角色战斗LV"
+cheat11_code = "33003C3A+00FF"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 第1角色运转LV"
+cheat12_code = "33003C3B+00FF"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 第1角色修理LV"
+cheat13_code = "33003C3C+00FF"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 第1角色EXP"
+cheat14_code = "33003AFB+007F+33003AFC+0096+33003AFD+0098"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 第2角色LV"
+cheat15_code = "33003C3D+0063"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 第2角色当前HP"
+cheat16_code = "33003C15+000F+33003C16+0027"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 第2角色最大HP"
+cheat17_code = "33003C17+000F+33003C18+0027"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 第2角色攻击力"
+cheat18_code = "33003C19+000F+33003C1A+0027"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 第2角色守备力"
+cheat19_code = "33003C1B+000F+33003C1C+0027"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 第2角色腕力"
+cheat20_code = "33003C3E+00FF"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 第2角色智力"
+cheat21_code = "33003C3F+00FF"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 第2角色体力"
+cheat22_code = "33003C40+00FF"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 第2角色敏捷"
+cheat23_code = "33003C41+00FF"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 第2角色战斗LV"
+cheat24_code = "33003C42+00FF"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 第2角色运转LV"
+cheat25_code = "33003C43+00FF"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 第2角色修理LV"
+cheat26_code = "33003C44+00FF"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 第2角色EXP"
+cheat27_code = "33003B03+007F+33003B04+0096+33003B05+0098"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 第3角色LV"
+cheat28_code = "33003C45+0063"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 第3角色当前HP"
+cheat29_code = "33003C1D+000F+33003C1E+0027"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 第3角色最大HP"
+cheat30_code = "33003C1F+000F+33003C20+0027"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 第3角色攻击力"
+cheat31_code = "33003C21+000F+33003C22+0027"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 第3角色守备力"
+cheat32_code = "33003C23+000F+33003C24+0027"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 第3角色腕力"
+cheat33_code = "33003C46+00FF"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 第3角色智力"
+cheat34_code = "33003C47+00FF"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 第3角色体力"
+cheat35_code = "33003C48+00FF"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 第3角色敏捷"
+cheat36_code = "33003C49+00FF"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 第3角色战斗LV"
+cheat37_code = "33003C4A+00FF"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 第3角色运转LV"
+cheat38_code = "33003C4B+00FF"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 第3角色修理LV"
+cheat39_code = "33003C4C+00FF"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 第3角色EXP"
+cheat40_code = "33003B0B+007F+33003B0C+0096+33003B0D+0098"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 第4角色LV(红狗)"
+cheat41_code = "33003C4D+0063"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 第4角色当前HP(红狗)"
+cheat42_code = "33003C25+000F+33003C26+0027"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 第4角色最大HP(红狗)"
+cheat43_code = "33003C27+000F+33003C28+0027"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 第4角色攻击力(红狗)"
+cheat44_code = "33003C29+000F+33003C2A+0027"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 第4角色守备力(红狗)"
+cheat45_code = "33003C2B+000F+33003C2C+0027"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 第4角色腕力(红狗)"
+cheat46_code = "33003C4E+00FF"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 第4角色智力(红狗)"
+cheat47_code = "33003C4F+00FF"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 第4角色体力(红狗)"
+cheat48_code = "33003C50+00FF"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 第4角色敏捷(红狗)"
+cheat49_code = "33003C51+00FF"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 第4角色战斗LV(红狗)"
+cheat50_code = "33003C52+00FF"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 第4角色けづや(红狗)"
+cheat51_code = "33003C53+00FF"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 第4角色EXP(红狗)"
+cheat52_code = "33003B13+007F+33003B14+0096+33003B15+0098"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 1号战车底盘守备"
+cheat53_code = "33003F16+00FF"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 1号战车底盘弹仓"
+cheat54_code = "33003F18+00FF"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 1号战车底盘重量"
+cheat55_code = "33003F1B+0001"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 2号战车底盘守备"
+cheat56_code = "33003F1E+00FF"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 2号战车底盘弹仓"
+cheat57_code = "33003F20+00FF"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 2号战车底盘重量"
+cheat58_code = "33003F23+0001"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 3号战车底盘守备"
+cheat59_code = "33003F26+00FF"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 3号战车底盘弹仓"
+cheat60_code = "33003F28+00FF"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 3号战车底盘重量"
+cheat61_code = "33003F2B+0001"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 4号战车底盘守备"
+cheat62_code = "33003F2E+00FF"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 4号战车底盘弹仓"
+cheat63_code = "33003F30+00FF"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 4号战车底盘重量"
+cheat64_code = "33003F33+0001"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 5号战车底盘守备"
+cheat65_code = "33003F36+00FF"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 5号战车底盘弹仓"
+cheat66_code = "33003F38+00FF"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 5号战车底盘重量"
+cheat67_code = "33003F3B+00FF"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 6号战车底盘守备"
+cheat68_code = "33003F3E+00FF"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 6号战车底盘弹仓"
+cheat69_code = "33003F3F+00FF"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 6号战车底盘重量"
+cheat70_code = "33003F43+00FF"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 7号战车底盘守备"
+cheat71_code = "33003F46+00FF"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 7号战车底盘弹仓"
+cheat72_code = "33003F48+00FF"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 7号战车底盘重量"
+cheat73_code = "33003F4B+00FF"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 8号战车底盘守备"
+cheat74_code = "33003F4E+00FF"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 8号战车底盘弹仓"
+cheat75_code = "33003F50+00FF"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 8号战车底盘重量"
+cheat76_code = "33003F53+00FF"
+cheat76_enable = false

@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "32fc060D+0008"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 隐身"
+cheat1_code = "32fc0626+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 人数"
+cheat2_code = "330003F8+00E7+020403F9+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 金币"
+cheat3_code = "330003D8+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 关卡全开"
+cheat4_code = "330003DA+00FF+020403DB+00FF+020403DC+00FF+020403DD+00FF+020403DE+00FF+020403DF+00FF+020403E0+00FF+020403E1+00FF+020403E2+00FF+020403E3+00FF+020403E4+00FF+020403E5+00FF+020403E6+00FF"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全彩蛋"
+cheat5_code = "330003E7+00FF+020403E8+00FF+020403E9+00FF+020403EA+00FF+020403EB+00FF+020403EC+00FF+020403ED+00FF+020403EE+00FF+020403EF+00FF+020403F0+00FF+020403F1+00FF+020403F2+00FF+020403F3+00FF"
+cheat5_enable = false

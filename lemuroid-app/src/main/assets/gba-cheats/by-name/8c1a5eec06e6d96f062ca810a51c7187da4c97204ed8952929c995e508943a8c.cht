@@ -1,0 +1,21 @@
+cheats = 5
+
+cheat0_desc = "direct_v1 选择语言 语言1"
+cheat0_code = "330036C2+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 选择语言 语言2"
+cheat1_code = "330036C2+0001"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 选择语言 语言3"
+cheat2_code = "330036C2+0002"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 选择语言 语言4"
+cheat3_code = "330036C2+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 选择语言 语言5"
+cheat4_code = "330036C2+0004"
+cheat4_enable = false

@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 敌人分数"
+cheat0_code = "33000A53+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 自己分数"
+cheat1_code = "33000A58+0009+02040A59+0009+02040A5A+0009+02040A5B+0009+02040A5D+0009+02040A5C+0009"
+cheat1_enable = false

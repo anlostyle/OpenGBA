@@ -1,0 +1,61 @@
+cheats = 15
+
+cheat0_desc = "direct_v1 男主角身体全能力"
+cheat0_code = "32fc03F0+0014+020003F1+0014+020003F2+0014+020003F3+0014"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 男主角击球全能力"
+cheat1_code = "32fc03F4+001E+020003F5+001E+020003F6+001E+020003F7+001E+020003F8+001E"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 男主角身体点数"
+cheat2_code = "32fc03FC+0063+020003FD+0063+020003FE+0063+020003FF+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 男主角击球点数"
+cheat3_code = "32fc0400+0063+02000401+0063+02000402+0063+02000403+0063+02000404+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 男主角等级"
+cheat4_code = "32fc0418+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 男主角经验"
+cheat5_code = "32fc041C+009F+0200041D+0086+0200041E+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 女主角身体全能力"
+cheat6_code = "32fc0440+0014+02000441+0014+02000442+0014+02000443+0014"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 女主角击球全能力"
+cheat7_code = "32fc0444+001E+02000445+001E+02000446+001E+02000447+001E+02000448+001E"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 女主角身体点数"
+cheat8_code = "32fc044C+0063+0200044D+0063+0200044E+0063+0200044F+0063"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 女主角击球点数"
+cheat9_code = "32fc0450+0063+02000451+0063+02000452+0063+02000453+0063+02000454+0063"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 女主角等级"
+cheat10_code = "32fc0468+0063"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 女主角经验"
+cheat11_code = "32fc046C+009F+0200046D+0086+0200046E+0001"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 SS技能点数"
+cheat12_code = "32fc05D0+00FF+020005D1+007F+020005D2+00FF+020005D3+007F+020005D4+00FF+020005D5+007F+020005D6+00FF+020005D7+007F+020005D8+00FF+020005D9+007F+020005DA+00FF+020005DB+007F+020005DC+00FF+020005DD+007F+020005DE+00FF+020005DF+007F"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 SS技能等级"
+cheat13_code = "32fc05E0+000A+020005E1+0000+020005E2+000A+020005E3+0000+020005E4+000A+020005E5+0000+020005E6+000A+020005E7+0000+020005E8+000A+020005E9+0000+020005EA+000A+020005EB+0000+020005EC+000A+020005ED+0000+020005EE+000A"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 分局比分"
+cheat14_code = "32fc02BC+0004+020002BD+0000"
+cheat14_enable = false

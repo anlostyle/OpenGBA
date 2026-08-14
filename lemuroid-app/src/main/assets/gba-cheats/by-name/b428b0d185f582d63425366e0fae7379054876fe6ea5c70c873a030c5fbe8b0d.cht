@@ -1,0 +1,37 @@
+cheats = 9
+
+cheat0_desc = "direct_v1 金钱"
+cheat0_code = "32fe8598+00FF+32fe8599+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 食物全满"
+cheat1_code = "32fe859A+00FF+32fe859B+00FF+32fe859C+00FF+32fe859D+00FF+32fe859E+00FF+32fe859F+00FF+32fe85A0+00FF+32fe85A1+00FF+32fe85A2+00FF+32fe85A3+00FF+32fe85A4+00FF+32fe85A5+00FF+32fe85A6+00FF+32fe85A7+00FF+32fe85A8+00FF+32fe85A9+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 能力全满"
+cheat2_code = "32fe8CFF+0064+32fe8D00+0064+32fe8D01+0064+32fe8D02+0064"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 状态最好"
+cheat3_code = "32fe8D07+0063+32fe8D08+0063+32fe8D09+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 好感度"
+cheat4_code = "32fe8CFC+00C8"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 未知数据"
+cheat5_code = "32fe8596+000F+32fe8597+0027"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 system全收集"
+cheat6_code = "32fe85E0+00FF+32fe85E1+00FF+32fe85E2+00FF+32fe85E3+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全道具"
+cheat7_code = "32fe85AA+0063+32fe85AB+0063+32fe85AC+0063+32fe85AD+0063+32fe85AE+0063"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全房屋"
+cheat8_code = "32fe85B0+00FF+32fe85B1+00FF+32fe85B2+00FF+32fe85B3+00FF+32fe85B4+00FF+32fe85B5+00FF+32fe85B6+00FF+32fe85B7+00FF+32fe85B8+00FF+32fe85B9+00FF+32fe85BA+00FF+32fe85BB+00FF+32fe85BC+00FF+32fe85BD+00FF+32fe85BE+00FF+32fe85BF+00FF+32fe85C0+00FF+32fe85C1+00FF+32fe85C2+00FF+32fe85C3+00FF"
+cheat8_enable = false

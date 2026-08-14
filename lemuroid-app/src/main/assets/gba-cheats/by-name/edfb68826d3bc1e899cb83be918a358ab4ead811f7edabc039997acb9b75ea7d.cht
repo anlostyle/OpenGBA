@@ -1,0 +1,41 @@
+cheats = 10
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "330077AE+003D+020477AF+003D"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 能量"
+cheat1_code = "330077B0+0043+020477B1+0044"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 人数"
+cheat2_code = "330077B2+0006+020477B3+0006"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 怒气"
+cheat3_code = "330077B4+0068+020477B5+0068"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 点数"
+cheat4_code = "3300774A+000F+0204774B+0027+0204774C+000F+0204774D+0027"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全能力"
+cheat5_code = "3300775A+00FF+0204775B+00FF+0204775C+00FF+0204775D+00FF+0204775E+0063+0204775F+0063"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全必杀"
+cheat6_code = "33007764+0003+02047765+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全特技"
+cheat7_code = "3300774E+0069+0204774F+0069+02047750+0069+02047751+0069+02047752+0069+02047753+0069+02047754+0069+02047755+0069+02047756+0069+02047757+0069+02047758+0069+02047759+0069"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 关卡全开"
+cheat8_code = "33007760+000D+02047761+000D"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 全难度"
+cheat9_code = "33007766+00FF"
+cheat9_enable = false

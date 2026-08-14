@@ -1,0 +1,113 @@
+cheats = 28
+
+cheat0_desc = "direct_v1 人数"
+cheat0_code = "33000000+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 星星"
+cheat1_code = "33000014+0023"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 积分"
+cheat2_code = "33000004+00FF+33000005+00E0+33000006+00F5+33000007+0005"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 金色货币"
+cheat3_code = "33000008+00E7+33000009+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 蓝色货币"
+cheat4_code = "3300000C+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 铁管时间"
+cheat5_code = "330001EA+0030+330001EB+0075"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 小游戏时间"
+cheat6_code = "33005A10+0008+33005A11+0007"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 红宝石时间"
+cheat7_code = "33000188+0080+33000189+0016"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 道具选择 蘑菇，球变大"
+cheat8_code = "3300002C+0000"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 道具选择 蛋，增加一个球"
+cheat9_code = "3300002C+0001"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 道具选择 水管，挡住出口"
+cheat10_code = "3300002C+0002"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 道具选择 星星，球无敌"
+cheat11_code = "3300002C+0003"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 道具选择 小蘑菇，球缩小"
+cheat12_code = "3300002C+0004"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 道具选择 闪电，瞬间消灭所有敌人"
+cheat13_code = "3300002C+0005"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 道具选择 蘑菇x2，球变大，2次机会"
+cheat14_code = "3300002C+0006"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 道具选择 蛋X2，增加一个球，2次机会"
+cheat15_code = "3300002C+0007"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 道具选择 水管X2，挡住出口，2次机会"
+cheat16_code = "3300002C+0008"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 道具选择 星星X2，球无敌，2次机会"
+cheat17_code = "3300002C+0009"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 道具选择 小蘑菇X2，球缩小，2次机会"
+cheat18_code = "3300002C+000A"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 道具选择 闪电X2，瞬间消灭所有敌人，2次机会"
+cheat19_code = "3300002C+000B"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 道具选择 抛出蛋，且球变大"
+cheat20_code = "3300002C+000C"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 挑战模式开启"
+cheat21_code = "33006368+0001+33006369+0001+3300636A+0001+3300636B+0001+3300636C+0001"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 BOSS一击死(勿锁) 娱乐园"
+cheat22_code = "33000594+0002"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 BOSS一击死(勿锁) 风车关"
+cheat23_code = "33002EB8+0002"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 BOSS一击死(勿锁) 雪地关"
+cheat24_code = "3300089C+0002"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 BOSS一击死(勿锁) 金字塔"
+cheat25_code = "3300274C+0002"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 BOSS一击死(勿锁) 城堡关"
+cheat26_code = "33000644+0002"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 全收集"
+cheat27_code = "33000038+0004+33000040+0004+33000044+0004+33000048+0004+33000050+0014+33000054+0005+3300005C+0016+33000060+0004+3300006C+0004+33000070+0025+33000074+0004+3300007C+0007+33000080+0004+33000084+0004+33000088+0004+3300008C+0004+33000090+0004+33000094+0006+33000098+0004+3300009C+0004+330000A0+0005+330000A4+0005+330000AC+0004+330000B0+0005+330000B8+0005+330000BC+0006+330000C0+0004+330000C4+0005+330000C8+0005+330000CC+0005+330000D4+0005+330000D8+00C7+330000DC+00C7+330000E4+00C7+330000E8+00C7+33000128+0001+3300012C+0001+33000134+0001+33000138+0001"
+cheat27_enable = false

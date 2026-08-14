@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "330037A8+0050"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 全魔道书"
+cheat1_code = "33004A8C+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 全道具数量"
+cheat2_code = "33004A4C+0063+02044A4E+0063+02044A50+0063+02044A52+0063+02044A54+0063+02044A56+0063"
+cheat2_enable = false

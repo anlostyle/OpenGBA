@@ -1,0 +1,41 @@
+cheats = 10
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "3300172E+0084"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 生命上限"
+cheat1_code = "33001732+0084"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 全武器"
+cheat2_code = "330017B9+00FF+330017BA+00FF+330017BB+00FF+330017BC+00FF+330017BD+0001"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 全雕像"
+cheat3_code = "33001764+00FF+33001765+00FF+33001766+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 无敌"
+cheat4_code = "330026D8+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 弹药无限"
+cheat5_code = "330026D9+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 购物点数"
+cheat6_code = "32fc0558+00FF+32fc0559+0000+32fc055A+00FF+32fc055B+0000+32fc055C+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 隐藏要素全开"
+cheat7_code = "32fc055F+00FF+32fc0560+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全剧情"
+cheat8_code = "32feA508+0018"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 全关卡"
+cheat9_code = "32fc0569+0009"
+cheat9_enable = false

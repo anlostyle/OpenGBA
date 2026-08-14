@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "32fc1C3B+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 人数"
+cheat1_code = "32fc1C3A+0063"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 隐身"
+cheat2_code = "32fc0AEA+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 豆子数"
+cheat3_code = "32fc1C38+00E7+02001C39+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 积分"
+cheat4_code = "32fc1C30+00FF+02001C31+00E0+02001C32+00F5+02001C33+0005"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 关卡全开"
+cheat5_code = "32fc1C4C+00FF+02001C4D+00FF+02001C4E+00FF"
+cheat5_enable = false

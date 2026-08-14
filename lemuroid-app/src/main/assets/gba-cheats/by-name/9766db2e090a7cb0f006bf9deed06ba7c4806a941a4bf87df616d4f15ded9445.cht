@@ -1,0 +1,253 @@
+cheats = 63
+
+cheat0_desc = "direct_v1 金钱"
+cheat0_code = "33001CC0+007F+33001CC1+0096+33001CC2+0098"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 凯杰的LEV/圣约EXP"
+cheat1_code = "3300214A+00E7+3300214B+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 凯杰的LEV/圣约HP"
+cheat2_code = "3300214C+00FF+3300214D+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 凯杰的LEV/圣约HP上限"
+cheat3_code = "330017D0+00FF+330017D1+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 凯杰的LEV/圣约EN"
+cheat4_code = "3300214E+00E7+3300214F+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 凯杰的LEV/圣约EN上限"
+cheat5_code = "330017D2+00E7+330017D3+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 凯杰的LEV/圣约气力"
+cheat6_code = "33002153+0064"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 凯杰的LEV/圣约无限移动"
+cheat7_code = "33002162+0069"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 德瑞兹EXP"
+cheat8_code = "330021DA+00E7+330021DB+0003"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 德瑞兹HP"
+cheat9_code = "330021DC+00FF+330021DD+00FF"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 德瑞兹EN"
+cheat10_code = "330021DE+00E7+330021DF+0003"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 德瑞兹气力"
+cheat11_code = "330021E3+0064"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 德瑞兹无限移动"
+cheat12_code = "330021F2+0069"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 利刃/NerokEXP"
+cheat13_code = "330021FE+00E7+330021FF+0003"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 利刃/NerokHP"
+cheat14_code = "33002200+000F+33002201+0027"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 利刃/NerokEN"
+cheat15_code = "33002202+00E7+33002203+0003"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 利刃/Nerok气力"
+cheat16_code = "33002207+0064"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 利刃/Nerok无限移动"
+cheat17_code = "33002216+0069"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 嘉斯汀EXP"
+cheat18_code = "3300226A+00E7+3300226B+0003"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 嘉斯汀HP"
+cheat19_code = "3300226C+00FF+3300226D+00FF"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 嘉斯汀EN"
+cheat20_code = "3300226E+00E7+3300226F+0003"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 嘉斯汀气力"
+cheat21_code = "33002273+0064"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 嘉斯汀无限移动"
+cheat22_code = "33002282+0069"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 卡里波斯EXP"
+cheat23_code = "3300228E+00E7+3300228F+0003"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 卡里波斯HP"
+cheat24_code = "33002290+00FF+33002291+00FF"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 卡里波斯EN"
+cheat25_code = "33002292+00E7+33002293+0003"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 卡里波斯气力"
+cheat26_code = "33002297+0064"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 卡里波斯无限移动"
+cheat27_code = "330022A6+0069"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 刀锋EXP"
+cheat28_code = "330022B2+00E7+330022B3+0003"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 刀锋HP"
+cheat29_code = "330022B4+00FF+330022B5+00FF"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 刀锋EN"
+cheat30_code = "330022B6+00E7+330022B7+0003"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 刀锋气力"
+cheat31_code = "330022BB+0064"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 刀锋无限移动"
+cheat32_code = "330022CA+0069"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 奥瑞斯特EXP"
+cheat33_code = "330022FA+00E7+330022FB+0003"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 奥瑞斯特HP"
+cheat34_code = "330022FC+00FF+330022FD+00FF"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 奥瑞斯特EN"
+cheat35_code = "330022FE+00E7+330022FF+0003"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 奥瑞斯特气力"
+cheat36_code = "33002303+0064"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 奥瑞斯特无限移动"
+cheat37_code = "33002312+0069"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 维嘉亚EXP"
+cheat38_code = "3300216E+00E7+3300216F+0003"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 维嘉亚HP"
+cheat39_code = "33002170+00FF+33002171+00FF"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 维嘉亚EN"
+cheat40_code = "33002172+00E7+33002173+0003"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 维嘉亚气力"
+cheat41_code = "33002177+0064"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 维嘉亚无限移动"
+cheat42_code = "33002186+0069"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 帝蓝特IIEXP"
+cheat43_code = "33002222+00E7+33002223+0003"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 帝蓝特IIHP"
+cheat44_code = "33002224+00FF+33002225+00FF"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 帝蓝特IIEN"
+cheat45_code = "33002226+00E7+33002227+0003"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 帝蓝特II气力"
+cheat46_code = "3300222B+0064"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 帝蓝特II无限移动"
+cheat47_code = "3300223A+0069"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 刀锋-凯杰EXP"
+cheat48_code = "33002164+00E7+33002165+0003"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 刀锋-凯杰HP"
+cheat49_code = "33002166+00FF+33002167+00FF"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 刀锋-凯杰EN"
+cheat50_code = "33002168+00E7+33002169+0003"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 刀锋-凯杰气力"
+cheat51_code = "3300216D+0064"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 刀锋-凯杰无限移动"
+cheat52_code = "3300217C+0069"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 卡里波EXP"
+cheat53_code = "33002192+00E7+33002193+0003"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 卡里波HP"
+cheat54_code = "33002194+00FF+33002195+00FF"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 卡里波EN"
+cheat55_code = "33002196+00E7+33002197+0003"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 卡里波气力"
+cheat56_code = "3300219B+0064"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 卡里波无限移动"
+cheat57_code = "330021AA+0069"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 全机体特性"
+cheat58_code = "33001D24+00FF+33001D25+00FF"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 全附加武器"
+cheat59_code = "33001D34+00FF+33001D35+00FF+33001D36+00FF+33001D37+00FF"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 全强化部件"
+cheat60_code = "33002030+0009+33002031+0009+33002032+0009"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 人物图鉴全满"
+cheat61_code = "33001D64+00FF+33001D65+00FF+33001D66+00FF+33001D67+00FF+33001D68+00FF+33001D69+00FF+33001D6A+00FF+33001D6B+00FF"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 机体图鉴全满"
+cheat62_code = "33001D84+00FF+33001D85+00FF+33001D86+00FF+33001D87+00FF+33001D88+00FF+33001D89+00FF"
+cheat62_enable = false

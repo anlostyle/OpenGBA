@@ -1,0 +1,37 @@
+cheats = 9
+
+cheat0_desc = "direct_v1 不遇敌"
+cheat0_code = "32fc29BE+0000+020029BF+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 战后金钱"
+cheat1_code = "32fcAEEC+00FF+0200AEED+007F"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 战后BUG碎片"
+cheat2_code = "32fcAEEC+00FE+0200AEED+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 HP"
+cheat3_code = "32fc52E8+000F+020052E9+0027"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 HP上限"
+cheat4_code = "32fc52EA+000F+020052EB+0027"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 战斗中体力"
+cheat5_code = "32ffB224+000F+0203B225+0027"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 战斗中能量"
+cheat6_code = "32ff5700+0000+02035701+0040"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 战斗中隐身"
+cheat7_code = "32ff8CB6+0050"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 战斗中敌人一击死"
+cheat8_code = "32ffB2FC+0000+0203B2FD+0000+0203B3D4+0000+0203B3D5+0000+0203B4AC+0000+0203B4AD+0000"
+cheat8_enable = false

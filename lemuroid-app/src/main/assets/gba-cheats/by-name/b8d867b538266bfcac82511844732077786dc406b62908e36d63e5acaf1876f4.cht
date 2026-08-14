@@ -1,0 +1,81 @@
+cheats = 20
+
+cheat0_desc = "direct_v1 无限能源"
+cheat0_code = "33000103+000C"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 火力最强"
+cheat1_code = "33000120+0080"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 子弹类型 黄色"
+cheat2_code = "33000121+001C"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 子弹类型 粉红"
+cheat3_code = "33000121+001D"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 子弹类型 绿色"
+cheat4_code = "33000121+001E"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 子弹类型 光球"
+cheat5_code = "33000121+001F"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 子弹类型 粉红?"
+cheat6_code = "33000121+0020"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 子弹类型 红色"
+cheat7_code = "33000121+0021"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 选择关卡 .NONE."
+cheat8_code = "32fc0000+0000"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 选择关卡 第一关"
+cheat9_code = "33000107+0010"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 选择关卡 第二关"
+cheat10_code = "33000107+0020"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 选择关卡 第三关"
+cheat11_code = "33000107+0030"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 选择关卡 第四关"
+cheat12_code = "33000107+0040"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 选择关卡 第五关"
+cheat13_code = "33000107+0050"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 选择关卡 第六关"
+cheat14_code = "33000107+0060"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 选择关卡 第七关"
+cheat15_code = "33000107+0070"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 无限命"
+cheat16_code = "33000102+0004"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 无限血"
+cheat17_code = "33000103+000C"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 最高分数"
+cheat18_code = "33000114+007F+02040115+0096+02040116+0098"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 连射"
+cheat19_code = "33000120+0000"
+cheat19_enable = false

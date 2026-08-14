@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 喷射器不减"
+cheat0_code = "33005D32+0063"
+cheat0_enable = false

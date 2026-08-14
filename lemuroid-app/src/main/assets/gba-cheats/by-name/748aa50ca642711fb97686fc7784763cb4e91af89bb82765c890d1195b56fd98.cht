@@ -1,0 +1,29 @@
+cheats = 7
+
+cheat0_desc = "direct_v1 血(游戏1)"
+cheat0_code = "32fcB0BC+0030"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 只数(游戏1)"
+cheat1_code = "32fcB0D2+0063"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 隐身(游戏1)"
+cheat2_code = "32fc5DFC+009D"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 时间(游戏2)"
+cheat3_code = "33001531+0009+02041532+0009"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 血(游戏2)"
+cheat4_code = "3300033D+0030"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 隐身(游戏2)"
+cheat5_code = "33000387+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 只数(游戏2)"
+cheat6_code = "3300037A+0009"
+cheat6_enable = false

@@ -15,3 +15,6 @@ repairs:
 
 No other .cht content differs from the source revision. The full license text
 is in LICENSE.txt in this directory.
+
+The by-name directory is a separate Chinese-filename compatibility set. Its
+source and provenance are documented in by-name/README.txt.

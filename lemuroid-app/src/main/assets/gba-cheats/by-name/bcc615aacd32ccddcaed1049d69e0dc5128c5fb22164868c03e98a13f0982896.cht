@@ -1,0 +1,205 @@
+cheats = 51
+
+cheat0_desc = "direct_v1 LIFE"
+cheat0_code = "330043CA+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 SUPER"
+cheat1_code = "330043D2+0063"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 POWER LIFE"
+cheat2_code = "33004420+0007"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 POWER PUNCH"
+cheat3_code = "33004421+0007"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 POWER LASER"
+cheat4_code = "33004422+0007"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 POWER SHOT"
+cheat5_code = "33004423+0007"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 POWER JET"
+cheat6_code = "33004424+0006"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 POWER SENSOR"
+cheat7_code = "33004425+0004"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全人物图鉴"
+cheat8_code = "330043F0+0001+020443F1+0001+020443F2+0001+020443F3+0001+020443F4+0001+020443F5+0001+020443F6+0001+020443F7+0001+020443F8+0001+020443F9+0001+020443FA+0001+020443FB+0001+020443FC+0001+020443FD+0001+020443FE+0001+020443FF+0001+02044400+0001+02044401+0001+02044402+0001+02044403+0001+02044404+0001+02044405+0001+02044406+0001+02044407+0001+02044408+0001+02044409+0001+0204440A+0001+0204440B+0001+0204440C+0001+0204440D+0001+0204440E+0001+0204440F+0001+02044410+0001+02044411+0001+02044412+0001+02044413+0001+02044414+0002+02044415+0002+02044416+0001+02044417+0002+02044418+0002+02044419+0002+0204441A+0001+0204441B+0002+0204441C+0001+0204441D+0001+0204441E+0001+0204441F+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 选关 1-1关"
+cheat9_code = "330043AE+0001+020443AF+0001"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 选关 1-2关"
+cheat10_code = "330043AE+0002+020443AF+0001"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 选关 1-3关"
+cheat11_code = "330043AE+0003+020443AF+0001"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 选关 1-4关"
+cheat12_code = "330043AE+0004+020443AF+0001"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 选关 1-5关"
+cheat13_code = "330043AE+0005+020443AF+0001"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 选关 0-1关"
+cheat14_code = "330043AE+0006+020443AF+0001"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 选关 2-1关"
+cheat15_code = "330043AE+0001+020443AF+0002"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 选关 2-2关"
+cheat16_code = "330043AE+0002+020443AF+0002"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 选关 2-3关"
+cheat17_code = "330043AE+0003+020443AF+0002"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 选关 2-4关"
+cheat18_code = "330043AE+0004+020443AF+0002"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 选关 2-5关"
+cheat19_code = "330043AE+0005+020443AF+0002"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 选关 2-6关"
+cheat20_code = "330043AE+0006+020443AF+0002"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 选关 3-1关"
+cheat21_code = "330043AE+0001+020443AF+0003"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 选关 3-2关"
+cheat22_code = "330043AE+0002+020443AF+0003"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 选关 3-3关"
+cheat23_code = "330043AE+0003+020443AF+0003"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 选关 3-4关"
+cheat24_code = "330043AE+0004+020443AF+0003"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 选关 3-5关"
+cheat25_code = "330043AE+0005+020443AF+0003"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 选关 4-1关"
+cheat26_code = "330043AE+0001+020443AF+0004"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 选关 4-2关"
+cheat27_code = "330043AE+0002+020443AF+0004"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 选关 4-3关"
+cheat28_code = "330043AE+0003+020443AF+0004"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 选关 4-4关"
+cheat29_code = "330043AE+0004+020443AF+0004"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 选关 0-2关"
+cheat30_code = "330043AE+0005+020443AF+0004"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 选关 5-1关"
+cheat31_code = "330043AE+0001+020443AF+0005"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 选关 5-2关"
+cheat32_code = "330043AE+0002+020443AF+0005"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 选关 5-3关"
+cheat33_code = "330043AE+0003+020443AF+0005"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 选关 5-4关"
+cheat34_code = "330043AE+0004+020443AF+0005"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 选关 0-3关"
+cheat35_code = "330043AE+0005+020443AF+0005"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 选关 6-1关"
+cheat36_code = "330043AE+0001+020443AF+0006"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 选关 6-2关"
+cheat37_code = "330043AE+0002+020443AF+0006"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 选关 6-3关"
+cheat38_code = "330043AE+0003+020443AF+0006"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 选关 6-4关"
+cheat39_code = "330043AE+0004+020443AF+0006"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 选关 0-4关"
+cheat40_code = "330043AE+0005+020443AF+0006"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 选关 7-1关"
+cheat41_code = "330043AE+0001+020443AF+0007"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 选关 7-2关"
+cheat42_code = "330043AE+0002+020443AF+0007"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 选关 7-3关"
+cheat43_code = "330043AE+0003+020443AF+0007"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 选关 7-4关"
+cheat44_code = "330043AE+0004+020443AF+0007"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 选关 7-5关"
+cheat45_code = "330043AE+0005+020443AF+0007"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 选关 8-1关"
+cheat46_code = "330043AE+0001+020443AF+0008"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 选关 8-2关"
+cheat47_code = "330043AE+0002+020443AF+0008"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 选关 8-3关"
+cheat48_code = "330043AE+0003+020443AF+0008"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 选关 8-4关"
+cheat49_code = "330043AE+0004+020443AF+0008"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 选关 0-5关"
+cheat50_code = "330043AE+0005+020443AF+0008"
+cheat50_enable = false

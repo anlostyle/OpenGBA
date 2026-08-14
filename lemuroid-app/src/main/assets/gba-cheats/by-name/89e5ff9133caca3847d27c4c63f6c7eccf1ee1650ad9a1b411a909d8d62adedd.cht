@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "33006A2C+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 步数"
+cheat1_code = "33005478+0000"
+cheat1_enable = false

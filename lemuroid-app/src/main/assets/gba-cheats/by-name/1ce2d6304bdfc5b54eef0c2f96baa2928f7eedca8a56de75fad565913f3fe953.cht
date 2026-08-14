@@ -1,0 +1,133 @@
+cheats = 33
+
+cheat0_desc = "direct_v1 体力不减"
+cheat0_code = "3300191C+0008"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 能量MAX"
+cheat1_code = "33001920+0008"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 一接到金币就MAX"
+cheat2_code = "33000C04+000F+33000C05+0023+33000C06+00F4"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 逃脱时间不减"
+cheat3_code = "33000BFC+0009+33000BFD+0005"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 获得4块碎片"
+cheat4_code = "33000C13+0002+33000C14+0002+33000C15+0002+33000C16+0002"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 直接打开出口"
+cheat5_code = "33000C19+0002"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 无敌"
+cheat6_code = "330018A8+0063"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 瓦里奥状态 正常"
+cheat7_code = "33001898+0000"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 瓦里奥状态 游泳"
+cheat8_code = "33001898+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 瓦里奥状态 反常"
+cheat9_code = "33001898+0002"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 瓦里奥状态 胖子"
+cheat10_code = "33001898+0003"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 瓦里奥状态 雪人"
+cheat11_code = "33001898+0004"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 瓦里奥状态 中毒"
+cheat12_code = "33001898+0005"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 瓦里奥状态 冷冻"
+cheat13_code = "33001898+0006"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 瓦里奥状态 虫子"
+cheat14_code = "33001898+0007"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 瓦里奥状态 气球"
+cheat15_code = "33001898+0008"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 瓦里奥状态 飞行"
+cheat16_code = "33001898+0009"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 瓦里奥状态 不明"
+cheat17_code = "33001898+000A"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 光盘"
+cheat18_code = "33000C17+0002"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 钥匙"
+cheat19_code = "33000C18+0002"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 BOSS战武器 无"
+cheat20_code = "33000C44+0000"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 BOSS战武器 苹果炸弹"
+cheat21_code = "33000C44+0001"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 BOSS战武器 大炮"
+cheat22_code = "33000C44+0002"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 BOSS战武器 白面人"
+cheat23_code = "33000C44+0003"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 BOSS战武器 喇叭"
+cheat24_code = "33000C44+0004"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 BOSS战武器 鳄鱼嘴"
+cheat25_code = "33000C44+0005"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 BOSS战武器 吻"
+cheat26_code = "33000C44+0006"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 BOSS战武器 拳头"
+cheat27_code = "33000C44+0007"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 BOSS战武器 火焰鸟"
+cheat28_code = "33000C44+0008"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 迷你游戏 记录999"
+cheat29_code = "33000016+00E7+33000017+0003"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 迷你游戏棒球永远不出局"
+cheat30_code = "33004A2E+0000"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 迷你游戏 获得的金币MAX"
+cheat31_code = "33000014+00E7+33000015+0003"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 迷你游戏 有效球个数MAX"
+cheat32_code = "330047D6+00E7+330047D7+0003"
+cheat32_enable = false

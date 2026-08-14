@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 生命数"
+cheat0_code = "3300526C+0005"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 体力心"
+cheat1_code = "33005220+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 透明 OFF"
+cheat2_code = "3300525E+0000+3300527B+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 透明"
+cheat3_code = "3300525E+0039+3300527B+0001"
+cheat3_enable = false

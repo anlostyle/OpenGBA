@@ -1,0 +1,189 @@
+cheats = 47
+
+cheat0_desc = "direct_v1 战斗生命"
+cheat0_code = "33001A60+00E7+02041A61+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 战斗隐身"
+cheat1_code = "33001A5D+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 金钱"
+cheat2_code = "33006510+00FF+02046511+00E0+02046512+00F5+02046513+0005"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 HP"
+cheat3_code = "330064A4+00E7+020464A5+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 MAXHP"
+cheat4_code = "330064A6+00E7+020464A7+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 SP"
+cheat5_code = "330064AA+00E7+020464AB+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 MAXSP"
+cheat6_code = "330064AC+00E7+020464AD+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 攻击力"
+cheat7_code = "330064AE+00E7+020464AF+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 防御力"
+cheat8_code = "330064B0+00E7+020464B1+0003"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 全属性"
+cheat9_code = "330065A7+0063+020465A8+0063+020465A9+0063+020465AA+0063"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 全魔导书"
+cheat10_code = "3300650C+0007"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 全卡片"
+cheat11_code = "3300658C+00FF+0204658D+00FF+0204658E+00FF+0204658F+00FF+02046590+00FF+02046591+00FF+02046592+00FF+02046593+00FF"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 魂魄数"
+cheat12_code = "3300658A+0063"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 持有武器"
+cheat13_code = "330065A5+0002"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 全技能"
+cheat14_code = "330065AB+00FF+020465AC+00FF+020465AD+00FF+020465AE+00FF+020465AF+00FF+020465B0+00FF+020465B1+00FF+020465B2+00FF+020465B3+00FF+020465B4+00FF+020465B5+00FF+020465B6+00FF+020465B7+00FF"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 全饰物"
+cheat15_code = "330065BB+00FF"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 全防具"
+cheat16_code = "330065B8+00FF"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 技能满星+额外道具"
+cheat17_code = "330065B9+00FF+020465BA+00FF"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 全信息+音乐盒开启"
+cheat18_code = "33006335+00FF+02046336+00FF"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 全音乐"
+cheat19_code = "33006594+00FF+02046595+00FF+02046596+00FF+02046597+00FF+02046598+00FF+02046599+00FF"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 全恢复道具"
+cheat20_code = "3300659A+0004+0204659B+0005+0204659C+0006+0204659D+0007+0204659E+0008"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 氧气"
+cheat21_code = "330064DC+0000+020464DD+0040"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 BOSS一击死"
+cheat22_code = "33001B28+0001+02041B29+0000"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 自由战全开"
+cheat23_code = "330065D4+0001+020465D8+0001+020465DC+0001+020465E0+0001+020465E4+0001+020465E8+0001+020465EC+0001+020465F0+0001+020465F4+0001+020465F8+0001+020465FC+0001+02046600+0001+02046604+0001+02046608+0001+0204660C+0001+02046610+0001+02046614+0001+02046618+0001+0204661C+0001+02046620+0001+02046624+0001"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 战斗中HP 全满"
+cheat24_code = "33001A60+00E7+02041A61+0003"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 无敌"
+cheat25_code = "33001A5D+0063"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 无敌 OFF"
+cheat26_code = "33001A5D+0000"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 金钱9999999"
+cheat27_code = "33006510+007F+02046511+0096+02046512+0098"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 全灵魂收集"
+cheat28_code = "330065AB+00FF+020465AC+00FF+020465AD+00FF+020465AE+00FF+020465AF+00FF+020465B0+00FF+020465B1+00FF+020465B2+00FF+020465B3+00FF+020465B4+00FF+020465B5+00FF+020465B6+00FF+020465B7+00FF"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 全EX-ITEM"
+cheat29_code = "330065B8+00FF+020465B9+00FF+020465BA+00FF+020465BB+00FF"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 技能之书I+II+III全获得"
+cheat30_code = "3300650C+000F"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 魂数量255"
+cheat31_code = "3300658A+00FF"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 攻击方式 刀斩"
+cheat32_code = "330064B3+0001"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 攻击方式 气斩"
+cheat33_code = "330064B3+0002"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 攻击方式 鬼火"
+cheat34_code = "330064B3+0030"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 拥有加强能力状态 所有能力加强"
+cheat35_code = "330064D6+00E7+020464D7+0003+020464D8+00E7+020464D9+0003+020464DA+00E7+020464DB+0003"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 拥有加强能力状态 攻击加强"
+cheat36_code = "330064D6+00E7+020464D7+0003"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 拥有加强能力状态 守备加强"
+cheat37_code = "330064D8+00E7+020464D9+0003"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 拥有加强能力状态 灵力加强"
+cheat38_code = "330064DA+00E7+020464DB+0003"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 阿叶能力 全能力超强"
+cheat39_code = "33001A60+00E7+02041A61+0003+020464A4+00E7+020464A5+0003+020464A6+00E7+020464A7+0003+020464A8+00E7+020464A9+0003+020464AA+00E7+020464AB+0003+020464AC+00E7+020464AD+0003+020464AE+00E7+020464AF+0003+020464B0+00E7+020464B1+0003+020465A7+0063+020465A8+0063+020465A9+0063+020465AA+0063"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 阿叶能力 HP+SP MAX"
+cheat40_code = "33001A60+00E7+02041A61+0003+020464A4+00E7+020464A5+0003+020464A6+00E7+020464A7+0003+020464A8+00E7+020464A9+0003+020464AA+00E7+020464AB+0003+020464AC+00E7+020464AD+0003"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 阿叶能力 HP MAX"
+cheat41_code = "33001A60+00E7+02041A61+0003+020464A4+00E7+020464A5+0003+020464A6+00E7+020464A7+0003+020464A8+00E7+020464A9+0003"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 阿叶能力 SP MAX"
+cheat42_code = "330064AA+00E7+020464AB+0003+020464AC+00E7+020464AD+0003"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 阿叶能力 攻击力"
+cheat43_code = "330064AE+00E7+020464AF+0003"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 阿叶能力 守备力"
+cheat44_code = "330064B0+00E7+020464B1+0003"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 阿叶能力 全属性能力满"
+cheat45_code = "330065A7+0063+020465A8+0063+020465A9+0063+020465AA+0063"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 敌方BOSS HP 一击必杀"
+cheat46_code = "33001B28+0001+02041B29+0000"
+cheat46_enable = false

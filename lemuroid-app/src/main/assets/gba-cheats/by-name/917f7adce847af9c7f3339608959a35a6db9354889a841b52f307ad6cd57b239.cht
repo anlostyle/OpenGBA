@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "330038DD+0078+330038DE+0002+330038E6+0000"
+cheat0_enable = false

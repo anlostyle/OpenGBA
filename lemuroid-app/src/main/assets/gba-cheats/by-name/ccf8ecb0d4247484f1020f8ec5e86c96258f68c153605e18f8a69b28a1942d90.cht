@@ -1,0 +1,73 @@
+cheats = 18
+
+cheat0_desc = "direct_v1 HP不减"
+cheat0_code = "32ff7D94+0040"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 HP槽最长"
+cheat1_code = "32ff7EED+0040"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 HP槽2倍"
+cheat2_code = "32ff7EF2+0001"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 无敌"
+cheat3_code = "32ff7D84+0040"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 能量9999"
+cheat4_code = "32ff7EEE+000F+32ff7EEF+0027"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 血包不减"
+cheat5_code = "32ff7EF6+001E+32ff7EF7+001E+32ff7EF8+001E+32ff7EF9+001E"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全精灵"
+cheat6_code = "32ff7F15+00FF+32ff7F16+00FF+32ff7F17+00FF+32ff7F18+00FF+32ff7F19+00FF+32ff7F1A+00FF+32ff7F1B+00FF+32ff7F1C+00FF+32ff7F1D+00FF+32ff7F1E+00FF+32ff7F1F+00FF+32ff7F20+00FF+32ff7F21+00FF+32ff7F22+00FF+32ff7F23+00FF+32ff7F24+00FF+32ff7F25+00FF+32ff7F26+00FF+32ff7F27+00FF+32ff7F28+00FF+32ff7F29+0000"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全属性芯片"
+cheat7_code = "32ff7F01+000F"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 4个能量包"
+cheat8_code = "32ff7EF4+0002+32ff7EF5+0002"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 全武器"
+cheat9_code = "32ff7F00+00FF"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 全EX技能"
+cheat10_code = "32ff7F06+00FF+32ff7F07+00FF"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 全装甲"
+cheat11_code = "32ff7EF0+00FF+32ff7EF1+00FF"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 剑星级最大"
+cheat12_code = "32ff7F0C+00FF+32ff7F0D+00FF"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 鞭星级最大"
+cheat13_code = "32ff7F0E+00FF+32ff7F0F+00FF"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 枪星级最大"
+cheat14_code = "32ff7F0A+00FF+32ff7F0B+00FF"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 装备精灵1"
+cheat15_code = "00000NAN --51H随便填"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 装备精灵2"
+cheat16_code = "00000NAN --51H随便填"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 装备精灵3"
+cheat17_code = "00000NAN --51H随便填"
+cheat17_enable = false

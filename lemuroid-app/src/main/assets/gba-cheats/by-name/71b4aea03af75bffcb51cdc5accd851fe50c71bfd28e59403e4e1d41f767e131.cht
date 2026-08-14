@@ -1,0 +1,45 @@
+cheats = 8
+
+cheat0_desc = "direct_v1 ON 0"
+
+cheat0_desc = "direct_v1 ON 1"
+
+cheat0_desc = "direct_v1 ON 2"
+
+cheat0_desc = "direct_v1 ON 3"
+
+cheat0_desc = "direct_v1 ON 4"
+cheat0_code = "30fc0NAN+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 ON 5"
+
+cheat1_desc = "direct_v1 ON 6"
+cheat1_code = "30fc0NAN+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 ON 7"
+
+cheat2_desc = "direct_v1 战后金钱"
+cheat2_code = "32fcA00C+00FF+0200A00D+007F"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 战后BUG"
+cheat3_code = "32fcA00C+00FE+0200A00D+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 体力"
+cheat4_code = "32ffA9D4+000F+0203A9D5+0027"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 能量"
+cheat5_code = "32ff52A0+0000+020352A1+0040"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 隐身"
+cheat6_code = "32ff8514+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 敌人速死"
+cheat7_code = "32ffAAAC+0000+0203AAAD+0000+0203AB84+0000+0203AB85+0000+0203AC5C+0000+0203AC5D+0000"
+cheat7_enable = false

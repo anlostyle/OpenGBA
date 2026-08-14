@@ -1,0 +1,197 @@
+cheats = 49
+
+cheat0_desc = "direct_v1 时间不减 45秒"
+cheat0_code = "32fc774C+0001+32fc774D+002D"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 时间不减 60秒"
+cheat1_code = "32fc774C+0001+32fc774D+003C"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 时间不减 30秒"
+cheat2_code = "32fc774C+0001+32fc774D+001E"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 P1 角色选择 コロシケ"
+cheat3_code = "32fc23AA+0000"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 P1 角色选择 ウスタ一"
+cheat4_code = "32fc23AA+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 P1 角色选择 リゾシト"
+cheat5_code = "32fc23AA+0002"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 P1 角色选择 プリンプリン"
+cheat6_code = "32fc23AA+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 P1 角色选择 フォンドヴォ一"
+cheat7_code = "32fc23AA+0004"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 P1 角色选择 アブラミ一"
+cheat8_code = "32fc23AA+0005"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 P1 角色选择 ババロア"
+cheat9_code = "32fc23AA+0006"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 P1 角色选择 クシカツ"
+cheat10_code = "32fc23AA+0007"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 P1 角色选择 ドリアン"
+cheat11_code = "32fc23AA+0008"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 P1 角色选择 ダイフク一"
+cheat12_code = "32fc23AA+0009"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 P1 角色选择 レバニラ"
+cheat13_code = "32fc23AA+000A"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 P1 角色选择 T-ボ一ン"
+cheat14_code = "32fc23AA+000B"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 P1 角色选择 黑マントの男"
+cheat15_code = "32fc23AA+000C"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 P1 角色选择 ポ一"
+cheat16_code = "32fc23AA+000D"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 P1 体力值 全满"
+cheat17_code = "32fc6C09+0064"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 P1 体力值 为零"
+cheat18_code = "32fc6C09+0000"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 P1 能量值 全满"
+cheat19_code = "32fc6C0B+0064"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 P1 能量值 为零"
+cheat20_code = "32fc6C0B+0000"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 P2 体力值 为零"
+cheat21_code = "32fc6C19+0000"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 P2 体力值 全满"
+cheat22_code = "32fc6C19+0064"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 P2 能量值 为零"
+cheat23_code = "32fc6C1B+0000"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 P2 能量值 全满"
+cheat24_code = "32fc6C1B+0064"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 场地选择 船上"
+cheat25_code = "32fc23B4+0000"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 场地选择 草原"
+cheat26_code = "32fc23B4+0001"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 场地选择 森林"
+cheat27_code = "32fc23B4+0002"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 场地选择 岩场"
+cheat28_code = "32fc23B4+0003"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 场地选择 遗迹"
+cheat29_code = "32fc23B4+0004"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 场地选择 河"
+cheat30_code = "32fc23B4+0005"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 场地选择 沙漠"
+cheat31_code = "32fc23B4+0006"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 场地选择 熔岩"
+cheat32_code = "32fc23B4+0007"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 场地选择 钟乳洞"
+cheat33_code = "32fc23B4+0008"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 场地选择 矿山铁路"
+cheat34_code = "32fc23B4+0009"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 场地选择 とうぎ场"
+cheat35_code = "32fc23B4+000A"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 全人物"
+cheat36_code = "32fc8B14+00FF+32fc8B28+0001"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 积分"
+cheat37_code = "32fc59F4+00FF+32fc59F5+00E0+32fc59F6+00F5+32fc59F7+0005"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 兔子料理"
+cheat38_code = "32fc66C8+0002+32fc66C9+0004+32fc66CA+0000+32fc66CB+0005+32fc66CC+0014"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 战斗时间"
+cheat39_code = "32fc774E+0000+32fc774F+0017"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 我方生命"
+cheat40_code = "32fc6C09+0064"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 我方能量"
+cheat41_code = "32fc6C0B+0064"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 我方禁货"
+cheat42_code = "32fc6C10+00E7+32fc6C11+0003"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 我方隐身"
+cheat43_code = "32fc6CC8+0010"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 对方生命"
+cheat44_code = "32fc6C19+0000"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 对方能量"
+cheat45_code = "32fc6C1B+0000"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 对方禁货"
+cheat46_code = "32fc6C20+0019+32fc6C21+00FC"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 对战全人物 步骤一"
+cheat47_code = "32fc23E8+0002"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 对战全人物 步骤二"
+cheat48_code = "32fc23E8+0001"
+cheat48_enable = false

@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "33001DEC+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血"
+cheat1_code = "33001E08+0005"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 宝石"
+cheat2_code = "33001E0C+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 只数"
+cheat3_code = "33001DE0+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 救人数"
+cheat4_code = "33001D80+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 隐身"
+cheat5_code = "33001DE4+00C8"
+cheat5_enable = false

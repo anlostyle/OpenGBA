@@ -1,0 +1,21 @@
+cheats = 5
+
+cheat0_desc = "direct_v1 1P HP MAX"
+cheat0_code = "33000731+006D"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 1P HP MIN"
+cheat1_code = "33000731+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 TIME"
+cheat2_code = "33000E6C+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 2P HP MIN"
+cheat3_code = "33000771+0000"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 2P HP MAX"
+cheat4_code = "33000771+006D"
+cheat4_enable = false

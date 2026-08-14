@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 命不减"
+cheat0_code = "33000954+0009"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 RING 999"
+cheat1_code = "3300094C+00E7+0204094D+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 时间 0'00'00"
+cheat2_code = "3300094E+0000+0204094F+0000"
+cheat2_enable = false

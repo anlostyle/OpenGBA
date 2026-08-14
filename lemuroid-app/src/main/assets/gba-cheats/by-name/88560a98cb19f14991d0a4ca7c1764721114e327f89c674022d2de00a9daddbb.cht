@@ -1,0 +1,41 @@
+cheats = 10
+
+cheat0_desc = "direct_v1 飞机耐久"
+cheat0_code = "330002E1+0044"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 飞机隐身"
+cheat1_code = "330002D8+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 快速结束"
+cheat2_code = "33007080+0000+02047081+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 人物体力"
+cheat3_code = "330027B4+0044"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 人物隐身"
+cheat4_code = "330076B0+00FF"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 等级"
+cheat5_code = "3300702C+0062"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 经验"
+cheat6_code = "3300705C+0018+0204705D+006F+0204705E+000E"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 炸弹"
+cheat7_code = "33007014+0008"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全武器"
+cheat8_code = "3300773C+00FF+0204773D+00FF+0204773E+00FF+02047744+00FF+02047745+00FF+02047746+00FF+02047747+00FF+02047748+00FF+02047749+00FF+0204774A+00FF+0204774B+00FF"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 全道具"
+cheat9_code = "33007740+00FF+02047741+00FF+02047742+00FF"
+cheat9_enable = false

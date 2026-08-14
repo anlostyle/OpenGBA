@@ -1,0 +1,29 @@
+cheats = 7
+
+cheat0_desc = "direct_v1 生命]"
+cheat0_code = "330055A0+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 能量]"
+cheat1_code = "330055AC+0064+020455AD+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 点数"
+cheat2_code = "330055AE+000F+020455AF+0027"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 全武器"
+cheat3_code = "33005595+0001+02045596+0001+02045597+0001+02045598+0001+02045599+0001+0204559A+0001"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 全关卡"
+cheat4_code = "3300552C+00FF+0204552D+00FF+02045530+00FF+02045531+00FF+02045534+00FF+02045535+00FF+02045538+00FF+02045539+00FF+0204553C+00FF+0204553D+00FF+02045540+00FF+02045541+00FF"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全能力"
+cheat5_code = "3300552F+00FF+02045533+00FF+02045537+00FF+0204553B+00FF+0204553F+00FF+02045543+00FF"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全奖励"
+cheat6_code = "33006D4C+00FF"
+cheat6_enable = false

@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 sp"
+cheat0_code = "32fcE2EC+0000+0200E2ED+000C"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 time"
+cheat1_code = "32fcE318+0000+0200E319+0000"
+cheat1_enable = false

@@ -1,0 +1,85 @@
+cheats = 21
+
+cheat0_desc = "direct_v1 我方体力"
+cheat0_code = "33004330+00E7+02044331+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 我方能量"
+cheat1_code = "33004334+00E7+02044335+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 敌方体力"
+cheat2_code = "33004518+0001+02044519+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 敌方能量"
+cheat3_code = "3300451C+0000+0204451D+0000"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 选人 ULTRAMAN"
+cheat4_code = "33002ED8+0000"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 选人 ULTRAMANTIGA"
+cheat5_code = "33002ED8+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 选人 ULTRAMANDYNA"
+cheat6_code = "33002ED8+0002"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 选人 ULTRAMANGAIA"
+cheat7_code = "33002ED8+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 选人 ULTRAMANAGUI"
+cheat8_code = "33002ED8+0004"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 选人 随机选人"
+cheat9_code = "33002ED8+000C"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 选人 ULTRAMANTARO"
+cheat10_code = "33002ED8+0006"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 选人 ULTRAMANJACK"
+cheat11_code = "33002ED8+0007"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 选人 ULTRAMANSEVEN"
+cheat12_code = "33002ED8+0008"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 选人 ALIEN RAITAN"
+cheat13_code = "33002ED8+0009"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 选人 GATANOTHOR"
+cheat14_code = "33002ED8+000A"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 选人 REICURAS"
+cheat15_code = "33002ED8+000B"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 选人 TYRANT"
+cheat16_code = "33002ED8+000D"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 选人 Z-TON"
+cheat17_code = "33002ED8+000E"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 选人 DINO-TANK"
+cheat18_code = "33002ED8+000F"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 POINT全满"
+cheat19_code = "33002E30+00FF+02042E31+00FF+02042E32+00FF+02042E33+00FF+02042E34+00FF+02042E35+00FF+02042E36+00FF+02042E37+00FF"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 能力全满"
+cheat20_code = "33002E38+0064+02042E39+0064+02042E3A+0064+02042E3B+0064+02042E3C+0064+02042E3D+0064+02042E3E+0064+02042E3F+0064+02042E40+0064+02042E41+0064+02042E42+0064+02042E43+0064+02042E44+0064+02042E45+0064+02042E46+0064+02042E47+0064+02042E48+0064+02042E49+0064+02042E4A+0064+02042E4B+0064+02042E4C+0064+02042E4D+0064+02042E4E+0064+02042E4F+0064+02042E50+0064+02042E51+0064+02042E52+0064+02042E53+0064+02042E54+0064+02042E55+0064+02042E56+0064+02042E57+0064"
+cheat20_enable = false

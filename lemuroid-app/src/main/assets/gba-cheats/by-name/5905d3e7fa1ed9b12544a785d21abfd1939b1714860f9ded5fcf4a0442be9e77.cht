@@ -1,0 +1,601 @@
+cheats = 150
+
+cheat0_desc = "direct_v1 体力"
+cheat0_code = "32ff66A4+0010"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 人数"
+cheat1_code = "32ff5910+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 无敌"
+cheat2_code = "32ff6694+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 能量"
+cheat3_code = "32ff66BA+000F+32ff66BB+0027"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 血瓶"
+cheat4_code = "32ff66BC+0020+32ff66BD+0020+32ff66BE+0020+32ff66BF+0020"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 S级"
+cheat5_code = "32ff5911+0006"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全EX特技"
+cheat6_code = "32ff66CA+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全装备"
+cheat7_code = "32ff5900+00FF+32ff5901+00FF+32ff5902+00FF+32ff5903+00FF+32ff5904+00FF+32ff5905+00FF+32ff5906+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全道具"
+cheat8_code = "32ff58C8+0099+32ff58C9+0099+32ff58CA+0099+32ff58CB+0099+32ff58CC+0099+32ff58CD+0099+32ff58CE+0099+32ff58CF+0099+32ff58D0+0099+32ff58D1+0099+32ff58D2+0099+32ff58D3+0099+32ff58D4+0099+32ff58D5+0099+32ff58D6+0099+32ff58D7+0099+32ff58D8+0099+32ff58D9+0099+32ff58DA+0099+32ff58DB+0099+32ff58DC+0099+32ff58DD+0099+32ff58DE+0099+32ff58DF+0099+32ff58E0+0099+32ff58E1+0099"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 精灵等级"
+cheat9_code = "32ff66F0+0007+32ff66F1+0007+32ff66F2+0007+32ff66F3+0007"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 载重等级"
+cheat10_code = "32ff66F4+0063"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 B键武器 バスターショット"
+cheat11_code = "32ff66C0+0000"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 B键武器 ゼットセイバー"
+cheat12_code = "32ff66C0+0001"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 B键武器 ゼロナックル"
+cheat13_code = "32ff66C0+0002"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 B键武器 スプレッドショット"
+cheat14_code = "32ff66C0+0003+32ff66C3+0001"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 B键武器 ドリルショット"
+cheat15_code = "32ff66C0+0003+32ff66C3+0002"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 B键武器 クロスショット"
+cheat16_code = "32ff66C0+0003+32ff66C3+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 B键武器 ランプバーナー"
+cheat17_code = "32ff66C0+0003+32ff66C3+0004"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 B键武器 2WAYショット"
+cheat18_code = "32ff66C0+0003+32ff66C3+0005"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 B键武器 アイムショット"
+cheat19_code = "32ff66C0+0003+32ff66C3+0006"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 B键武器 アイスバスター"
+cheat20_code = "32ff66C0+0003+32ff66C3+0007"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 B键武器 ビームショット"
+cheat21_code = "32ff66C0+0003+32ff66C3+0008"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 B键武器 サーチショット"
+cheat22_code = "32ff66C0+0003+32ff66C3+0009"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 B键武器 ブレィズバスター"
+cheat23_code = "32ff66C0+0003+32ff66C3+000A"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 B键武器 トライショット"
+cheat24_code = "32ff66C0+0003+32ff66C3+000B"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 B键武器 バーチカルショット"
+cheat25_code = "32ff66C0+0003+32ff66C3+000C"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 B键武器 ワイドバスター"
+cheat26_code = "32ff66C0+0003+32ff66C3+000D"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 B键武器 ベンドレーザー"
+cheat27_code = "32ff66C0+0003+32ff66C3+000E"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 B键武器 リフレーザー"
+cheat28_code = "32ff66C0+0003+32ff66C3+000F"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 B键武器 ウォータガン"
+cheat29_code = "32ff66C0+0003+32ff66C3+0010"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 B键武器 キャノンバスター"
+cheat30_code = "32ff66C0+0003+32ff66C3+0011"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 B键武器 でんとう"
+cheat31_code = "32ff66C0+0003+32ff66C3+0012"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 B键武器 メットシールド"
+cheat32_code = "32ff66C0+0004+32ff66C3+0000"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 B键武器 ランプシールド"
+cheat33_code = "32ff66C0+0004+32ff66C3+0001"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 B键武器 アイスシールド"
+cheat34_code = "32ff66C0+0004+32ff66C3+0002"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 B键武器 ブレードシールド"
+cheat35_code = "32ff66C0+0004+32ff66C3+0003"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 B键武器 シャープシールド"
+cheat36_code = "32ff66C0+0004+32ff66C3+0004"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 B键武器 バウンドタイヤ"
+cheat37_code = "32ff66C0+0005+32ff66C3+0000"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 B键武器 ジョイントボム"
+cheat38_code = "32ff66C0+0005+32ff66C3+0001"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 B键武器 ライジングボム"
+cheat39_code = "32ff66C0+0005+32ff66C3+0002"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 B键武器 エッグボム"
+cheat40_code = "32ff66C0+0005+32ff66C3+0003"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 B键武器 バルーンボム"
+cheat41_code = "32ff66C0+0005+32ff66C3+0004"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 B键武器 ギアボム"
+cheat42_code = "32ff66C0+0005+32ff66C3+0005"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 B键武器 ハイブボム"
+cheat43_code = "32ff66C0+0005+32ff66C3+0006"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 B键武器 ネオンボム"
+cheat44_code = "32ff66C0+0005+32ff66C3+0007"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 B键武器 ジャイロブーメラン"
+cheat45_code = "32ff66C0+0005+32ff66C3+0008"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 B键武器 ウェーブボム"
+cheat46_code = "32ff66C0+0005+32ff66C3+0009"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 B键武器 バーストボム"
+cheat47_code = "32ff66C0+0005+32ff66C3+000A"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 B键武器 3WAYボム"
+cheat48_code = "32ff66C0+0005+32ff66C3+000B"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 B键武器 ミニクラバーンR"
+cheat49_code = "32ff66C0+0005+32ff66C3+000C"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 B键武器 ミニクラバーンB"
+cheat50_code = "32ff66C0+0005+32ff66C3+000D"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 B键武器 ロングスナッパー"
+cheat51_code = "32ff66C0+0006+32ff66C3+0000"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 B键武器 エレキロッド"
+cheat52_code = "32ff66C0+0006+32ff66C3+0001"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 B键武器 タングロッド"
+cheat53_code = "32ff66C0+0006+32ff66C3+0002"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 B键武器 ビーロッド"
+cheat54_code = "32ff66C0+0006+32ff66C3+0003"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 B键武器 エレキネイル"
+cheat55_code = "32ff66C0+0006+32ff66C3+0004"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 B键武器 マグネパンチN"
+cheat56_code = "32ff66C0+0006+32ff66C3+0005"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 B键武器 マグネパンチS"
+cheat57_code = "32ff66C0+0006+32ff66C3+0006"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 B键武器 ドリルロシド"
+cheat58_code = "32ff66C0+0006+32ff66C3+0007"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 B键武器 カードキー"
+cheat59_code = "32ff66C0+0006+32ff66C3+0008"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 B键武器 エレキアーム"
+cheat60_code = "32ff66C0+0006+32ff66C3+0009"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 B键武器 ヒートサーベル"
+cheat61_code = "32ff66C0+0006+32ff66C3+000A"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 B键武器 スティールクロウ"
+cheat62_code = "32ff66C0+0006+32ff66C3+000B"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 B键武器 メガアックス"
+cheat63_code = "32ff66C0+0007+32ff66C3+0000"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 B键武器 フレイムソード"
+cheat64_code = "32ff66C0+0007+32ff66C3+0001"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 B键武器 メガハンマー"
+cheat65_code = "32ff66C0+0007+32ff66C3+0002"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 B键武器 デスピアス"
+cheat66_code = "32ff66C0+0007+32ff66C3+0003"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 B键武器 てつパイプ"
+cheat67_code = "32ff66C0+0007+32ff66C3+0004"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 武器弹药"
+cheat68_code = "32ff66E6+0009"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 BOSS一击死"
+cheat69_code = "32ffA4E4+0001"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 氧气"
+cheat70_code = "32feEB94+00CE+32feEB95+0020"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 杀敌数"
+cheat71_code = "32feE8EC+000F+32feE8ED+0027"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 过关时间"
+cheat72_code = "32feE8E8+0000+32feE8E9+0000+32feE8EA+0000+32feE8EB+0000"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 过关积分"
+cheat73_code = "32feE8E5+0064"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 总积分"
+cheat74_code = "32ff591C+0040+32ff591D+0006"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 关卡全开"
+cheat75_code = "32feE8B6+00FF+32feE8B7+00FF"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 全图鉴"
+cheat76_code = "32fc0A70+00FF+32fc0A71+00FF+32fc0A72+00FF+32fc0A73+00FF+32fc0A74+00FF+32fc0A75+00FF+32fc0A76+00FF+32fc0A77+00FF+32fc0A78+00FF+32fc0A79+00FF+32fc0A7A+00FF+32fc0A7B+00FF+32fc0A7C+00FF"
+cheat76_enable = false
+
+cheat77_desc = "direct_v1 全模式"
+cheat77_code = "32fc0A80+0031+32fc0A81+0038"
+cheat77_enable = false
+
+cheat78_desc = "direct_v1 全小游戏"
+cheat78_code = "32fc0A82+003E+32fc0A83+0044+32fc0A84+004A+32fc0A85+0050+32fc0A86+0056+32fc0A87+005C+32fc0A88+0061"
+cheat78_enable = false
+
+cheat79_desc = "direct_v1 小游戏积分"
+cheat79_code = "32ff03E4+000F+32ff03E5+0027"
+cheat79_enable = false
+
+cheat80_desc = "direct_v1 小游戏时间"
+cheat80_code = "32ff03F0+0010+32ff03F1+000E"
+cheat80_enable = false
+
+cheat81_desc = "direct_v1 全零件 x 9+全获得"
+cheat81_code = "32ff58C8+0099+32ff58C9+0099+32ff58CA+0099+32ff58CB+0099+32ff58CC+0099+32ff58CD+0099+32ff58CE+0099+32ff58CF+0099+32ff58D0+0099+32ff58D1+0099+32ff58D2+0099+32ff58D3+0099+32ff58D4+0099+32ff58D5+0099+32ff58D6+0099+32ff58D7+0099+32ff58D8+0099+32ff58D9+0099+32ff58DA+0099+32ff58DB+0099+32ff58DC+0099+32ff58DD+0099+32ff58DE+0099+32ff58DF+0099+32ff58E0+0099"
+cheat81_enable = false
+
+cheat82_desc = "direct_v1 芯片全研发完成"
+cheat82_code = "32ff5900+00FF+32ff5901+00FF+32ff5902+00FF+32ff5903+00FF+32ff5904+00FF+32ff5905+00FF+32ff5906+00FF+32ff5907+00FF"
+cheat82_enable = false
+
+cheat83_desc = "direct_v1 全EX武器芯片获得"
+cheat83_code = "32ff66CA+00FF"
+cheat83_enable = false
+
+cheat84_desc = "direct_v1 无限二段跳跃"
+cheat84_code = "32ff66C6+0015+32ff6742+0000"
+cheat84_enable = false
+
+cheat85_desc = "direct_v1 无限二段跳跃 OFF"
+cheat85_code = "32ff66C6+0015+32ff6742+0002"
+cheat85_enable = false
+
+cheat86_desc = "direct_v1 E币"
+cheat86_code = "32ff66BA+000F+32ff66BB+0027"
+cheat86_enable = false
+
+cheat87_desc = "direct_v1 生命X9"
+cheat87_code = "32ff5910+0009"
+cheat87_enable = false
+
+cheat88_desc = "direct_v1 LV S S级"
+cheat88_code = "32ff5911+0006"
+cheat88_enable = false
+
+cheat89_desc = "direct_v1 精灵升级点数9999"
+cheat89_code = "32ff66BA+000F+32ff66BB+0027"
+cheat89_enable = false
+
+cheat90_desc = "direct_v1 全精灵等级最高 LV MAX"
+cheat90_code = "32ff66F0+0007+32ff66F4+0063"
+cheat90_enable = false
+
+cheat91_desc = "direct_v1 全E罐获得+全满"
+cheat91_code = "32ff66BC+0020+32ff66BD+0020+32ff66BE+0020+32ff66BF+0020"
+cheat91_enable = false
+
+cheat92_desc = "direct_v1 HP全满"
+cheat92_code = "32ff66A4+00FF"
+cheat92_enable = false
+
+cheat93_desc = "direct_v1 视觉修改 残影跟随"
+cheat93_code = "32ff670B+0000"
+cheat93_enable = false
+
+cheat94_desc = "direct_v1 视觉修改 身上有红色光球"
+cheat94_code = "32ff66EC+00BD"
+cheat94_enable = false
+
+cheat95_desc = "direct_v1 手掌武器-炸弹 弹跳弹"
+cheat95_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0000+32ff66E6+0009"
+cheat95_enable = false
+
+cheat96_desc = "direct_v1 手掌武器-炸弹 定时炸弹"
+cheat96_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0001+32ff66E6+0009"
+cheat96_enable = false
+
+cheat97_desc = "direct_v1 手掌武器-炸弹 火焰弹"
+cheat97_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0002+32ff66E6+0009"
+cheat97_enable = false
+
+cheat98_desc = "direct_v1 手掌武器-炸弹 定时回旋爆弹"
+cheat98_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0003+32ff66E6+0009"
+cheat98_enable = false
+
+cheat99_desc = "direct_v1 手掌武器-炸弹 刺针爆弹"
+cheat99_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0004+32ff66E6+0009"
+cheat99_enable = false
+
+cheat100_desc = "direct_v1 手掌武器-炸弹 水晶轮"
+cheat100_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0005+32ff66E6+0009"
+cheat100_enable = false
+
+cheat101_desc = "direct_v1 手掌武器-炸弹 蜜蜂爆弹"
+cheat101_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0006+32ff66E6+0009"
+cheat101_enable = false
+
+cheat102_desc = "direct_v1 手掌武器-炸弹 电磁弹"
+cheat102_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0007+32ff66E6+0009"
+cheat102_enable = false
+
+cheat103_desc = "direct_v1 手掌武器-炸弹 飞刃回旋"
+cheat103_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0008+32ff66E6+0009"
+cheat103_enable = false
+
+cheat104_desc = "direct_v1 手掌武器-炸弹 火焰扩散弹"
+cheat104_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+0009+32ff66E6+0009"
+cheat104_enable = false
+
+cheat105_desc = "direct_v1 手掌武器-炸弹 爆炸弹"
+cheat105_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+000A+32ff66E6+0009"
+cheat105_enable = false
+
+cheat106_desc = "direct_v1 手掌武器-炸弹 扩散弹"
+cheat106_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+000B+32ff66E6+0009"
+cheat106_enable = false
+
+cheat107_desc = "direct_v1 手掌武器-炸弹 炸弹"
+cheat107_code = "32ff66C1+0005+32ff66C2+0000+32ff66C3+000C+32ff66E6+0009"
+cheat107_enable = false
+
+cheat108_desc = "direct_v1 手掌武器-炸弹 OFF"
+cheat108_code = "32ff66C1+0002+32ff66C2+0000+32ff66C3+0000+32ff66E6+0000+32ff66FA+0002"
+cheat108_enable = false
+
+cheat109_desc = "direct_v1 手掌武器-炮弹 洛克飞弹"
+cheat109_code = "32ff66C1+0003+32ff66C3+0000+32ff66E6+0009+32ff66FA+0003"
+cheat109_enable = false
+
+cheat110_desc = "direct_v1 手掌武器-炮弹 扫射飞弹"
+cheat110_code = "32ff66C1+0003+32ff66C3+0001+32ff66E6+0009+32ff66FA+0003"
+cheat110_enable = false
+
+cheat111_desc = "direct_v1 手掌武器-炮弹 钻头弹"
+cheat111_code = "32ff66C1+0003+32ff66C3+0002+32ff66E6+0009+32ff66FA+0003"
+cheat111_enable = false
+
+cheat112_desc = "direct_v1 手掌武器-炮弹 刺针飞弹"
+cheat112_code = "32ff66C1+0003+32ff66C3+0003+32ff66E6+0009+32ff66FA+0003"
+cheat112_enable = false
+
+cheat113_desc = "direct_v1 手掌武器-炮弹 火焰枪"
+cheat113_code = "32ff66C1+0003+32ff66C3+0004+32ff66E6+0009+32ff66FA+0003"
+cheat113_enable = false
+
+cheat114_desc = "direct_v1 手掌武器-炮弹 双方向飞弹"
+cheat114_code = "32ff66C1+0003+32ff66C3+0005+32ff66E6+0009+32ff66FA+0003"
+cheat114_enable = false
+
+cheat115_desc = "direct_v1 手掌武器-炮弹 单方向飞弹"
+cheat115_code = "32ff66C1+0003+32ff66C3+0006+32ff66E6+0009+32ff66FA+0003"
+cheat115_enable = false
+
+cheat116_desc = "direct_v1 手掌武器-炮弹 极冻枪"
+cheat116_code = "32ff66C1+0003+32ff66C3+0007+32ff66E6+0009+32ff66FA+0003"
+cheat116_enable = false
+
+cheat117_desc = "direct_v1 手掌武器-炮弹 光速枪"
+cheat117_code = "32ff66C1+0003+32ff66C3+0008+32ff66E6+0009+32ff66FA+0003"
+cheat117_enable = false
+
+cheat118_desc = "direct_v1 手掌武器-炮弹 单枪飞弹"
+cheat118_code = "32ff66C1+0003+32ff66C3+0009+32ff66E6+0009+32ff66FA+0003"
+cheat118_enable = false
+
+cheat119_desc = "direct_v1 手掌武器-炮弹 火焰炮弹"
+cheat119_code = "32ff66C1+0003+32ff66C3+000A+32ff66E6+0009+32ff66FA+0003"
+cheat119_enable = false
+
+cheat120_desc = "direct_v1 手掌武器-炮弹 电磁光炮"
+cheat120_code = "32ff66C1+0003+32ff66C3+000B+32ff66E6+0009+32ff66FA+0003"
+cheat120_enable = false
+
+cheat121_desc = "direct_v1 手掌武器-炮弹 上下飞弹"
+cheat121_code = "32ff66C1+0003+32ff66C3+000C+32ff66E6+0009+32ff66FA+0003"
+cheat121_enable = false
+
+cheat122_desc = "direct_v1 手掌武器-炮弹 扩散飞弹"
+cheat122_code = "32ff66C1+0003+32ff66CD+000D+32ff66E6+0009+32ff66FA+0003"
+cheat122_enable = false
+
+cheat123_desc = "direct_v1 手掌武器-炮弹 雷射枪"
+cheat123_code = "32ff66C1+0003+32ff66C3+000E+32ff66E6+0009+32ff66FA+0003"
+cheat123_enable = false
+
+cheat124_desc = "direct_v1 手掌武器-炮弹 折射枪"
+cheat124_code = "32ff66C1+0003+32ff66C3+000F+32ff66E6+0009+32ff66FA+0003"
+cheat124_enable = false
+
+cheat125_desc = "direct_v1 手掌武器-炮弹 水炮弹"
+cheat125_code = "32ff66C1+0003+32ff66C3+0010+32ff66E6+0009+32ff66FA+0003"
+cheat125_enable = false
+
+cheat126_desc = "direct_v1 手掌武器-炮弹 绿弹跳球弹"
+cheat126_code = "32ff66C1+0003+32ff66C3+0011+32ff66E6+0009+32ff66FA+0003"
+cheat126_enable = false
+
+cheat127_desc = "direct_v1 手掌武器-炮弹 照明用枪"
+cheat127_code = "32ff66C1+0003+32ff66C3+0012+32ff66E6+0009+32ff66FA+0003"
+cheat127_enable = false
+
+cheat128_desc = "direct_v1 手掌武器-炮弹 OFF"
+cheat128_code = "32ff66C1+0002+32ff66C2+0000+32ff66C3+0000+32ff66E6+0000+32ff66FA+0002"
+cheat128_enable = false
+
+cheat129_desc = "direct_v1 手掌武器-盾 防护兵帽盾"
+cheat129_code = "32ff66C1+0004+32ff66C3+0000+32ff66FA+0004"
+cheat129_enable = false
+
+cheat130_desc = "direct_v1 手掌武器-盾 机械盾"
+cheat130_code = "32ff66C1+0004+32ff66C3+0001+32ff66FA+0004"
+cheat130_enable = false
+
+cheat131_desc = "direct_v1 手掌武器-盾 水晶盾"
+cheat131_code = "32ff66C1+0004+32ff66C3+0002+32ff66FA+0004"
+cheat131_enable = false
+
+cheat132_desc = "direct_v1 手掌武器-盾 挖土机盾"
+cheat132_code = "32ff66C1+0004+32ff66C3+0003+32ff66FA+0004"
+cheat132_enable = false
+
+cheat133_desc = "direct_v1 手掌武器-盾 贝壳盾"
+cheat133_code = "32ff66C1+0004+32ff66C3+0004+32ff66FA+0004"
+cheat133_enable = false
+
+cheat134_desc = "direct_v1 手掌武器-盾 OFF"
+cheat134_code = "32ff66C1+0002+32ff66C2+0000+32ff66C3+0000+32ff66E6+0000+32ff66FA+0002"
+cheat134_enable = false
+
+cheat135_desc = "direct_v1 手掌武器-拳套 食人花夹"
+cheat135_code = "32ff66C0+0006+32ff66C3+0000+32ff66E6+0009+32ff66FA+0006"
+cheat135_enable = false
+
+cheat136_desc = "direct_v1 手掌武器-拳套 电流棒"
+cheat136_code = "32ff66C0+0006+32ff66C3+0001+32ff66E6+0009+32ff66FA+0006"
+cheat136_enable = false
+
+cheat137_desc = "direct_v1 手掌武器-拳套 青蛙链球"
+cheat137_code = "32ff66C0+0006+32ff66C3+0002+32ff66E6+0009+32ff66FA+0006"
+cheat137_enable = false
+
+cheat138_desc = "direct_v1 手掌武器-拳套 电光击"
+cheat138_code = "32ff66C0+0006+32ff66C3+0004+32ff66E6+0009+32ff66FA+0006"
+cheat138_enable = false
+
+cheat139_desc = "direct_v1 手掌武器-拳套 钻头刺击"
+cheat139_code = "32ff66C0+0006+32ff66C3+0007+32ff66E6+0009+32ff66FA+0006"
+cheat139_enable = false
+
+cheat140_desc = "direct_v1 手掌武器-拳套 掌电击"
+cheat140_code = "32ff66C0+0006+32ff66C3+0009+32ff66E6+0009+32ff66FA+0006"
+cheat140_enable = false
+
+cheat141_desc = "direct_v1 手掌武器-拳套 红莲刺击"
+cheat141_code = "32ff66C0+0006+32ff66C3+000A+32ff66E6+0009+32ff66FA+0006"
+cheat141_enable = false
+
+cheat142_desc = "direct_v1 手掌武器-拳套 掌刺击"
+cheat142_code = "32ff66C0+0006+32ff66C3+000B+32ff66E6+0009+32ff66FA+0006"
+cheat142_enable = false
+
+cheat143_desc = "direct_v1 手掌武器-拳套 OFF"
+cheat143_code = "32ff66C1+0002+32ff66C2+0000+32ff66C3+0000+32ff66E6+0000+32ff66FA+0002"
+cheat143_enable = false
+
+cheat144_desc = "direct_v1 手掌武器-刀斧 螃蟹斧"
+cheat144_code = "32ff66C1+0007+32ff66C3+0000+32ff66FA+0007"
+cheat144_enable = false
+
+cheat145_desc = "direct_v1 手掌武器-刀斧 火焰剑"
+cheat145_code = "32ff66C1+0007+32ff66C3+0001+32ff66FA+0007"
+cheat145_enable = false
+
+cheat146_desc = "direct_v1 手掌武器-刀斧 铁锤"
+cheat146_code = "32ff66C1+0007+32ff66C3+0002+32ff66FA+0007"
+cheat146_enable = false
+
+cheat147_desc = "direct_v1 手掌武器-刀斧 紫焰剑"
+cheat147_code = "32ff66C1+0007+32ff66C3+0003+32ff66FA+0007"
+cheat147_enable = false
+
+cheat148_desc = "direct_v1 手掌武器-刀斧 铁棒"
+cheat148_code = "32ff66C1+0007+32ff66C3+0004+32ff66FA+0007"
+cheat148_enable = false
+
+cheat149_desc = "direct_v1 手掌武器-刀斧 OFF"
+cheat149_code = "32ff66C1+0002+32ff66C2+0000+32ff66C3+0000+32ff66E6+0000+32ff66FA+0002"
+cheat149_enable = false

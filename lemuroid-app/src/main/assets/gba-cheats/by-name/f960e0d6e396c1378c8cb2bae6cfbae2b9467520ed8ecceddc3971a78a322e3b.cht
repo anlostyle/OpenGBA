@@ -1,0 +1,41 @@
+cheats = 10
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "32fc4948+0032"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 无敌"
+cheat1_code = "32fc0028+0020"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 子弹"
+cheat2_code = "32fc0072+00E7+02000073+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 炸弹"
+cheat3_code = "32fc006F+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 机器炮弹"
+cheat4_code = "33004756+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 关卡全开"
+cheat5_code = "32fcCD69+00FF"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全卡片"
+cheat6_code = "32fcCD70+00FF+0200CD71+00FF+0200CD72+00FF+0200CD73+00FF+0200CD74+00FF+0200CD75+00FF+0200CD76+00FF+0200CD77+00FF+0200CD78+00FF+0200CD79+00FF+0200CD7A+00FF+0200CD7B+00FF+0200CD7C+00FF+0200CD7D+00FF+0200CD7E+00FF+0200CD7F+00FF+0200CD80+00FF+0200CD81+00FF+0200CD82+00FF+0200CD83+00FF+0200CD84+00FF+0200CD85+00FF+0200CD86+00FF+0200CD87+00FF+0200CD88+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全战俘"
+cheat7_code = "32fcCD90+00FF+0200CD91+00FF+0200CD92+00FF+0200CD93+00FF+0200CD94+00FF+0200CD95+00FF+0200CD96+00FF+0200CD97+00FF+0200CD98+00FF+0200CD99+00FF+0200CD9A+00FF+0200CD9B+00FF+0200CD9C+000F"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 炸弹种类 BOMB"
+cheat8_code = "32fc006E+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 炸弹种类 FIRE"
+cheat9_code = "32fc006E+0002"
+cheat9_enable = false

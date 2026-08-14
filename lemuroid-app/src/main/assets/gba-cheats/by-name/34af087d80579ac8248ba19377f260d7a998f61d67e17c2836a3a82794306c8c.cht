@@ -1,0 +1,53 @@
+cheats = 13
+
+cheat0_desc = "direct_v1 HP"
+cheat0_code = "32fd509E+00F2+0201509F+0007"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 MP"
+cheat1_code = "32fd50A0+000F+020150A1+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 怒气"
+cheat2_code = "32fd50A2+0064"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 全能力"
+cheat3_code = "32fd514A+00FF+0201514B+00FF+0201514C+00FF+0201514D+00FF+0201514E+00FF+0201514F+00FF+02015150+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 HP上限"
+cheat4_code = "32fd50A4+000F+020150A5+0027"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 MP上限"
+cheat5_code = "32fd50A6+000F+020150A7+0027"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 经验"
+cheat6_code = "32fd50E4+003F+020150E5+0042+020150E6+000F"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 等级"
+cheat7_code = "32fd50F4+00E7+020150F5+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全道具"
+cheat8_code = "32fd510C+0001+0201510D+0002+0201510E+0003+0201510F+0004+02015110+0005+02015111+0006+02015112+0007+02015113+0008"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 恶魔模式时间"
+cheat9_code = "32fd50EA+0002"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 过关经验"
+cheat10_code = "32fdA900+003F+0201A901+0042+0201A902+000F"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 全人物"
+cheat11_code = "32fc01CC+0001+020001CD+0001+020001CE+0001+020001CF+0001+020001D0+0001+020001D1+0001+020001D2+0001+020001D3+0001+020001D4+0001+020001D5+0001+020001D6+0001+020001D7+0001+020001D8+0001+020001D9+0001+020001DA+0001+020001DB+0001+020001DC+0001+020001DD+0001"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 附加模式开启"
+cheat12_code = "32fc01F6+0003"
+cheat12_enable = false

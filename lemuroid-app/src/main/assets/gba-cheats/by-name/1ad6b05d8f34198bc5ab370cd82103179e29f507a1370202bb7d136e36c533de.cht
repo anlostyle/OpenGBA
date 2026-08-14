@@ -1,0 +1,45 @@
+cheats = 11
+
+cheat0_desc = "direct_v1 隐身"
+cheat0_code = "32feB634+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 无限接关"
+cheat1_code = "32feA5D0+0005"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 E水晶"
+cheat2_code = "32feB79E+000F"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 HP"
+cheat3_code = "32feB62C+002C"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 无敌"
+cheat4_code = "32feB634+000A"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全妖精入手"
+cheat5_code = "32feB744+00FE"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 妖精次数无限"
+cheat6_code = "32feB758+0000+32feB759+0000+32feB75A+0000+32feB75B+0000+32feB75C+0000+32feB75D+0000+32feB75E+0000"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 杀敌数"
+cheat7_code = "32fe2B2C+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 BOSS一击必杀(对某些BOSS无效)"
+cheat8_code = "32feCC3C+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 持有全道具"
+cheat9_code = "32feB728+000F+32feB729+000F+32feB71B+0004"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 武器LV金手指"
+cheat10_code = "32feB734+0003+32feB735+0006+32feB736+0004+32feB737+0002"
+cheat10_enable = false

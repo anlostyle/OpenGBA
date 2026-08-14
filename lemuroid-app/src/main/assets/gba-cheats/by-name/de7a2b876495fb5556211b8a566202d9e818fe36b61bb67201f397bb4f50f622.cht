@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 钱"
+cheat0_code = "33001AB0+003F+02041AB1+0042+02041AB2+000F"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 HP MAX"
+cheat1_code = "32fd4CE8+0063"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 HP下面那个"
+cheat2_code = "32fd4CEA+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 HP"
+cheat3_code = "33001F20+0063"
+cheat3_enable = false

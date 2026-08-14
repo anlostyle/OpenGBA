@@ -1,0 +1,89 @@
+cheats = 22
+
+cheat0_desc = "direct_v1 分数"
+cheat0_code = "33000CA8+00FF+02040CA9+00C9+02040CAA+009A+02040CAB+003B"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 第一关血不减"
+cheat1_code = "33003CA0+0064+02043CCA+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 第一关变身程度,建议用后解锁,否则可能引起死机 变身程度1,壮男1"
+cheat2_code = "33003CCD+0002+02043C94+007C+02043C95+00A2+02043C96+005E"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 第一关变身程度,建议用后解锁,否则可能引起死机 变身程度2,壮男2"
+cheat3_code = "33003CCD+0003+02043C94+0088+02043C95+00B2+02043C96+005F"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 第二关及后面所有关血不减"
+cheat4_code = "33006414+0064+0204643E+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 第二关及后面所有关变身程度,建议用后解锁,否则可能引起死机 变身程度1,壮男1"
+cheat5_code = "33006441+0002+02046408+007C+02046409+00A2+0204640A+005E"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 第二关及后面所有关变身程度,建议用后解锁,否则可能引起死机 变身程度2,壮男2"
+cheat6_code = "33006441+0003+02046408+0088+02046409+00B2+0204640A+005F"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 各关最强变身,即变身程度3, 01狼人"
+cheat7_code = "33003C94+000C+02043C95+0084+02043C96+0074+02043C97+0008+02043CBC+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 各关最强变身,即变身程度3, 02蜥蜴蛇"
+cheat8_code = "33006408+0008+02046409+0087+0204640A+0070+0204640B+0008+02046430+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 各关最强变身,即变身程度3, 03龙"
+cheat9_code = "33006408+00C8+02046409+0044+0204640A+0064+0204640B+0008+02046430+0004"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 各关最强变身,即变身程度3, 04虎人"
+cheat10_code = "33006408+00F0+02046409+009E+0204640A+006A+0204640B+0008+02046430+0003"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 各关最强变身,即变身程度3, 05刺蜥蜴人"
+cheat11_code = "33006408+0028+02046409+0060+0204640A+0072+0204640B+0008+02046430+0002"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 各关最强变身,即变身程度3, 06鲨鱼人"
+cheat12_code = "33006408+0044+02046409+00D7+0204640A+006F+0204640B+0008+02046430+0003"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 各关最强变身,即变身程度3, 07犀牛人"
+cheat13_code = "33006408+0008+02046409+009A+0204640A+0068+0204640B+0008+02046430+0005"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 各关最强变身,即变身程度3, 08虫人"
+cheat14_code = "33006408+00C8+02046409+0067+0204640A+006C+0204640B+0008+02046430+0003"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 各关最强变身,即变身程度3, 09鹰人"
+cheat15_code = "33006408+0048+02046409+0081+0204640A+0066+0204640B+0008+02046430+0003"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 各关最强变身,即变身程度3, 10狼人"
+cheat16_code = "33006408+000C+02046409+0084+0204640A+0074+0204640B+0008+02046430+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 各关最强变身,即变身程度3, 11刺蜥蜴人"
+cheat17_code = "33006408+0028+02046409+0060+0204640A+0072+0204640B+0008+02046430+0002"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 各关最强变身,即变身程度3, 12鲨鱼人"
+cheat18_code = "33006408+0044+02046409+00D7+0204640A+006F+0204640B+0008+02046430+0003"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 各关最强变身,即变身程度3, 13龙"
+cheat19_code = "33006408+00C8+02046409+0044+0204640A+0064+0204640B+0008+02046430+0004"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 各关最强变身,即变身程度3, 14怪物"
+cheat20_code = "33006408+005C+02046409+0021+0204640A+0061+0204640B+0008+02046430+0006"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 各关最强变身,即变身程度3, 15怪物"
+cheat21_code = "33006408+005C+02046409+0021+0204640A+0061+0204640B+0008+02046430+0006"
+cheat21_enable = false

@@ -1,0 +1,187 @@
+cheats = 46
+
+cheat0_desc = "direct_v1 洗澡"
+cheat0_code = "33003A07+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 睡觉"
+cheat1_code = "33003A0B+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 进食"
+cheat2_code = "33003A03+0064"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 社交"
+cheat3_code = "33003A0F+0064"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 舒适"
+cheat4_code = "33003A13+0064"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 如厕"
+cheat5_code = "33003A17+0064"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 娱乐"
+cheat6_code = "33003A1B+0064"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 环境"
+cheat7_code = "33003A1F+0064"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 分钟(自由调教)"
+cheat8_code = "3300395B+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 小时(自由调教) 12 am"
+cheat9_code = "3300395A+0000"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 小时(自由调教) 01 am"
+cheat10_code = "3300395A+0001"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 小时(自由调教) 02 am"
+cheat11_code = "3300395A+0002"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 小时(自由调教) 03 am"
+cheat12_code = "3300395A+0003"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 小时(自由调教) 04 am"
+cheat13_code = "3300395A+0004"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 小时(自由调教) 05 am"
+cheat14_code = "3300395A+0005"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 小时(自由调教) 06 am"
+cheat15_code = "3300395A+0006"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 小时(自由调教) 07 am"
+cheat16_code = "3300395A+0007"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 小时(自由调教) 08 am"
+cheat17_code = "3300395A+0008"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 小时(自由调教) 09 am"
+cheat18_code = "3300395A+0009"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 小时(自由调教) 10 am"
+cheat19_code = "3300395A+000A"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 小时(自由调教) 11 am"
+cheat20_code = "3300395A+000B"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 小时(自由调教) 12 pm"
+cheat21_code = "3300395A+0018"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 小时(自由调教) 01 pm"
+cheat22_code = "3300395A+000D"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 小时(自由调教) 02 pm"
+cheat23_code = "3300395A+000E"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 小时(自由调教) 03 pm"
+cheat24_code = "3300395A+000F"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 小时(自由调教) 04 pm"
+cheat25_code = "3300395A+0010"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 小时(自由调教) 05 pm"
+cheat26_code = "3300395A+0011"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 小时(自由调教) 06 pm"
+cheat27_code = "3300395A+0012"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 小时(自由调教) 07 pm"
+cheat28_code = "3300395A+0013"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 小时(自由调教) 08 pm"
+cheat29_code = "3300395A+0014"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 小时(自由调教) 09 pm"
+cheat30_code = "3300395A+0015"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 小时(自由调教) 10 pm"
+cheat31_code = "3300395A+0016"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 小时(自由调教) 11 pm"
+cheat32_code = "3300395A+0017"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 钱"
+cheat33_code = "22043954 0001869F"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 Body"
+cheat34_code = "330039F7+000A"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 Creativity"
+cheat35_code = "330039F3+000A"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 Charisma"
+cheat36_code = "330039FF+000A"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 Cooking"
+cheat37_code = "330039EB+000A"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 logic"
+cheat38_code = "330039FB+000A"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 mechanical"
+cheat39_code = "330039EF+000A"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 金钱"
+
+cheat40_desc = "direct_v1 状态全满"
+cheat40_code = "33003A03+0064+33003A07+0064+33003A0B+0064+33003A0F+0064+33003A13+0064+33003A17+0064+33003A1B+0064+33003A1F+0064"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 技能等级全满"
+cheat41_code = "330039EB+000A+330039EF+000A+330039F3+000A+330039F7+000A+330039FB+000A+330039FF+000A"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 全员平均友好度"
+cheat42_code = "33003982+0064"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 全员满友好度"
+cheat43_code = "33003989+0064+3300398D+0064+33003991+0064+33003995+0064+33003999+0064+3300399D+0064+330039A1+0064+330039A5+0064+330039A9+0064+330039AD+0064+330039B1+0064+330039B5+0064+330039B9+0064+330039BD+0064+330039C1+0064+330039C5+0064+330039C9+0064+330039CD+0064+330039D1+0064+330039D5+0064+330039D9+0064+330039DD+0064+330039E1+0064+330039E5+0064"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 拾得物全满"
+cheat44_code = "33003A30+0063+33003A31+0063+33003A32+0063+33003A33+0063+33003A34+0063"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 任务积分"
+cheat45_code = "32fe9758+0063"
+cheat45_enable = false

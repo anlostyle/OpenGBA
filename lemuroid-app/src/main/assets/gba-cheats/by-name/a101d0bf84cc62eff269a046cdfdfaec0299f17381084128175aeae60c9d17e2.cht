@@ -1,0 +1,85 @@
+cheats = 21
+
+cheat0_desc = "direct_v1 选队 LUFFY'S TEAM"
+cheat0_code = "33000A40+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 选队 SECRET"
+cheat1_code = "33000A40+0001"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 选队 SKYPIEA"
+cheat2_code = "33000A40+0002"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 选队 BAROQUE WORKS"
+cheat3_code = "33000A40+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 选队 MARINE"
+cheat4_code = "33000A40+0004"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 选队 GRAND-LINE"
+cheat5_code = "33000A40+0005"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 选队 EAST-BLUE"
+cheat6_code = "33000A40+0006"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 选队 ALABASTA"
+cheat7_code = "33000A40+0007"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 图标在左方总积分 最大"
+cheat8_code = "32fc62FA+0063"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 图标在左方总积分 最小"
+cheat9_code = "32fc62FA+0000"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 图标在右方总积分 最大"
+cheat10_code = "32fc62FB+0063"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 图标在右方总积分 最小"
+cheat11_code = "32fc62FB+0000"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 图标在左方气力"
+cheat12_code = "33006364+00BC+02046365+0002+02046378+00BC+02046379+0002+0204638C+00BC+0204638D+0002+020463A0+00BC+020463A1+0002+020463B4+00BC+020463B5+0002+020463C8+00BC+020463C9+0002+020463DC+00BC+020463DD+0002"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 图标在右方气力"
+cheat13_code = "330063F0+00BC+020463F1+0002+02046404+00BC+02046405+0002+02046418+00BC+02046419+0002+0204642C+00BC+0204642D+0002+02046440+00BC+02046441+0002+02046454+00BC+02046455+0002+02046468+00BC+02046469+0002"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 三振"
+cheat14_code = "33006312+0003"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 四坏球"
+cheat15_code = "33006313+0004"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 出局数"
+cheat16_code = "33006310+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 全队伍探查"
+cheat17_code = "33006256+00FF+02046257+00FF"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 ポイント"
+cheat18_code = "3300625C+009F+0204625D+0086+0204625E+0001"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 全队员雇佣"
+cheat19_code = "33000A22+007F+02040A23+007F+02040A24+007F+02040A25+007F+02040A26+007F+02040A27+007F+02040A28+007F+02040A29+007F+02046258+00FF"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 小游戏全开"
+cheat20_code = "33000A72+00FF"
+cheat20_enable = false

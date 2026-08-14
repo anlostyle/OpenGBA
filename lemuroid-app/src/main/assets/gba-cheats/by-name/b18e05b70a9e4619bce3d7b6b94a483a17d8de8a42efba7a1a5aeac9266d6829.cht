@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 子弹数"
+cheat0_code = "33003ED5+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 弹夹数"
+cheat1_code = "33003ED6+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 生命值"
+cheat2_code = "33003DEA+0053"
+cheat2_enable = false

@@ -1,0 +1,37 @@
+cheats = 9
+
+cheat0_desc = "direct_v1 金钱"
+cheat0_code = "330037C4+003F+020437C5+0042+020437C6+000F"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 状态全满"
+cheat1_code = "33003883+0063+02043887+0063+0204388B+0063+0204388F+0063+02043893+0063+02043897+0063+0204389B+0063+0204389F+0063"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 技能等级最高"
+cheat2_code = "3300386B+000A+0204386F+000A+02043873+000A+02043877+000A+0204387B+000A+0204387F+000A"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 友好度"
+cheat3_code = "330037F5+0064+020437F9+0064+020437FD+0064+02043805+0064+02043809+0064+0204380D+0064+02043815+0064+02043819+0064+0204381D+0064+02043825+0064+02043829+0064+0204382D+0064+02043835+0064+02043839+0064+0204383D+0064+02043845+0064+02043849+0064+0204384D+0064+02043855+0064+02043859+0064+0204385D+0064+02043865+0064"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 Xizzle数量"
+cheat4_code = "330038B8+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 Xizzle卡片"
+cheat5_code = "330038B0+0077+020438B1+00FF+020438B2+000F"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 拾得物"
+cheat6_code = "330038D8+0063+020438D9+0063+020438DA+0063+020438DB+0063+020438DC+0063"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 食物"
+cheat7_code = "330038DD+0063+020438DE+0063+020438DF+0063+020438E0+0063+020438E1+0063+020438E2+0063+020438E3+0063+020438E4+0063"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 任务积分"
+cheat8_code = "32fdBEC4+000F+0201BEC5+0027"
+cheat8_enable = false

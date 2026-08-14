@@ -1,0 +1,41 @@
+cheats = 10
+
+cheat0_desc = "direct_v1 HYPER蓄力后维持"
+cheat0_code = "33000DF8+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 分数MAX"
+cheat1_code = "330043B4+007F+020443B5+0096+020443B6+0098"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 移动速度加快"
+cheat2_code = "33006B84+00FF+02046B85+0002"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 按L键锁定HYBER状态"
+cheat3_code = "330040D0+0004"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 按A键蓄力槽锁定"
+cheat4_code = "330040D4+0000+020440D5+0002"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 飞机架数"
+cheat5_code = "330043C6+0006"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 无敌"
+cheat6_code = "330043BC+00A0"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 无限BEAM"
+cheat7_code = "330040D5+0002"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 HYPER时间无限"
+cheat8_code = "330040E4+0000"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 防护罩"
+cheat9_code = "33004305+0002+02044308+0000"
+cheat9_enable = false

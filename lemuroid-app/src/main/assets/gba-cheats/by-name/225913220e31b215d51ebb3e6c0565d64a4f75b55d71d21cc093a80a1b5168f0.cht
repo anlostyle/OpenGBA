@@ -1,0 +1,57 @@
+cheats = 14
+
+cheat0_desc = "direct_v1 可过版(前3关必须一直开启,在喽啰出完之前用超杀斩死BOSS)"
+cheat0_code = "330015A4+0000+33001664+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 可过版(前3关必须一直开启,在喽啰出完之前用超杀斩死BOSS) OFF"
+cheat1_code = "32fc0000+0000+32fc0000+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 体力不减"
+cheat2_code = "33005F98+0064"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 体力不减 OFF"
+cheat3_code = "32fc0000+0000"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 必杀槽全满"
+cheat4_code = "33005F9F+0048"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 必杀槽全满 OFF"
+cheat5_code = "32fc0000+0000"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 出现ARCADE模式"
+cheat6_code = "33005FC3+0001"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全武器收集"
+cheat7_code = "33005FC5+00FF+33005FC6+00FF+33005FC7+00FF+33005FC9+00FF+33005FCA+00FF+33005FCB+00FF+33005FCD+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 人物选择 鬼眼の狂"
+cheat8_code = "330011AA+0000"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 人物选择 红虎"
+cheat9_code = "330011AA+0001"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 人物选择 真田幸村"
+cheat10_code = "330011AA+0002"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 人物选择 壬生京四郎"
+cheat11_code = "330011AA+0003"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 人物选择 椎名ゆや"
+cheat12_code = "330011AA+0004"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 斩数迅速提高"
+cheat13_code = "33005FA2+00FF"
+cheat13_enable = false

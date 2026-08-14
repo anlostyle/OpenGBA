@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 选人 第一人"
+cheat0_code = "33004852+000E"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血"
+cheat1_code = "33004859+00BC+0204485A+0002"
+cheat1_enable = false

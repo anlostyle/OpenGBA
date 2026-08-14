@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 冰块数量"
+cheat0_code = "330029F4+0063"
+cheat0_enable = false

@@ -1,0 +1,93 @@
+cheats = 23
+
+cheat0_desc = "direct_v1 HP"
+cheat0_code = "32fc0F22+0064+0202582A+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 防弹背心"
+cheat1_code = "32fe5828+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 全武器"
+cheat2_code = "32fc1084+0000+02001085+0001+02001086+00FF+0200108C+0001+0200108D+0001+0200108E+00FF+02001094+0002+02001095+0001+02001096+00FF+0200109C+0003+0200109D+0001+0200109E+00FF+020010A4+0004+020010A5+0001+020010A6+00FF+020010AC+0005+020010AD+0001+020010AE+00FF+020010B4+0006+020010B5+0001+020010B6+00FF+020010BC+0007+020010BD+0001+020010BE+00FF+020010C4+0008+020010C5+0001+020010C6+00FF+020010CC+0009+020010CD+0001+020010CE+00FF+020010D4+000A+020010D5+0001+020010D6+00FF+020010DC+000B+020010DD+0001+020010DE+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 时间"
+cheat3_code = "32fe5818+0000+02025819+0000"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 金钱"
+cheat4_code = "32fe5824+00FF+02025825+00E0+02025826+00F5+02025827+0005"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 警察等级 LV.0"
+cheat5_code = "32fe581A+0000+02030340+0000"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 警察等级 LV.Max"
+cheat6_code = "32fe581A+0006+02030340+0063"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 车辆速度"
+cheat7_code = "32fc7248+002B+02007249+006F+0200724A+0004"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 STATE 全任务完成"
+cheat8_code = "32fc0DD2+0029+02000D8C+00FF+02000D8D+00FF+02000D8E+00FF+02000D8F+00FF+02000D90+00FF+02000D91+00FF+02000D92+00FF+02000D93+00FF+02000DC1+00FF+02000DC2+00FF+02000DC3+00FF+02000D9C+00FF+02000D9D+00FF+02000D9E+00FF+02000D9F+00FF+02000DA0+00FF+02000DA1+00FF+02000DA2+00FF+02000DA3+00FF+02000DA4+00FF+02000DA5+00FF+02000DA6+00FF+02000DA7+00FF+02000DA8+00FF+02000DA9+00FF+02000DAA+00FF+02000DAB+00FF+02000DAC+00FF+02000DAD+0001+02000DCC+00FF+02000DCD+00FF+02000DCE+00FF+02000DCF+00FF"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 STATE CARS EXPLODED"
+cheat9_code = "32fc0DB4+0000"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 STATE TIMES BUSTED"
+cheat10_code = "32fc0DB6+0000"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 STATE WASTED"
+cheat11_code = "32fc0DB8+0000"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 STATE WASTED BY OTHERS"
+cheat12_code = "32fc0DBA+0000"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 STATE THUG WASTED"
+cheat13_code = "32fc0DBC+0000"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 STATE CRIMINALS WASTED"
+cheat14_code = "32fc0DD5+0000"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 STATE MILES WALKED"
+cheat15_code = "32fc0DC4+000F+02000DC5+0027"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 STATE MILES DRIVEN"
+cheat16_code = "32fc0DC6+000F+02000DC7+0027"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 STATE PATIENTS RESCURED"
+cheat17_code = "32fc0DCF+000F+02000DD0+0027"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 护甲"
+cheat18_code = "32fe5828+0064"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 生命"
+cheat19_code = "32fc0F22+0064"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 暴露度"
+cheat20_code = "32ff0340+0000"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 计时任务时间"
+cheat21_code = "32fe5814+0063"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 初始赛车速度"
+cheat22_code = "32fc7248+002B+02007249+006F+0200724A+0004"
+cheat22_enable = false

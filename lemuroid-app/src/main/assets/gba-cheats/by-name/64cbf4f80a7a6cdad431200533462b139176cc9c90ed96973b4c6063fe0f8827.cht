@@ -1,0 +1,125 @@
+cheats = 31
+
+cheat0_desc = "direct_v1 EE体力"
+cheat0_code = "33003840+00E7+33003841+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 AE体力"
+cheat1_code = "33003842+00E7+33003843+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 CR体力"
+cheat2_code = "3300384C+00E7+3300384D+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 AA体力"
+cheat3_code = "33003848+00E7+33003849+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 RM体力"
+cheat4_code = "33003844+00E7+33003845+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 RH体力"
+cheat5_code = "33003846+00E7+33003847+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 AM体力"
+cheat6_code = "3300384A+00E7+3300384B+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 EE战斗次数"
+cheat7_code = "33003880+00FF+33003881+0000"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 AE战斗次数"
+cheat8_code = "33003882+00FF+33003883+0000"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 CR战斗次数"
+cheat9_code = "3300388C+00FF+3300388D+0000"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 AA战斗次数"
+cheat10_code = "33003888+00FF+33003889+0000"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 RM战斗次数"
+cheat11_code = "33003884+00FF+33003885+0000"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 RH战斗次数"
+cheat12_code = "33003886+00FF+33003887+0000"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 AM战斗次数"
+cheat13_code = "3300388A+00FF+3300388B+0000"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 战斗中1P体力"
+cheat14_code = "33001A30+00E7+33001A31+0003"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 战斗中2P体力"
+cheat15_code = "33001B38+00E7+33001B39+0003"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 战斗中3P体力"
+cheat16_code = "33001C40+00E7+33001C41+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 战斗中1P快速集气"
+cheat17_code = "33001A39+0007"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 战斗中2P快速集气"
+cheat18_code = "33001B41+0006"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 战斗中3P快速集气"
+cheat19_code = "33001C49+0006"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 第1位敌人HP"
+cheat20_code = "33001D48+0000+33001D49+0000"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 第1位敌人气力"
+cheat21_code = "33001D51+0000"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 第2位敌人HP"
+cheat22_code = "33001E50+0000+33001E51+0000"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 第2位敌人气力"
+cheat23_code = "33001E59+0000"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 第3位敌人HP"
+cheat24_code = "33001F58+0000+33001F59+0000"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 第3位敌人气力"
+cheat25_code = "33001F61+0000"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 金钱"
+cheat26_code = "33003838+003F+33003839+0042+3300383A+000F"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 不遇敌"
+cheat27_code = "33003758+0000"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 全道具"
+cheat28_code = "330038C0+0063+330038C1+0063+330038C2+0063+330038C3+0063+330038C4+0063+330038C5+0063+330038C6+0063+330038C7+0063+330038C8+0063+330038C9+0063+330038CA+0063+330038CB+0063+330038CC+0063+330038CD+0063+330038CE+0063+330038CF+0063+330038D0+0063+330038D1+0063+330038D2+0063+330038D3+0063+330038D4+0063+330038D5+0063+330038D6+0063+330038D7+0063+330038D8+0063+330038D9+0063+330038DA+0063+330038DB+0063+330038DC+0063+330038DD+0063+330038DE+0063+330038DF+0063"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 炼成手册全满"
+cheat29_code = "33003B60+00FF+33003B61+00FF+33003B62+00FF+33003B63+00FF+33003B64+00FF+33003B65+00FF+33003B66+00FF+33003B67+00FF+33003B68+00FF+33003B69+00FF+33003B6A+00FF+33003B6B+00FF+33003B6C+00FF+33003B6D+00FF+33003B6E+00FF+33003B6F+00FF+33003B70+00FF+33003B71+00FF+33003B72+00FF+33003B73+00FF+33003B74+00FF+33003B75+00FF+33003B76+00FF+33003B77+00FF+33003B78+00FF"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 地图全开"
+cheat30_code = "330009A0+0001+330009A4+0001+330009A8+0001+330009AC+0001+330009B0+0001+330009B4+0001+330009B8+0001+330009BC+0001+330009C0+0001+330009C4+0001"
+cheat30_enable = false

@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "[Hp不减]ON"
+cheat0_code = "33003856+0050"
+cheat0_enable = false

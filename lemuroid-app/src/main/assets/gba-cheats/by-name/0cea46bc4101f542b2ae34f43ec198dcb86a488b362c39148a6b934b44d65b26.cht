@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "33003800+0000+02043801+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 砖头数"
+cheat1_code = "33002EE0+00FF"
+cheat1_enable = false

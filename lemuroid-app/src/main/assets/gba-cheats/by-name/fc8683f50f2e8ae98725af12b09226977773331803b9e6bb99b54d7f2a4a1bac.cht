@@ -1,0 +1,109 @@
+cheats = 27
+
+cheat0_desc = "direct_v1 角色 MARIO"
+cheat0_code = "33001C20+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 角色 PEACH"
+cheat1_code = "33001C20+0001"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 角色 KINOPIO"
+cheat2_code = "33001C20+0002"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 角色 LUIGI"
+cheat3_code = "33001C20+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 生命数"
+cheat4_code = "33001111+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 变大"
+cheat5_code = "33001C26+001F"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全部‘A’"
+cheat6_code = "33001BE5+001F"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 可空中飘浮(按住跳键)"
+cheat7_code = "33001C2E+005F"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 透明 OFF"
+cheat8_code = "33001C2D+0000"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 透明"
+cheat9_code = "33001C2D+005F"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 SM分数99999990"
+cheat10_code = "330010FC+007F+330010FD+0096+330010FE+0098"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 SM100%Ace金币"
+cheat11_code = "33001100+00FF+33001101+00FF+33001102+00FF+33001103+00FF+33001104+00FF+33001105+00FF+33001106+00FF+33001107+00FF+33001108+00FF+33001109+00FF+3300110A+00FF+3300110B+00FF+3300110C+000F"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 SM命数99"
+cheat12_code = "33001111+0063"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 SM人物转换 Mario"
+cheat13_code = "33001C20+0000"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 SM人物转换 Peach"
+cheat14_code = "33001C20+0001"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 SM人物转换 Kinopio"
+cheat15_code = "33001C20+0002"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 SM人物转换 Luigi"
+cheat16_code = "33001C20+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 SM无限跳跃"
+cheat17_code = "33001C21+0000"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 SM动力"
+cheat18_code = "33001C26+00FF"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 SM心7"
+cheat19_code = "33001C27+0007"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 SM无敌状态"
+cheat20_code = "33001C2C+00FF"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 SM星星状态"
+cheat21_code = "33001C38+00FF"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 SM敌人不活动"
+cheat22_code = "33001C5C+00FF"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 MB杀1敌过关"
+cheat23_code = "33001D9E+0000"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 MB分数99999"
+cheat24_code = "33001DC0+003F+33001DC1+0042+33001DC2+000F"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 MB剩下的接关数4"
+cheat25_code = "33001DE4+0004"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 MB命数99"
+cheat26_code = "33001DE5+0063"
+cheat26_enable = false

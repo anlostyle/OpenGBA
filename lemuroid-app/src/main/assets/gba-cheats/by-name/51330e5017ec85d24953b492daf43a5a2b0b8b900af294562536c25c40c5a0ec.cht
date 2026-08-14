@@ -1,0 +1,37 @@
+cheats = 9
+
+cheat0_desc = "direct_v1 生命不减"
+cheat0_code = "3300627E+0099"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 掉BB后时间不减"
+cheat1_code = "33006ACE+0099+33006ACF+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 人数"
+cheat2_code = "3300627E+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐身"
+cheat3_code = "33006F52+0064"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 金币"
+cheat4_code = "33006280+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 星星"
+cheat5_code = "33006ACE+002C+33006ACF+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 红币"
+cheat6_code = "33006AD6+0014"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 花朵"
+cheat7_code = "33006A9A+0005"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 关卡全开"
+cheat8_code = "33006B6D+0001+33006B6E+0001+33006B6F+0001+33006B70+0001+33006B71+0001+33006B72+0001+33006B73+0001+33006B74+0001+33006B79+0001+33006B7A+0001+33006B7B+0001+33006B7C+0001+33006B7D+0001+33006B7E+0001+33006B7F+0001+33006B80+0001+33006B85+0001+33006B86+0001+33006B87+0001+33006B88+0001+33006B89+0001+33006B8A+0001+33006B8B+0001+33006B8C+0001+33006B91+0001+33006B92+0001+33006B93+0001+33006B94+0001+33006B95+0001+33006B96+0001+33006B97+0001+33006B98+0001+33006B9D+0001+33006B9E+0001+33006B9F+0001+33006BA0+0001+33006BA1+0001+33006BA2+0001+33006BA3+0001+33006BA4+0001+33006BA9+0001+33006BAA+0001+33006BAB+0001+33006BAC+0001+33006BAD+0001+33006BAE+0001+33006BAF+0001+33006BB0+0001"
+cheat8_enable = false
