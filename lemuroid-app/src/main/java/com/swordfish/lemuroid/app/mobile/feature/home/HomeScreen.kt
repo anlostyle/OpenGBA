@@ -3,6 +3,7 @@ package com.swordfish.lemuroid.app.mobile.feature.home
 import android.text.format.DateUtils
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -264,12 +265,13 @@ private fun HomeFeaturedGame(
                     fontWeight = FontWeight.Bold,
                 )
                 Text(
-                    text = game.title,
+                    text = game.displayName,
+                    modifier = Modifier.basicMarquee(),
                     color = PixelInk,
                     style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.Black,
                     maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
+                    overflow = TextOverflow.Clip,
                 )
                 Spacer(
                     modifier =

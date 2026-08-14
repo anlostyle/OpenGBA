@@ -143,7 +143,7 @@ class ChannelHandler(
         val preview =
             PreviewProgram.Builder()
                 .setChannelId(channelId)
-                .setTitle(game.title)
+                .setTitle(game.displayName)
                 .setDescription(game.developer)
                 .setIntent(intent)
                 .setStartTimeUtcMillis(game.lastPlayedAt ?: 0)

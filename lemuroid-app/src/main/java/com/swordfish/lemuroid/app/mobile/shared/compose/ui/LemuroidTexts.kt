@@ -25,7 +25,7 @@ fun LemuroidGameTexts(
             GameUtils.getGameSubtitle(context, game)
         }
 
-    LemuroidTexts(modifier, game.title, subtitle, showSubtitle)
+    LemuroidTexts(modifier, game.displayName, subtitle, showSubtitle)
 }
 
 @Composable
@@ -42,7 +42,8 @@ fun LemuroidTexts(
             text = title,
             style = MaterialTheme.typography.titleSmall,
             color = PixelPaper,
-            maxLines = 1,
+            minLines = 2,
+            maxLines = 2,
             overflow = TextOverflow.Ellipsis,
         )
         if (showSubtitle) {

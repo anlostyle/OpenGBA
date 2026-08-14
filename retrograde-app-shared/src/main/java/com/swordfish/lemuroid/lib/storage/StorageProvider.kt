@@ -46,6 +46,9 @@ interface StorageProvider {
     /** Returns a local cover beside the ROM, when the provider can resolve one. */
     fun findArtworkUri(baseStorageFile: BaseStorageFile): Uri? = null
 
+    /** Returns a local metadata title for this exact ROM file, when available. */
+    fun findGameTitle(baseStorageFile: BaseStorageFile): String? = null
+
     fun getGameRomFiles(
         game: Game,
         dataFiles: List<DataFile>,

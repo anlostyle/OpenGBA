@@ -26,6 +26,7 @@ fun LemuroidGameCard(
     game: Game,
     onClick: () -> Unit = { },
     onLongClick: () -> Unit = { },
+    onFocused: () -> Unit = { },
     imageAspectRatio: Float = 0.72f,
     showSubtitle: Boolean = true,
 ) {
@@ -41,7 +42,10 @@ fun LemuroidGameCard(
             modifier =
                 Modifier
                     .fillMaxWidth()
-                    .onFocusChanged { focused = it.isFocused }
+                    .onFocusChanged {
+                        focused = it.isFocused
+                        if (it.isFocused) onFocused()
+                    }
                     .pixelFocusBrackets(focused)
                     .clip(PixelShape)
                     .border(if (focused) 2.dp else 1.dp, if (focused) PixelGreen else PixelOutline, PixelShape)

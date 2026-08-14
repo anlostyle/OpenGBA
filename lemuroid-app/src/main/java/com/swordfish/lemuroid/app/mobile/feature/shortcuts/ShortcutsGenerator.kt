@@ -29,8 +29,8 @@ class ShortcutsGenerator(
 
         val shortcutInfo =
             ShortcutInfo.Builder(appContext, "game_${game.id}")
-                .setShortLabel(game.title)
-                .setLongLabel(game.title)
+                .setShortLabel(game.displayName)
+                .setLongLabel(game.displayName)
                 .setIntent(DeepLink.launchIntentForGame(appContext, game))
                 .setIcon(Icon.createWithBitmap(bitmap))
                 .build()

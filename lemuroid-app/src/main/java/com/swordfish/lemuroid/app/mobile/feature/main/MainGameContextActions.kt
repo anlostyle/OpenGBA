@@ -178,11 +178,11 @@ private fun ContextActionHeader(game: Game) {
         )
         Column(modifier = Modifier.weight(1f)) {
             Text(
-                text = game.title,
+                text = game.displayName,
                 color = PixelInk,
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Black,
-                maxLines = 1,
+                maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
             Text(

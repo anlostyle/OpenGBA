@@ -37,7 +37,10 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
         return metadata
     }
 
-    private fun convertToGameMetadata(rom: LibretroRom): GameMetadata? {
+    private fun convertToGameMetadata(
+        rom: LibretroRom,
+        crcMatched: Boolean = false,
+    ): GameMetadata? {
         val system = GameSystem.all().firstOrNull { it.id.dbname == rom.system } ?: return null
         return GameMetadata(
             name = rom.name,
@@ -45,6 +48,7 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
             thumbnail = null,
             system = rom.system,
             developer = rom.developer,
+            crcMatched = crcMatched,
         )
     }
 
@@ -98,7 +102,7 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
     ): GameMetadata? {
         if (file.crc == null || file.crc == "0") return null
         return file.crc?.let { crc32 -> db.gameDao().findByCRC(crc32) }
-            ?.let { convertToGameMetadata(it) }
+            ?.let { convertToGameMetadata(it, crcMatched = true) }
     }
 
     private suspend fun findBySerial(

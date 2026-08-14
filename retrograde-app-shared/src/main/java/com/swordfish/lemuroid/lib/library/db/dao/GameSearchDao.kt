@@ -70,12 +70,13 @@ class GameSearchDao(private val internalDao: Internal) {
                 """
                 SELECT games.*
                     FROM games
-                    WHERE title LIKE '%' || ? || '%' COLLATE NOCASE
+                    WHERE displayTitle LIKE '%' || ? || '%' COLLATE NOCASE
+                       OR title LIKE '%' || ? || '%' COLLATE NOCASE
                        OR fileName LIKE '%' || ? || '%' COLLATE NOCASE
-                    ORDER BY title COLLATE NOCASE
+                    ORDER BY displayTitle COLLATE NOCASE, title COLLATE NOCASE
                 """,
                 // ponytail: a GBA-only library is small; restore FTS if measured libraries outgrow LIKE.
-                arrayOf(query, query),
+                arrayOf(query, query, query),
             ),
         )
 

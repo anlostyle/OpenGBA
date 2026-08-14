@@ -28,6 +28,8 @@ import java.util.Locale
 import java.util.zip.ZipInputStream
 
 class StorageAccessFrameworkProvider(private val context: Context) : StorageProvider {
+    private val metadataCache = mutableMapOf<String, Map<String, String>>()
+
     override val id: String = "access_framework"
 
     override val name: String = context.getString(R.string.local_storage)
@@ -39,6 +41,7 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
     override val enabledByDefault = true
 
     override fun listBaseStorageFiles(): Flow<List<BaseStorageFile>> {
+        synchronized(metadataCache) { metadataCache.clear() }
         return getExternalFolder()?.let { folder ->
             traverseDirectoryEntries(Uri.parse(folder))
         } ?: emptyFlow()
@@ -66,6 +69,52 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
         val gameMediaId = findDirectory(mediaChildrenUri, artworkDirectoryNames(baseName)) ?: return null
         val gameMediaChildrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(baseStorageFile.uri, gameMediaId)
         return findArtworkInDirectory(baseStorageFile.uri, gameMediaChildrenUri, artworkNames)
+    }
+
+    override fun findGameTitle(baseStorageFile: BaseStorageFile): String? {
+        val parentDocumentId =
+            runCatching {
+                DocumentsContract.getDocumentId(baseStorageFile.uri).substringBeforeLast('/')
+            }.getOrNull() ?: return null
+        val titles =
+            synchronized(metadataCache) {
+                metadataCache.getOrPut(parentDocumentId) {
+                    loadPegasusTitles(baseStorageFile.uri, parentDocumentId)
+                }
+            }
+        return titles[PegasusMetadataParser.normalizeFileName(baseStorageFile.name)]
+    }
+
+    private fun loadPegasusTitles(
+        treeUri: Uri,
+        parentDocumentId: String,
+    ): Map<String, String> {
+        val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, parentDocumentId)
+        val projection =
+            arrayOf(
+                DocumentsContract.Document.COLUMN_DOCUMENT_ID,
+                DocumentsContract.Document.COLUMN_DISPLAY_NAME,
+                DocumentsContract.Document.COLUMN_MIME_TYPE,
+            )
+        val metadataUri =
+            context.contentResolver.query(childrenUri, projection, null, null, null)?.use { cursor ->
+                while (cursor.moveToNext()) {
+                    if (
+                        cursor.getString(2) != DocumentsContract.Document.MIME_TYPE_DIR &&
+                        cursor.getString(1).equals(PEGASUS_METADATA_FILE, ignoreCase = true)
+                    ) {
+                        return@use DocumentsContract.buildDocumentUriUsingTree(treeUri, cursor.getString(0))
+                    }
+                }
+                null
+            } ?: return emptyMap()
+
+        return runCatching {
+            context.contentResolver.openInputStream(metadataUri)?.bufferedReader(Charsets.UTF_8)?.use { reader ->
+                PegasusMetadataParser.parse(reader.lineSequence())
+            }.orEmpty()
+        }.onFailure { Timber.w(it, "Unable to read Pegasus metadata") }
+            .getOrDefault(emptyMap())
     }
 
     private fun findArtworkInDirectory(
@@ -309,6 +358,7 @@ class StorageAccessFrameworkProvider(private val context: Context) : StorageProv
     companion object {
         const val SAF_CACHE_SUBFOLDER = "storage-framework-games"
         const val VIRTUAL_FILE_PATH = "/virtual/file/path"
+        const val PEGASUS_METADATA_FILE = "metadata.pegasus.txt"
         private val COVER_NAMES = listOf("boxfront", "coverfront", "cover")
         private val COVER_EXTENSIONS = listOf("png", "jpg", "jpeg", "webp")
     }

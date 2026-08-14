@@ -50,18 +50,18 @@ object CoverUtils {
 
     private fun computeTitle(game: Game): String {
         val sanitizedName =
-            game.title
+            game.displayName
                 .replace(Regex("\\(.*\\)"), "")
 
         return sanitizedName.asSequence()
             .filter { it.isDigit() or it.isUpperCase() or (it == '&') }
             .take(3)
             .joinToString("")
-            .ifBlank { game.title.first().toString() }
+            .ifBlank { game.displayName.firstOrNull()?.toString().orEmpty() }
             .capitalize()
     }
 
     private fun computeColor(game: Game): Int {
-        return ColorUtils.randomColor(game.title)
+        return ColorUtils.randomColor(game.displayName)
     }
 }

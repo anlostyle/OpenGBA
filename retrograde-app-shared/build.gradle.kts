@@ -14,6 +14,7 @@ android {
 }
 
 dependencies {
+    testImplementation(kotlin("test"))
     implementation(project(":retrograde-util"))
     implementation(project(":lemuroid-touchinput"))
 

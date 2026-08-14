@@ -224,7 +224,15 @@ fun GameMenuHomeScreen(
             text = {
                 Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                     if (builtInCheats == null) {
-                        Text(stringResource(R.string.game_menu_cheats_builtin_empty))
+                        Text(
+                            stringResource(
+                                if (gameMenuRequest.game.metadataCrcMatched) {
+                                    R.string.game_menu_cheats_builtin_empty
+                                } else {
+                                    R.string.game_menu_cheats_crc_empty
+                                },
+                            ),
+                        )
                     } else {
                         Text(stringResource(R.string.game_menu_cheats_builtin_source, builtInCheats.source))
                         Text(stringResource(R.string.game_menu_cheats_builtin_hint))

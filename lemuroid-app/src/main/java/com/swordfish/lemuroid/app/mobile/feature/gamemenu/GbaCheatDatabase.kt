@@ -17,6 +17,8 @@ internal data class GbaCheatSet(
 
 internal object GbaCheatDatabase {
     private const val ASSET_DIRECTORY = "gba-cheats"
+    private const val CRC_ASSET_DIRECTORY = "$ASSET_DIRECTORY/by-crc"
+    private val crc32 = Regex("[0-9A-F]{8}")
     private val extension = Regex("\\.(cht|gba|zip|7z)$", RegexOption.IGNORE_CASE)
     private val codeType =
         Regex("\\b(code\\s*breaker|game\\s*shark|gameshark|diff)\\b", RegexOption.IGNORE_CASE)
@@ -28,16 +30,33 @@ internal object GbaCheatDatabase {
     ): GbaCheatSet? {
         if (game.systemId != "gba") return null
 
+        val crc = game.romCrc?.uppercase(Locale.ROOT)?.takeIf(crc32::matches)
+        if (crc != null) {
+            val crcFile =
+                runCatching { assets.list(CRC_ASSET_DIRECTORY).orEmpty() }.getOrDefault(emptyArray())
+                    .firstOrNull { it.equals("$crc.cht", ignoreCase = true) }
+            if (crcFile != null) return loadFile(assets, "$CRC_ASSET_DIRECTORY/$crcFile", "CRC $crc")
+        }
+
+        // Unknown and modified ROMs must never inherit codes intended for a similarly named retail ROM.
+        if (!game.metadataCrcMatched) return null
+
         val files = assets.list(ASSET_DIRECTORY).orEmpty().filter { it.endsWith(".cht") }
         val names = listOf(game.title, game.fileName)
         val exactNames = names.map(::normalize).filter(String::isNotEmpty).toSet()
         val exactMatch = files.firstOrNull { normalize(it) in exactNames }
         val match = exactMatch ?: findUniqueBaseMatch(files, names) ?: return null
 
+        return loadFile(assets, "$ASSET_DIRECTORY/$match", match.removeSuffix(".cht"))
+    }
+
+    private fun loadFile(
+        assets: AssetManager,
+        path: String,
+        source: String,
+    ): GbaCheatSet? {
         val properties = Properties()
-        assets.open("$ASSET_DIRECTORY/$match").bufferedReader(Charsets.UTF_8).use {
-            properties.load(it)
-        }
+        assets.open(path).bufferedReader(Charsets.UTF_8).use(properties::load)
         val cheatCount = properties.getProperty("cheats")?.trim()?.toIntOrNull() ?: return null
         val cheats =
             (0 until cheatCount)
@@ -51,7 +70,7 @@ internal object GbaCheatDatabase {
 
         return cheats
             .takeIf(List<GbaCheat>::isNotEmpty)
-            ?.let { GbaCheatSet(match.removeSuffix(".cht"), it) }
+            ?.let { GbaCheatSet(source, it) }
     }
 
     private fun findUniqueBaseMatch(

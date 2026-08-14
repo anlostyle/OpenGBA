@@ -2,17 +2,22 @@ package com.swordfish.lemuroid.app.mobile.feature.games
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ButtonDefaults
@@ -29,6 +34,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.swordfish.lemuroid.R
@@ -52,33 +58,54 @@ fun GamesScreen(
     onSearchClick: () -> Unit,
 ) {
     val games = viewModel.games.collectAsLazyPagingItems()
+    var focusedGame by remember { mutableStateOf<Game?>(null) }
 
     if (games.itemCount == 0) {
         LemuroidEmptyView()
         return
     }
 
-    LazyVerticalGrid(
-        modifier = modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        columns = GridCells.Adaptive(136.dp),
-        horizontalArrangement = Arrangement.spacedBy(14.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-    ) {
-        item(span = { GridItemSpan(maxLineSpan) }) {
-            SearchGamesButton(onClick = onSearchClick)
+    Column(modifier = modifier.fillMaxSize()) {
+        LazyVerticalGrid(
+            modifier = Modifier.weight(1f),
+            contentPadding = PaddingValues(16.dp),
+            columns = GridCells.Adaptive(136.dp),
+            horizontalArrangement = Arrangement.spacedBy(14.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                SearchGamesButton(onClick = onSearchClick)
+            }
+
+            items(games.itemCount, key = { games[it]?.id ?: it }) { index ->
+                val game = games[index] ?: return@items
+
+                LemuroidGameCard(
+                    modifier = Modifier.animateItem(),
+                    game = game,
+                    onClick = { onGameClick(game) },
+                    onLongClick = { onGameLongClick(game) },
+                    onFocused = { focusedGame = game },
+                )
+            }
         }
 
-        items(games.itemCount, key = { games[it]?.id ?: it }) { index ->
-            val game = games[index] ?: return@items
-
-            LemuroidGameCard(
-                modifier = Modifier.animateItem(),
-                game = game,
-                onClick = { onGameClick(game) },
-                onLongClick = { onGameLongClick(game) },
-            )
-        }
+        Text(
+            text = focusedGame?.displayName.orEmpty(),
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .heightIn(min = 36.dp)
+                    .background(PixelPanel)
+                    .border(1.dp, PixelOutline)
+                    .padding(horizontal = 14.dp, vertical = 8.dp)
+                    .basicMarquee(),
+            color = PixelPaper,
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.Bold,
+            maxLines = 1,
+            overflow = TextOverflow.Clip,
+        )
     }
 }
 

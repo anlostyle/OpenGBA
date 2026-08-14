@@ -3,6 +3,7 @@ package com.swordfish.lemuroid.app.mobile.feature.main
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.focusGroup
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -18,7 +19,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.focusRestorer
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -34,6 +37,7 @@ import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPaper
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelShape
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.pixelFocusBrackets
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun MainNavigationRail(
     currentRoute: MainRoute?,
@@ -46,6 +50,8 @@ fun MainNavigationRail(
                 .width(112.dp)
                 .background(PixelPanel, PixelShape)
                 .border(2.dp, PixelOutline, PixelShape)
+                .focusRestorer()
+                .focusGroup()
                 .padding(horizontal = 9.dp, vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly,
