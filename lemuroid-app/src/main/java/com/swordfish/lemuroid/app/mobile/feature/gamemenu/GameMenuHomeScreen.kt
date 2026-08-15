@@ -3,10 +3,8 @@ package com.swordfish.lemuroid.app.mobile.feature.gamemenu
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Intent
-import android.view.KeyEvent as AndroidKeyEvent
 import android.widget.Toast
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Arrangement
@@ -65,6 +63,7 @@ import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsMenuLin
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsSwitch
 import com.swordfish.lemuroid.app.utils.android.stringListResource
 import kotlin.reflect.KFunction1
+import android.view.KeyEvent as AndroidKeyEvent
 
 @Composable
 fun GameMenuHomeScreen(
@@ -176,7 +175,7 @@ fun GameMenuHomeScreen(
             action = {
                 Text(
                     stringListResource(R.array.pref_key_shader_filter_display_names)[
-                        screenFilters.indexOf(gameMenuRequest.screenFilter).coerceAtLeast(0)
+                        screenFilters.indexOf(gameMenuRequest.screenFilter).coerceAtLeast(0),
                     ],
                     style = MaterialTheme.typography.labelMedium,
                 )
