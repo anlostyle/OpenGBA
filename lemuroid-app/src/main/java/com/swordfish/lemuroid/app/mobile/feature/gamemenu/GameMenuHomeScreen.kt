@@ -1,8 +1,13 @@
 package com.swordfish.lemuroid.app.mobile.feature.gamemenu
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Intent
+import android.view.KeyEvent as AndroidKeyEvent
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,6 +24,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Code
+import androidx.compose.material.icons.filled.ContentPaste
 import androidx.compose.material.icons.filled.FilterAlt
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Speed
@@ -41,6 +47,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.key.nativeKeyEvent
+import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -310,6 +318,10 @@ fun GameMenuCheatsScreen(
     onResult: KFunction1<Intent.() -> Unit, Unit>,
 ) {
     val context = LocalContext.current
+    val clipboardManager =
+        remember(context) {
+            context.getSystemService(ClipboardManager::class.java)
+        }
     val currentCheatCodes =
         remember(gameMenuRequest.cheats) {
             gameMenuRequest.cheats
@@ -426,6 +438,19 @@ fun GameMenuCheatsScreen(
                                 enabledBuiltInCodes + cheat.code
                             }
                     },
+                    onCopy = {
+                        clipboardManager.setPrimaryClip(
+                            ClipData.newPlainText(cheat.displayDescription(), cheat.code),
+                        )
+                        Toast.makeText(
+                            context,
+                            context.getString(
+                                R.string.game_menu_cheats_copy_success,
+                                cheat.displayDescription(),
+                            ),
+                            Toast.LENGTH_SHORT,
+                        ).show()
+                    },
                 )
             }
             if (!enabledOnly && searchQuery.isBlank()) {
@@ -444,6 +469,44 @@ fun GameMenuCheatsScreen(
                                 stringResource(R.string.game_menu_cheats_hint),
                                 style = MaterialTheme.typography.bodySmall,
                             )
+                        },
+                        supportingText = {
+                            Text(
+                                stringResource(R.string.game_menu_cheats_manual_warning),
+                                style = MaterialTheme.typography.bodySmall,
+                            )
+                        },
+                        trailingIcon = {
+                            IconButton(
+                                onClick = {
+                                    val pastedCode =
+                                        clipboardManager.primaryClip
+                                            ?.takeIf { it.itemCount > 0 }
+                                            ?.getItemAt(0)
+                                            ?.coerceToText(context)
+                                            ?.toString()
+                                            .orEmpty()
+                                    if (pastedCode.isBlank()) {
+                                        Toast.makeText(
+                                            context,
+                                            R.string.game_menu_cheats_clipboard_empty,
+                                            Toast.LENGTH_SHORT,
+                                        ).show()
+                                    } else {
+                                        cheatText = appendCheatCodes(cheatText, pastedCode)
+                                        Toast.makeText(
+                                            context,
+                                            R.string.game_menu_cheats_paste_warning,
+                                            Toast.LENGTH_LONG,
+                                        ).show()
+                                    }
+                                },
+                            ) {
+                                Icon(
+                                    Icons.Default.ContentPaste,
+                                    stringResource(R.string.game_menu_cheats_paste),
+                                )
+                            }
                         },
                     )
                 }
@@ -479,8 +542,10 @@ private fun CheatMenuRow(
     text: String,
     checked: Boolean,
     onToggle: () -> Unit,
+    onCopy: () -> Unit,
 ) {
     var focused by remember { mutableStateOf(false) }
+    var gamepadLongPressHandled by remember { mutableStateOf(false) }
     val accent = MaterialTheme.colorScheme.primary
     Row(
         modifier =
@@ -489,7 +554,28 @@ private fun CheatMenuRow(
                 .height(48.dp)
                 .onFocusChanged { focused = it.isFocused }
                 .background(if (focused) accent.copy(alpha = 0.16f) else Color.Transparent)
-                .clickable(onClick = onToggle)
+                .onPreviewKeyEvent { event ->
+                    val nativeEvent = event.nativeKeyEvent
+                    if (!nativeEvent.isGameMenuConfirmKey()) return@onPreviewKeyEvent false
+                    when (nativeEvent.action) {
+                        AndroidKeyEvent.ACTION_DOWN -> {
+                            if (nativeEvent.repeatCount > 0 || nativeEvent.isLongPress) {
+                                if (!gamepadLongPressHandled) {
+                                    gamepadLongPressHandled = true
+                                    onCopy()
+                                }
+                                true
+                            } else {
+                                false
+                            }
+                        }
+                        AndroidKeyEvent.ACTION_UP -> {
+                            gamepadLongPressHandled.also { gamepadLongPressHandled = false }
+                        }
+                        else -> false
+                    }
+                }
+                .combinedClickable(onClick = onToggle, onLongClick = onCopy)
                 .focusable()
                 .padding(end = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -516,3 +602,24 @@ private fun CheatMenuRow(
         )
     }
 }
+
+internal fun appendCheatCodes(
+    current: String,
+    pasted: CharSequence,
+): String =
+    (current.lineSequence() + pasted.toString().lineSequence())
+        .map(String::trim)
+        .filter(String::isNotEmpty)
+        .distinct()
+        .joinToString("\n")
+
+private fun AndroidKeyEvent.isGameMenuConfirmKey(): Boolean =
+    when (keyCode) {
+        AndroidKeyEvent.KEYCODE_BUTTON_A,
+        AndroidKeyEvent.KEYCODE_DPAD_CENTER,
+        AndroidKeyEvent.KEYCODE_ENTER,
+        AndroidKeyEvent.KEYCODE_NUMPAD_ENTER,
+        AndroidKeyEvent.KEYCODE_SPACE,
+        -> true
+        else -> false
+    }

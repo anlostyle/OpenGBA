@@ -6,6 +6,14 @@ import kotlin.test.assertNull
 
 class GbaCheatDatabaseTest {
     @Test
+    fun appendsClipboardCodesWithoutChangingMultipartCode() {
+        assertEquals(
+            "02023FE0 0064\n830030EC+03E7",
+            appendCheatCodes("02023FE0 0064", "830030EC+03E7\n02023FE0 0064"),
+        )
+    }
+
+    @Test
     fun hidesTechnicalPrefixWithoutChangingStoredCheat() {
         val cheat = GbaCheat("direct_v1 获得999经验", "12345678 0001")
 

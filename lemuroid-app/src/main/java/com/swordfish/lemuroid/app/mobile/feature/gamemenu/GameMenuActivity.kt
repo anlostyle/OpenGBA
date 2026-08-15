@@ -269,6 +269,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
 
             Surface(
                 color = MaterialTheme.colorScheme.surface.copy(alpha = 0.88f),
+                contentColor = MaterialTheme.colorScheme.onSurface,
                 modifier =
                     Modifier
                         .padding()

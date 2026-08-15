@@ -177,6 +177,11 @@
     <string name="game_menu_cheats_filter_enabled">Enabled</string>
     <string name="game_menu_cheats_search">Search cheats</string>
     <string name="game_menu_cheats_apply">Apply and return</string>
+    <string name="game_menu_cheats_copy_success">Copied: %1$s</string>
+    <string name="game_menu_cheats_paste">Paste code</string>
+    <string name="game_menu_cheats_clipboard_empty">No cheat code in clipboard</string>
+    <string name="game_menu_cheats_paste_warning">Pasted. Cross-ROM codes may freeze the game; save first.</string>
+    <string name="game_menu_cheats_manual_warning">Cross-ROM codes may be incompatible. Save before applying.</string>
     <string name="game_menu_change_disk_disk">Disk %1$s</string>
     <string name="game_menu_tilt_sensor">Tilt Sensor</string>
 
