@@ -1,0 +1,697 @@
+cheats = 174
+
+cheat0_desc = "direct_v1 第一人LV (编成时)"
+cheat0_code = "32fc0762+0032"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 第一人LV(战斗时)"
+cheat1_code = "32fc1B52+0032"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 第一人经验值(编成时)"
+cheat2_code = "32fc0763+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 第一人经验值(战斗时)"
+cheat3_code = "32fc1B53+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 第一人HP(编成时)"
+cheat4_code = "32fc0750+00E7+32fc0751+0003+32fc0752+00E7+32fc0753+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 第一人HP(战斗时)"
+cheat5_code = "32fc1B40+00E7+32fc1B41+0003+32fc1B42+00E7+32fc1B43+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 第一人MP(编成时)"
+cheat6_code = "32fc0754+00E7+32fc0755+0003+32fc0756+00E7+32fc0757+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 第一人MP(战斗时)"
+cheat7_code = "32fc1B44+00E7+32fc1B45+0003+32fc1B46+00E7+32fc1B47+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 第一人能力(编成时)"
+cheat8_code = "32fc0758+00E7+32fc0759+0003+32fc075A+00E7+32fc075B+0003+32fc075C+00E7+32fc075D+0003"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 第一人能力(战斗时)"
+cheat9_code = "32fc1B48+00E7+32fc1B49+0003+32fc1B4A+00E7+32fc1B4B+0003+32fc1B4C+00E7+32fc1B4D+0003"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 第一人属性(编成时) 风"
+cheat10_code = "32fc0764+0001"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 第一人属性(编成时) 炎"
+cheat11_code = "32fc0764+0002"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 第一人属性(编成时) 地"
+cheat12_code = "32fc0764+0003"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 第一人属性(编成时) 水"
+cheat13_code = "32fc0764+0004"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 第一人属性(编成时) 圣"
+cheat14_code = "32fc0764+0005"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 第一人属性(编成时) 暗"
+cheat15_code = "32fc0764+0006"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 第一人属性(战斗时) 风"
+cheat16_code = "32fc1B54+0001"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 第一人属性(战斗时) 炎"
+cheat17_code = "32fc1B54+0002"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 第一人属性(战斗时) 地"
+cheat18_code = "32fc1B54+0003"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 第一人属性(战斗时) 水"
+cheat19_code = "32fc1B54+0004"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 第一人属性(战斗时) 圣"
+cheat20_code = "32fc1B54+0005"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 第一人属性(战斗时) 暗"
+cheat21_code = "32fc1B54+0006"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 第一人性格(编成时) L"
+cheat22_code = "32fc0765+0001"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 第一人性格(编成时) N"
+cheat23_code = "32fc0765+0002"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 第一人性格(编成时) C"
+cheat24_code = "32fc0765+0003"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 第一人性格(战斗时) L"
+cheat25_code = "32fc1B55+0001"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 第一人性格(战斗时) N"
+cheat26_code = "32fc1B55+0002"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 第一人性格(战斗时) C"
+cheat27_code = "32fc1B55+0003"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 第一人性别(编成时) 男"
+cheat28_code = "32fc076E+0001"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 第一人性别(编成时) 女"
+cheat29_code = "32fc076E+0002"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 第一人性别(战斗时) 男"
+cheat30_code = "32fc1B5E+0001"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 第一人性别(战斗时) 女"
+cheat31_code = "32fc1B5E+0002"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 第一人职业(编成时) 堕天使"
+cheat32_code = "32fc075F+0053"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 第一人职业(编成时) 士兵（男）"
+cheat33_code = "32fc075F+0001"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 第一人职业(编成时) 士兵（女）"
+cheat34_code = "32fc075F+0002"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 第一人职业(编成时) 忍者（男）"
+cheat35_code = "32fc075F+0003"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 第一人职业(编成时) 忍者（女）"
+cheat36_code = "32fc075F+0004"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 第一人职业(编成时) 弓兵（男）"
+cheat37_code = "32fc075F+0005"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 第一人职业(编成时) 弓兵（女）"
+cheat38_code = "32fc075F+0006"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 第一人职业(编成时) 魔法师（男）"
+cheat39_code = "32fc075F+0007"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 第一人职业(编成时) 魔法师（女）"
+cheat40_code = "32fc075F+0008"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 第一人职业(编成时) 僧侣（男）"
+cheat41_code = "32fc075F+0009"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 第一人职业(编成时) 僧侣（女）"
+cheat42_code = "32fc075F+000A"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 第一人职业(编成时) 祭司（男）"
+cheat43_code = "32fc075F+0013"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 第一人职业(编成时) 祭司（女）"
+cheat44_code = "32fc075F+0014"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 第一人职业(编成时) 骑士（男）"
+cheat45_code = "32fc075F+000B"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 第一人职业(编成时) 骑士（女）"
+cheat46_code = "32fc075F+000C"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 第一人职业(编成时) 剑圣（男）"
+cheat47_code = "32fc075F+000D"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 第一人职业(编成时) 剑圣（女）"
+cheat48_code = "32fc075F+004F"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 第一人职业(编成时) 召唤师（男）"
+cheat49_code = "32fc075F+0045"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 第一人职业(编成时) 召唤师（女）"
+cheat50_code = "32fc075F+0046"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 第一人职业(编成时) 死灵士兵（男）"
+cheat51_code = "32fc075F+0032"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 第一人职业(编成时) 死灵士兵（女）"
+cheat52_code = "32fc075F+0033"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 第一人职业(编成时) 死灵魔法师（男）"
+cheat53_code = "32fc075F+0034"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 第一人职业(编成时) 死灵魔法师（女）"
+cheat54_code = "32fc075F+0035"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 第一人职业(编成时) 死灵骑士（男）"
+cheat55_code = "32fc075F+0036"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 第一人职业(编成时) 死灵骑士（女）"
+cheat56_code = "32fc075F+0037"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 第一人职业(编成时) 天使骑士（男）"
+cheat57_code = "32fc075F+001B"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 第一人职业(编成时) 天使骑士（女）"
+cheat58_code = "32fc075F+001C"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 第一人职业(编成时) 暗天使骑士（男）"
+cheat59_code = "32fc075F+0022"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 第一人职业(编成时) 暗天使骑士（女）"
+cheat60_code = "32fc075F+0023"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 第一人职业(编成时) 小恶魔"
+cheat61_code = "32fc075F+001F"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 第一人职业(编成时) 下级恶魔"
+cheat62_code = "32fc075F+004A"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 第一人职业(编成时) 上级恶魔"
+cheat63_code = "32fc075F+0020"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 第一人职业(编成时) 暗忍者"
+cheat64_code = "32fc075F+0039"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 第一人职业(编成时) 暗巨人"
+cheat65_code = "32fc075F+003A"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 第一人职业(编成时) 暗龙骑士"
+cheat66_code = "32fc075F+003F"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 第一人职业(编成时) 风龙"
+cheat67_code = "32fc075F+0024"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 第一人职业(编成时) 炎龙"
+cheat68_code = "32fc075F+0025"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 第一人职业(编成时) 地龙"
+cheat69_code = "32fc075F+0026"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 第一人职业(编成时) 水龙"
+cheat70_code = "32fc075F+0027"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 第一人职业(编成时) 圣龙"
+cheat71_code = "32fc075F+0028"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 第一人职业(编成时) 海龙"
+cheat72_code = "32fc075F+0029"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 第一人职业(编成时) 魔龙"
+cheat73_code = "32fc075F+002A"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 第一人职业(编成时) 丧尸龙"
+cheat74_code = "32fc075F+002B"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 第一人职业(编成时) 龙骑士"
+cheat75_code = "32fc075F+000E"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 第一人职业(编成时) 近卫骑士"
+cheat76_code = "32fc075F+0021"
+cheat76_enable = false
+
+cheat77_desc = "direct_v1 第一人职业(编成时) 蓝铠骑士"
+cheat77_code = "32fc075F+004E"
+cheat77_enable = false
+
+cheat78_desc = "direct_v1 第一人职业(编成时) 女武神"
+cheat78_code = "32fc075F+000F"
+cheat78_enable = false
+
+cheat79_desc = "direct_v1 第一人职业(编成时) 高位魔法师"
+cheat79_code = "32fc075F+0010"
+cheat79_enable = false
+
+cheat80_desc = "direct_v1 第一人职业(编成时) 学者"
+cheat80_code = "32fc075F+0011"
+cheat80_enable = false
+
+cheat81_desc = "direct_v1 第一人职业(编成时) 巫女"
+cheat81_code = "32fc075F+0012"
+cheat81_enable = false
+
+cheat82_desc = "direct_v1 第一人职业(编成时) 操龙使"
+cheat82_code = "32fc075F+0015"
+cheat82_enable = false
+
+cheat83_desc = "direct_v1 第一人职业(编成时) 操兽使"
+cheat83_code = "32fc075F+0016"
+cheat83_enable = false
+
+cheat84_desc = "direct_v1 第一人职业(编成时) 翼人"
+cheat84_code = "32fc075F+0017"
+cheat84_enable = false
+
+cheat85_desc = "direct_v1 第一人职业(编成时) 人鱼"
+cheat85_code = "32fc075F+0018"
+cheat85_enable = false
+
+cheat86_desc = "direct_v1 第一人职业(编成时) 精灵"
+cheat86_code = "32fc075F+0019"
+cheat86_enable = false
+
+cheat87_desc = "direct_v1 第一人职业(编成时) 死灵魔道士"
+cheat87_code = "32fc075F+001A"
+cheat87_enable = false
+
+cheat88_desc = "direct_v1 第一人职业(编成时) 幽灵"
+cheat88_code = "32fc075F+001D"
+cheat88_enable = false
+
+cheat89_desc = "direct_v1 第一人职业(编成时) 美杜莎"
+cheat89_code = "32fc075F+001E"
+cheat89_enable = false
+
+cheat90_desc = "direct_v1 第一人职业(编成时) 狮鹫"
+cheat90_code = "32fc075F+002C"
+cheat90_enable = false
+
+cheat91_desc = "direct_v1 第一人职业(编成时) 石化鸟"
+cheat91_code = "32fc075F+002D"
+cheat91_enable = false
+
+cheat92_desc = "direct_v1 第一人职业(编成时) 乌鱼"
+cheat92_code = "32fc075F+002E"
+cheat92_enable = false
+
+cheat93_desc = "direct_v1 第一人职业(编成时) 双头犬"
+cheat93_code = "32fc075F+002F"
+cheat93_enable = false
+
+cheat94_desc = "direct_v1 第一人职业(编成时) 巨人"
+cheat94_code = "32fc075F+0030"
+cheat94_enable = false
+
+cheat95_desc = "direct_v1 第一人职业(编成时) 海贼"
+cheat95_code = "32fc075F+0031"
+cheat95_enable = false
+
+cheat96_desc = "direct_v1 第一人职业(编成时) 孤高的美女魔术师"
+cheat96_code = "32fc075F+0042"
+cheat96_enable = false
+
+cheat97_desc = "direct_v1 第一人职业(编成时) 神官骑士"
+cheat97_code = "32fc075F+0043"
+cheat97_enable = false
+
+cheat98_desc = "direct_v1 第一人职业(编成时) 魔导战士"
+cheat98_code = "32fc075F+004B"
+cheat98_enable = false
+
+cheat99_desc = "direct_v1 第一人职业(编成时) 大魔女迪芙"
+cheat99_code = "32fc075F+004C"
+cheat99_enable = false
+
+cheat100_desc = "direct_v1 第一人职业(编成时) 领主"
+cheat100_code = "32fc075F+004D"
+cheat100_enable = false
+
+cheat101_desc = "direct_v1 第一人职业(编成时) 巨魔"
+cheat101_code = "32fc075F+0052"
+cheat101_enable = false
+
+cheat102_desc = "direct_v1 第一人职业(战斗时) 堕天使"
+cheat102_code = "32fc1B4F+0053"
+cheat102_enable = false
+
+cheat103_desc = "direct_v1 第一人职业(战斗时) 士兵(男)"
+cheat103_code = "32fc1B4F+0001"
+cheat103_enable = false
+
+cheat104_desc = "direct_v1 第一人职业(战斗时) 士兵(女)"
+cheat104_code = "32fc1B4F+0002"
+cheat104_enable = false
+
+cheat105_desc = "direct_v1 第一人职业(战斗时) 忍者(男)"
+cheat105_code = "32fc1B4F+0003"
+cheat105_enable = false
+
+cheat106_desc = "direct_v1 第一人职业(战斗时) 忍者(女)"
+cheat106_code = "32fc1B4F+0004"
+cheat106_enable = false
+
+cheat107_desc = "direct_v1 第一人职业(战斗时) 弓兵(男)"
+cheat107_code = "32fc1B4F+0005"
+cheat107_enable = false
+
+cheat108_desc = "direct_v1 第一人职业(战斗时) 弓兵(女)"
+cheat108_code = "32fc1B4F+0006"
+cheat108_enable = false
+
+cheat109_desc = "direct_v1 第一人职业(战斗时) 魔法师(男)"
+cheat109_code = "32fc1B4F+0007"
+cheat109_enable = false
+
+cheat110_desc = "direct_v1 第一人职业(战斗时) 魔法师(女)"
+cheat110_code = "32fc1B4F+0008"
+cheat110_enable = false
+
+cheat111_desc = "direct_v1 第一人职业(战斗时) 僧侣(男)"
+cheat111_code = "32fc1B4F+0009"
+cheat111_enable = false
+
+cheat112_desc = "direct_v1 第一人职业(战斗时) 僧侣(女)"
+cheat112_code = "32fc1B4F+000A"
+cheat112_enable = false
+
+cheat113_desc = "direct_v1 第一人职业(战斗时) 祭司(男)"
+cheat113_code = "32fc1B4F+0013"
+cheat113_enable = false
+
+cheat114_desc = "direct_v1 第一人职业(战斗时) 祭司(女)"
+cheat114_code = "32fc1B4F+0014"
+cheat114_enable = false
+
+cheat115_desc = "direct_v1 第一人职业(战斗时) 骑士(男)"
+cheat115_code = "32fc1B4F+000B"
+cheat115_enable = false
+
+cheat116_desc = "direct_v1 第一人职业(战斗时) 骑士(女)"
+cheat116_code = "32fc1B4F+000C"
+cheat116_enable = false
+
+cheat117_desc = "direct_v1 第一人职业(战斗时) 剑圣(男)"
+cheat117_code = "32fc1B4F+000D"
+cheat117_enable = false
+
+cheat118_desc = "direct_v1 第一人职业(战斗时) 剑圣(女)"
+cheat118_code = "32fc1B4F+004F"
+cheat118_enable = false
+
+cheat119_desc = "direct_v1 第一人职业(战斗时) 召唤师(男)"
+cheat119_code = "32fc1B4F+0045"
+cheat119_enable = false
+
+cheat120_desc = "direct_v1 第一人职业(战斗时) 召唤师(女）"
+cheat120_code = "32fc1B4F+0046"
+cheat120_enable = false
+
+cheat121_desc = "direct_v1 第一人职业(战斗时) 死灵士兵(男)"
+cheat121_code = "32fc1B4F+0032"
+cheat121_enable = false
+
+cheat122_desc = "direct_v1 第一人职业(战斗时) 死灵士兵(女)"
+cheat122_code = "32fc1B4F+0033"
+cheat122_enable = false
+
+cheat123_desc = "direct_v1 第一人职业(战斗时) 死灵魔法师(男)"
+cheat123_code = "32fc1B4F+0034"
+cheat123_enable = false
+
+cheat124_desc = "direct_v1 第一人职业(战斗时) 死灵魔法师(女)"
+cheat124_code = "32fc1B4F+0035"
+cheat124_enable = false
+
+cheat125_desc = "direct_v1 第一人职业(战斗时) 死灵骑士(男)"
+cheat125_code = "32fc1B4F+0036"
+cheat125_enable = false
+
+cheat126_desc = "direct_v1 第一人职业(战斗时) 死灵骑士(女)"
+cheat126_code = "32fc1B4F+0037"
+cheat126_enable = false
+
+cheat127_desc = "direct_v1 第一人职业(战斗时) 天使骑士(男)"
+cheat127_code = "32fc1B4F+001B"
+cheat127_enable = false
+
+cheat128_desc = "direct_v1 第一人职业(战斗时) 天使骑士(女)"
+cheat128_code = "32fc1B4F+001C"
+cheat128_enable = false
+
+cheat129_desc = "direct_v1 第一人职业(战斗时) 暗天使骑士(男)"
+cheat129_code = "32fc1B4F+0022"
+cheat129_enable = false
+
+cheat130_desc = "direct_v1 第一人职业(战斗时) 暗天使骑士(女)"
+cheat130_code = "32fc1B4F+0023"
+cheat130_enable = false
+
+cheat131_desc = "direct_v1 第一人职业(战斗时) 小恶魔"
+cheat131_code = "32fc1B4F+001F"
+cheat131_enable = false
+
+cheat132_desc = "direct_v1 第一人职业(战斗时) 下级恶魔"
+cheat132_code = "32fc1B4F+004A"
+cheat132_enable = false
+
+cheat133_desc = "direct_v1 第一人职业(战斗时) 上级恶魔"
+cheat133_code = "32fc1B4F+0020"
+cheat133_enable = false
+
+cheat134_desc = "direct_v1 第一人职业(战斗时) 暗忍者"
+cheat134_code = "32fc1B4F+0039"
+cheat134_enable = false
+
+cheat135_desc = "direct_v1 第一人职业(战斗时) 暗巨人"
+cheat135_code = "32fc1B4F+003A"
+cheat135_enable = false
+
+cheat136_desc = "direct_v1 第一人职业(战斗时) 暗龙骑士"
+cheat136_code = "32fc1B4F+003F"
+cheat136_enable = false
+
+cheat137_desc = "direct_v1 第一人职业(战斗时) 风龙"
+cheat137_code = "32fc1B4F+0024"
+cheat137_enable = false
+
+cheat138_desc = "direct_v1 第一人职业(战斗时) 炎龙"
+cheat138_code = "32fc1B4F+0025"
+cheat138_enable = false
+
+cheat139_desc = "direct_v1 第一人职业(战斗时) 地龙"
+cheat139_code = "32fc1B4F+0026"
+cheat139_enable = false
+
+cheat140_desc = "direct_v1 第一人职业(战斗时) 水龙"
+cheat140_code = "32fc1B4F+0027"
+cheat140_enable = false
+
+cheat141_desc = "direct_v1 第一人职业(战斗时) 圣龙"
+cheat141_code = "32fc1B4F+0028"
+cheat141_enable = false
+
+cheat142_desc = "direct_v1 第一人职业(战斗时) 海龙"
+cheat142_code = "32fc1B4F+0029"
+cheat142_enable = false
+
+cheat143_desc = "direct_v1 第一人职业(战斗时) 魔龙"
+cheat143_code = "32fc1B4F+002A"
+cheat143_enable = false
+
+cheat144_desc = "direct_v1 第一人职业(战斗时) 丧尸龙"
+cheat144_code = "32fc1B4F+002B"
+cheat144_enable = false
+
+cheat145_desc = "direct_v1 第一人职业(战斗时) 龙骑士"
+cheat145_code = "32fc1B4F+000E"
+cheat145_enable = false
+
+cheat146_desc = "direct_v1 第一人职业(战斗时) 近卫骑士"
+cheat146_code = "32fc1B4F+0021"
+cheat146_enable = false
+
+cheat147_desc = "direct_v1 第一人职业(战斗时) 蓝铠骑士"
+cheat147_code = "32fc1B4F+004E"
+cheat147_enable = false
+
+cheat148_desc = "direct_v1 第一人职业(战斗时) 女武神"
+cheat148_code = "32fc1B4F+000F"
+cheat148_enable = false
+
+cheat149_desc = "direct_v1 第一人职业(战斗时) 高位魔法师"
+cheat149_code = "32fc1B4F+0010"
+cheat149_enable = false
+
+cheat150_desc = "direct_v1 第一人职业(战斗时) 学者"
+cheat150_code = "32fc1B4F+0011"
+cheat150_enable = false
+
+cheat151_desc = "direct_v1 第一人职业(战斗时) 巫女"
+cheat151_code = "32fc1B4F+0012"
+cheat151_enable = false
+
+cheat152_desc = "direct_v1 第一人职业(战斗时) 操龙使"
+cheat152_code = "32fc1B4F+0015"
+cheat152_enable = false
+
+cheat153_desc = "direct_v1 第一人职业(战斗时) 操兽使"
+cheat153_code = "32fc1B4F+0016"
+cheat153_enable = false
+
+cheat154_desc = "direct_v1 第一人职业(战斗时) 翼人"
+cheat154_code = "32fc1B4F+0017"
+cheat154_enable = false
+
+cheat155_desc = "direct_v1 第一人职业(战斗时) 人鱼"
+cheat155_code = "32fc1B4F+0018"
+cheat155_enable = false
+
+cheat156_desc = "direct_v1 第一人职业(战斗时) 精灵"
+cheat156_code = "32fc1B4F+0019"
+cheat156_enable = false
+
+cheat157_desc = "direct_v1 第一人职业(战斗时) 死灵魔道士"
+cheat157_code = "32fc1B4F+001A"
+cheat157_enable = false
+
+cheat158_desc = "direct_v1 第一人职业(战斗时) 幽灵"
+cheat158_code = "32fc1B4F+001D"
+cheat158_enable = false
+
+cheat159_desc = "direct_v1 第一人职业(战斗时) 美杜莎"
+cheat159_code = "32fc1B4F+001E"
+cheat159_enable = false
+
+cheat160_desc = "direct_v1 第一人职业(战斗时) 狮鹫"
+cheat160_code = "32fc1B4F+002C"
+cheat160_enable = false
+
+cheat161_desc = "direct_v1 第一人职业(战斗时) 石化鸟"
+cheat161_code = "32fc1B4F+002D"
+cheat161_enable = false
+
+cheat162_desc = "direct_v1 第一人职业(战斗时) 乌鱼"
+cheat162_code = "32fc1B4F+002E"
+cheat162_enable = false
+
+cheat163_desc = "direct_v1 第一人职业(战斗时) 双头犬"
+cheat163_code = "32fc1B4F+002F"
+cheat163_enable = false
+
+cheat164_desc = "direct_v1 第一人职业(战斗时) 巨人"
+cheat164_code = "32fc1B4F+0030"
+cheat164_enable = false
+
+cheat165_desc = "direct_v1 第一人职业(战斗时) 海贼"
+cheat165_code = "32fc1B4F+0031"
+cheat165_enable = false
+
+cheat166_desc = "direct_v1 第一人职业(战斗时) 孤高的美女魔术师"
+cheat166_code = "32fc075F+0042"
+cheat166_enable = false
+
+cheat167_desc = "direct_v1 第一人职业(战斗时) 神官骑士"
+cheat167_code = "32fc1B4F+0043"
+cheat167_enable = false
+
+cheat168_desc = "direct_v1 第一人职业(战斗时) 魔导战士"
+cheat168_code = "32fc1B4F+004B"
+cheat168_enable = false
+
+cheat169_desc = "direct_v1 第一人职业(战斗时) 大魔女迪芙妮"
+cheat169_code = "32fc1B4F+004C"
+cheat169_enable = false
+
+cheat170_desc = "direct_v1 第一人职业(战斗时) 领主"
+cheat170_code = "32fc1B4F+004D"
+cheat170_enable = false
+
+cheat171_desc = "direct_v1 第一人职业(战斗时) 巨魔"
+cheat171_code = "32fc1B4F+0052"
+cheat171_enable = false
+
+cheat172_desc = "direct_v1 第一人徽章(编成时)"
+cheat172_code = "32fc0718+00DF+32fc0719+00F7+32fc071A+00E7+32fc071B+00F3"
+cheat172_enable = false
+
+cheat173_desc = "direct_v1 第一人徽章(战斗时)"
+cheat173_code = "32fc1B08+00DF+32fc1B09+00F7+32fc1B0A+00E7+32fc1B0B+00F3"
+cheat173_enable = false

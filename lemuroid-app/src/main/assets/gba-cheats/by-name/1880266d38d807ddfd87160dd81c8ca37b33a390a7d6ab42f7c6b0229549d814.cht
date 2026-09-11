@@ -1,0 +1,197 @@
+cheats = 49
+
+cheat0_desc = "direct_v1 最高级 Lv99"
+cheat0_code = "32fe5664+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 无限心"
+cheat1_code = "32fe563C+00F6"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 生命值"
+cheat2_code = "32fe562E+0038+0202562F+0004"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 能量值"
+cheat3_code = "32fe5636+0038+02025637+0004"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 全卡片"
+cheat4_code = "32fe5674+0001+02025675+0001+02025676+0001+02025677+0001+02025678+0001+02025679+0001+0202567A+0001+0202567B+0001+0202567C+0001+0202567D+0001+0202567E+0001+0202567F+0001+02025680+0001+02025681+0001+02025682+0001+02025683+0001+02025684+0001+02025685+0001+02025686+0001+02025687+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全能力"
+cheat5_code = "32fe572F+0001+02025730+0001+02025731+0001+02025732+0001+02025733+0001+02025734+0001+02025735+0001+02025736+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 HP"
+cheat6_code = "32fe562E+00E7+0202562F+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 MP"
+cheat7_code = "32fe5636+0038+02025637+0004"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 HEART"
+cheat8_code = "32fe563C+00FF"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 LEVEL MAX"
+cheat9_code = "32fe5664+0063"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 LEVEL LEVEL 01"
+cheat10_code = "32fe5664+0001"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 LEVEL LEVEL 10"
+cheat11_code = "32fe5664+000A"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 LEVEL LEVEL 20"
+cheat12_code = "32fe5664+0014"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 LEVEL LEVEL 30"
+cheat13_code = "32fe5664+001E"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 LEVEL LEVEL 40"
+cheat14_code = "32fe5664+0028"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 LEVEL LEVEL 50"
+cheat15_code = "32fe5664+0032"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 LEVEL LEVEL 60"
+cheat16_code = "32fe5664+003C"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 LEVEL LEVEL 70"
+cheat17_code = "32fe5664+0046"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 LEVEL LEVEL 80"
+cheat18_code = "32fe5664+0050"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 LEVEL LEVEL 90"
+cheat19_code = "32fe5664+005A"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 所有卡片 ON "
+cheat20_code = "32fe5674+0001+02025675+0001+02025676+0001+02025677+0001+02025678+0001+02025679+0001+0202567A+0001+0202567B+0001+0202567C+0001+0202567D+0001+0202567E+0001+0202567F+0001+02025680+0001+02025681+0001+02025682+0001+02025683+0001+02025684+0001+02025685+0001+02025686+0001+02025687+0001"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 所有卡片 OFF"
+cheat21_code = "32fe5674+0000+02025675+0000+02025676+0000+02025677+0000+02025678+0000+02025679+0000+0202567A+0000+0202567B+0000+0202567C+0000+0202567D+0000+0202567E+0000+0202567F+0000+02025680+0000+02025681+0000+02025682+0000+02025683+0000+02025684+0000+02025685+0000+02025686+0000+02025687+0000"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 所有魔导器 ON "
+cheat22_code = "32fe572F+0001+02025730+0001+02025731+0001+02025732+0001+02025733+0001+02025734+0001+02025735+0001+02025736+0001"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 所有魔导器 OFF"
+cheat23_code = "32fe572F+0000+02025730+0000+02025731+0000+02025732+0000+02025733+0000+02025734+0000+02025735+0000+02025736+0000"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 武器类型 追踪飞刀"
+cheat24_code = "32fe5640+0001+02025641+0001"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 武器类型 暂无"
+cheat25_code = "32fe5640+0000+02025641+0000"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 武器类型 飞刀"
+cheat26_code = "32fe5640+0001+02025641+0000"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 武器类型 斧头"
+cheat27_code = "32fe5640+0002"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 武器类型 圣水"
+cheat28_code = "32fe5640+0003"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 武器类型 时表"
+cheat29_code = "32fe5640+0005"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 武器类型 回旋刀"
+cheat30_code = "32fe5640+0004"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 透明隐身 禁用"
+cheat31_code = "32fc0000+0000"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 透明隐身 启用"
+cheat32_code = "32fc00C0+0063"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 无限跳"
+cheat33_code = "32fc0080+0000"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 无敌"
+cheat34_code = "32fc00C0+00FF"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 MAX HP"
+cheat35_code = "32fe5632+00E7+02025633+0003"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 SP"
+cheat36_code = "32fe5636+00E7+02025637+0003"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 MAX SP"
+cheat37_code = "32fe563A+00E7+0202563B+0003"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 MAX HEART"
+cheat38_code = "32fe563E+00FF"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 特殊武器 追踪飞刀"
+cheat39_code = "32fe5640+0001+02025641+0001"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 特殊武器 飞刀"
+cheat40_code = "32fe5640+0001+02025641+0000"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 特殊武器 斧头"
+cheat41_code = "32fe5640+0002"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 特殊武器 圣水"
+cheat42_code = "32fe5640+0003"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 特殊武器 时表"
+cheat43_code = "32fe5640+0005"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 特殊武器 回旋刀"
+cheat44_code = "32fe5640+0004"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 LV"
+cheat45_code = "32fe5664+0063"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 显示全DSS"
+cheat46_code = "32fe5688+0001+02025689+0001+0202568A+0001+0202568B+0001+0202568C+0001+0202568D+0001+0202568E+0001+0202568F+0001+02025690+0001+02025691+0001+02025692+0001+02025693+0001+02025694+0001+02025695+0001+02025696+0001+02025697+0001+02025698+0001+02025699+0001+0202569A+0001+0202569B+0001+0202569C+0001+0202569D+0001+0202569E+0001+0202569F+0001+020256A0+0001+020256A1+0001+020256A2+0001+020256A3+0001+020256A4+0001+020256A5+0001+020256A6+0001+020256A7+0001+020256A8+0001+020256A9+0001+020256AA+0001+020256AB+0001+020256AC+0001+020256AD+0001+020256AE+0001+020256AF+0001+020256B0+0001+020256B1+0001+020256B2+0001+020256B3+0001+020256B4+0001+020256B5+0001+020256B6+0001+020256B7+0001+020256B8+0001+020256B9+0001+020256BA+0001+020256BB+0001+020256BC+0001+020256BD+0001+020256BE+0001+020256BF+0001+020256C0+0001+020256C1+0001+020256C2+0001+020256C3+0001+020256C4+0001+020256C5+0001+020256C6+0001+020256C7+0001+020256C8+0001+020256C9+0001+020256CA+0001+020256CB+0001+020256CC+0001+020256CD+0001+020256CE+0001+020256CF+0001+020256D0+0001+020256D1+0001+020256D2+0001+020256D3+0001+020256D4+0001+020256D5+0001+020256D6+0001+020256D7+0001+020256D8+0001+020256D9+0001+020256DA+0001+020256DB+0001+020256DC+0001+020256DD+0001+020256DE+0001+020256DF+0001+020256E0+0001+020256E1+0001+020256E2+0001+020256E3+0001+020256E4+0001+020256E5+0001+020256E6+0001+020256E7+0001+020256E8+0001+020256E9+0001+020256EA+0001+020256EB+0001"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 全ITEM"
+cheat47_code = "32fe56EC+0063+020256ED+0063+020256EE+0063+020256EF+0063+020256F0+0063+020256F1+0063+020256F2+0063+020256F3+0063+020256F4+0063+020256F5+0063+020256F6+0063+020256F7+0063+020256F8+0063+020256F9+0063+020256FA+0063+020256FB+0063+020256FC+0063+020256FD+0063+020256FE+0063+020256FF+0063+02025700+0063+02025701+0063+02025702+0063+02025703+0063+02025704+0063+02025705+0063+02025706+0063+02025707+0063+02025708+0063+02025709+0063+0202570A+0063+0202570B+0063+0202570C+0063+0202570D+0063+0202570E+0063+0202570F+0063+02025710+0063+02025711+0063+02025712+0063+02025713+0063+02025714+0063+02025715+0063+02025716+0063+02025717+0063+02025718+0063+02025719+0063+0202571A+0063+0202571B+0063+0202571C+0063+0202571D+0063+0202571E+0063+0202571F+0063+02025720+0063+02025721+0063+02025722+0063+02025723+0063+02025724+0063"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 全MAGIC ITEM"
+cheat48_code = "32fe5730+0001+02025731+0001+02025732+0001+02025733+0001+02025734+0001+02025735+0001+02025736+0001+02025737+0001"
+cheat48_enable = false

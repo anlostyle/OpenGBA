@@ -1,0 +1,217 @@
+cheats = 54
+
+cheat0_desc = "direct_v1 等级"
+cheat0_code = "32fc0A40+0014"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 HP上限"
+cheat1_code = "32fc0A44+000F+02000A45+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 MP上限"
+cheat2_code = "32fc0A64+0064"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 攻击"
+cheat3_code = "32fc0A58+00D0+02000A59+0007"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 速度"
+cheat4_code = "32fc0A49+0004"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 移动"
+cheat5_code = "32fc0A4A+000A"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 射程"
+cheat6_code = "32fc0A5C+000F"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全道具"
+cheat7_code = "32fc0A6C+00FF+02000A6D+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全怪兽"
+cheat8_code = "32fc0A30+00FF+02000A31+00FF+02000A32+00FF+02000A33+00FF+02000A34+00FF+02000A35+00FF+02000A36+00FF+02000A37+00FF+02000A38+00FF+02000A39+00FF+02000A3A+00FF+02000A3B+00FF"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 地图全开"
+cheat9_code = "32fc0AB0+00FF+02000AB1+00FF+02000AB2+00FF+02000AB3+00FF+02000AB4+00FF+02000AB5+00FF+02000AB6+00FF+02000AB7+00FF+02000AB8+00FF+02000AB9+00FF+02000ABA+00FF+02000ABB+00FF+02000ABC+00FF+02000ABD+00FF+02000ABE+00FF+02000ABF+00FF"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 无限召唤"
+cheat10_code = "32fdB0C7+0000"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 我方MP"
+cheat11_code = "32ff5930+00E7+02035931+0003"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 我方AP"
+cheat12_code = "32ff593E+00E8+0203593F+0003"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 敌人MP"
+cheat13_code = "32ff5944+0000+02035945+0000"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 敌人AP"
+cheat14_code = "32ff5952+0000+02035953+0000"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 战绩时间"
+cheat15_code = "32fc0C34+0000+02000C35+0000"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 战果房子"
+cheat16_code = "32fc0C22+00E7+02000C23+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 战果士兵"
+cheat17_code = "32fc0C2A+00E7+02000C2B+0003"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 战果旗帜"
+cheat18_code = "32fc0C2E+00E7+02000C2F+0003"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 被害房子"
+cheat19_code = "32fc0C24+0000+02000C25+0000"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 被害士兵"
+cheat20_code = "32fc0C2C+0000+02000C2D+0000"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 被害旗帜"
+cheat21_code = "32fc0C30+0000+02000C31+0000"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 全人物"
+cheat22_code = "32fc0AC4+00FF+02000AC5+00FF+02000AC6+00FF"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 全地图"
+cheat23_code = "32fc0AC8+005F+02000AC9+00FD+02000ACA+007F+02000ACB+00D7"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 挑战赛全开"
+cheat24_code = "32fc0ACC+00FF"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 主角HP"
+cheat25_code = "32fdD224+009F+0201D225+0086+0201D226+0001"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 主角SKILL"
+cheat26_code = "32fdD228+00FF"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 主角速度"
+cheat27_code = "32fdD229+0001"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 主角移动"
+cheat28_code = "32fdD22A+00FF"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 基地HP"
+cheat29_code = "32fdD39C+009F+0201D39D+0086+0201D39E+0001"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 基地攻击"
+cheat30_code = "32fdD3B4+00FC"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 基地快速召唤&建造"
+cheat31_code = "32fdD3C8+000F+0201D3C9+0027"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 基地攻击强化"
+cheat32_code = "32fdD3B0+0090+0201D3B1+0001"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 基地防御强化"
+cheat33_code = "32fdD3EC+0005"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 基地城堡强化"
+cheat34_code = "32fdD414+000C+0201D415+00CC"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 怪兽全强化"
+cheat35_code = "32fe8E84+0004+02028E85+0004+02028E86+0004+02028E87+0000+02029154+0004+02029155+0004+02029156+0004+02029157+0000+02029424+0004+02029425+0004+02029426+0004+02029427+0000+020296F4+0004+020296F5+0004+020296F6+0004+020296F7+0000+020299C4+0004+020299C5+0004+020299C6+0004+020299C7+0000"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 战斗中MP"
+cheat36_code = "32ff5930+003C+02035932+003C"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 主角 LV"
+cheat37_code = "32fc0A40+0063"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 主角 HP MAX"
+cheat38_code = "32fc0A44+000F+02000A45+0027"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 主角 MP MAX"
+cheat39_code = "32fc0A64+000F+02000A65+0027"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 主角 ATTACK"
+cheat40_code = "32fc0A58+00E0+02000A59+0007"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 主角 SPEED"
+cheat41_code = "32fc0A49+0004"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 主角 MOVE"
+cheat42_code = "32fc0A4A+000A"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 主角 RANGE"
+cheat43_code = "32fc00A5+000F"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 主角 EXP"
+cheat44_code = "32fc0A68+009F+02000A69+0086+02000A6A+0001"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 主角 TOTAL+WIN"
+cheat45_code = "32fc0A70+00E7+02000A71+0003"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 主角 LOSE"
+cheat46_code = "32fc0A72+0000"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 战绩结果 房子"
+cheat47_code = "32fc0C22+00E7+02000C23+0003"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 战绩结果 士兵"
+cheat48_code = "32fc0C2A+00E7+02000C2B+0003"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 战绩结果 旗帜"
+cheat49_code = "32fc0C2E+00E7+02000C2F+0003"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 战绩结果 时间"
+cheat50_code = "32fc0C34+0000+02000C35+0000"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 被害 房子"
+cheat51_code = "32fc0C24+0000+02000C25+0000"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 被害 士兵"
+cheat52_code = "32fc0C2C+0000+02000C2D+0000"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 被害 旗帜"
+cheat53_code = "32fc0C30+0000+02000C31+0000"
+cheat53_enable = false

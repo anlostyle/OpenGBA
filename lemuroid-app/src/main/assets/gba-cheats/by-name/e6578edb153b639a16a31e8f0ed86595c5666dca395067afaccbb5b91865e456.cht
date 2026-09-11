@@ -1,0 +1,29 @@
+cheats = 7
+
+cheat0_desc = "direct_v1 金钱"
+cheat0_code = "33004788+00FF+02044789+00E0+0204478A+00F5+0204478B+0005"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 全线索购买"
+cheat1_code = "33004798+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 全角色解锁"
+cheat2_code = "3300479C+00FF+0204479D+00FF+0204479E+00FF+0204479F+00FF+020447A0+00FF+020447B4+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 全角色购买"
+cheat3_code = "330047A4+00FF+020447A5+00FF+020447A6+00FF+020447A7+00FF+020447A8+00FF+020447B8+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 EX项全购买"
+cheat4_code = "330047AC+00FF+020447AD+00FF+020447AE+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 关卡全开"
+cheat5_code = "3300478C+00FF+0204478D+00FF"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 自由战全开"
+cheat6_code = "33004790+00FF+02044791+00FF"
+cheat6_enable = false

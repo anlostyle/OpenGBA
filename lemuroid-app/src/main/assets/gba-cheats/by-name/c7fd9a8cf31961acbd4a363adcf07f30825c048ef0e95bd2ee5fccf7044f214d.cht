@@ -1,0 +1,205 @@
+cheats = 51
+
+cheat0_desc = "direct_v1 最高时速"
+cheat0_code = "33005529+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 总时间"
+cheat1_code = "33005BE8+0000+33005BE9+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 单圈时间"
+cheat2_code = "33005BEC+0000+33005BED+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 可玩全BEGINNER'S关卡"
+cheat3_code = "330020B8+0008"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 可玩全MIDDLE关卡"
+cheat4_code = "330020B9+0008"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 可玩全HIGH SPEED关卡"
+cheat5_code = "330020BA+0008"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 可玩全PROFESSIONAL关卡"
+cheat6_code = "330020BB+0008"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全车"
+cheat7_code = "330020BC+00FF+330020BD+00FF+330020BE+00FF+330020BF+00FF+330020C0+00FF+330020C1+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全ENGINE"
+cheat8_code = "330020CC+0003"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 全SUS"
+cheat9_code = "330020CD+0003"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 全MUFFLER"
+cheat10_code = "330020CE+0003"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 LSD"
+cheat11_code = "330020CF+0001"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 CPU"
+cheat12_code = "330020D0+0001"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 Light"
+cheat13_code = "330020D1+0001"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 SEAT"
+cheat14_code = "330020D2+0001"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 FILTER"
+cheat15_code = "330020D3+0001"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 AERO"
+cheat16_code = "330020D4+0001"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 关卡获金 Circuit-1 Hornet"
+cheat17_code = "330021F4+0001"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 关卡获金 Winding-1 Cross"
+cheat18_code = "33002240+0001"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 关卡获金 Highway-1 Nightwalk"
+cheat19_code = "3300228C+0001"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 关卡获金 City-1 Main Street"
+cheat20_code = "330022D8+0001"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 关卡获金 Dirt-1 Zero"
+cheat21_code = "33002324+0001"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 关卡获金 Highway-2 Bayside"
+cheat22_code = "33002370+0001"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 关卡获金 Dirt-2 Halfdump1"
+cheat23_code = "330023BC+0001"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 关卡获金 Winding-2 Speedstar"
+cheat24_code = "33002408+0001"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 关卡获金 Circuit-2 Bullet"
+cheat25_code = "33002454+0001"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 关卡获金 Winding-3 Turnpike"
+cheat26_code = "330024A0+0001"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 关卡获金 Highway-3 Freeway"
+cheat27_code = "330024EC+0001"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 关卡获金 City-2 Dash"
+cheat28_code = "33002538+0001"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 关卡获金 Dirt-3 Dirt Park"
+cheat29_code = "33002584+0001"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 关卡获金 Circuit-3 Big Trap"
+cheat30_code = "330025D0+0001"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 关卡获金 Winding-4 Caution"
+cheat31_code = "3300261C+0001"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 关卡获金 City-3 Running Free"
+cheat32_code = "33002668+0001"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 关卡获金 Circuit-4 Drift Park"
+cheat33_code = "330026B4+0001"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 关卡获金 Winding-5 Doglake"
+cheat34_code = "33002700+0001"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 关卡获金 Highway-4 Outburn"
+cheat35_code = "3300274C+0001"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 关卡获金 City-4 Yellow Post"
+cheat36_code = "33002798+0001"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 关卡获金 Dirt-4 Response"
+cheat37_code = "330027E4+0001"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 关卡获金 Circuit-5 Rough"
+cheat38_code = "33002830+0001"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 关卡获金 Highway-5 Stardust"
+cheat39_code = "3300287C+0001"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 关卡获金 Dirt-5 Inline Four"
+cheat40_code = "330028C8+0001"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 关卡获金 Circuit-6 Fox"
+cheat41_code = "33002914+0001"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 关卡获金 Winding-6 Skyline"
+cheat42_code = "33002960+0001"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 关卡获金 Highway-6 Black Eye"
+cheat43_code = "330029AC+0001"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 关卡获金 City-5 Good Line"
+cheat44_code = "330029F8+0001"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 关卡获金 Dirt-6 Halfdump2"
+cheat45_code = "33002A44+0001"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 关卡获金 Circuit-7 Free Speed"
+cheat46_code = "33002A90+0001"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 关卡获金 Winding-7 Wild Boar"
+cheat47_code = "33002ADC+0001"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 关卡获金 City-6 Barracuda"
+cheat48_code = "33002B28+0001"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 Total Time00:00:00"
+cheat49_code = "33005BE8+0000+33005BE9+0000+33005BEA+0000+33005BEB+0000"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 Lap Time 00:00:00"
+cheat50_code = "33005BEC+0000+33005BED+0000+33005BEE+0000+33005BEF+0000"
+cheat50_enable = false

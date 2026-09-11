@@ -1,0 +1,51 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 999999 0"
+
+cheat0_desc = "direct_v1 999999 1"
+
+cheat0_desc = "direct_v1 999999 2"
+
+cheat0_desc = "direct_v1 999999 3"
+
+cheat0_desc = "direct_v1 999999 4"
+
+cheat0_desc = "direct_v1 999999 5"
+cheat0_code = "00000NAN+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 999999 6"
+
+cheat1_desc = "direct_v1 999999 7"
+
+cheat1_desc = "direct_v1 999999 8"
+cheat1_code = "00000NAN+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 999999 9"
+
+cheat2_desc = "direct_v1 999999 10"
+
+cheat2_desc = "direct_v1 999999 11"
+cheat2_code = "00000NAN+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 999999 12"
+
+cheat3_desc = "direct_v1 [CP 0"
+
+cheat3_desc = "direct_v1 [CP 1"
+
+cheat3_desc = "direct_v1 [CP 2"
+
+cheat3_desc = "direct_v1 [CP 3"
+
+cheat3_desc = "direct_v1 [CP 4"
+
+cheat3_desc = "direct_v1 [CP 5"
+
+cheat3_desc = "direct_v1 [CP 6"
+
+cheat3_desc = "direct_v1 无限移动(别人移动时请解锁)"
+cheat3_code = "33004733+0006"
+cheat3_enable = false

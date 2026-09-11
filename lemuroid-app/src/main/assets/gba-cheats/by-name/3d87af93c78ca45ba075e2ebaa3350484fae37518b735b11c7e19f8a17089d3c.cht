@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 时间0"
+cheat0_code = "32ff04CD+0000+020304C5+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 生命99"
+cheat1_code = "32ff04E4+0063"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 AVE999999"
+cheat2_code = "32ff04A4+003F+020304A5+0042+020304A6+000F"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 分数999999999"
+cheat3_code = "32ff0484+00FF+02030485+00C9+02030486+009A+02030487+003B"
+cheat3_enable = false

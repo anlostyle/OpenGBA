@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 Everything Unlocked"
+cheat0_code = "0500005B+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 Start on Galaxy 2"
+cheat1_code = "05000059+0001"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 Start on Galaxy 3"
+cheat2_code = "05000059+0002"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 Start on Galaxy 4"
+cheat3_code = "05000059+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 Start on Galaxy 5"
+cheat4_code = "05000059+0004"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 Invincible"
+cheat5_code = "32fc0000+0000"
+cheat5_enable = false

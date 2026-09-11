@@ -16,6 +16,7 @@ import com.swordfish.lemuroid.lib.library.CoreID
 import com.swordfish.lemuroid.lib.library.SystemCoreConfig
 import com.swordfish.lemuroid.lib.library.db.entity.Game
 import com.swordfish.lemuroid.lib.saves.SaveInfo
+import com.swordfish.lemuroid.lib.saves.StatesManager
 import com.swordfish.lemuroid.lib.saves.StatesPreviewManager
 import java.text.SimpleDateFormat
 import kotlin.math.roundToInt
@@ -134,15 +135,11 @@ object GameMenuHelper {
         activity: Activity?,
         preference: Preference?,
     ): Boolean {
-        return when (preference?.key) {
-            "pref_game_save_0" -> handleSaveAction(activity, 0)
-            "pref_game_save_1" -> handleSaveAction(activity, 1)
-            "pref_game_save_2" -> handleSaveAction(activity, 2)
-            "pref_game_save_3" -> handleSaveAction(activity, 3)
-            "pref_game_load_0" -> handleLoadAction(activity, 0)
-            "pref_game_load_1" -> handleLoadAction(activity, 1)
-            "pref_game_load_2" -> handleLoadAction(activity, 2)
-            "pref_game_load_3" -> handleLoadAction(activity, 3)
+        val key = preference?.key.orEmpty()
+        slotIndex(key, "pref_game_save_")?.let { return handleSaveAction(activity, it) }
+        slotIndex(key, "pref_game_load_")?.let { return handleLoadAction(activity, it) }
+
+        return when (key) {
             "pref_game_mute" -> {
                 val currentValue = (preference as SwitchPreference).isChecked
                 val resultIntent =
@@ -188,6 +185,16 @@ object GameMenuHelper {
             else -> false
         }
     }
+
+    private fun slotIndex(
+        key: String,
+        prefix: String,
+    ): Int? =
+        key
+            .takeIf { it.startsWith(prefix) }
+            ?.removePrefix(prefix)
+            ?.toIntOrNull()
+            ?.takeIf { it in 0 until StatesManager.MAX_STATES }
 
     private fun handleSaveAction(
         activity: Activity?,

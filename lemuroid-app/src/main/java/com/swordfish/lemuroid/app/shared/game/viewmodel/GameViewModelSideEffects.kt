@@ -27,6 +27,18 @@ class GameViewModelSideEffects(private val scope: CoroutineScope) {
         data object SaveQuickSave : UiEffect
 
         data object ToggleFastForward : UiEffect
+
+        data object StartFastForward : UiEffect
+
+        data object StopFastForward : UiEffect
+
+        data object StartRewind : UiEffect
+
+        data object StopRewind : UiEffect
+
+        data object StartForward : UiEffect
+
+        data object StopForward : UiEffect
     }
 
     private val uiEffects = MutableSharedFlow<UiEffect>()
@@ -93,6 +105,54 @@ class GameViewModelSideEffects(private val scope: CoroutineScope) {
         scope.launch {
             withContext(Dispatchers.Main) {
                 uiEffects.emit(UiEffect.ToggleFastForward)
+            }
+        }
+    }
+
+    fun startFastForward() {
+        scope.launch {
+            withContext(Dispatchers.Main) {
+                uiEffects.emit(UiEffect.StartFastForward)
+            }
+        }
+    }
+
+    fun stopFastForward() {
+        scope.launch {
+            withContext(Dispatchers.Main) {
+                uiEffects.emit(UiEffect.StopFastForward)
+            }
+        }
+    }
+
+    fun startRewind() {
+        scope.launch {
+            withContext(Dispatchers.Main) {
+                uiEffects.emit(UiEffect.StartRewind)
+            }
+        }
+    }
+
+    fun stopRewind() {
+        scope.launch {
+            withContext(Dispatchers.Main) {
+                uiEffects.emit(UiEffect.StopRewind)
+            }
+        }
+    }
+
+    fun startForward() {
+        scope.launch {
+            withContext(Dispatchers.Main) {
+                uiEffects.emit(UiEffect.StartForward)
+            }
+        }
+    }
+
+    fun stopForward() {
+        scope.launch {
+            withContext(Dispatchers.Main) {
+                uiEffects.emit(UiEffect.StopForward)
             }
         }
     }

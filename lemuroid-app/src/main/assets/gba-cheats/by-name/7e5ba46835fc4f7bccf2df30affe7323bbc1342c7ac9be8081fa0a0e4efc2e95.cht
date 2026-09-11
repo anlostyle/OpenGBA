@@ -1,0 +1,61 @@
+cheats = 15
+
+cheat0_desc = "direct_v1 体力"
+cheat0_code = "3300643D+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 金钱"
+cheat1_code = "33006440+0096+02046441+0086+02046442+0001"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 召唤"
+cheat2_code = "33006425+0009"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 队友1体力"
+cheat3_code = "33006445+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 队友1金钱"
+cheat4_code = "33006448+0096+02046449+0086+0204644A+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 队友2体力"
+cheat5_code = "3300644D+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 队友2金钱"
+cheat6_code = "33006450+0096+02046451+0086+02046452+0001"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 队友3体力"
+cheat7_code = "33006455+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 队友3金钱"
+cheat8_code = "33006458+0096+02046459+0086+0204645A+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 分数MAX"
+cheat9_code = "33006328+00FF+02046329+00E0+0204632A+00F5+0204632B+0005"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 一接到金币就MAX"
+cheat10_code = "33006440+009F+02046441+0086+02046442+0001"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 时间不减"
+cheat11_code = "33006324+00C5"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 生命X9"
+cheat12_code = "33006425+0009"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 无敌"
+cheat13_code = "3300622B+0000"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 体力不减"
+cheat14_code = "3300643D+0003"
+cheat14_enable = false

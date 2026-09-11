@@ -17,8 +17,12 @@ class GameLaunchTaskHandler(
     private val reviewManager: ReviewManager,
     private val retrogradeDb: RetrogradeDatabase,
 ) {
-    fun handleGameStart(context: Context) {
+    suspend fun handleGameStart(
+        context: Context,
+        game: Game,
+    ) {
         cancelBackgroundWork(context)
+        updateGamePlayedTimestamp(game)
     }
 
     suspend fun handleGameFinish(

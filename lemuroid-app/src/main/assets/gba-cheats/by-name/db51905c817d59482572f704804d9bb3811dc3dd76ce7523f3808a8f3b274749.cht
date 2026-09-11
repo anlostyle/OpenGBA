@@ -1,0 +1,149 @@
+cheats = 37
+
+cheat0_desc = "direct_v1 全图片"
+cheat0_code = "32ff4626+0001+02034627+0001+02034628+0001+02034629+0001+0203462A+0001+0203462B+0001+0203462C+0001+0203462D+0001+0203462E+0001+0203462F+0001+02034630+0001+02034631+0001+02034632+0001+02034633+0001+02034634+0001+02034635+0001+02034636+0001+02034637+0001+02034638+0001+02034639+0001+0203463A+0001+0203463B+0001+0203463C+0001+0203463D+0001+0203463E+0001+0203463F+0001+02034640+0001+02034641+0001+02034642+0001+02034643+0001+02034644+0001+02034645+0001+02034646+0001+02034647+0001+02034648+0001+02034649+0001+0203464A+0001+0203464B+0001+0203464C+0001+0203464D+0001+0203464E+0001+0203464F+0001+02034650+0001+02034651+0001+02034652+0001+02034653+0001+02034654+0001+02034655+0001+02034656+0001+02034657+0001+02034658+0001+02034659+0001+0203465A+0001+0203465B+0001+0203465C+0001+0203465D+0001+0203465E+0001+0203465F+0001+02034660+0001+02034661+0001+02034662+0001+02034663+0001+02034664+0001+02034665+0001+02034666+0001+02034667+0001+02034668+0001+02034669+0001+0203466A+0001+0203466B+0001+0203466C+0001+0203466D+0001+0203466E+0001+0203466F+0001+02034670+0001+02034671+0001+02034672+0001+02034673+0001+02034674+0001+02034675+0001+02034676+0001+02034677+0001+02034678+0001+02034679+0001+0203467A+0001+0203467B+0001+0203467C+0001+0203467D+0001+0203467E+0001+0203467F+0001+02034680+0001+02034681+0001+02034682+0001+02034683+0001+02034684+0001+02034685+0001+02034686+0001+02034687+0001+02034688+0001+02034689+0001+0203468A+0001+0203468B+0001+0203468C+0001+0203468D+0001"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 我方点数"
+cheat1_code = "32ff93A4+000F+020393A5+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 对方点数"
+cheat2_code = "32ff9504+0000+02039505+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 首位牌 一万"
+cheat3_code = "32ff9264+0001"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 首位牌 二万"
+cheat4_code = "32ff9264+0002"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 首位牌 三万"
+cheat5_code = "32ff9264+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 首位牌 四万"
+cheat6_code = "32ff9264+0004"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 首位牌 五万"
+cheat7_code = "32ff9264+0005"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 首位牌 六万"
+cheat8_code = "32ff9264+0006"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 首位牌 七万"
+cheat9_code = "32ff9264+0007"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 首位牌 八万"
+cheat10_code = "32ff9264+0008"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 首位牌 九万"
+cheat11_code = "32ff9264+0009"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 首位牌 一柄"
+cheat12_code = "32ff9264+0011"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 首位牌 二柄"
+cheat13_code = "32ff9264+0012"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 首位牌 三柄"
+cheat14_code = "32ff9264+0013"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 首位牌 四柄"
+cheat15_code = "32ff9264+0014"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 首位牌 五柄"
+cheat16_code = "32ff9264+0015"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 首位牌 六柄"
+cheat17_code = "32ff9264+0016"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 首位牌 七柄"
+cheat18_code = "32ff9264+0017"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 首位牌 八柄"
+cheat19_code = "32ff9264+0018"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 首位牌 九柄"
+cheat20_code = "32ff9264+0019"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 首位牌 一条"
+cheat21_code = "32ff9264+0021"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 首位牌 二条"
+cheat22_code = "32ff9264+0022"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 首位牌 三条"
+cheat23_code = "32ff9264+0023"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 首位牌 四条"
+cheat24_code = "32ff9264+0024"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 首位牌 五条"
+cheat25_code = "32ff9264+0025"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 首位牌 六条"
+cheat26_code = "32ff9264+0026"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 首位牌 七条"
+cheat27_code = "32ff9264+0027"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 首位牌 八条"
+cheat28_code = "32ff9264+0028"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 首位牌 九条"
+cheat29_code = "32ff9264+0029"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 首位牌 东风"
+cheat30_code = "32ff9264+0031"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 首位牌 南风"
+cheat31_code = "32ff9264+0032"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 首位牌 西风"
+cheat32_code = "32ff9264+0033"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 首位牌 北风"
+cheat33_code = "32ff9264+0034"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 首位牌 白板"
+cheat34_code = "32ff9264+0035"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 首位牌 发财"
+cheat35_code = "32ff9264+0036"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 首位牌 红中"
+cheat36_code = "32ff9264+0037"
+cheat36_enable = false

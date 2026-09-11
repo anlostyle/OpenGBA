@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 只数"
+cheat0_code = "32fc2ADC+0005"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 时间"
+cheat1_code = "330019ED+0009+020419EE+0009+02041A1D+0009+02041A1E+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 香蕉数"
+cheat2_code = "32fc2AD8+0063"
+cheat2_enable = false

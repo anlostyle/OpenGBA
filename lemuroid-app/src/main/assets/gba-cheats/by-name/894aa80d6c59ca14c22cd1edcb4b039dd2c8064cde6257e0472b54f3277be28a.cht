@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 调我方LP MAX"
+cheat0_code = "32fd2384+000F+02012385+0027"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 调敌方LP ZERO"
+cheat1_code = "32fd30E8+0000+020130E9+0000"
+cheat1_enable = false

@@ -1,0 +1,21 @@
+cheats = 5
+
+cheat0_desc = "direct_v1 不满度"
+cheat0_code = "33005124+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 分数"
+cheat1_code = "330030E0+00FA+020430E1+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 风速"
+cheat2_code = "33005434+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 小时"
+cheat3_code = "3300512C+000C"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 分钟"
+cheat4_code = "3300512D+002D"
+cheat4_enable = false

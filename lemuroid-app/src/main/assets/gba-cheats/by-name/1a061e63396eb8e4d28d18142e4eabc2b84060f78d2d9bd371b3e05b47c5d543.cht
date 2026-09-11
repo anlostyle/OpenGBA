@@ -1,0 +1,41 @@
+cheats = 10
+
+cheat0_desc = "direct_v1 大绝招"
+cheat0_code = "33007831+0009"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血"
+cheat1_code = "33007825+0005"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 只数"
+cheat2_code = "33007822+0009"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐身"
+cheat3_code = "3300781E+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 气力槽全满"
+cheat4_code = "33007828+0078+02047829+0078+0204782A+0078"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 快速集气"
+cheat5_code = "33007827+0078"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 属性 火"
+cheat6_code = "33007823+0000"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 属性 冰"
+cheat7_code = "33007823+0001"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 属性 土"
+cheat8_code = "33007823+0002"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 杀敌数"
+cheat9_code = "3300783A+0064"
+cheat9_enable = false

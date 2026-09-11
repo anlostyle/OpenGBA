@@ -1,0 +1,33 @@
+cheats = 8
+
+cheat0_desc = "direct_v1 无限续关"
+cheat0_code = "33006BD0+0009"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 体力不减"
+cheat1_code = "330073F8+00E7+020473F9+0003+02046CCE+00E7+02046CCF+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 机枪子弹不减"
+cheat2_code = "330072E8+00E7+020472E9+0003+02046CEE+00E7+02046CEF+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 电机枪能量不减"
+cheat3_code = "33006CF4+0064+020472EE+0064"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 生命"
+cheat4_code = "33002CCA+00E7+02042CCB+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 拥有全部武器"
+cheat5_code = "33002D04+0001+02042D05+0000+02042D06+0001+02042D07+0000"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 子弹全满"
+cheat6_code = "33002CEA+00E7+02042CEB+0003+02042CEC+00E7+02042CED+0003+02042CEE+00E7+02042CEF+0003+02042CF0+00E7+02042CF1+0003+02042CF2+00E7+02042CF3+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 光环"
+cheat7_code = "33002CF4+00FF"
+cheat7_enable = false

@@ -12,6 +12,7 @@ import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.shared.input.InputDeviceManager
 import com.swordfish.lemuroid.app.shared.input.InputKey
 import com.swordfish.lemuroid.app.shared.input.inputclass.getInputClass
+import com.swordfish.lemuroid.app.shared.input.normalizeInputKeyCode
 import com.swordfish.lemuroid.app.shared.settings.ControllerConfigsManager
 import com.swordfish.lemuroid.app.shared.settings.GameShortcutType
 import com.swordfish.lemuroid.common.coroutines.launchOnState
@@ -57,6 +58,7 @@ class GameViewModelInput(
     private val tilt: GameViewModelTilt,
     private val sideEffects: GameViewModelSideEffects,
     private val scope: CoroutineScope,
+    private val onGameplayInput: () -> Unit,
 ) : DefaultLifecycleObserver {
     private data class SingleAxisEvent(val axis: Int, val action: Int, val keyCode: Int, val port: Int)
 
@@ -280,12 +282,13 @@ class GameViewModelInput(
 
     private suspend fun initializeGamePadKeysFlow() {
         val pressedKeys = mutableSetOf<Int>()
+        val consumedKeys = mutableSetOf<Int>()
 
         val filteredKeyEvents =
             keyEventsFlow
                 .filterNotNull()
                 .filter { it.repeatCount == 0 }
-                .map { Triple(it.device, it.action, it.keyCode) }
+                .map { Triple(it.device, it.action, it.device.normalizeInputKeyCode(it.keyCode)) }
                 .distinctUntilChanged()
 
         val combinedObservable =
@@ -298,40 +301,96 @@ class GameViewModelInput(
             )
 
         combinedObservable
-            .onStart { pressedKeys.clear() }
-            .onCompletion { pressedKeys.clear() }
+            .onStart {
+                pressedKeys.clear()
+                consumedKeys.clear()
+            }
+            .onCompletion {
+                pressedKeys.clear()
+                consumedKeys.clear()
+            }
             .safeCollect { (shortcuts, ports, bindings, event) ->
                 val (device, action, keyCode) = event
                 val port = ports(device)
                 val bindKeyCode = bindings(device)[InputKey(keyCode)]?.keyCode ?: keyCode
 
                 if (port == 0) {
-                    if (bindKeyCode == KeyEvent.KEYCODE_BUTTON_MODE && action == KeyEvent.ACTION_DOWN) {
-                        sideEffects.showMenu(tilt, this)
-                        return@safeCollect
-                    }
-
+                    val keysBeforeEvent = pressedKeys.toSet()
                     if (action == KeyEvent.ACTION_DOWN) {
                         pressedKeys.add(keyCode)
                     } else if (action == KeyEvent.ACTION_UP) {
                         pressedKeys.remove(keyCode)
                     }
 
-                    shortcuts[device]?.forEach { shortcut ->
-                        if (shortcut.keys.isNotEmpty() && pressedKeys.containsAll(shortcut.keys)) {
-                            when (shortcut.type) {
+                    val deviceShortcuts = shortcuts[device].orEmpty()
+                    val holds =
+                        deviceShortcuts.filter {
+                            it.keys.isNotEmpty() &&
+                                (it.type == GameShortcutType.REWIND ||
+                                    it.type == GameShortcutType.FORWARD ||
+                                    it.type == GameShortcutType.TOGGLE_FAST_FORWARD)
+                        }
+
+                    if (action == KeyEvent.ACTION_DOWN) {
+                        val matchedHold =
+                            holds.firstOrNull {
+                                keyCode in it.keys && pressedKeys.containsAll(it.keys)
+                            }
+                        if (matchedHold != null) {
+                            when (matchedHold.type) {
+                                GameShortcutType.REWIND -> sideEffects.startRewind()
+                                GameShortcutType.FORWARD -> sideEffects.startForward()
+                                GameShortcutType.TOGGLE_FAST_FORWARD -> sideEffects.startFastForward()
+                                else -> Unit
+                            }
+                            consumedKeys.add(keyCode)
+                            return@safeCollect
+                        }
+
+                        val matchedAction =
+                            deviceShortcuts.firstOrNull {
+                                it.keys.isNotEmpty() && pressedKeys.containsAll(it.keys) &&
+                                    it.type != GameShortcutType.REWIND &&
+                                    it.type != GameShortcutType.FORWARD &&
+                                    it.type != GameShortcutType.TOGGLE_FAST_FORWARD
+                            }
+                        if (matchedAction != null) {
+                            when (matchedAction.type) {
                                 GameShortcutType.MENU -> sideEffects.showMenu(tilt, this)
                                 GameShortcutType.QUICK_LOAD -> sideEffects.loadQuickSave()
                                 GameShortcutType.QUICK_SAVE -> sideEffects.saveQuickSave()
-                                GameShortcutType.TOGGLE_FAST_FORWARD -> sideEffects.toggleFastForward()
+                                GameShortcutType.PERSISTENT_FAST_FORWARD -> sideEffects.toggleFastForward()
+                                GameShortcutType.TOGGLE_FAST_FORWARD -> Unit
+                                GameShortcutType.REWIND -> Unit
+                                GameShortcutType.FORWARD -> Unit
                             }
+                            consumedKeys.add(keyCode)
                             return@safeCollect
                         }
+                    } else if (action == KeyEvent.ACTION_UP) {
+                        val releasedHold =
+                            holds.firstOrNull {
+                                keyCode in it.keys && keysBeforeEvent.containsAll(it.keys)
+                            }
+                        if (releasedHold != null) {
+                            when (releasedHold.type) {
+                                GameShortcutType.REWIND -> sideEffects.stopRewind()
+                                GameShortcutType.FORWARD -> sideEffects.stopForward()
+                                GameShortcutType.TOGGLE_FAST_FORWARD -> sideEffects.stopFastForward()
+                                else -> Unit
+                            }
+                            consumedKeys.remove(keyCode)
+                            return@safeCollect
+                        }
+                        if (consumedKeys.remove(keyCode)) return@safeCollect
                     }
                 }
 
-                port?.let {
-                    retroGameView.retroGameView?.sendKeyEvent(action, bindKeyCode, it)
+                if (bindKeyCode != KeyEvent.KEYCODE_UNKNOWN) {
+                    onGameplayInput()
+                    port?.let {
+                        retroGameView.retroGameView?.sendKeyEvent(action, bindKeyCode, it)
+                    }
                 }
             }
     }
@@ -381,6 +440,7 @@ class GameViewModelInput(
         events
             .safeCollect { (ports, event) ->
                 ports(event.device)?.let {
+                    onGameplayInput()
                     sendStickMotions(event, it)
                 }
             }

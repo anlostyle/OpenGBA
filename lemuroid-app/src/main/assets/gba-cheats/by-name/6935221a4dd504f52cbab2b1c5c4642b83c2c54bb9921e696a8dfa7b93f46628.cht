@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 棋数"
+cheat0_code = "32fd6B38+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 敌人棋数"
+cheat1_code = "32fd6B34+0000"
+cheat1_enable = false

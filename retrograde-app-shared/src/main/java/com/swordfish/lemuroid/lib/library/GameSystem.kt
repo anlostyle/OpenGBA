@@ -1297,7 +1297,7 @@ data class GameSystem(
                     uniqueExtensions = listOf("3ds"),
                     hasTouchScreen = true,
                 ),
-            )
+            ).filter { it.id == SystemID.GBA }
 
         private val byIdCache by lazy { mapOf(*SYSTEMS.map { it.id.dbname to it }.toTypedArray()) }
         private val byExtensionCache by lazy {

@@ -42,7 +42,11 @@ class InputBindingUpdater(private val inputDeviceManager: InputDeviceManager, in
 
         runBlocking {
             GlobalScope.async {
-                inputDeviceManager.updateBinding(event.device, RetroKey(extras.retroKey), InputKey(event.keyCode))
+                inputDeviceManager.updateBinding(
+                    event.device,
+                    RetroKey(extras.retroKey),
+                    InputKey(event.device.normalizeInputKeyCode(event.keyCode)),
+                )
             }
         }
 

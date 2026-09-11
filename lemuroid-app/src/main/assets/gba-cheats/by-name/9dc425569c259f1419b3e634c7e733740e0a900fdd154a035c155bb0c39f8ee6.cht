@@ -1,0 +1,37 @@
+cheats = 9
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "33007D61+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 命数"
+cheat1_code = "33007D67+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 血"
+cheat2_code = "33007D65+0006"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐身"
+cheat3_code = "33000FDB+0027"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 钱"
+cheat4_code = "33007D80+00C8"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 武器"
+cheat5_code = "33000FD7+0002"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 机器人HP OK"
+cheat6_code = "33002C72+0009+02042C73+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 敌机器人HP 0"
+cheat7_code = "33003460+0001"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 子弹 999"
+cheat8_code = "33002C74+00E7+02042C75+0003"
+cheat8_enable = false

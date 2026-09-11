@@ -95,7 +95,7 @@ class LemuroidLibrary(
         val entries = batch.map { fetchEntriesFromDatabase(it) }
 
         val existingEntries = entries.filterIsInstance<ScanEntry.GameFile>()
-        handleExistingEntries(existingEntries, startedAtMs)
+        handleExistingEntries(existingEntries, startedAtMs, provider, gameMetadata)
 
         val newEntries =
             entries.filterIsInstance<ScanEntry.File>()
@@ -121,21 +121,37 @@ class LemuroidLibrary(
         }
     }
 
-    private fun handleExistingEntries(
+    private suspend fun handleExistingEntries(
         entries: List<ScanEntry.GameFile>,
         startedAtMs: Long,
+        provider: StorageProvider,
+        metadataProvider: GameMetadataProvider,
     ) {
-        updateGames(entries, startedAtMs)
+        updateGames(entries, startedAtMs, provider, metadataProvider)
         updateDataFiles(entries, startedAtMs)
     }
 
-    private fun updateGames(
+    private suspend fun updateGames(
         entries: List<ScanEntry.GameFile>,
         startedAtMs: Long,
+        provider: StorageProvider,
+        metadataProvider: GameMetadataProvider,
     ) {
         val updatedGames =
             entries
-                .map { it.game.copy(lastIndexedAt = startedAtMs) }
+                .map { entry ->
+                    val storageFile = safeStorageFile(provider, entry.file.primaryFile)
+                    val metadata = storageFile?.let { metadataProvider.retrieveMetadata(it) }
+                    entry.game.copy(
+                        title = metadata?.name ?: entry.game.title,
+                        displayTitle = displayTitle(entry.file, provider, metadata),
+                        romCrc = storageFile?.crc,
+                        metadataCrcMatched = metadata?.crcMatched == true,
+                        developer = metadata?.developer ?: entry.game.developer,
+                        lastIndexedAt = startedAtMs,
+                        coverFrontUrl = provider.findArtworkUri(entry.file.primaryFile)?.toString(),
+                    )
+                }
 
         updatedGames
             .forEach { Timber.d("Updating game: $it") }
@@ -240,7 +256,7 @@ class LemuroidLibrary(
                 .mapNotNull { safeStorageFile(provider, it) }
                 .mapNotNull { storageFile ->
                     val metadata = metadataProvider.retrieveMetadata(storageFile)
-                    convertGameMetadataToGame(groupedStorageFile, storageFile, metadata, startedAtMs)
+                    convertGameMetadataToGame(groupedStorageFile, storageFile, provider, metadata, startedAtMs)
                 }
                 .firstOrNull()
 
@@ -278,6 +294,7 @@ class LemuroidLibrary(
     private fun convertGameMetadataToGame(
         groupedStorageFile: GroupedStorageFiles,
         storageFile: StorageFile,
+        provider: StorageProvider,
         gameMetadata: GameMetadata?,
         lastIndexedAt: Long,
     ): Game? {
@@ -299,12 +316,26 @@ class LemuroidLibrary(
             fileName = fileName,
             fileUri = groupedStorageFile.primaryFile.uri.toString(),
             title = gameMetadata.name ?: groupedStorageFile.primaryFile.name,
+            displayTitle = displayTitle(groupedStorageFile, provider, gameMetadata),
+            romCrc = storageFile.crc,
+            metadataCrcMatched = gameMetadata.crcMatched,
             systemId = gameSystem.id.dbname,
             developer = gameMetadata.developer,
-            coverFrontUrl = gameMetadata.thumbnail,
+            coverFrontUrl = provider.findArtworkUri(groupedStorageFile.primaryFile)?.toString(),
             lastIndexedAt = lastIndexedAt,
         )
     }
+
+    private fun displayTitle(
+        groupedStorageFile: GroupedStorageFiles,
+        provider: StorageProvider,
+        metadata: GameMetadata?,
+    ): String =
+        com.swordfish.lemuroid.lib.storage.local.PegasusMetadataParser.preferredTitle(
+            provider.findGameTitle(groupedStorageFile.primaryFile),
+            groupedStorageFile.primaryFile.name,
+            metadata?.name,
+        )
 
     private fun removeDeletedDataFiles(startedAtMs: Long) {
         Timber.d("Deleting data files from db before: $startedAtMs")

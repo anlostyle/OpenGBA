@@ -1,0 +1,21 @@
+cheats = 5
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "330055A8+0040+020455A9+0038"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 放雷数"
+cheat1_code = "32fc0051+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 雷威力"
+cheat2_code = "32fc0053+0009"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 速度"
+cheat3_code = "32fc004D+000A"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 只数"
+cheat4_code = "32fc8098+0009"
+cheat4_enable = false

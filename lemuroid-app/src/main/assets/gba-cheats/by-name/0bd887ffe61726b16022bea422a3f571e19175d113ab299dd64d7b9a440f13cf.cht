@@ -1,0 +1,149 @@
+cheats = 37
+
+cheat0_desc = "direct_v1 附加项开启"
+cheat0_code = "32feC030+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 职业殿堂全满"
+cheat1_code = "32feC2D6+0084+0202C2D7+0084+0202C2D8+0084+0202C2D9+0083+0202C2DA+0084+0202C2DB+0083+0202C2DC+0083+0202C2DD+0082+0202C2DE+0084+0202C2DF+0082+0202C2E0+0082+0202C2E1+0082+0202C2E2+0082+0202C2E3+0082+0202C2E4+0082+0202C2E5+0082+0202C2E6+0082+0202C2E7+0084+0202C2E8+0082+0202C2E9+0083+0202C2EA+0084+0202C2EB+0083+0202C2EC+0084+0202C2ED+0084+0202C2EE+0082"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 梦殿堂全满"
+cheat2_code = "32feC308+00FF+0202C309+00FF+0202C30A+00FF+0202C30B+00FF+0202C30C+00FF+0202C30D+00FF+0202C318+00FF+0202C319+00FF+0202C31A+00FF+0202C31B+00FF+0202C31C+00FF+0202C31D+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 金钱"
+cheat3_code = "32feC6B8+00FF+0202C6B9+00C9+0202C6BA+009A+0202C6BB+003B"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 全弓箭"
+cheat4_code = "32feC640+0063+0202C641+0063+0202C642+0063+0202C643+0063+0202C644+0063+0202C645+0063+0202C646+0063+0202C647+0063+0202C648+0063+0202C649+0063+0202C64A+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全道具"
+cheat5_code = "32feC650+0063+0202C651+0063+0202C652+0063+0202C653+0063+0202C654+0063+0202C655+0063+0202C656+0063+0202C657+0063+0202C658+0063+0202C659+0063+0202C65A+0063+0202C65B+0063"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 等级"
+cheat6_code = "32feC66E+0036"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 评价点数"
+cheat7_code = "32feC670+003F+0202C671+0042+0202C672+000F"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 家族气氛"
+cheat8_code = "32feC6AE+00FF"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 成员1知力"
+cheat9_code = "32feC714+0000+0202C715+0012"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 成员1体力"
+cheat10_code = "32feC716+0000+0202C717+0012"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 成员1魅力"
+cheat11_code = "32feC718+0000+0202C719+0012"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 成员1运气"
+cheat12_code = "32feC71A+0000+0202C71B+0012"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 成员1情绪"
+cheat13_code = "32feC71E+00FF"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 成员1红心"
+cheat14_code = "32feC71F+00FF"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 成员1信仰"
+cheat15_code = "32feC729+00FF+0202C72A+00FF"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 成员2知力"
+cheat16_code = "32feCAE4+0000+0202CAE5+0012"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 成员2体力"
+cheat17_code = "32feCAE6+0000+0202CAE7+0012"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 成员2魅力"
+cheat18_code = "32feCAE8+0000+0202CAE9+0012"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 成员2运气"
+cheat19_code = "32feCAEA+0000+0202CAEB+0012"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 成员2情绪"
+cheat20_code = "32feCAEE+00FF"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 成员2红心"
+cheat21_code = "32feCAEF+00FF"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 成员2信仰"
+cheat22_code = "32feCAF9+00FF+0202CAFA+00FF"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 成员3知力"
+cheat23_code = "32feCEB4+0000+0202CEB5+0012"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 成员3体力"
+cheat24_code = "32feCEB6+0000+0202CEB7+0012"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 成员3魅力"
+cheat25_code = "32feCEB8+0000+0202CEB9+0012"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 成员3运气"
+cheat26_code = "32feCEBA+0000+0202CEBB+0012"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 成员3情绪"
+cheat27_code = "32feCEBE+00FF"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 成员3红心"
+cheat28_code = "32feCEBF+00FF"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 成员3信仰"
+cheat29_code = "32feCEC9+00FF+0202CECA+00FF"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 成员4知力"
+cheat30_code = "32feD284+0000+0202D285+0012"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 成员4体力"
+cheat31_code = "32feD286+0000+0202D287+0012"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 成员4魅力"
+cheat32_code = "32feD288+0000+0202D289+0012"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 成员4运气"
+cheat33_code = "32feD28A+0000+0202D28B+0012"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 成员4情绪"
+cheat34_code = "32feD28E+00FF"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 成员4红心"
+cheat35_code = "32feD28F+00FF"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 成员4信仰"
+cheat36_code = "32feD299+00FF+0202D29A+00FF"
+cheat36_enable = false

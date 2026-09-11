@@ -1,0 +1,37 @@
+cheats = 9
+
+cheat0_desc = "direct_v1 生命"
+cheat0_code = "33004F8C+001C"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 人数"
+cheat1_code = "32fd630C+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 隐身"
+cheat2_code = "33004F8D+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 零件"
+cheat3_code = "32fd632E+00E7+32fd632F+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 选人 Rockman"
+cheat4_code = "32fd6304+0000"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 选人 Forte"
+cheat5_code = "32fd6304+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全武器"
+cheat6_code = "32fd6310+00FF+32fd6311+0000+32fd6312+00FF+32fd6313+0000+32fd6314+00FF+32fd6315+0000+32fd6316+00FF+32fd6317+0000+32fd6318+00FF+32fd6319+0000+32fd631A+00FF+32fd631B+0000+32fd631C+00FF+32fd631D+0000+32fd631E+00FF+32fd631F+0000+32fd6320+00FF+32fd6321+0000+32fd6322+00FF+32fd6323+0000+32fd6324+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全道具"
+cheat7_code = "32fd6325+00FF+32fd6326+00FF+32fd6327+00FF"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全资料"
+cheat8_code = "32fe7DA0+00FF+32fe7DA1+00FF+32fe7DA2+00FF+32fe7DA3+00FF+32fe7DA4+00FF+32fe7DA5+00FF+32fe7DA6+00FF+32fe7DA7+00FF+32fe7DA8+00FF+32fe7DA9+00FF+32fe7DAA+00FF+32fe7DAB+00FF+32fe7DAC+00FF"
+cheat8_enable = false

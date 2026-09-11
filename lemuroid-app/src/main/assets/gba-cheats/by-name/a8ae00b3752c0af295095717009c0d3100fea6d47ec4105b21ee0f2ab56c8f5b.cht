@@ -1,0 +1,77 @@
+cheats = 19
+
+cheat0_desc = "direct_v1 速度"
+cheat0_code = "3300009A+0032"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 时间"
+cheat1_code = "32fdBFB4+0000+0201BFB5+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 角色 角色1"
+cheat2_code = "32fdBCE6+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 角色 角色2"
+cheat3_code = "32fdBCE6+0001"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 角色 角色3"
+cheat4_code = "32fdBCE6+0002"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 角色 角色4"
+cheat5_code = "32fdBCE6+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 角色 角色5"
+cheat6_code = "32fdBCE6+0004"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 角色 角色6"
+cheat7_code = "32fdBCE6+0005"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 角色 角色7"
+cheat8_code = "32fdBCE6+0006"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 角色 角色8"
+cheat9_code = "32fdBCE6+0007"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 角色 角色9"
+cheat10_code = "32fdBCE6+0008"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 角色 角色10"
+cheat11_code = "32fdBCE6+0009"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 角色 角色11"
+cheat12_code = "32fdBCE6+000A"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 角色 角色12"
+cheat13_code = "32fdBCE6+000B"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 全车牌"
+cheat14_code = "32fdBDB6+00FF"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 揭示版全开"
+cheat15_code = "32fdBDB8+00FF+0201BDB9+00FF"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 S级"
+cheat16_code = "32fdBE58+0002"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 金钱999"
+cheat17_code = "32fdBE64+00E7+0201BE65+0003"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 金币999"
+cheat18_code = "32fdBFBE+00E7+0201BFBF+0003"
+cheat18_enable = false

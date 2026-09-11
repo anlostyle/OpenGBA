@@ -1,0 +1,325 @@
+cheats = 81
+
+cheat0_desc = "direct_v1 全隐藏人物"
+cheat0_code = "32fcDAC9+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 全员换装"
+cheat1_code = "32fcDE18+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 财宝记录开启"
+cheat2_code = "32fcDAC9+0001"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 财宝记录全满"
+cheat3_code = "32fcD89A+0099+0200D89B+0009+0200D89C+0099+0200D89D+0009+0200D89E+0099+0200D89F+0009+0200D8A0+0099+0200D8A1+0009+0200D8A2+0099+0200D8A3+0009+0200D8A4+0099+0200D8A5+0009+0200D8A6+0099+0200D8A7+0009+0200D8A8+0099+0200D8A9+0009+0200D8AA+0099+0200D8AB+0009+0200D8AC+0099+0200D8AD+0009+0200D8AE+0099+0200D8AF+0009+0200D8B0+0099+0200D8B1+0009+0200D8B2+0099+0200D8B3+0009+0200D8B4+0099+0200D8B5+0009+0200D8B6+0099+0200D8B7+0009+0200D8B8+0099+0200D8B9+0009+0200D8BA+0099+0200D8BB+0009+0200D8BC+0099+0200D8BD+0009+0200D8BE+0099+0200D8BF+0009+0200D8C0+0099+0200D8C1+0009+0200D8C2+0099+0200D8C3+0009+0200D8C4+0099+0200D8C5+0009+0200D8C6+0099+0200D8C7+0009+0200D8C8+0099+0200D8C9+0009+0200D8CA+0099+0200D8CB+0009+0200D8CC+0099+0200D8CD+0009+0200D8CE+0099+0200D8CF+0009+0200D8D0+0099+0200D8D1+0009+0200D8D2+0099+0200D8D3+0009+0200D8D4+0099+0200D8D5+0009+0200D8D6+0099+0200D8D7+0009+0200D8D8+0099+0200D8D9+0009+0200D8DA+0099+0200D8DB+0009+0200D8DC+0099+0200D8DD+0009+0200D8DE+0099+0200D8DF+0009+0200D8E0+0099+0200D8E1+0009+0200D8E2+0099+0200D8E3+0009+0200D8E4+0099+0200D8E5+0009+0200D8E6+0099+0200D8E7+0009+0200D8E8+0099+0200D8E9+0009+0200D8EA+0099+0200D8EB+0009+0200D8EC+0099+0200D8ED+0009+0200D8EE+0099+0200D8EF+0009+0200D8F0+0099+0200D8F1+0009+0200D8F2+0099+0200D8F3+0009+0200D8F4+0099+0200D8F5+0009+0200D8F6+0099+0200D8F7+0009+0200D8F8+0099+0200D8F9+0009+0200D8FA+0099+0200D8FB+0009+0200D8FC+0099+0200D8FD+0009+0200D8FE+0099+0200D8FF+0009+0200D900+0099+0200D901+0009+0200D902+0099+0200D903+0009+0200D904+0099+0200D905+0009+0200D906+0099+0200D907+0009+0200D908+0099+0200D909+0009+0200D90A+0099+0200D90B+0009+0200D90C+0099+0200D90D+0009+0200D90E+0099+0200D90F+0009+0200D910+0099+0200D911+0009+0200D912+0099+0200D913+0009+0200D914+0099+0200D915+0009+0200D916+0099+0200D917+0009+0200D918+0099+0200D919+0009+0200D91A+0099+0200D91B+0009+0200D91C+0099+0200D91D+0009+0200D91E+0099+0200D91F+0009+0200D920+0099+0200D921+0009+0200D922+0099+0200D923+0009+0200D924+0099+0200D925+0009+0200D926+0099+0200D927+0009+0200D928+0099+0200D929+0009+0200D92A+0099+0200D92B+0009+0200D92C+0099+0200D92D+0009+0200D92E+0099+0200D92F+0009+0200D930+0099+0200D931+0009+0200D932+0099+0200D933+0009+0200D934+0099+0200D935+0009+0200D936+0099+0200D937+0009+0200D938+0099+0200D939+0009+0200D93A+0099+0200D93B+0009+0200D93C+0099+0200D93D+0009+0200D93E+0099+0200D93F+0009+0200D940+0099+0200D941+0009+0200D942+0099+0200D943+0009+0200D944+0099+0200D945+0009+0200D946+0099+0200D947+0009+0200D948+0099+0200D949+0009+0200D94A+0099+0200D94B+0009+0200D94C+0099+0200D94D+0009+0200D94E+0099+0200D94F+0009+0200D950+0099+0200D951+0009+0200D952+0099+0200D953+0009+0200D954+0099+0200D955+0009+0200D956+0099+0200D957+0009+0200D958+0099+0200D959+0009+0200D95A+0099+0200D95B+0009+0200D95C+0099+0200D95D+0009+0200D95E+0099+0200D95F+0009+0200D960+0099+0200D961+0009"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 敌人记录全满"
+cheat4_code = "32fcDA98+00FF+0200DA99+00FF+0200DA9A+00FF+0200DA9B+00FF+0200DA9C+00FF+0200DA9D+00FF+0200DA9E+00FF+0200DA9F+00FF+0200DAA0+00FF+0200DAA1+00FF+0200DAA2+00FF+0200DAA3+00FF+0200DAA4+00FF+0200DAA5+00FF+0200DAA6+00FF+0200DAA7+00FF+0200DAA8+00FF+0200DAA9+00FF+0200DAAA+00FF+0200DAAB+00FF+0200DAAC+00FF+0200DAAD+00FF+0200DAAE+00FF+0200DAAF+00FF+0200DAB0+00FF+0200DAB1+00FF+0200DAB2+00FF+0200DAB3+00FF+0200DAB4+00FF+0200DAB5+00FF+0200DAB6+00FF+0200DAB7+00FF+0200DAB8+00FF+0200DAB9+00FF+0200DABA+00FF+0200DABB+00FF+0200DABC+00FF+0200DABD+00FF+0200DABE+00FF+0200DABF+00FF+0200DAC0+00FF+0200DAC1+00FF+0200DAC2+00FF+0200DAC3+00FF+0200DAC4+00FF+0200DAC5+00FF+0200DAC6+00FF+0200DAC7+00FF"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 玩家所持金"
+cheat5_code = "32fd8220+009F+02018221+0086+02018222+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 玩家HP"
+cheat6_code = "32fd8228+000F+02018229+0027"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 玩家HP上限"
+cheat7_code = "32fd822A+000F+0201822B+0027"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 玩家攻击力"
+cheat8_code = "32fd822E+00FF"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 玩家敏捷度"
+cheat9_code = "32fd8230+00FF"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 玩家人物 路飞"
+cheat10_code = "32fd8234+0000"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 玩家人物 索隆"
+cheat11_code = "32fd8234+0001"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 玩家人物 香吉士"
+cheat12_code = "32fd8234+0002"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 玩家人物 乔巴"
+cheat13_code = "32fd8234+0003"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 玩家人物 乌索普"
+cheat14_code = "32fd8234+0004"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 玩家人物 薇薇"
+cheat15_code = "32fd8234+0005"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 玩家MP"
+cheat16_code = "32fd823E+00E7+0201823F+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 玩家MP上限"
+cheat17_code = "32fd8240+00E7+02018241+0003"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 玩家移动力"
+cheat18_code = "32fd8243+0063"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 玩家移动上限"
+cheat19_code = "32fd8245+0063"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 玩家满肉"
+cheat20_code = "32fd824B+00FF"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 玩家首位物品 肉"
+cheat21_code = "32fd8246+0001"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 玩家首位物品 高级海牛肉"
+cheat22_code = "32fd8246+0002"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 玩家首位物品 钻石(80万贝里)"
+cheat23_code = "32fd8246+0003"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 玩家首位物品 黄金(100万贝里)"
+cheat24_code = "32fd8246+0004"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 玩家首位物品 宝石箱"
+cheat25_code = "32fd8246+0005"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 玩家首位物品 藏宝图的宝石"
+cheat26_code = "32fd8246+0006"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 玩家首位物品 赞多路"
+cheat27_code = "32fd8246+0007"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 玩家首位物品 库奇饮料"
+cheat28_code = "32fd8246+0008"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 玩家首位物品 毒蘑菇"
+cheat29_code = "32fd8246+0009"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 玩家首位物品 出租欺骗券"
+cheat30_code = "32fd8246+000A"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 玩家首位物品 望选镜"
+cheat31_code = "32fd8246+000B"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 玩家首位物品 海贼向标"
+cheat32_code = "32fd8246+000C"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 玩家首位物品 小船改造零件"
+cheat33_code = "32fd8246+000D"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 玩家首位物品 超级改造零件"
+cheat34_code = "32fd8246+000E"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 玩家首位物品 乌索普铁锤"
+cheat35_code = "32fd8246+000F"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 玩家首位物品 雪走"
+cheat36_code = "32fd8246+0010"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 玩家首位物品 三代鬼彻"
+cheat37_code = "32fd8246+0011"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 玩家首位物品 海贼饭盒"
+cheat38_code = "32fd8246+0012"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 玩家首位物品 海贼内幕"
+cheat39_code = "32fd8246+0013"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 玩家首位物品 香吉士汤水"
+cheat40_code = "32fd8246+0014"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 玩家首位物品 回复药DX"
+cheat41_code = "32fd8246+0015"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 玩家首位物品 万能药"
+cheat42_code = "32fd8246+0016"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 玩家首位物品 大家药"
+cheat43_code = "32fd8246+0017"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 玩家首位物品 快速咬"
+cheat44_code = "32fd8246+0018"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 玩家首位物品 战斗药"
+cheat45_code = "32fd8246+0019"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 玩家首位物品 加强攻击药"
+cheat46_code = "32fd8246+001A"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 玩家首位物品 无用药"
+cheat47_code = "32fd8246+001B"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 玩家首位物品 奇迹之药"
+cheat48_code = "32fd8246+001C"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 玩家首位物品 脚力值"
+cheat49_code = "32fd8246+001D"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 玩家首位物品 重量值"
+cheat50_code = "32fd8246+001E"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 玩家首位物品 跳跃值"
+cheat51_code = "32fd8246+001F"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 玩家首位物品 防御值"
+cheat52_code = "32fd8246+0020"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 玩家首位物品 腕力值"
+cheat53_code = "32fd8246+0021"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 玩家首位物品 脑力值"
+cheat54_code = "32fd8246+0022"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 玩家首位物品 铅星"
+cheat55_code = "32fd8246+0023"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 玩家首位物品 火药星"
+cheat56_code = "32fd8246+0024"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 玩家首位物品 火炎星"
+cheat57_code = "32fd8246+0025"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 玩家首位物品 Miss星一"
+cheat58_code = "32fd8246+0026"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 玩家首位物品 哲夫"
+cheat59_code = "32fd8246+0027"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 玩家首位物品 药品"
+cheat60_code = "32fd8246+0028"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 玩家首位物品 大漩涡"
+cheat61_code = "32fd8246+0029"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 玩家首位物品 超级卡鲁"
+cheat62_code = "32fd8246+002A"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 玩家首位物品 天侯棒"
+cheat63_code = "32fd8246+002B"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 玩家首位物品 加速器1"
+cheat64_code = "32fd8246+002C"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 玩家首位物品 加速器2"
+cheat65_code = "32fd8246+002D"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 玩家首位物品 加速器3"
+cheat66_code = "32fd8246+002E"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 玩家首位物品 珍珠(40贝里)"
+cheat67_code = "32fd8246+002F"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 玩家首位物品 5万贝里"
+cheat68_code = "32fd8246+0030"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 玩家首位物品 10万贝里"
+cheat69_code = "32fd8246+0031"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 玩家首位物品 15万贝里"
+cheat70_code = "32fd8246+0032"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 玩家首位物品 20万贝里"
+cheat71_code = "32fd8246+0033"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 玩家首位物品 30万贝里"
+cheat72_code = "32fd8246+0034"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 玩家首位物品 40万贝里"
+cheat73_code = "32fd8246+0035"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 玩家首位物品 50万贝里"
+cheat74_code = "32fd8246+0036"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 玩家首位物品 60万贝里"
+cheat75_code = "32fd8246+0037"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 玩家首位物品 移动力+1"
+cheat76_code = "32fd8246+0038"
+cheat76_enable = false
+
+cheat77_desc = "direct_v1 玩家首位物品 海贼汤"
+cheat77_code = "32fd8246+0039"
+cheat77_enable = false
+
+cheat78_desc = "direct_v1 全员满HP"
+cheat78_code = "32fd8228+000F+02018229+0027+02018284+000F+02018285+0027+020182E0+000F+020182E1+0027+0201833C+000F+0201833D+0027"
+cheat78_enable = false
+
+cheat79_desc = "direct_v1 全员满MP"
+cheat79_code = "32fd823E+00E7+0201823F+0003+0201829A+00E7+0201829B+0003+020182F6+00E7+020182F7+0003+02018352+00E7+02018353+0003"
+cheat79_enable = false
+
+cheat80_desc = "direct_v1 金钱"
+cheat80_code = "32fd8220+009F+02018221+0086+02018222+0001"
+cheat80_enable = false

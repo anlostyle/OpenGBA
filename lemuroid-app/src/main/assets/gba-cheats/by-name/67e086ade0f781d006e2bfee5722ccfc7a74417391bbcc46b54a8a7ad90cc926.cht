@@ -1,0 +1,29 @@
+cheats = 7
+
+cheat0_desc = "direct_v1 快速胜利"
+cheat0_code = "32feC6E9+0001"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 购物点数"
+cheat1_code = "32fc0814+003F+02000815+0042+02000816+000F"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 全人物"
+cheat2_code = "32fc0C5A+00FF+02000C5B+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 全关卡"
+cheat3_code = "32fc0C58+00FF+02000C59+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 全赛车解锁"
+cheat4_code = "32fc0C56+00FF"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全赛车购买"
+cheat5_code = "32fc081A+00FF+0200081B+00FF"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全强化项解锁"
+cheat6_code = "32fc0C35+00FF+02000C36+00FF+02000C37+00FF+02000C38+00FF+02000C39+00FF+02000C3A+00FF+02000C3B+00FF+02000C3C+00FF+02000C3D+00FF+02000C3E+00FF+02000C3F+00FF+02000C40+00FF+02000C41+00FF+02000C42+00FF+02000C43+00FF+02000C44+00FF+02000C45+00FF+02000C46+00FF+02000C47+00FF+02000C48+00FF+02000C49+00FF+02000C4A+00FF+02000C4B+00FF+02000C4C+00FF+02000C4D+00FF+02000C4E+00FF+02000C4F+00FF+02000C50+00FF"
+cheat6_enable = false

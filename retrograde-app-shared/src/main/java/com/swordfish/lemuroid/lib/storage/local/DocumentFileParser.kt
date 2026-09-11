@@ -1,12 +1,14 @@
 package com.swordfish.lemuroid.lib.storage.local
 
 import android.content.Context
+import android.os.Build
 import com.swordfish.lemuroid.common.kotlin.calculateCrc32
 import com.swordfish.lemuroid.common.kotlin.toStringCRC32
 import com.swordfish.lemuroid.lib.storage.BaseStorageFile
 import com.swordfish.lemuroid.lib.storage.StorageFile
 import com.swordfish.lemuroid.lib.storage.scanner.SerialScanner
 import timber.log.Timber
+import java.nio.charset.Charset
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
 
@@ -31,9 +33,22 @@ object DocumentFileParser {
     private fun parseZipFile(
         context: Context,
         baseStorageFile: BaseStorageFile,
+    ): StorageFile =
+        runCatching { parseZipFile(context, baseStorageFile, Charsets.UTF_8) }
+            .getOrElse { error ->
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N || error !is IllegalArgumentException) {
+                    throw error
+                }
+                parseZipFile(context, baseStorageFile, Charset.forName("GBK"))
+            }
+
+    private fun parseZipFile(
+        context: Context,
+        baseStorageFile: BaseStorageFile,
+        charset: Charset,
     ): StorageFile {
         val inputStream = context.contentResolver.openInputStream(baseStorageFile.uri)
-        return ZipInputStream(inputStream).use {
+        return ZipInputStream(inputStream, charset).use {
             val gameEntry = findGameEntry(it, baseStorageFile.size)
             if (gameEntry != null) {
                 Timber.d("Handing zip file as compressed game: ${baseStorageFile.name}")
@@ -113,6 +128,7 @@ object DocumentFileParser {
         entry: ZipEntry,
         fileSize: Long,
     ): Boolean {
+        if (entry.name.endsWith(".gba", ignoreCase = true)) return true
         if (fileSize <= 0 || entry.compressedSize <= 0) return false
         return (entry.compressedSize.toFloat() / fileSize.toFloat()) > SINGLE_ARCHIVE_THRESHOLD
     }

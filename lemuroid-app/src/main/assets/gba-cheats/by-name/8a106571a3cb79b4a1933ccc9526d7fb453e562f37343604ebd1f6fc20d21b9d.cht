@@ -1,0 +1,61 @@
+cheats = 15
+
+cheat0_desc = "direct_v1 我方体力"
+cheat0_code = "32fc9B9E+0040"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 我方魔力"
+cheat1_code = "32fc9BAC+0030"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 对方体力"
+cheat2_code = "32fc9D7A+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 对方魔力"
+cheat3_code = "32fc9D88+0000"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 选关 第1关"
+cheat4_code = "32fe42F2+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 选关 第2关"
+cheat5_code = "32fe42F2+0002"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 选关 第3关"
+cheat6_code = "32fe42F2+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 选关 第4关"
+cheat7_code = "32fe42F2+0004"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 选关 第5关"
+cheat8_code = "32fe42F2+0005"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 选关 第6关"
+cheat9_code = "32fe42F2+0006"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 选关 第7关"
+cheat10_code = "32fe42F2+0007"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 选关 第8关"
+cheat11_code = "32fe42F2+0008"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 对战全人物+全赛场"
+cheat12_code = "32fe4329+00FF+0202432A+00FF"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 小游戏全开"
+cheat13_code = "32fe42FC+00FF+0202432C+00FF"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 全收集"
+cheat14_code = "32fe4324+00FF+02024325+00FF+02024326+00FF+02024327+00FF"
+cheat14_enable = false

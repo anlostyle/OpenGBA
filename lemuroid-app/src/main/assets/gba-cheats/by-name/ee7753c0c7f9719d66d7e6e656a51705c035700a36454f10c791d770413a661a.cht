@@ -1,0 +1,1489 @@
+cheats = 372
+
+cheat0_desc = "direct_v1 获得999经验"
+cheat0_code = "32fe280C+00E7+32fe280D+0003+32fe2A3C+00E7+32fe2A3D+0003+32fe2B4C+00E7+32fe2B4D+0003+32fe3CB0+00E7+32fe3CB1+0003+32fc0060+00E7+32fc0061+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 HP"
+cheat1_code = "32fe423A+00E7+32fe423B+0003+32fe423C+00E7+32fe423D+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 能力值1"
+cheat2_code = "32fe423E+00E7+32fe423F+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 能力值2"
+cheat3_code = "32fe4240+00E7+32fe4241+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 能力值3"
+cheat4_code = "32fe4242+00E7+32fe4243+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 能力值4"
+cheat5_code = "32fe4244+00E7+32fe4245+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 能力值5"
+cheat6_code = "32fe4246+00E7+32fe4247+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 第一技能PP"
+cheat7_code = "32fe27F0+0063+32fe2B30+0063+32fe3B68+0063+33006844+0063"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 血"
+cheat8_code = "32fe3B6C+002C+32fe3B6D+0001+32fe423A+002C+32fe423B+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 不遇敌"
+cheat9_code = "32fe6534+00F8"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 购买金钱"
+cheat10_code = "32ff9888+0000+32ff9889+0000+32ff988A+0000+32ff988B+0000+32ff988C+0000"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 资金不减"
+cheat11_code = "32ff9888+0000+32ff9889+0000+32ff988A+0000+32ff988B+0000"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 攻击力 MAX"
+cheat12_code = "32fe423E+00E7+32fe423F+0003"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 防御力 MAX"
+cheat13_code = "32fe4240+00E7+32fe4241+0003"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 特攻力 MAX"
+cheat14_code = "32fe4242+00E7+32fe4243+0003"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 特防力 MAX"
+cheat15_code = "32fe4244+00E7+32fe4245+0003"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 敏捷力 MAX"
+cheat16_code = "32fe4246+00E7+32fe4247+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 野生保护区内无限行动"
+cheat17_code = "1203990E+0258"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 野生保护区内精灵球无限"
+cheat18_code = "32ff990C+001E"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 物品可买99个"
+cheat19_code = "33005102+0063"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 遇到Pokemon等级 自选"
+cheat20_code = "32023FE0 ??(1-64)"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 遇到Pokemon等级 等级5"
+cheat21_code = "32fe3FE0+0005"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 遇到Pokemon等级 等级10"
+cheat22_code = "32fe3FE0+000A"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 遇到Pokemon等级 等级20"
+cheat23_code = "32fe3FE0+0014"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 遇到Pokemon等级 等级30"
+cheat24_code = "32fe3FE0+001E"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 遇到Pokemon等级 等级40"
+cheat25_code = "32fe3FE0+0028"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 遇到Pokemon等级 等级50"
+cheat26_code = "32fe3FE0+0032"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 遇到Pokemon等级 等级60"
+cheat27_code = "32fe3FE0+003C"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 遇到Pokemon等级 等级70"
+cheat28_code = "32fe3FE0+0046"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 遇到Pokemon等级 等级80"
+cheat29_code = "32fe3FE0+0050"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 遇到Pokemon等级 等级90"
+cheat30_code = "32fe3FE0+005A"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 遇到Pokemon等级 等级100"
+cheat31_code = "32fe3FE0+0064"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 Pokemon中心 大师球 MAX"
+cheat32_code = "32fe57A0+0001"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 购买的物品 001 大师球"
+cheat33_code = "3300510A+0001+3300510B+0000"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 购买的物品 002 超力怪兽球"
+cheat34_code = "3300510A+0002+3300510B+0000"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 购买的物品 003 超级球（比怪兽球更厉害些）"
+cheat35_code = "3300510A+0003+3300510B+0000"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 购买的物品 004 怪兽球（普通的球）"
+cheat36_code = "3300510A+0004+3300510B+0000"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 购买的物品 005 砂狐球（砂狐乐园专用球）"
+cheat37_code = "3300510A+0005+3300510B+0000"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 购买的物品 006 触网球（容易抓水和虫类的怪兽）"
+cheat38_code = "3300510A+0006+3300510B+0000"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 购买的物品 007 大布斯球（容易抓海底的怪兽）"
+cheat39_code = "3300510A+0007+3300510B+0000"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 购买的物品 008 尼斯道球（怪兽越弱越容易抓）"
+cheat40_code = "3300510A+0008+3300510B+0000"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 购买的物品 009 利比道球（容易抓抓过的球）"
+cheat41_code = "3300510A+0009+3300510B+0000"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 购买的物品 00A 达伊玛球（回合数越长越容易抓）"
+cheat42_code = "3300510A+000A+3300510B+0000"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 购买的物品 00B 高基石球（抓到的怪兽变亲密）"
+cheat43_code = "3300510A+000B+3300510B+0000"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 购买的物品 00C 布雷密球（珍惜怪兽球）"
+cheat44_code = "3300510A+000C+3300510B+0000"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 购买的物品 00D 伤药（体力恢复20）"
+cheat45_code = "3300510A+000D+3300510B+0000"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 购买的物品 00E 解毒药（恢复毒状态）"
+cheat46_code = "3300510A+000E+3300510B+0000"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 购买的物品 00F 烧伤恢复（恢复烧伤状态）"
+cheat47_code = "3300510A+000F+3300510B+0000"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 购买的物品 010 解冻药（恢复冻状态）"
+cheat48_code = "3300510A+0010+3300510B+0000"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 购买的物品 011 清醒药（恢复沉睡状态）"
+cheat49_code = "3300510A+0011+3300510B+0000"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 购买的物品 012 麻痹恢复（恢复麻痹状态）"
+cheat50_code = "3300510A+0012+3300510B+0000"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 购买的物品 013 恢复药（全恢复体力与所有状态）"
+cheat51_code = "3300510A+0013+3300510B+0000"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 购买的物品 014 慢谈药（体力全恢复）"
+cheat52_code = "3300510A+0014+3300510B+0000"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 购买的物品 015 伤药（体力恢复200）"
+cheat53_code = "3300510A+0015+3300510B+0000"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 购买的物品 016 好伤药（体力恢复50）"
+cheat54_code = "3300510A+0016+3300510B+0000"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 购买的物品 017 万能恢复（全部恢复）"
+cheat55_code = "3300510A+0017+3300510B+0000"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 购买的物品 018 精神片（死亡恢复体力一半）"
+cheat56_code = "3300510A+0018+3300510B+0000"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 购买的物品 019 精神草（死亡全恢复体力）"
+cheat57_code = "3300510A+0019+3300510B+0000"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 购买的物品 01A 美味水（恢复体力50）"
+cheat58_code = "3300510A+001A+3300510B+0000"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 购买的物品 01B 精神汽水（恢复体力60）"
+cheat59_code = "3300510A+001B+3300510B+0000"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 购买的物品 01C 米力液（恢复体力80）"
+cheat60_code = "3300510A+001C+3300510B+0000"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 购买的物品 01D 木木奶（恢复体力100）"
+cheat61_code = "3300510A+001D+3300510B+0000"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 购买的物品 01E 力量粉（恢复体力50，很苦粉，减底怪兽亲密度）"
+cheat62_code = "3300510A+001E+3300510B+0000"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 购买的物品 01F 力量根（恢复体力200，很苦根，减底怪兽亲密度）"
+cheat63_code = "3300510A+001F+3300510B+0000"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 购买的物品 020 万能粉（全恢复状态，非常苦的粉，大大减低与怪兽的亲密度）"
+cheat64_code = "3300510A+0020+3300510B+0000"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 购买的物品 021 复活草（死亡复活，很苦的草）"
+cheat65_code = "3300510A+0021+3300510B+0000"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 购买的物品 022 pp艾依（1种技能值恢复10）"
+cheat66_code = "3300510A+0022+3300510B+0000"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 购买的物品 023 pp力卡（1种技能值全恢复）"
+cheat67_code = "3300510A+0023+3300510B+0000"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 购买的物品 025 pp最大（1只怪兽的全部技能值全恢复）"
+cheat68_code = "3300510A+0025+3300510B+0000"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 购买的物品 026 飞音饼（恢复全部异常状态）"
+cheat69_code = "3300510A+0026+3300510B+0000"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 购买的物品 027 蓝玻璃（恢复沉睡状态，可用无限次）"
+cheat70_code = "3300510A+0027+3300510B+0000"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 购买的物品 028 黄玻璃（恢复混乱状态，可用无限次）"
+cheat71_code = "3300510A+0028+3300510B+0000"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 购买的物品 029 红玻璃（恢复颓废状态，可用无限次）"
+cheat72_code = "3300510A+0029+3300510B+0000"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 购买的物品 02A 黑玻璃（不遇野生怪兽）"
+cheat73_code = "3300510A+002A+3300510B+0000"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 购买的物品 02B 白玻璃（容易遇野生怪兽）"
+cheat74_code = "3300510A+002B+3300510B+0000"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 购买的物品 02C 树果汁（恢复体力20）"
+cheat75_code = "3300510A+002C+3300510B+0000"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 购买的物品 02D 圣是（死亡恢复全部体力，异常状态恢复）"
+cheat76_code = "3300510A+002D+3300510B+0000"
+cheat76_enable = false
+
+cheat77_desc = "direct_v1 购买的物品 02E 浅水盐（看看洞用的道具）"
+cheat77_code = "3300510A+002E+3300510B+0000"
+cheat77_enable = false
+
+cheat78_desc = "direct_v1 购买的物品 02F 浅水贝（看看洞用的道具）"
+cheat78_code = "3300510A+002F+3300510B+0000"
+cheat78_enable = false
+
+cheat79_desc = "direct_v1 购买的物品 030 红碎片（换进化石的道具）"
+cheat79_code = "3300510A+0030+3300510B+0000"
+cheat79_enable = false
+
+cheat80_desc = "direct_v1 购买的物品 031 蓝碎片（换进化石的道具）"
+cheat80_code = "3300510A+0031+3300510B+0000"
+cheat80_enable = false
+
+cheat81_desc = "direct_v1 购买的物品 032 黄碎片（换进化石的道具）"
+cheat81_code = "3300510A+0032+3300510B+0000"
+cheat81_enable = false
+
+cheat82_desc = "direct_v1 购买的物品 033 绿碎片（换进化石的道具）"
+cheat82_code = "3300510A+0033+3300510B+0000"
+cheat82_enable = false
+
+cheat83_desc = "direct_v1 购买的物品 03F 最大上升（体力基础值提高）"
+cheat83_code = "3300510A+003F+3300510B+0000"
+cheat83_enable = false
+
+cheat84_desc = "direct_v1 购买的物品 040 赞美语（攻击基础值提高）"
+cheat84_code = "3300510A+0040+3300510B+0000"
+cheat84_enable = false
+
+cheat85_desc = "direct_v1 购买的物品 041 落海夫（防御基础值提高）"
+cheat85_code = "3300510A+0041+3300510B+0000"
+cheat85_enable = false
+
+cheat86_desc = "direct_v1 购买的物品 042 因得西（敏捷基础值提高）"
+cheat86_code = "3300510A+0042+3300510B+0000"
+cheat86_enable = false
+
+cheat87_desc = "direct_v1 购买的物品 043 立麦森（特攻基础值提高）"
+cheat87_code = "3300510A+0043+3300510B+0000"
+cheat87_enable = false
+
+cheat88_desc = "direct_v1 购买的物品 044 奇异甜食（怪兽升1级）"
+cheat88_code = "3300510A+0044+3300510B+0000"
+cheat88_enable = false
+
+cheat89_desc = "direct_v1 购买的物品 045 值上升（技能值的最大值上升）"
+cheat89_code = "3300510A+0045+3300510B+0000"
+cheat89_enable = false
+
+cheat90_desc = "direct_v1 购买的物品 046 极道山果（德望基础值提高）"
+cheat90_code = "3300510A+0046+3300510B+0000"
+cheat90_enable = false
+
+cheat91_desc = "direct_v1 购买的物品 047 值最大（技能值提高到最大）"
+cheat91_code = "3300510A+0047+3300510B+0000"
+cheat91_enable = false
+
+cheat92_desc = "direct_v1 购买的物品 049 效果卡（战斗中…能避开对方的攻击，用于装备）"
+cheat92_code = "3300510A+0049+3300510B+0000"
+cheat92_enable = false
+
+cheat93_desc = "direct_v1 购买的物品 04A 清洗物（战斗中…容易命中要害，用于装备）"
+cheat93_code = "3300510A+004A+3300510B+0000"
+cheat93_enable = false
+
+cheat94_desc = "direct_v1 购买的物品 04B 布拉斯力量（战斗中…攻击力上升，用于装备）"
+cheat94_code = "3300510A+004B+3300510B+0000"
+cheat94_enable = false
+
+cheat95_desc = "direct_v1 购买的物品 04C 力道（战斗中…防御力上升，用于装备）"
+cheat95_code = "3300510A+004C+3300510B+0000"
+cheat95_enable = false
+
+cheat96_desc = "direct_v1 购买的物品 04D 敏捷力（战斗中…敏捷上升，用于装备）"
+cheat96_code = "3300510A+004D+3300510B+0000"
+cheat96_enable = false
+
+cheat97_desc = "direct_v1 购买的物品 04E 纪念打（战斗中…技能容易命中，用于装备）"
+cheat97_code = "3300510A+004E+3300510B+0000"
+cheat97_enable = false
+
+cheat98_desc = "direct_v1 购买的物品 04F 特别上升（战斗中…特攻的威力上升，用于装备）"
+cheat98_code = "3300510A+004F+3300510B+0000"
+cheat98_enable = false
+
+cheat99_desc = "direct_v1 购买的物品 050 皮皮木偶（在战斗中逃脱）"
+cheat99_code = "3300510A+0050+3300510B+0000"
+cheat99_enable = false
+
+cheat100_desc = "direct_v1 购买的物品 051 小松鼠尾（在战斗中逃脱）"
+cheat100_code = "3300510A+0051+3300510B+0000"
+cheat100_enable = false
+
+cheat101_desc = "direct_v1 购买的物品 05D 太阳石（让独特的怪兽进化）"
+cheat101_code = "3300510A+005D+3300510B+0000"
+cheat101_enable = false
+
+cheat102_desc = "direct_v1 购买的物品 05E 月亮石（让独特的怪兽进化）"
+cheat102_code = "3300510A+005E+3300510B+0000"
+cheat102_enable = false
+
+cheat103_desc = "direct_v1 购买的物品 05F 火焰石（让独特的怪兽进化）"
+cheat103_code = "3300510A+005F+3300510B+0000"
+cheat103_enable = false
+
+cheat104_desc = "direct_v1 购买的物品 060 雷电石（让独特的怪兽进化）"
+cheat104_code = "3300510A+0060+3300510B+0000"
+cheat104_enable = false
+
+cheat105_desc = "direct_v1 购买的物品 061 水石（让独特的怪兽进化）"
+cheat105_code = "3300510A+0061+3300510B+0000"
+cheat105_enable = false
+
+cheat106_desc = "direct_v1 购买的物品 062 珊瑚石（让独特的怪兽进化）"
+cheat106_code = "3300510A+0062+3300510B+0000"
+cheat106_enable = false
+
+cheat107_desc = "direct_v1 购买的物品 067 小的树果（普通的树果容易成熟）"
+cheat107_code = "3300510A+0067+3300510B+0000"
+cheat107_enable = false
+
+cheat108_desc = "direct_v1 购买的物品 068 大的树果（珍贵的树果难成熟）"
+cheat108_code = "3300510A+0068+3300510B+0000"
+cheat108_enable = false
+
+cheat109_desc = "direct_v1 购买的物品 06A 珍珠（美丽的珍珠容易成熟）"
+cheat109_code = "3300510A+006A+3300510B+0000"
+cheat109_enable = false
+
+cheat110_desc = "direct_v1 购买的物品 06B 大珍珠（很美丽的大珍珠难成熟）"
+cheat110_code = "3300510A+006B+3300510B+0000"
+cheat110_enable = false
+
+cheat111_desc = "direct_v1 购买的物品 06C 星沙（美丽的红色的沙子）"
+cheat111_code = "3300510A+006C+3300510B+0000"
+cheat111_enable = false
+
+cheat112_desc = "direct_v1 购买的物品 06D 星星碎片（美丽的红宝石碎片）"
+cheat112_code = "3300510A+006D+3300510B+0000"
+cheat112_enable = false
+
+cheat113_desc = "direct_v1 购买的物品 06E 金珠（金星）"
+cheat113_code = "3300510A+006E+3300510B+0000"
+cheat113_enable = false
+
+cheat114_desc = "direct_v1 购买的物品 06F 心灵碎片（可以恢复忘却的技能）"
+cheat114_code = "3300510A+006F+3300510B+0000"
+cheat114_enable = false
+
+cheat115_desc = "direct_v1 购买的物品 079 彩色邮件（针鼠模样的信件）"
+cheat115_code = "3300510A+0079+3300510B+0000"
+cheat115_enable = false
+
+cheat116_desc = "direct_v1 购买的物品 07A 哈伯邮件（海鸥模样的信件）"
+cheat116_code = "3300510A+007A+3300510B+0000"
+cheat116_enable = false
+
+cheat117_desc = "direct_v1 购买的物品 07B 闪光邮件（皮卡丘模样的信件）"
+cheat117_code = "3300510A+007B+3300510B+0000"
+cheat117_enable = false
+
+cheat118_desc = "direct_v1 购买的物品 07C 机械邮件（小磁怪模样的信件）"
+cheat118_code = "3300510A+007C+3300510B+0000"
+cheat118_enable = false
+
+cheat119_desc = "direct_v1 购买的物品 07D 鸟烟邮件（食叶兽模样的信件）"
+cheat119_code = "3300510A+007D+3300510B+0000"
+cheat119_enable = false
+
+cheat120_desc = "direct_v1 购买的物品 07E 十字邮件（皮皮鲸模样的信件）"
+cheat120_code = "3300510A+007E+3300510B+0000"
+cheat120_enable = false
+
+cheat121_desc = "direct_v1 购买的物品 07F 珍贵邮件（有持有怪兽模样的信件）"
+cheat121_code = "3300510A+007F+3300510B+0000"
+cheat121_enable = false
+
+cheat122_desc = "direct_v1 购买的物品 080 阴影邮件（钻墙怪模样的信件）"
+cheat122_code = "3300510A+0080+3300510B+0000"
+cheat122_enable = false
+
+cheat123_desc = "direct_v1 购买的物品 081 热带邮件（美丽花模样的信件）"
+cheat123_code = "3300510A+0081+3300510B+0000"
+cheat123_enable = false
+
+cheat124_desc = "direct_v1 购买的物品 082 花边邮件（有持有怪兽模样的信件）"
+cheat124_code = "3300510A+0082+3300510B+0000"
+cheat124_enable = false
+
+cheat125_desc = "direct_v1 购买的物品 083 神奇邮件（豪华的信件）"
+cheat125_code = "3300510A+0083+3300510B+0000"
+cheat125_enable = false
+
+cheat126_desc = "direct_v1 购买的物品 084 怀旧邮件（3只怪兽的信件）"
+cheat126_code = "3300510A+0084+3300510B+0000"
+cheat126_enable = false
+
+cheat127_desc = "direct_v1 购买的物品 085 解麻果（恢复麻痹状态1号）"
+cheat127_code = "3300510A+0085+3300510B+0000"
+cheat127_enable = false
+
+cheat128_desc = "direct_v1 购买的物品 086 醒睡果（恢复沉睡状态2号）"
+cheat128_code = "3300510A+0086+3300510B+0000"
+cheat128_enable = false
+
+cheat129_desc = "direct_v1 购买的物品 087 解毒果（恢复中毒状态3号）"
+cheat129_code = "3300510A+0087+3300510B+0000"
+cheat129_enable = false
+
+cheat130_desc = "direct_v1 购买的物品 088 烧伤果（恢复烧伤状态4号）"
+cheat130_code = "3300510A+0088+3300510B+0000"
+cheat130_enable = false
+
+cheat131_desc = "direct_v1 购买的物品 089 解冻果（恢复冰冻状态5号）"
+cheat131_code = "3300510A+0089+3300510B+0000"
+cheat131_enable = false
+
+cheat132_desc = "direct_v1 购买的物品 08A 木果（恢复技能值10，6号）"
+cheat132_code = "3300510A+008A+3300510B+0000"
+cheat132_enable = false
+
+cheat133_desc = "direct_v1 购买的物品 08B 桔果（恢复体力10，7号）"
+cheat133_code = "3300510A+008B+3300510B+0000"
+cheat133_enable = false
+
+cheat134_desc = "direct_v1 购买的物品 08C 太阳果（恢复混乱状态8号）"
+cheat134_code = "3300510A+008C+3300510B+0000"
+cheat134_enable = false
+
+cheat135_desc = "direct_v1 购买的物品 08D 雷木果（恢复全部状态9号）"
+cheat135_code = "3300510A+008D+3300510B+0000"
+cheat135_enable = false
+
+cheat136_desc = "direct_v1 购买的物品 08E 黄石果（恢复体力30，10号）"
+cheat136_code = "3300510A+008E+3300510B+0000"
+cheat136_enable = false
+
+cheat137_desc = "direct_v1 购买的物品 08F 飞来果（恢复体力产生混乱11号）"
+cheat137_code = "3300510A+008F+3300510B+0000"
+cheat137_enable = false
+
+cheat138_desc = "direct_v1 购买的物品 090 沙一果（恢复体力产生混乱12号）"
+cheat138_code = "3300510A+0090+3300510B+0000"
+cheat138_enable = false
+
+cheat139_desc = "direct_v1 购买的物品 091 真之果（恢复体力产生混乱13号）"
+cheat139_code = "3300510A+0091+3300510B+0000"
+cheat139_enable = false
+
+cheat140_desc = "direct_v1 购买的物品 092 混光果（恢复体力产生混乱14号）"
+cheat140_code = "3300510A+0092+3300510B+0000"
+cheat140_enable = false
+
+cheat141_desc = "direct_v1 购买的物品 093 易果（恢复体力产生混乱15号）"
+cheat141_code = "3300510A+0093+3300510B+0000"
+cheat141_enable = false
+
+cheat142_desc = "direct_v1 购买的物品 094 红果（怪兽盒材料16号）"
+cheat142_code = "3300510A+0094+3300510B+0000"
+cheat142_enable = false
+
+cheat143_desc = "direct_v1 购买的物品 095 紫果（怪兽盒材料17号）"
+cheat143_code = "3300510A+0095+3300510B+0000"
+cheat143_enable = false
+
+cheat144_desc = "direct_v1 购买的物品 096 香果（怪兽盒材料18号，会种出娜娜）"
+cheat144_code = "3300510A+0096+3300510B+0000"
+cheat144_enable = false
+
+cheat145_desc = "direct_v1 购买的物品 097 利果（怪兽盒材料19号）"
+cheat145_code = "3300510A+0097+3300510B+0000"
+cheat145_enable = false
+
+cheat146_desc = "direct_v1 购买的物品 098 波罗果（怪兽盒材料20号）"
+cheat146_code = "3300510A+0098+3300510B+0000"
+cheat146_enable = false
+
+cheat147_desc = "direct_v1 购买的物品 099 灯灯果（怪兽盒材料21号）"
+cheat147_code = "3300510A+0099+3300510B+0000"
+cheat147_enable = false
+
+cheat148_desc = "direct_v1 购买的物品 09A 猫形果（怪兽盒材料22号）"
+cheat148_code = "3300510A+009A+3300510B+0000"
+cheat148_enable = false
+
+cheat149_desc = "direct_v1 购买的物品 09B 水波果（怪兽盒材料23号）"
+cheat149_code = "3300510A+009B+3300510B+0000"
+cheat149_enable = false
+
+cheat150_desc = "direct_v1 购买的物品 09C 黄果（怪兽盒材料24号）"
+cheat150_code = "3300510A+009C+3300510B+0000"
+cheat150_enable = false
+
+cheat151_desc = "direct_v1 购买的物品 09D 鸟布果（怪兽盒材料25号）"
+cheat151_code = "3300510A+009D+3300510B+0000"
+cheat151_enable = false
+
+cheat152_desc = "direct_v1 购买的物品 09E 红刺果（怪兽盒材料26号）"
+cheat152_code = "3300510A+009E+3300510B+0000"
+cheat152_enable = false
+
+cheat153_desc = "direct_v1 购买的物品 09F 木高西果（怪兽盒材料27号）"
+cheat153_code = "3300510A+009F+3300510B+0000"
+cheat153_enable = false
+
+cheat154_desc = "direct_v1 购买的物品 0A0 高芝果（怪兽盒材料28号）"
+cheat154_code = "3300510A+00A0+3300510B+0000"
+cheat154_enable = false
+
+cheat155_desc = "direct_v1 购买的物品 0A1 布拉达果（怪兽盒材料29号）"
+cheat155_code = "3300510A+00A1+3300510B+0000"
+cheat155_enable = false
+
+cheat156_desc = "direct_v1 购买的物品 0A2 麦鲁果（怪兽盒材料30号）"
+cheat156_code = "3300510A+00A2+3300510B+0000"
+cheat156_enable = false
+
+cheat157_desc = "direct_v1 购买的物品 0A3 万吉果（怪兽盒材料31号）"
+cheat157_code = "3300510A+00A3+3300510B+0000"
+cheat157_enable = false
+
+cheat158_desc = "direct_v1 购买的物品 0A4 西亚果（怪兽盒材料32号）"
+cheat158_code = "3300510A+00A4+3300510B+0000"
+cheat158_enable = false
+
+cheat159_desc = "direct_v1 购买的物品 0A5 卡依斯果（怪兽盒材料33号）"
+cheat159_code = "3300510A+00A5+3300510B+0000"
+cheat159_enable = false
+
+cheat160_desc = "direct_v1 购买的物品 0A6 刀利果（怪兽盒材料34号）"
+cheat160_code = "3300510A+00A6+3300510B+0000"
+cheat160_enable = false
+
+cheat161_desc = "direct_v1 购买的物品 0A7 海比果（怪兽盒材料35号）"
+cheat161_code = "3300510A+00A7+3300510B+0000"
+cheat161_enable = false
+
+cheat162_desc = "direct_v1 购买的物品 0A8 吉拉果（战斗中…危急时攻击力上升36号）"
+cheat162_code = "3300510A+00A8+3300510B+0000"
+cheat162_enable = false
+
+cheat163_desc = "direct_v1 购买的物品 0A9 利卡果（战斗中…危急时防御力上升37号）"
+cheat163_code = "3300510A+00A9+3300510B+0000"
+cheat163_enable = false
+
+cheat164_desc = "direct_v1 购买的物品 0AA 卡木拉果（战斗中…危急时敏捷上升38号）"
+cheat164_code = "3300510A+00AA+3300510B+0000"
+cheat164_enable = false
+
+cheat165_desc = "direct_v1 购买的物品 0AB 哑达比果（战斗中…危急时特攻上升39号）"
+cheat165_code = "3300510A+00AB+3300510B+0000"
+cheat165_enable = false
+
+cheat166_desc = "direct_v1 购买的物品 0AC 阿芝果（战斗中…危急时德望上升40号）"
+cheat166_code = "3300510A+00AC+3300510B+0000"
+cheat166_enable = false
+
+cheat167_desc = "direct_v1 购买的物品 0AD 山果（战斗中…危急时容易命中要害41号）"
+cheat167_code = "3300510A+00AD+3300510B+0000"
+cheat167_enable = false
+
+cheat168_desc = "direct_v1 购买的物品 0AE 星星果（战斗中…危急时使其中一种能力迅速提高42号）"
+cheat168_code = "3300510A+00AE+3300510B+0000"
+cheat168_enable = false
+
+cheat169_desc = "direct_v1 购买的物品 0AF 神秘果有（怪兽盒材料43号）"
+cheat169_code = "3300510A+00AF+3300510B+0000"
+cheat169_enable = false
+
+cheat170_desc = "direct_v1 购买的物品 0B3 光粉（降低对手命中率）"
+cheat170_code = "3300510A+00B3+3300510B+0000"
+cheat170_enable = false
+
+cheat171_desc = "direct_v1 购买的物品 0B4 白色海石花（下降能力复原）"
+cheat171_code = "3300510A+00B4+3300510B+0000"
+cheat171_enable = false
+
+cheat172_desc = "direct_v1 购买的物品 0B5 竞争背心（敏捷下降，好好饲育）"
+cheat172_code = "3300510A+00B5+3300510B+0000"
+cheat172_enable = false
+
+cheat173_desc = "direct_v1 购买的物品 0B6 学习装置（持有的怪兽得到经验值）"
+cheat173_code = "3300510A+00B6+3300510B+0000"
+cheat173_enable = false
+
+cheat174_desc = "direct_v1 购买的物品 0B7 老师指甲（偶尔能先发出攻击）"
+cheat174_code = "3300510A+00B7+3300510B+0000"
+cheat174_enable = false
+
+cheat175_desc = "direct_v1 购买的物品 0B8 安闲玲（持有的怪兽变亲密）"
+cheat175_code = "3300510A+00B8+3300510B+0000"
+cheat175_enable = false
+
+cheat176_desc = "direct_v1 购买的物品 0B9 精神海石花（持有的怪兽恢复颓废状态）"
+cheat176_code = "3300510A+00B9+3300510B+0000"
+cheat176_enable = false
+
+cheat177_desc = "direct_v1 购买的物品 0BA 守日器（攻击的威力提高）"
+cheat177_code = "3300510A+00BA+3300510B+0000"
+cheat177_enable = false
+
+cheat178_desc = "direct_v1 购买的物品 0BB 王者之证（有时能让对手沉睡）"
+cheat178_code = "3300510A+00BB+3300510B+0000"
+cheat178_enable = false
+
+cheat179_desc = "direct_v1 购买的物品 0BC 银粉（虫类技能的威力上升）"
+cheat179_code = "3300510A+00BC+3300510B+0000"
+cheat179_enable = false
+
+cheat180_desc = "direct_v1 购买的物品 0BD 守卫饭（持有的怪兽参战能得到2倍金钱）"
+cheat180_code = "3300510A+00BD+3300510B+0000"
+cheat180_enable = false
+
+cheat181_desc = "direct_v1 购买的物品 0BE 清符（难以与野生怪兽）"
+cheat181_code = "3300510A+00BE+3300510B+0000"
+cheat181_enable = false
+
+cheat182_desc = "direct_v1 购买的物品 0BF 心珠（特攻和德望上升，限于雄奇怪和木皮怪）"
+cheat182_code = "3300510A+00BF+3300510B+0000"
+cheat182_enable = false
+
+cheat183_desc = "direct_v1 购买的物品 0C0 进化牙（特攻上升，限于海贝）"
+cheat183_code = "3300510A+00C0+3300510B+0000"
+cheat183_enable = false
+
+cheat184_desc = "direct_v1 购买的物品 0C1 进化鳞片（德望上升，限于海贝）"
+cheat184_code = "3300510A+00C1+3300510B+0000"
+cheat184_enable = false
+
+cheat185_desc = "direct_v1 购买的物品 0C2 烟珠（遇到野生的怪兽能逃脱）"
+cheat185_code = "3300510A+00C2+3300510B+0000"
+cheat185_enable = false
+
+cheat186_desc = "direct_v1 购买的物品 0C3 不变石（持有的怪兽不会进化）"
+cheat186_code = "3300510A+00C3+3300510B+0000"
+cheat186_enable = false
+
+cheat187_desc = "direct_v1 购买的物品 0C4 精神器（偶尔能防御）"
+cheat187_code = "3300510A+00C4+3300510B+0000"
+cheat187_enable = false
+
+cheat188_desc = "direct_v1 购买的物品 0C5 幸福怪兽蛋（怪兽经验值更容易上升）"
+cheat188_code = "3300510A+00C5+3300510B+0000"
+cheat188_enable = false
+
+cheat189_desc = "direct_v1 购买的物品 0C6 焦点镜（容易命中要害）"
+cheat189_code = "3300510A+00C6+3300510B+0000"
+cheat189_enable = false
+
+cheat190_desc = "direct_v1 购买的物品 0C7 杯衣（钢类技能威力上升）"
+cheat190_code = "3300510A+00C7+3300510B+0000"
+cheat190_enable = false
+
+cheat191_desc = "direct_v1 购买的物品 0C8 余物（体力能在战斗间慢慢恢复）"
+cheat191_code = "3300510A+00C8+3300510B+0000"
+cheat191_enable = false
+
+cheat192_desc = "direct_v1 购买的物品 0C9 龙鳞（飞龙类怪兽持有的奇异鳞片）"
+cheat192_code = "3300510A+00C9+3300510B+0000"
+cheat192_enable = false
+
+cheat193_desc = "direct_v1 购买的物品 0CA 电珠（特攻上升，限于皮卡丘）"
+cheat193_code = "3300510A+00CA+3300510B+0000"
+cheat193_enable = false
+
+cheat194_desc = "direct_v1 购买的物品 0CB 软沙（地面类技能的威力上升）"
+cheat194_code = "3300510A+00CB+3300510B+0000"
+cheat194_enable = false
+
+cheat195_desc = "direct_v1 购买的物品 0CC 坚硬石头（岩石类技能的威力上升）"
+cheat195_code = "3300510A+00CC+3300510B+0000"
+cheat195_enable = false
+
+cheat196_desc = "direct_v1 购买的物品 0CD 奇迹种（草类技能的威力上升）"
+cheat196_code = "3300510A+00CD+3300510B+0000"
+cheat196_enable = false
+
+cheat197_desc = "direct_v1 购买的物品 0CE 黑色眼镜（恶类技能的威力上升）"
+cheat197_code = "3300510A+00CE+3300510B+0000"
+cheat197_enable = false
+
+cheat198_desc = "direct_v1 购买的物品 0CF 黑带（格斗类技能的威力上升）"
+cheat198_code = "3300510A+00CF+3300510B+0000"
+cheat198_enable = false
+
+cheat199_desc = "direct_v1 购买的物品 0D0 磁铁（电类技能的威力上升）"
+cheat199_code = "3300510A+00D0+3300510B+0000"
+cheat199_enable = false
+
+cheat200_desc = "direct_v1 购买的物品 0D1 神秘水珠（水类技能的威力上升）"
+cheat200_code = "3300510A+00D1+3300510B+0000"
+cheat200_enable = false
+
+cheat201_desc = "direct_v1 购买的物品 0D2 尖嘴（飞行类技能的威力上升）"
+cheat201_code = "3300510A+00D2+3300510B+0000"
+cheat201_enable = false
+
+cheat202_desc = "direct_v1 购买的物品 0D3 毒针（毒类技能的威力上升）"
+cheat202_code = "3300510A+00D3+3300510B+0000"
+cheat202_enable = false
+
+cheat203_desc = "direct_v1 购买的物品 0D4 不化冰（冰冻技能的威力上升）"
+cheat203_code = "3300510A+00D4+3300510B+0000"
+cheat203_enable = false
+
+cheat204_desc = "direct_v1 购买的物品 0D5 诅咒符（幽灵类技能的威力上升）"
+cheat204_code = "3300510A+00D5+3300510B+0000"
+cheat204_enable = false
+
+cheat205_desc = "direct_v1 购买的物品 0D6 银勺（超能技能的威力上升）"
+cheat205_code = "3300510A+00D6+3300510B+0000"
+cheat205_enable = false
+
+cheat206_desc = "direct_v1 购买的物品 0D7 木炭（火焰类技能的威力上升）"
+cheat206_code = "3300510A+00D7+3300510B+0000"
+cheat206_enable = false
+
+cheat207_desc = "direct_v1 购买的物品 0D8 龙牙（飞龙类技能的威力上升）"
+cheat207_code = "3300510A+00D8+3300510B+0000"
+cheat207_enable = false
+
+cheat208_desc = "direct_v1 购买的物品 0D9 西库头巾（正常类技能的威力上升）"
+cheat208_code = "3300510A+00D9+3300510B+0000"
+cheat208_enable = false
+
+cheat209_desc = "direct_v1 购买的物品 0DA 上升叶片（奇异箱子，收集用）"
+cheat209_code = "3300510A+00DA+3300510B+0000"
+cheat209_enable = false
+
+cheat210_desc = "direct_v1 购买的物品 0DB 空贝（对敌人损伤时体力会恢复）"
+cheat210_code = "3300510A+00DB+3300510B+0000"
+cheat210_enable = false
+
+cheat211_desc = "direct_v1 购买的物品 0DC 潮物（水类技能的威力上升一点）"
+cheat211_code = "3300510A+00DC+3300510B+0000"
+cheat211_enable = false
+
+cheat212_desc = "direct_v1 购买的物品 0DD 气物（敌人的命中率下降一点）"
+cheat212_code = "3300510A+00DD+3300510B+0000"
+cheat212_enable = false
+
+cheat213_desc = "direct_v1 购买的物品 0DE 吉利蛋钳（容易命中要害，限于吉利蛋）"
+cheat213_code = "3300510A+00DE+3300510B+0000"
+cheat213_enable = false
+
+cheat214_desc = "direct_v1 购买的物品 0DF 木物（防御力上升，限于百变怪）"
+cheat214_code = "3300510A+00DF+3300510B+0000"
+cheat214_enable = false
+
+cheat215_desc = "direct_v1 购买的物品 0FE 红手巾（持有参加比赛会比平时显得聪明）"
+cheat215_code = "3300510A+00FE+3300510B+0000"
+cheat215_enable = false
+
+cheat216_desc = "direct_v1 购买的物品 0FF 蓝手巾（持有参加比赛会比平时显得美丽）"
+cheat216_code = "3300510A+00FF+3300510B+0000"
+cheat216_enable = false
+
+cheat217_desc = "direct_v1 购买的物品 100 粉手巾（持有参加比赛会比平时显得可爱）"
+cheat217_code = "3300510A+0000+3300510B+0001"
+cheat217_enable = false
+
+cheat218_desc = "direct_v1 购买的物品 101 绿手巾（持有参加比赛会比平时显得聪明）"
+cheat218_code = "3300510A+0001+3300510B+0001"
+cheat218_enable = false
+
+cheat219_desc = "direct_v1 购买的物品 102 黄手巾（持有参加比赛会比平时显得坚强）"
+cheat219_code = "3300510A+0002+3300510B+0001"
+cheat219_enable = false
+
+cheat220_desc = "direct_v1 购买的物品 103 风马自行车"
+cheat220_code = "3300510A+0003+3300510B+0001"
+cheat220_enable = false
+
+cheat221_desc = "direct_v1 购买的物品 104 硬币盒子"
+cheat221_code = "3300510A+0004+3300510B+0001"
+cheat221_enable = false
+
+cheat222_desc = "direct_v1 购买的物品 105 探宝器"
+cheat222_code = "3300510A+0005+3300510B+0001"
+cheat222_enable = false
+
+cheat223_desc = "direct_v1 购买的物品 106 普通钓竿"
+cheat223_code = "3300510A+0006+3300510B+0001"
+cheat223_enable = false
+
+cheat224_desc = "direct_v1 购买的物品 107 好钓竿"
+cheat224_code = "3300510A+0007+3300510B+0001"
+cheat224_enable = false
+
+cheat225_desc = "direct_v1 购买的物品 108 超级钓竿"
+cheat225_code = "3300510A+0008+3300510B+0001"
+cheat225_enable = false
+
+cheat226_desc = "direct_v1 购买的物品 109 船票"
+cheat226_code = "3300510A+0009+3300510B+0001"
+cheat226_enable = false
+
+cheat227_desc = "direct_v1 购买的物品 10A 比赛通行证"
+cheat227_code = "3300510A+000A+3300510B+0001"
+cheat227_enable = false
+
+cheat228_desc = "direct_v1 购买的物品 10C 皮皮鲸喷壶"
+cheat228_code = "3300510A+000C+3300510B+0001"
+cheat228_enable = false
+
+cheat229_desc = "direct_v1 购买的物品 10D 天力行李"
+cheat229_code = "3300510A+000D+3300510B+0001"
+cheat229_enable = false
+
+cheat230_desc = "direct_v1 购买的物品 10E 背包"
+cheat230_code = "3300510A+000E+3300510B+0001"
+cheat230_enable = false
+
+cheat231_desc = "direct_v1 购买的物品 10F 地下钥匙"
+cheat231_code = "3300510A+000F+3300510B+0001"
+cheat231_enable = false
+
+cheat232_desc = "direct_v1 购买的物品 110 沙道自行车"
+cheat232_code = "3300510A+0010+3300510B+0001"
+cheat232_enable = false
+
+cheat233_desc = "direct_v1 购买的物品 111 怪兽盒"
+cheat233_code = "3300510A+0011+3300510B+0001"
+cheat233_enable = false
+
+cheat234_desc = "direct_v1 购买的物品 112 代后的信"
+cheat234_code = "3300510A+0012+3300510B+0001"
+cheat234_enable = false
+
+cheat235_desc = "direct_v1 购买的物品 113 梦幻船票"
+cheat235_code = "3300510A+0013+3300510B+0001"
+cheat235_enable = false
+
+cheat236_desc = "direct_v1 购买的物品 114 红色玉石"
+cheat236_code = "3300510A+0014+3300510B+0001"
+cheat236_enable = false
+
+cheat237_desc = "direct_v1 购买的物品 115 蓝色玉石"
+cheat237_code = "3300510A+0015+3300510B+0001"
+cheat237_enable = false
+
+cheat238_desc = "direct_v1 购买的物品 116 探知器"
+cheat238_code = "3300510A+0016+3300510B+0001"
+cheat238_enable = false
+
+cheat239_desc = "direct_v1 购买的物品 117 沙道眼睛"
+cheat239_code = "3300510A+0017+3300510B+0001"
+cheat239_enable = false
+
+cheat240_desc = "direct_v1 购买的物品 118 陨石"
+cheat240_code = "3300510A+0018+3300510B+0001"
+cheat240_enable = false
+
+cheat241_desc = "direct_v1 购买的物品 119 1室钥匙"
+cheat241_code = "3300510A+0019+3300510B+0001"
+cheat241_enable = false
+
+cheat242_desc = "direct_v1 购买的物品 11A 2室钥匙"
+cheat242_code = "3300510A+001A+3300510B+0001"
+cheat242_enable = false
+
+cheat243_desc = "direct_v1 购买的物品 11B 4室钥匙"
+cheat243_code = "3300510A+001B+3300510B+0001"
+cheat243_enable = false
+
+cheat244_desc = "direct_v1 购买的物品 11C 6室钥匙"
+cheat244_code = "3300510A+001C+3300510B+0001"
+cheat244_enable = false
+
+cheat245_desc = "direct_v1 购买的物品 11D 仓库钥匙"
+cheat245_code = "3300510A+001D+3300510B+0001"
+cheat245_enable = false
+
+cheat246_desc = "direct_v1 购买的物品 11E 木根化石"
+cheat246_code = "3300510A+001E+3300510B+0001"
+cheat246_enable = false
+
+cheat247_desc = "direct_v1 购买的物品 11F 指甲化石"
+cheat247_code = "3300510A+001F+3300510B+0001"
+cheat247_enable = false
+
+cheat248_desc = "direct_v1 购买的物品 120 天力思奇"
+cheat248_code = "3300510A+0020+3300510B+0001"
+cheat248_enable = false
+
+cheat249_desc = "direct_v1 购买的物品 121 招式机器01"
+cheat249_code = "3300510A+0021+3300510B+0001"
+cheat249_enable = false
+
+cheat250_desc = "direct_v1 购买的物品 122 招式机器02"
+cheat250_code = "3300510A+0022+3300510B+0001"
+cheat250_enable = false
+
+cheat251_desc = "direct_v1 购买的物品 123 招式机器03"
+cheat251_code = "3300510A+0023+3300510B+0001"
+cheat251_enable = false
+
+cheat252_desc = "direct_v1 购买的物品 124 招式机器04"
+cheat252_code = "3300510A+0024+3300510B+0001"
+cheat252_enable = false
+
+cheat253_desc = "direct_v1 购买的物品 125 招式机器05"
+cheat253_code = "3300510A+0025+3300510B+0001"
+cheat253_enable = false
+
+cheat254_desc = "direct_v1 购买的物品 126 招式机器06"
+cheat254_code = "3300510A+0026+3300510B+0001"
+cheat254_enable = false
+
+cheat255_desc = "direct_v1 购买的物品 127 招式机器07"
+cheat255_code = "3300510A+0027+3300510B+0001"
+cheat255_enable = false
+
+cheat256_desc = "direct_v1 购买的物品 128 招式机器08"
+cheat256_code = "3300510A+0028+3300510B+0001"
+cheat256_enable = false
+
+cheat257_desc = "direct_v1 购买的物品 129 招式机器09"
+cheat257_code = "3300510A+0029+3300510B+0001"
+cheat257_enable = false
+
+cheat258_desc = "direct_v1 购买的物品 12A 招式机器10"
+cheat258_code = "3300510A+002A+3300510B+0001"
+cheat258_enable = false
+
+cheat259_desc = "direct_v1 购买的物品 12B 招式机器11"
+cheat259_code = "3300510A+002B+3300510B+0001"
+cheat259_enable = false
+
+cheat260_desc = "direct_v1 购买的物品 12C 招式机器12"
+cheat260_code = "3300510A+002C+3300510B+0001"
+cheat260_enable = false
+
+cheat261_desc = "direct_v1 购买的物品 12D 招式机器13"
+cheat261_code = "3300510A+002D+3300510B+0001"
+cheat261_enable = false
+
+cheat262_desc = "direct_v1 购买的物品 12E 招式机器14"
+cheat262_code = "3300510A+002E+3300510B+0001"
+cheat262_enable = false
+
+cheat263_desc = "direct_v1 购买的物品 12F 招式机器15"
+cheat263_code = "3300510A+002F+3300510B+0001"
+cheat263_enable = false
+
+cheat264_desc = "direct_v1 购买的物品 130 招式机器16"
+cheat264_code = "3300510A+0030+3300510B+0001"
+cheat264_enable = false
+
+cheat265_desc = "direct_v1 购买的物品 131 招式机器17"
+cheat265_code = "3300510A+0031+3300510B+0001"
+cheat265_enable = false
+
+cheat266_desc = "direct_v1 购买的物品 132 招式机器18"
+cheat266_code = "3300510A+0032+3300510B+0001"
+cheat266_enable = false
+
+cheat267_desc = "direct_v1 购买的物品 133 招式机器19"
+cheat267_code = "3300510A+0033+3300510B+0001"
+cheat267_enable = false
+
+cheat268_desc = "direct_v1 购买的物品 134 招式机器20"
+cheat268_code = "3300510A+0034+3300510B+0001"
+cheat268_enable = false
+
+cheat269_desc = "direct_v1 购买的物品 135 招式机器21"
+cheat269_code = "3300510A+0035+3300510B+0001"
+cheat269_enable = false
+
+cheat270_desc = "direct_v1 购买的物品 136 招式机器22"
+cheat270_code = "3300510A+0036+3300510B+0001"
+cheat270_enable = false
+
+cheat271_desc = "direct_v1 购买的物品 137 招式机器23"
+cheat271_code = "3300510A+0037+3300510B+0001"
+cheat271_enable = false
+
+cheat272_desc = "direct_v1 购买的物品 138 招式机器24"
+cheat272_code = "3300510A+0038+3300510B+0001"
+cheat272_enable = false
+
+cheat273_desc = "direct_v1 购买的物品 139 招式机器25"
+cheat273_code = "3300510A+0039+3300510B+0001"
+cheat273_enable = false
+
+cheat274_desc = "direct_v1 购买的物品 13A 招式机器26"
+cheat274_code = "3300510A+003A+3300510B+0001"
+cheat274_enable = false
+
+cheat275_desc = "direct_v1 购买的物品 13B 招式机器27"
+cheat275_code = "3300510A+003B+3300510B+0001"
+cheat275_enable = false
+
+cheat276_desc = "direct_v1 购买的物品 13C 招式机器28"
+cheat276_code = "3300510A+003C+3300510B+0001"
+cheat276_enable = false
+
+cheat277_desc = "direct_v1 购买的物品 13D 招式机器29"
+cheat277_code = "3300510A+003D+3300510B+0001"
+cheat277_enable = false
+
+cheat278_desc = "direct_v1 购买的物品 13E 招式机器30"
+cheat278_code = "3300510A+003E+3300510B+0001"
+cheat278_enable = false
+
+cheat279_desc = "direct_v1 购买的物品 13F 招式机器31"
+cheat279_code = "3300510A+003F+3300510B+0001"
+cheat279_enable = false
+
+cheat280_desc = "direct_v1 购买的物品 140 招式机器32"
+cheat280_code = "3300510A+0040+3300510B+0001"
+cheat280_enable = false
+
+cheat281_desc = "direct_v1 购买的物品 141 招式机器33"
+cheat281_code = "3300510A+0041+3300510B+0001"
+cheat281_enable = false
+
+cheat282_desc = "direct_v1 购买的物品 142 招式机器34"
+cheat282_code = "3300510A+0042+3300510B+0001"
+cheat282_enable = false
+
+cheat283_desc = "direct_v1 购买的物品 143 招式机器35"
+cheat283_code = "3300510A+0043+3300510B+0001"
+cheat283_enable = false
+
+cheat284_desc = "direct_v1 购买的物品 144 招式机器36"
+cheat284_code = "3300510A+0044+3300510B+0001"
+cheat284_enable = false
+
+cheat285_desc = "direct_v1 购买的物品 145 招式机器37"
+cheat285_code = "3300510A+0045+3300510B+0001"
+cheat285_enable = false
+
+cheat286_desc = "direct_v1 购买的物品 146 招式机器38"
+cheat286_code = "3300510A+0046+3300510B+0001"
+cheat286_enable = false
+
+cheat287_desc = "direct_v1 购买的物品 147 招式机器39"
+cheat287_code = "3300510A+0047+3300510B+0001"
+cheat287_enable = false
+
+cheat288_desc = "direct_v1 购买的物品 148 招式机器40"
+cheat288_code = "3300510A+0048+3300510B+0001"
+cheat288_enable = false
+
+cheat289_desc = "direct_v1 购买的物品 149 招式机器41"
+cheat289_code = "3300510A+0049+3300510B+0001"
+cheat289_enable = false
+
+cheat290_desc = "direct_v1 购买的物品 14A 招式机器42"
+cheat290_code = "3300510A+004A+3300510B+0001"
+cheat290_enable = false
+
+cheat291_desc = "direct_v1 购买的物品 14B 招式机器43"
+cheat291_code = "3300510A+004B+3300510B+0001"
+cheat291_enable = false
+
+cheat292_desc = "direct_v1 购买的物品 14C 招式机器44"
+cheat292_code = "3300510A+004C+3300510B+0001"
+cheat292_enable = false
+
+cheat293_desc = "direct_v1 购买的物品 14D 招式机器45"
+cheat293_code = "3300510A+004D+3300510B+0001"
+cheat293_enable = false
+
+cheat294_desc = "direct_v1 购买的物品 14E 招式机器46"
+cheat294_code = "3300510A+004E+3300510B+0001"
+cheat294_enable = false
+
+cheat295_desc = "direct_v1 购买的物品 14F 招式机器47"
+cheat295_code = "3300510A+004F+3300510B+0001"
+cheat295_enable = false
+
+cheat296_desc = "direct_v1 购买的物品 150 招式机器48"
+cheat296_code = "3300510A+0050+3300510B+0001"
+cheat296_enable = false
+
+cheat297_desc = "direct_v1 购买的物品 151 招式机器49"
+cheat297_code = "3300510A+0051+3300510B+0001"
+cheat297_enable = false
+
+cheat298_desc = "direct_v1 购买的物品 152 招式机器50"
+cheat298_code = "3300510A+0052+3300510B+0001"
+cheat298_enable = false
+
+cheat299_desc = "direct_v1 购买的物品 153 秘传机01"
+cheat299_code = "3300510A+0053+3300510B+0001"
+cheat299_enable = false
+
+cheat300_desc = "direct_v1 购买的物品 154 秘传机02"
+cheat300_code = "3300510A+0054+3300510B+0001"
+cheat300_enable = false
+
+cheat301_desc = "direct_v1 购买的物品 155 秘传机03"
+cheat301_code = "3300510A+0055+3300510B+0001"
+cheat301_enable = false
+
+cheat302_desc = "direct_v1 购买的物品 156 秘传机04"
+cheat302_code = "3300510A+0056+3300510B+0001"
+cheat302_enable = false
+
+cheat303_desc = "direct_v1 购买的物品 157 秘传机05"
+cheat303_code = "3300510A+0057+3300510B+0001"
+cheat303_enable = false
+
+cheat304_desc = "direct_v1 购买的物品 158 秘传机06"
+cheat304_code = "3300510A+0058+3300510B+0001"
+cheat304_enable = false
+
+cheat305_desc = "direct_v1 购买的物品 159 秘传机07"
+cheat305_code = "3300510A+0059+3300510B+0001"
+cheat305_enable = false
+
+cheat306_desc = "direct_v1 购买的物品 15A 秘传机08"
+cheat306_code = "3300510A+005A+3300510B+0001"
+cheat306_enable = false
+
+cheat307_desc = "direct_v1 购买的物品 15D 邮包"
+cheat307_code = "3300510A+005D+3300510B+0001"
+cheat307_enable = false
+
+cheat308_desc = "direct_v1 购买的物品 15E 怪兽笛子"
+cheat308_code = "3300510A+005E+3300510B+0001"
+cheat308_enable = false
+
+cheat309_desc = "direct_v1 购买的物品 15F 火焰道馆钥匙"
+cheat309_code = "3300510A+005F+3300510B+0001"
+cheat309_enable = false
+
+cheat310_desc = "direct_v1 购买的物品 160 自行车兑换卷"
+cheat310_code = "3300510A+0060+3300510B+0001"
+cheat310_enable = false
+
+cheat311_desc = "direct_v1 购买的物品 161 假牙"
+cheat311_code = "3300510A+0061+3300510B+0001"
+cheat311_enable = false
+
+cheat312_desc = "direct_v1 购买的物品 162 琥珀"
+cheat312_code = "3300510A+0062+3300510B+0001"
+cheat312_enable = false
+
+cheat313_desc = "direct_v1 购买的物品 163 黄金室大楼钥匙"
+cheat313_code = "3300510A+0063+3300510B+0001"
+cheat313_enable = false
+
+cheat314_desc = "direct_v1 购买的物品 164 火箭队钥匙"
+cheat314_code = "3300510A+0064+3300510B+0001"
+cheat314_enable = false
+
+cheat315_desc = "direct_v1 购买的物品 165 菊石兽化石"
+cheat315_code = "3300510A+0065+3300510B+0001"
+cheat315_enable = false
+
+cheat316_desc = "direct_v1 购买的物品 166 化石盔化石"
+cheat316_code = "3300510A+0066+3300510B+0001"
+cheat316_enable = false
+
+cheat317_desc = "direct_v1 购买的物品 167 照妖眼镜"
+cheat317_code = "3300510A+0067+3300510B+0001"
+cheat317_enable = false
+
+cheat318_desc = "direct_v1 购买的物品 168 自行车"
+cheat318_code = "3300510A+0068+3300510B+0001"
+cheat318_enable = false
+
+cheat319_desc = "direct_v1 购买的物品 169 城市地图"
+cheat319_code = "3300510A+0069+3300510B+0001"
+cheat319_enable = false
+
+cheat320_desc = "direct_v1 购买的物品 16A 声音探测器"
+cheat320_code = "3300510A+006A+3300510B+0001"
+cheat320_enable = false
+
+cheat321_desc = "direct_v1 购买的物品 16B 电话机"
+cheat321_code = "3300510A+006B+3300510B+0001"
+cheat321_enable = false
+
+cheat322_desc = "direct_v1 购买的物品 16C 技能盒子"
+cheat322_code = "3300510A+006C+3300510B+0001"
+cheat322_enable = false
+
+cheat323_desc = "direct_v1 购买的物品 16D 树果袋子"
+cheat323_code = "3300510A+006D+3300510B+0001"
+cheat323_enable = false
+
+cheat324_desc = "direct_v1 购买的物品 16E 电视机"
+cheat324_code = "3300510A+006E+3300510B+0001"
+cheat324_enable = false
+
+cheat325_desc = "direct_v1 购买的物品 16F 1、2、3岛道船票"
+cheat325_code = "3300510A+006F+3300510B+0001"
+cheat325_enable = false
+
+cheat326_desc = "direct_v1 购买的物品 170 彩虹船票"
+cheat326_code = "3300510A+0070+3300510B+0001"
+cheat326_enable = false
+
+cheat327_desc = "direct_v1 购买的物品 171 茶"
+cheat327_code = "3300510A+0071+3300510B+0001"
+cheat327_enable = false
+
+cheat328_desc = "direct_v1 购买的物品 172 紫色的票"
+cheat328_code = "3300510A+0072+3300510B+0001"
+cheat328_enable = false
+
+cheat329_desc = "direct_v1 购买的物品 173 水底的票"
+cheat329_code = "3300510A+0073+3300510B+0001"
+cheat329_enable = false
+
+cheat330_desc = "direct_v1 购买的物品 174 收集瓶（深蓝市老头家得到换东西的）"
+cheat330_code = "3300510A+0074+3300510B+0001"
+cheat330_enable = false
+
+cheat331_desc = "direct_v1 购买的物品 175 红宝石"
+cheat331_code = "3300510A+0075+3300510B+0001"
+cheat331_enable = false
+
+cheat332_desc = "direct_v1 购买的物品 176 蓝宝石"
+cheat332_code = "3300510A+0076+3300510B+0001"
+cheat332_enable = false
+
+cheat333_desc = "direct_v1 每战经验值 100点"
+cheat333_code = "32fe3CB0+0064+32fe3CB1+0000"
+cheat333_enable = false
+
+cheat334_desc = "direct_v1 每战经验值 200点"
+cheat334_code = "32fe3CB0+00C8+32fe3CB1+0000"
+cheat334_enable = false
+
+cheat335_desc = "direct_v1 每战经验值 500点"
+cheat335_code = "32fe3CB0+00F4+32fe3CB1+0001"
+cheat335_enable = false
+
+cheat336_desc = "direct_v1 每战经验值 1000点"
+cheat336_code = "32fe3CB0+00E8+32fe3CB1+0003"
+cheat336_enable = false
+
+cheat337_desc = "direct_v1 每战经验值 2000点"
+cheat337_code = "32fe3CB0+00D0+32fe3CB1+0007"
+cheat337_enable = false
+
+cheat338_desc = "direct_v1 每战经验值 5000点"
+cheat338_code = "32fe3CB0+0088+32fe3CB1+0013"
+cheat338_enable = false
+
+cheat339_desc = "direct_v1 每战经验值 10000点"
+cheat339_code = "32fe3CB0+0010+32fe3CB1+0027"
+cheat339_enable = false
+
+cheat340_desc = "direct_v1 每战经验值 20000点"
+cheat340_code = "32fe3CB0+0020+32fe3CB1+004E"
+cheat340_enable = false
+
+cheat341_desc = "direct_v1 每战经验值 50000点"
+cheat341_code = "32fe3CB0+0050+32fe3CB1+00C3"
+cheat341_enable = false
+
+cheat342_desc = "direct_v1 喷雾剂剩余步数"
+cheat342_code = "32fe64E4+00FF"
+cheat342_enable = false
+
+cheat343_desc = "direct_v1 喷雾剂剩余步数 0FF"
+cheat343_code = "32fe64E4+0000"
+cheat343_enable = false
+
+cheat344_desc = "direct_v1 地点转换 4号岛饲养屋"
+cheat344_code = "32ff1CF0+0023+32ff1CF1+0000"
+cheat344_enable = false
+
+cheat345_desc = "direct_v1 地点转换 6号岛无路山洞"
+cheat345_code = "32ff1CF0+0003+32ff1CF1+003A"
+cheat345_enable = false
+
+cheat346_desc = "direct_v1 地点转换 草会馆"
+cheat346_code = "32ff1CF0+0004+32ff1CF1+003A"
+cheat346_enable = false
+
+cheat347_desc = "direct_v1 地点转换 毒会馆的精灵中心"
+cheat347_code = "32ff1CF0+0006+32ff1CF1+003A"
+cheat347_enable = false
+
+cheat348_desc = "direct_v1 地点转换 红莲岛的研究馆"
+cheat348_code = "32ff1CF0+0007+32ff1CF1+003A"
+cheat348_enable = false
+
+cheat349_desc = "direct_v1 地点转换 超能力城市"
+cheat349_code = "32ff1CF0+0008+32ff1CF1+003A"
+cheat349_enable = false
+
+cheat350_desc = "direct_v1 地点转换 长青森林的过道"
+cheat350_code = "32ff1CF0+0009+32ff1CF1+003A"
+cheat350_enable = false
+
+cheat351_desc = "direct_v1 地点转换 船"
+cheat351_code = "32ff1CF0+0000+32ff1CF1+001F"
+cheat351_enable = false
+
+cheat352_desc = "direct_v1 地点转换 那大师球的地方"
+cheat352_code = "32ff1CF0+0000+32ff1CF1+003A"
+cheat352_enable = false
+
+cheat353_desc = "direct_v1 地点转换 抓火焰鸟的地方"
+cheat353_code = "32ff1CF0+0000+32ff1CF1+006A"
+cheat353_enable = false
+
+cheat354_desc = "direct_v1 地点转换 无人洞"
+cheat354_code = "32ff1CF0+0001+32ff1CF1+007A"
+cheat354_enable = false
+
+cheat355_desc = "direct_v1 地点转换 通信站"
+cheat355_code = "32ff1CF0+0000+32ff1CF1+0001"
+cheat355_enable = false
+
+cheat356_desc = "direct_v1 地点转换 第8会馆"
+cheat356_code = "32ff1CF0+0005+32ff1CF1+0001"
+cheat356_enable = false
+
+cheat357_desc = "direct_v1 地点转换 主角学3招的地方"
+cheat357_code = "32ff1CF0+0028+32ff1CF1+0000"
+cheat357_enable = false
+
+cheat358_desc = "direct_v1 地点转换 4天王门口"
+cheat358_code = "32ff1CF0+0003+32ff1CF1+002A"
+cheat358_enable = false
+
+cheat359_desc = "direct_v1 地点转换 狩猎区"
+cheat359_code = "32ff1CF0+0005+32ff1CF1+003A"
+cheat359_enable = false
+
+cheat360_desc = "direct_v1 地点转换 超梦洞"
+cheat360_code = "32ff1CF0+0001+32ff1CF1+004A"
+cheat360_enable = false
+
+cheat361_desc = "direct_v1 地点转换 家"
+cheat361_code = "32ff1CF0+0002+32ff1CF1+007E"
+cheat361_enable = false
+
+cheat362_desc = "direct_v1 地点转换 1号岛"
+cheat362_code = "32ff1CF0+0020+32ff1CF1+0004"
+cheat362_enable = false
+
+cheat363_desc = "direct_v1 地点转换 2号岛"
+cheat363_code = "32ff1CF0+0021+32ff1CF1+0004"
+cheat363_enable = false
+
+cheat364_desc = "direct_v1 地点转换 3号岛"
+cheat364_code = "32ff1CF0+0026+32ff1CF1+0000"
+cheat364_enable = false
+
+cheat365_desc = "direct_v1 地点转换 4号岛"
+cheat365_code = "32ff1CF0+0023+32ff1CF1+0005"
+cheat365_enable = false
+
+cheat366_desc = "direct_v1 地点转换 5号岛"
+cheat366_code = "32ff1CF0+0024+32ff1CF1+0002"
+cheat366_enable = false
+
+cheat367_desc = "direct_v1 地点转换 6号岛"
+cheat367_code = "32ff1CF0+0025+32ff1CF1+0002"
+cheat367_enable = false
+
+cheat368_desc = "direct_v1 地点转换 7号岛"
+cheat368_code = "32ff1CF0+001F+32ff1CF1+0006"
+cheat368_enable = false
+
+cheat369_desc = "direct_v1 地点转换 8号岛"
+cheat369_code = "32ff1CF0+0002+32ff1CF1+003B"
+cheat369_enable = false
+
+cheat370_desc = "direct_v1 地点转换 9号岛"
+cheat370_code = "32ff1CF0+0002+32ff1CF1+003A"
+cheat370_enable = false
+
+cheat371_desc = "direct_v1 狩猎区"
+cheat371_code = "32ff990C+0032+32ff990D+0000+32ff990E+0058+32ff990F+0002"
+cheat371_enable = false

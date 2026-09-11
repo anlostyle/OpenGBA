@@ -1,0 +1,337 @@
+cheats = 84
+
+cheat0_desc = "direct_v1 信长带兵数"
+cheat0_code = "33001CE0+000F+33001CE1+0027+33001CE2+000F+33001CE3+0027+33001CE4+000F+33001CE5+0027"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 第二人带兵数"
+cheat1_code = "33001D24+000F+33001D25+0027+33001D26+000F+33001D27+0027+33001D28+000F+33001D29+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 编成中/士气"
+cheat2_code = "330024A4+00C8"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 编成中/气合"
+cheat3_code = "330024A5+0005+330024A6+0005"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 编成中/全技能"
+cheat4_code = "330024A8+0001+330024A9+0001+330024AA+0001+330024AB+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 编成中/前卫种类 太刀队"
+cheat5_code = "33001CDD+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 编成中/前卫种类 枪队"
+cheat6_code = "33001CDD+0002"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 编成中/前卫种类 弓队"
+cheat7_code = "33001CDD+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 编成中/前卫种类 铁炮队"
+cheat8_code = "33001CDD+0004"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 编成中/前卫种类 骑马队"
+cheat9_code = "33001CDD+0005"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 编成中/前卫种类 母衣众"
+cheat10_code = "33001CDD+0006"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 编成中/前卫种类 骑马铁炮队"
+cheat11_code = "33001CDD+0007"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 编成中/前卫种类 水军"
+cheat12_code = "33001CDD+0008"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 编成中/前卫种类 毛利水军"
+cheat13_code = "33001CDD+0009"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 编成中/前卫种类 铁船水军"
+cheat14_code = "33001CDD+000A"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 编成中/前卫种类 一揆兵"
+cheat15_code = "33001CDD+000B"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 编成中/前卫种类 铁炮一揆兵"
+cheat16_code = "33001CDD+000C"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 编成中/前卫种类 僧兵"
+cheat17_code = "33001CDD+000D"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 编成中/前卫种类 国崩"
+cheat18_code = "33001CDD+000E"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 编成中/前卫种类 伊贺忍"
+cheat19_code = "33001CDD+000F"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 编成中/前卫种类 三河众"
+cheat20_code = "33001CDD+0010"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 编成中/前卫种类 西美浓众"
+cheat21_code = "33001CDD+0011"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 编成中/前卫种类 杂贺众"
+cheat22_code = "33001CDD+0012"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 编成中/前卫种类 武田骑马队"
+cheat23_code = "33001CDD+0013"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 编成中/前卫种类 村上水军"
+cheat24_code = "33001CDD+0014"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 编成中/前卫种类 风魔忍"
+cheat25_code = "33001CDD+0015"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 编成中/前卫种类 一领具足兵"
+cheat26_code = "33001CDD+0016"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 编成中/中卫种类 太刀队"
+cheat27_code = "33001CDE+0001"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 编成中/中卫种类 枪队"
+cheat28_code = "33001CDE+0002"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 编成中/中卫种类 弓队"
+cheat29_code = "33001CDE+0003"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 编成中/中卫种类 铁炮队"
+cheat30_code = "33001CDE+0004"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 编成中/中卫种类 骑马队"
+cheat31_code = "33001CDE+0005"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 编成中/中卫种类 母衣众"
+cheat32_code = "33001CDE+0006"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 编成中/中卫种类 骑马铁炮队"
+cheat33_code = "33001CDE+0007"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 编成中/中卫种类 水军"
+cheat34_code = "33001CDE+0008"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 编成中/中卫种类 毛利水军"
+cheat35_code = "33001CDE+0009"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 编成中/中卫种类 铁船水军"
+cheat36_code = "33001CDE+000A"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 编成中/中卫种类 一揆兵"
+cheat37_code = "33001CDE+000B"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 编成中/中卫种类 铁炮一揆兵"
+cheat38_code = "33001CDE+000C"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 编成中/中卫种类 僧兵"
+cheat39_code = "33001CDE+000D"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 编成中/中卫种类 国崩"
+cheat40_code = "33001CDE+000E"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 编成中/中卫种类 伊贺忍"
+cheat41_code = "33001CDE+000F"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 编成中/中卫种类 三河众"
+cheat42_code = "33001CDE+0010"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 编成中/中卫种类 西美浓众"
+cheat43_code = "33001CDE+0011"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 编成中/中卫种类 杂贺众"
+cheat44_code = "33001CDE+0012"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 编成中/中卫种类 武田骑马队"
+cheat45_code = "33001CDE+0013"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 编成中/中卫种类 村上水军"
+cheat46_code = "33001CDE+0014"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 编成中/中卫种类 风魔忍"
+cheat47_code = "33001CDE+0015"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 编成中/中卫种类 一领具足兵"
+cheat48_code = "33001CDE+0016"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 编成中/后卫种类 太刀队"
+cheat49_code = "33001CDF+0001"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 编成中/后卫种类 枪队"
+cheat50_code = "33001CDF+0002"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 编成中/后卫种类 弓队"
+cheat51_code = "33001CDF+0003"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 编成中/后卫种类 铁炮队"
+cheat52_code = "33001CDF+0004"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 编成中/后卫种类 骑马队"
+cheat53_code = "33001CDF+0005"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 编成中/后卫种类 母衣众"
+cheat54_code = "33001CDF+0006"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 编成中/后卫种类 骑马铁炮队"
+cheat55_code = "33001CDF+0007"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 编成中/后卫种类 水军"
+cheat56_code = "33001CDF+0008"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 编成中/后卫种类 毛利水军"
+cheat57_code = "33001CDF+0009"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 编成中/后卫种类 铁船水军"
+cheat58_code = "33001CDF+000A"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 编成中/后卫种类 一揆兵"
+cheat59_code = "33001CDF+000B"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 编成中/后卫种类 铁炮一揆兵"
+cheat60_code = "33001CDF+000C"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 编成中/后卫种类 僧兵"
+cheat61_code = "33001CDF+000D"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 编成中/后卫种类 国崩"
+cheat62_code = "33001CDF+000E"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 编成中/后卫种类 伊贺忍"
+cheat63_code = "33001CDF+000F"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 编成中/后卫种类 三河众"
+cheat64_code = "33001CDF+0010"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 编成中/后卫种类 西美浓众"
+cheat65_code = "33001CDF+0011"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 编成中/后卫种类 杂贺众"
+cheat66_code = "33001CDF+0012"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 编成中/后卫种类 武田骑马队"
+cheat67_code = "33001CDF+0013"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 编成中/后卫种类 村上水军"
+cheat68_code = "33001CDF+0014"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 编成中/后卫种类 风魔忍"
+cheat69_code = "33001CDF+0015"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 编成中/后卫种类 一领具足兵"
+cheat70_code = "33001CDF+0016"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 编成中/士兵数量"
+cheat71_code = "33001CE0+00FF+33001CE1+00FF+33001CE2+00FF+33001CE3+00FF+33001CE4+00FF+33001CE5+00FF"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 战斗中/左军体力 最大"
+cheat72_code = "3300503E+00FF"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 战斗中/左军体力 最少"
+cheat73_code = "3300503E+0000"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 战斗中/左军气合 最大"
+cheat74_code = "33004FE7+0005"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 战斗中/左军气合 最少"
+cheat75_code = "33004FE7+0000"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 战斗中/左军士兵数量 最大"
+cheat76_code = "33004FB6+00FF+33004FB7+00FF+33004FBC+00FF+33004FBD+00FF+33004FC2+00FF+33004FC3+00FF"
+cheat76_enable = false
+
+cheat77_desc = "direct_v1 战斗中/左军士兵数量 最少"
+cheat77_code = "33004FB6+0000+33004FB7+0000+33004FBC+0000+33004FBD+0000+33004FC2+0000+33004FC3+0000"
+cheat77_enable = false
+
+cheat78_desc = "direct_v1 战斗中/右军体力 最大"
+cheat78_code = "3300503F+00FF"
+cheat78_enable = false
+
+cheat79_desc = "direct_v1 战斗中/右军体力 最少"
+cheat79_code = "3300503F+0000"
+cheat79_enable = false
+
+cheat80_desc = "direct_v1 战斗中/右军气合 最大"
+cheat80_code = "33004FE7+0005"
+cheat80_enable = false
+
+cheat81_desc = "direct_v1 战斗中/右军气合 最少"
+cheat81_code = "33004FE7+0000"
+cheat81_enable = false
+
+cheat82_desc = "direct_v1 战斗中/右军士兵数量 最大"
+cheat82_code = "33004FC8+00FF+33004FC9+00FF+33004FCE+00FF+33004FCF+00FF+33004FD4+00FF+33004FD5+00FF"
+cheat82_enable = false
+
+cheat83_desc = "direct_v1 战斗中/右军士兵数量 最少"
+cheat83_code = "33004FC8+0000+33004FC9+0000+33004FCE+0000+33004FCF+0000+33004FD4+0000+33004FD5+0000"
+cheat83_enable = false

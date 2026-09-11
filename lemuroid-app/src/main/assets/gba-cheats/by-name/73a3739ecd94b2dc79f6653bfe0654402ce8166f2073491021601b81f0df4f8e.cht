@@ -1,0 +1,285 @@
+cheats = 71
+
+cheat0_desc = "direct_v1 生命(星际大战三部曲皆可用)"
+cheat0_code = "32fcDCD4+00E7+32fcDCD5+0003+32fcDCD6+00E7+32fcDCD7+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 剑气能源(星际大战三部曲皆可用)"
+cheat1_code = "32fcDCE8+000F+32fcDCE9+0027+32fcDCEA+000F+32fcDCEB+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 金钱999(星际大战三部曲皆可用)"
+cheat2_code = "33006BD0+00E7+33006BD1+0003+33006BD2+00E7+33006BD3+0003+33006EB0+00E7+33006EB1+0003+33006EB4+00E7+33006EB5+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐藏人物模块使用(星际大战三部曲皆可用) 模块1"
+cheat3_code = "330033D1+0031+330033D2+0032+330033D3+0033"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 隐藏人物模块使用(星际大战三部曲皆可用) 模块2"
+cheat4_code = "330033D1+0034+330033D2+0035+330033D3+0036"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 隐藏人物模块使用(星际大战三部曲皆可用) 模块3"
+cheat5_code = "330033D1+0037+330033D2+0038+330033D3+0039"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 隐藏人物模块使用(星际大战三部曲皆可用) 模块4"
+cheat6_code = "330033D1+003A+330033D2+003B+330033D3+003C"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 隐藏人物模块使用(星际大战三部曲皆可用) 模块5"
+cheat7_code = "330033D1+003D+330033D2+003E+330033D3+003F"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 隐藏人物模块使用(星际大战三部曲皆可用) 模块6"
+cheat8_code = "330033D1+0040+330033D2+0041+330033D3+0042"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 隐藏人物模块使用(星际大战三部曲皆可用) 回复游戏设定最初模块(一部曲)"
+cheat9_code = "330033D0+002E+330033D1+0069+330033D2+0069+330033D3+0069+330033CB+002E+330033D8+002E+330033D9+0069+330033DA+0069+330033DB+0069"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 隐藏人物模块使用(星际大战三部曲皆可用) 回复游戏设定最初模块(二部曲和三部曲)"
+cheat10_code = "330033D0+002C+330033D1+0069+330033D2+0069+330033D3+0069+330033CB+002C+330033D8+002C+330033D9+0069+330033DA+0069+330033DB+0069"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 移动高速化"
+cheat11_code = "330033E0+00FF"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 移动高速化 OFF"
+cheat12_code = "330033E0+0000"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 生命"
+cheat13_code = "32fcDCD4+002C+32fcDCD5+0001"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 能量"
+cheat14_code = "32fcDCE8+0088+32fcDCE9+0013"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 收集品"
+cheat15_code = "33006EB4+00E7+33006EB5+0003"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 自由战全开"
+cheat16_code = "33006F44+00FF+33006F45+00FF"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 自由战全人物"
+cheat17_code = "33006F4A+00FF+33006F4B+00FF+33006F4C+00FF+33006F4D+00FF"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 队员1变更 Anakin"
+cheat18_code = "330033D0+002C"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 队员1变更 Qui-Gon"
+cheat19_code = "330033D0+002D"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 队员1变更 Obi-Wan"
+cheat20_code = "330033D0+002E"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 队员1变更 Dooku"
+cheat21_code = "330033D0+0030"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 队员1变更 Darth Maul"
+cheat22_code = "330033D0+0031"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 队员1变更 Darth Vader"
+cheat23_code = "330033D0+0032"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 队员1变更 Yoda"
+cheat24_code = "330033D0+0033"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 队员1变更 R2-D2"
+cheat25_code = "330033D0+0034"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 队员1变更 R4-P17"
+cheat26_code = "330033D0+0035"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 队员1变更 Jar Jar"
+cheat27_code = "330033D0+0036"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 队员1变更 Jango Fett"
+cheat28_code = "330033D0+0037"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 队员1变更 Clone Trooper"
+cheat29_code = "330033D0+0038"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 队员1变更 Amidala"
+cheat30_code = "330033D0+0039"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 队员1变更 Chewbacca"
+cheat31_code = "330033D0+003A"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 队员1变更 Tusken Raider"
+cheat32_code = "330033D0+003B"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 队员1变更 敌兵1"
+cheat33_code = "330033D0+003C"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 队员1变更 敌兵2"
+cheat34_code = "330033D0+003D"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 队员1变更 敌兵3"
+cheat35_code = "330033D0+003E"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 队员1变更 敌兵4"
+cheat36_code = "330033D0+003F"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 队员1变更 敌兵5"
+cheat37_code = "330033D0+0040"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 队员1变更 敌兵6"
+cheat38_code = "330033D0+0041"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 队员1变更 敌兵7"
+cheat39_code = "330033D0+0042"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 队员1变更 敌兵8"
+cheat40_code = "330033D0+0043"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 队员1变更 敌兵9"
+cheat41_code = "330033D0+0044"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 队员1变更 敌兵10"
+cheat42_code = "330033D0+0045"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 队员1变更 敌兵11"
+cheat43_code = "330033D0+0046"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 队员1变更 敌兵12"
+cheat44_code = "330033D0+0047"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 队员1变更 敌兵13"
+cheat45_code = "330033D0+0048"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 队员1变更 敌兵14"
+cheat46_code = "330033D0+0049"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 队员1变更 敌兵15"
+cheat47_code = "330033D0+004A"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 队员1变更 敌兵16"
+cheat48_code = "330033D0+004B"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 队员1变更 敌兵17"
+cheat49_code = "330033D0+004C"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 队员1变更 敌兵18"
+cheat50_code = "330033D0+004D"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 队员1变更 敌兵19"
+cheat51_code = "330033D0+004E"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 队员1变更 敌兵201"
+cheat52_code = "330033D0+004F"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 队员1变更 敌兵21"
+cheat53_code = "330033D0+0050"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 队员1变更 敌兵22"
+cheat54_code = "330033D0+0051"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 队员1变更 敌兵23"
+cheat55_code = "330033D0+0052"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 队员1变更 敌兵24"
+cheat56_code = "330033D0+0053"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 队员1变更 敌兵25"
+cheat57_code = "330033D0+0054"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 队员1变更 敌兵26"
+cheat58_code = "330033D0+0055"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 队员1变更 敌兵27"
+cheat59_code = "330033D0+0056"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 队员1变更 敌兵28"
+cheat60_code = "330033D0+0057"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 队员1变更 敌兵29"
+cheat61_code = "330033D0+0058"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 队员1变更 敌兵30"
+cheat62_code = "330033D0+0059"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 队员1变更 敌兵31"
+cheat63_code = "330033D0+005A"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 队员1变更 敌兵32"
+cheat64_code = "330033D0+005B"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 队员1变更 敌兵33"
+cheat65_code = "330033D0+005C"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 队员1变更 敌兵34"
+cheat66_code = "330033D0+005D"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 队员1变更 敌兵35"
+cheat67_code = "330033D0+005E"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 队员1变更 敌兵36"
+cheat68_code = "330033D0+005F"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 队员1变更 敌兵37"
+cheat69_code = "330033D0+0060"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 队员1变更 敌兵38"
+cheat70_code = "330033D0+0061"
+cheat70_enable = false

@@ -1,0 +1,65 @@
+cheats = 16
+
+cheat0_desc = "direct_v1 属性"
+cheat0_code = "32fc0690+00E7+32fc0691+0003+32fc0692+00E7+32fc0693+0003+32fc0694+00E7+32fc0695+0003+32fc0696+00E7+32fc0697+0003+32fc0698+00E7+32fc0699+0003+32fc069A+00E7+32fc069B+0003+32fc069E+00E7+32fc069F+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 钱"
+cheat1_code = "32fc06DC+000F+32fc06DD+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 经验值"
+cheat2_code = "32fc06E4+0060+32fc06E5+00EA"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 无敌"
+cheat3_code = "32fd77C8+00C8"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 金钱"
+cheat4_code = "32fc06DC+009F+32fc06DD+0086+32fc06DE+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 体力"
+cheat5_code = "32fc0690+00E7+32fc0691+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 气力"
+cheat6_code = "32fc0692+00E7+32fc0693+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 攻击"
+cheat7_code = "32fc0698+00E7+32fc0699+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 防御"
+cheat8_code = "32fc069A+00E7+32fc069B+0003"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 脚力"
+cheat9_code = "32fc069E+00E7+32fc069F+0003"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 经验"
+cheat10_code = "32fc06E4+0080+32fc06E5+0084+32fc06E6+001E"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 全装备"
+cheat11_code = "32fc070C+00FF+32fc070D+00FF+32fc070E+00FF+32fc070F+00FF+32fc0710+00FF+32fc0711+00FF+32fc0712+00FF+32fc0713+00FF+32fc0714+00FF+32fc0715+00FF+32fc0716+00FF+32fc0717+00FF+32fc0718+00FF+32fc0719+00FF+32fc071A+00FF+32fc071B+00FF+32fc071C+00FF+32fc071D+00FF+32fc071E+00FF+32fc071F+00FF"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 全图鉴"
+cheat12_code = "32fc077A+00FF"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 战斗体力"
+cheat13_code = "32fc0694+00E7+32fc0695+0003"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 战斗气力"
+cheat14_code = "32fc0696+00E7+32fc0697+0003"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 战斗隐身"
+cheat15_code = "32fd77C8+00FF"
+cheat15_enable = false

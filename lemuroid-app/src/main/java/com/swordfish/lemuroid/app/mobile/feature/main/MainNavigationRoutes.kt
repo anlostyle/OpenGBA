@@ -6,10 +6,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.VideogameAsset
 import androidx.compose.material.icons.outlined.Home
-import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.VideogameAsset
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -48,10 +48,6 @@ enum class MainRoute(
         route = "favorites",
         titleId = R.string.favorites,
     ),
-    SEARCH(
-        route = "search",
-        titleId = R.string.title_search,
-    ),
     SYSTEMS(
         route = "systems/home",
         titleId = R.string.title_systems,
@@ -61,6 +57,11 @@ enum class MainRoute(
         titleId = R.string.title_games,
         parent = SYSTEMS,
         listOf(navArgument("metaSystemId") { type = NavType.StringType }),
+    ),
+    SEARCH(
+        route = "search",
+        titleId = R.string.title_search,
+        parent = SYSTEMS,
     ),
     SETTINGS(
         route = "settings/home",
@@ -118,8 +119,8 @@ enum class MainNavigationRoutes(
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector,
 ) {
-    HOME(MainRoute.HOME, R.string.title_home, Icons.Filled.Home, Icons.Outlined.Home),
-    FAVORITES(MainRoute.FAVORITES, R.string.favorites, Icons.Filled.Favorite, Icons.Filled.FavoriteBorder),
+    HOME(MainRoute.HOME, R.string.launcher_continue, Icons.Filled.Home, Icons.Outlined.Home),
     SYSTEMS(MainRoute.SYSTEMS, R.string.title_systems, Icons.Filled.VideogameAsset, Icons.Outlined.VideogameAsset),
-    SEARCH(MainRoute.SEARCH, R.string.title_search, Icons.Filled.Search, Icons.Outlined.Search),
+    FAVORITES(MainRoute.FAVORITES, R.string.favorites, Icons.Filled.Favorite, Icons.Filled.FavoriteBorder),
+    SETTINGS(MainRoute.SETTINGS, R.string.title_settings, Icons.Filled.Settings, Icons.Outlined.Settings),
 }

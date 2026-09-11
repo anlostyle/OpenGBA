@@ -34,6 +34,19 @@ class StatesManager(private val directoriesManager: DirectoriesManager) {
         setSaveState(getSlotSaveFileName(game, index), coreID.coreName, saveState)
     }
 
+    suspend fun deleteSlotSave(
+        game: Game,
+        coreID: CoreID,
+        index: Int,
+    ): Boolean =
+        withContext(Dispatchers.IO) {
+            assert(index in 0 until MAX_STATES)
+            val fileName = getSlotSaveFileName(game, index)
+            val stateDeleted = getStateFile(fileName, coreID.coreName).deleteIfExists()
+            val metadataDeleted = getMetadataStateFile(fileName, coreID.coreName).deleteIfExists()
+            stateDeleted && metadataDeleted
+        }
+
     suspend fun getAutoSaveInfo(
         game: Game,
         coreID: CoreID,
@@ -148,7 +161,9 @@ class StatesManager(private val directoriesManager: DirectoriesManager) {
     ) = "${game.fileName}.slot${index + 1}"
 
     companion object {
-        const val MAX_STATES = 4
+        const val MAX_STATES = 10
         private const val FILE_ACCESS_RETRIES = 3
     }
+
+    private fun File.deleteIfExists() = !exists() || delete()
 }

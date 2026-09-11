@@ -1,0 +1,49 @@
+cheats = 12
+
+cheat0_desc = "direct_v1 无限金钱"
+cheat0_code = "32fd9BB4+00FF+32fd9BB5+00E0+32fd9BB6+00F5+32fd9BB7+0005"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 龙星PP值全满"
+cheat1_code = "32fd8B34+00E7+32fd8B35+0003+32fd9BB4+00FF+32fd9BB5+00E0+32fd9BB6+00F5+32fd9BB7+0005"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 熟练度"
+cheat2_code = "32fd9B66+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 难度选择 难"
+cheat3_code = "32fd9B6C+0002"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 难度选择 普"
+cheat4_code = "32fd9B6C+0001"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 难度选择 易"
+cheat5_code = "32fd9B6C+0000"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 梨比"
+cheat6_code = "32fd8BF0+0049"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 ラトゥ－ニ·スポゥ－タ"
+cheat7_code = "32fd8BBC+000F"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全强化部件"
+cheat8_code = "32fc38E0+0009+32fc38E1+0009+32fc38E2+0009+32fc38E3+0009+32fc38E4+0009+32fc38E5+0009+32fc38E6+0009"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 战后经验值 65535"
+cheat9_code = "32fc19C8+00FF+32fc19C9+00FF"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 战后经验值 升一级"
+cheat10_code = "32fc19C8+00F4+32fc19C9+0001"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 所有队员PP值全满"
+cheat11_code = "32fd8B34+00E7+32fd8B35+0003+32fd8F78+00E7+32fd8F79+0003+32fd8CA0+00E7+32fd8CA1+0003+32fd8CD4+00E7+32fd8CD5+0003+32fd8E74+00E7+32fd8E75+0003+32fd8E0C+00E7+32fd8E0D+0003+32fd8C38+00E7+32fd8C39+0003+32fd8C6C+00E7+32fd8C6D+0003+32fd8B68+00E7+32fd8B69+0003+32fd8DA4+00E7+32fd8DA5+0003+32fd8D70+00E7+32fd8D71+0003+32fd8DD8+00E7+32fd8DD9+0003+32fd8D08+00E7+32fd8D09+0003+32fd8C04+00E7+32fd8C05+0003+32fd8BD0+00E7+32fd8BD1+0003+32fd8EDC+00E7+32fd8EDD+0003+32fd8D3C+00E7+32fd8D3D+0003+32fd8F44+00E7+32fd8F45+0003+32fd8F10+00E7+32fd8F11+0003+32fd8EA8+00E7+32fd8EA9+0003+32fd8E40+00E7+32fd8E41+0003+32fd9014+00E7+32fd9015+0003+32fc18FE+00E7+32fc18FF+0003+32fd8FAC+00E7+32fd8FAD+0003+32fd9048+00E7+32fd9049+0003+32fd8B9C+00E7+32fd8B9D+0003+32fd90B0+00E7+32fd90B1+0003+32fd907C+00E7+32fd907D+0003+32fd90E4+00E7+32fd90E5+0003"
+cheat11_enable = false

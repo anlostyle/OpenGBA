@@ -57,6 +57,24 @@ class InputDevicesSettingsViewModel(
         }
     }
 
+    fun clearBinding(
+        device: InputDevice,
+        retroKey: RetroKey,
+    ) {
+        viewModelScope.launch {
+            inputDeviceManager.clearBinding(device, retroKey)
+        }
+    }
+
+    fun clearShortcutBinding(
+        device: InputDevice,
+        shortcut: GameShortcut,
+    ) {
+        viewModelScope.launch {
+            inputDeviceManager.clearShortcutBinding(device, shortcut.type)
+        }
+    }
+
     private fun initializeState(context: Context): Flow<State> {
         val devicesViews = getEnabledDevicesViews(context)
         val bindingsViews = getDevicesBindingViews()
@@ -86,10 +104,10 @@ class InputDevicesSettingsViewModel(
 
         return combine(devicesFlow, bindingsFlow, shortcutsFlow) { devices, allBindings, allShortcuts ->
             devices.associateWith { device ->
+                val configuredShortcuts = allShortcuts[device].orEmpty().associateBy { it.type }
                 val shortcuts =
-                    allShortcuts[device]?.filter {
-                        it.type in device.getLemuroidInputDevice().getSupportedShortcuts()
-                    } ?: emptyList()
+                    device.getLemuroidInputDevice().getSupportedShortcuts()
+                        .map { type -> configuredShortcuts[type] ?: GameShortcut(type, emptySet()) }
                 val keys = allBindings(device).reverseLookup()
 
                 BindingsView(keys, shortcuts)

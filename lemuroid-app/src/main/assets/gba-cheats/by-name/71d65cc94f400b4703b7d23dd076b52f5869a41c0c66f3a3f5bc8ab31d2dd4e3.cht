@@ -1,0 +1,33 @@
+cheats = 8
+
+cheat0_desc = "direct_v1 电脑全为零星卡片"
+cheat0_code = "330004DE+0000+330004E2+0000+330004E6+0000+330004EA+0000+330004EE+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 自己全为六星卡片"
+cheat1_code = "330004A6+00FF+330004AA+00FF+330004AE+00FF+330004B2+00FF+330004B6+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 电脑能量槽为零"
+cheat2_code = "330038C1+0000+330004F1+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 自己能量槽全满"
+cheat3_code = "330004B9+0064+330038C2+000D"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 调换卡片时间(按SELECT键完成) 无限"
+cheat4_code = "33000C04+0000"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 调换卡片时间(按SELECT键完成) 为零"
+cheat5_code = "33000C04+0084"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 隐藏人物可选"
+cheat6_code = "32fcDF5C+0001+32fcDF5D+0001"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 封面人物全部出现"
+cheat7_code = "32fcDF66+00FF"
+cheat7_enable = false

@@ -1,0 +1,125 @@
+cheats = 31
+
+cheat0_desc = "direct_v1 人物,游戏开始选人时用 FIGHTER"
+cheat0_code = "33000ACB+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 人物,游戏开始选人时用 WIZARO"
+cheat1_code = "33000ACB+0001"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 人物,游戏开始选人时用 ARCHER"
+cheat2_code = "33000ACB+0002"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 人物,游戏开始选人时用 ELVEN FIGHTER"
+cheat3_code = "33000ACB+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 HEALTH"
+cheat4_code = "33000B54+0044+02040B55+0016"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 ENERGY"
+cheat5_code = "33000B56+0044+02040B57+0016"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 最大载重"
+cheat6_code = "33000B58+00E7+02040B59+0003"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 金钱"
+cheat7_code = "33000994+003F+02040995+0042+02040996+000F"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 EXPERIENCE"
+cheat8_code = "33000B50+007F+02040B51+0096+02040B52+0098"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 STRENGTH"
+cheat9_code = "33000B5E+0064"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 DEXTERITY"
+cheat10_code = "33000B5F+0064"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 INTELLIGENCE"
+cheat11_code = "33000B60+0064"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 WISDOM"
+cheat12_code = "33000B61+0064"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 CONSTITUTION"
+cheat13_code = "33000B62+0064"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 CHARISMA"
+cheat14_code = "33000B63+0021"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 ARMOR"
+cheat15_code = "33000B5C+0064"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 斧头"
+cheat16_code = "33000B34+0000"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 小刀"
+cheat17_code = "33000B34+0001"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 木棍"
+cheat18_code = "33000B34+0002"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 木棍2"
+cheat19_code = "33000B34+0003"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 木棍3"
+cheat20_code = "33000B34+0004"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 大刀"
+cheat21_code = "33000B34+0005"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 中剑"
+cheat22_code = "33000B34+0006"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 射箭"
+cheat23_code = "33000B34+0007"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 大斧头"
+cheat24_code = "33000B34+0008+02040B30+0002"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 长剑"
+cheat25_code = "33000B34+0009+02040B30+0003"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 武器,慎用,特别本身物品没有这种武器时,可能会死机 大锤(慎用)"
+cheat26_code = "33000B34+000A+02040B30+0002"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 四种人物的全能力最高 Fighter"
+cheat27_code = "33000B71+0065+02040B72+006D+02040B73+0071+02040B74+0079+02040B75+008D+02040B76+0095+02040B77+00A5+02040B78+00AD+02040B79+00B5+02040B7A+00BD+02040B7B+00C5+02040B7C+00D5+02040B7D+00DB+02040B7E+00E1+02040B7F+00ED+02040B80+00F5"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 四种人物的全能力最高 Wizard"
+cheat28_code = "33000B71+002B+02040B72+0035+02040B73+003D+02040B74+0045+02040B75+004D+02040B76+0052+02040B77+005D+02040B78+0071+02040B79+0079+02040B7A+00B5+02040B7B+00BD+02040B7C+00C5"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 四种人物的全能力最高 Archer"
+cheat29_code = "33000B71+0005+02040B72+000D+02040B73+0015+02040B74+001A+02040B75+0025+02040B76+0071+02040B77+0079+02040B78+0081+02040B79+008D+02040B7A+0095+02040B7B+009D+02040B7C+00A5+02040B7D+00AD+02040B7E+00B5+02040B7F+00BD+02040B80+00C5+02040B81+00CD+02040B82+00D5+02040B83+00DB"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 四种人物的全能力最高 Elven Fighter"
+cheat30_code = "33000B71+000D+02040B72+0015+02040B73+001A+02040B74+002B+02040B75+0035+02040B76+0045+02040B77+0065+02040B78+006D+02040B79+0071+02040B7A+0079+02040B7B+008D+02040B7C+0095+02040B7D+00A5+02040B7E+00AD+02040B7F+00B5+02040B80+00BD+02040B81+00C5+02040B82+00D5+02040B83+00DB+02040B84+00E1+02040B85+00ED+02040B86+00F5"
+cheat30_enable = false

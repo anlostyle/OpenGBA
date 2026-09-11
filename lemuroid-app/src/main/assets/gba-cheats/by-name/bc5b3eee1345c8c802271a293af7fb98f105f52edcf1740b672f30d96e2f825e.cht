@@ -1,0 +1,61 @@
+cheats = 15
+
+cheat0_desc = "direct_v1 宝石量*255 on"
+cheat0_code = "32fc2340+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血不减"
+cheat1_code = "32fc234D+00A0"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 钱"
+cheat2_code = "32fc2340+00E7+32fc2341+0003+32fc2341+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 无限炸弹"
+cheat3_code = "32fc2323+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 气力槽"
+cheat4_code = "32fc234E+0080"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 剑 1级剑"
+cheat5_code = "32fc233D+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 剑 2级剑"
+cheat6_code = "32fc233D+0002"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 剑 3级剑"
+cheat7_code = "32fc233D+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 剑 4级剑"
+cheat8_code = "32fc233D+0004"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 箭"
+cheat9_code = "32fc2357+0063"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 箭不减(黑暗世界练靶场)"
+cheat10_code = "33002FE5+0005"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 无限时(黑暗世界)"
+cheat11_code = "33002D8C+001E"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 无限时(黑暗世界) OFF"
+cheat12_code = "32fc0000+0000"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 钥匙"
+cheat13_code = "32fc234F+0009"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 隐身"
+cheat14_code = "330039DA+0064"
+cheat14_enable = false

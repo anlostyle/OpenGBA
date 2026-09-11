@@ -1,0 +1,41 @@
+cheats = 10
+
+cheat0_desc = "direct_v1 人数"
+cheat0_code = "32fe0842+0009"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 能量"
+cheat1_code = "32fe0844+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 经验"
+cheat2_code = "32fe084C+000F+32fe084D+0027"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐藏要素全开"
+cheat3_code = "32fe0A58+00FF+32fe0A59+00FF+32fe0A5A+00FF+32fe0A5B+00FF+32fe0A5C+00FF+32fe0A5D+00FF+32fe0A84+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 血"
+cheat4_code = "32fd14AC+001C"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 无敌"
+cheat5_code = "32fd147E+007F"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 EXP"
+cheat6_code = "32fe084C+009F+32fe084D+0086+32fe084E+0001"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 怒气槽"
+cheat7_code = "32fe0844+0064"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 只数"
+cheat8_code = "32fe0842+0009"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 得分"
+cheat9_code = "32fe082C+00FF+32fe082D+00E0+32fe082E+00F5+32fe082F+0005"
+cheat9_enable = false

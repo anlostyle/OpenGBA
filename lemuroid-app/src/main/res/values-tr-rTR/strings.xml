@@ -146,7 +146,7 @@
     <string name="tv_home_section_recents">En son</string>
     <string name="tv_home_section_systems">Sistemler</string>
     <string name="tv_home_section_settings">Ayarlar</string>
-    <string name="gamepad_binding_update_title">gamepad bağlama güncelleme başlığı</string>
+    <string name="gamepad_binding_update_title">“RetroPad %1$s” ile eşleştir</string>
     <string name="gamepad_binding_update_description">\"%1$s\" üzerinde bir tuşa basın</string>
     <string name="shortcut_binding_update_title">\"Kısayol %1$s\" ile ilişkilendirilmiş</string>
     <string name="shortcut_binding_update_description">\"%1$s\" karakterinize bir kombo atamak için önce birinci, sonra ikinci düğmeye basın</string>

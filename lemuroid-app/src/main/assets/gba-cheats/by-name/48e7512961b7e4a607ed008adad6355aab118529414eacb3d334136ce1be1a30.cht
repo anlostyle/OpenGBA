@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 生命值"
+cheat0_code = "33001344+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 隐身"
+cheat1_code = "3300127D+0063"
+cheat1_enable = false

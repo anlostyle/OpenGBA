@@ -1,0 +1,497 @@
+cheats = 124
+
+cheat0_desc = "direct_v1 1P资金 最大"
+cheat0_code = "32fd0150+00FF+02010151+00C9+02010152+009A+02010153+003B"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 1P资金 最小"
+cheat1_code = "32fd0150+0000+02010151+0000+02010152+0000+02010153+0000"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 1P步数 1步"
+cheat2_code = "32fd6BE4+0001"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 1P步数 2步"
+cheat3_code = "32fd6BE4+0002"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 1P步数 3步"
+cheat4_code = "32fd6BE4+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 1P步数 4步"
+cheat5_code = "32fd6BE4+0004"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 1P步数 5步"
+cheat6_code = "32fd6BE4+0005"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 1P步数 6步"
+cheat7_code = "32fd6BE4+0006"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 首位进行系卡片 急行カード"
+cheat8_code = "32fd015C+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 首位进行系卡片 特急カード"
+cheat9_code = "32fd015C+0002"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 首位进行系卡片 新干线カード"
+cheat10_code = "32fd015C+0003"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 首位进行系卡片 のぞみカード"
+cheat11_code = "32fd015C+0004"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 首位进行系卡片 リニアカード"
+cheat12_code = "32fd015C+0005"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 首位进行系卡片 1进めるカード"
+cheat13_code = "32fd015C+0006"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 首位进行系卡片 2进めるカード"
+cheat14_code = "32fd015C+0007"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 首位进行系卡片 3进めるカード"
+cheat15_code = "32fd015C+0008"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 首位进行系卡片 4进めるカード"
+cheat16_code = "32fd015C+0009"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 首位进行系卡片 5进めるカード"
+cheat17_code = "32fd015C+000A"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 首位进行系卡片 6进めるカード"
+cheat18_code = "32fd015C+000B"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 首位进行系卡片 スペシャルカード"
+cheat19_code = "32fd015C+000C"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 首位进行系卡片 急行周游カード"
+cheat20_code = "32fd015C+000D"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 首位进行系卡片 特急周游カード"
+cheat21_code = "32fd015C+000E"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 首位进行系卡片 新干线周游カード"
+cheat22_code = "32fd015C+000F"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 首位进行系卡片 スピードカード"
+cheat23_code = "32fd015C+0010"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 首位进行系卡片 德政令カード"
+cheat24_code = "32fd015C+0011"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 首位进行系卡片 サミットカード"
+cheat25_code = "32fd015C+0012"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 首位进行系卡片 ぶっとばしカード"
+cheat26_code = "32fd015C+0013"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 首位进行系卡片 みなぶっとびカード"
+cheat27_code = "32fd015C+0014"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 首位进行系卡片 ぶっとびカード"
+cheat28_code = "32fd015C+0015"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 首位进行系卡片 梦のまた梦カード"
+cheat29_code = "32fd015C+0016"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 首位进行系卡片 北ヘ!カード"
+cheat30_code = "32fd015C+0017"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 首位进行系卡片 もしかしたらカード"
+cheat31_code = "32fd015C+0018"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 首位进行系卡片 千载一遇カード"
+cheat32_code = "32fd015C+0019"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 首位进行系卡片 银河铁道カード"
+cheat33_code = "32fd015C+001A"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 首位进行系卡片 うんちカード"
+cheat34_code = "32fd015C+001B"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 首位进行系卡片 とびちりカード"
+cheat35_code = "32fd015C+001C"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 首位进行系卡片 指定うんちカード"
+cheat36_code = "32fd015C+001D"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 首位进行系卡片 うんち突入カード"
+cheat37_code = "32fd015C+001E"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 首位进行系卡片 ばちあたりカード"
+cheat38_code = "32fd015C+001F"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 首位进行系卡片 バキュームカード"
+cheat39_code = "32fd015C+0020"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 首位进行系卡片 オナラカード"
+cheat40_code = "32fd015C+0021"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 首位进行系卡片 ☆に愿いをカード"
+cheat41_code = "32fd015C+0022"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 首位进行系卡片 虎につばさカード"
+cheat42_code = "32fd015C+0023"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 首位进行系卡片 ダイヤモンドカード"
+cheat43_code = "32fd015C+0024"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 首位进行系卡片 シルバーカード"
+cheat44_code = "32fd015C+0025"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 首位进行系卡片 ゴールドカード"
+cheat45_code = "32fd015C+0026"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 首位进行系卡片 プラチナカード"
+cheat46_code = "32fd015C+0027"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 首位进行系卡片 乘っ取りカード"
+cheat47_code = "32fd015C+0028"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 首位进行系卡片 刀狩りカード"
+cheat48_code = "32fd015C+0029"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 首位进行系卡片 冬眠カード"
+cheat49_code = "32fd015C+002A"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 首位进行系卡片 牛步カード"
+cheat50_code = "32fd015C+002B"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 首位进行系卡片 ふういんカード"
+cheat51_code = "32fd015C+002C"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 首位进行系卡片 ぱろぷんてカード"
+cheat52_code = "32fd015C+002D"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 首位进行系卡片 たいらのまさカード"
+cheat53_code = "32fd015C+002E"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 首位进行系卡片 クレジットカード"
+cheat54_code = "32fd015C+002F"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 首位进行系卡片 增资カード"
+cheat55_code = "32fd015C+0030"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 首位进行系卡片 最寄りの驿でカード"
+cheat56_code = "32fd015C+0031"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 首位进行系卡片 ダビングカード"
+cheat57_code = "32fd015C+0032"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 首位进行系卡片 千两箱カード"
+cheat58_code = "32fd015C+0033"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 首位进行系卡片 エアポートカード"
+cheat59_code = "32fd015C+0034"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 首位进行系卡片 イエローカード"
+cheat60_code = "32fd015C+0035"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 首位进行系卡片 ブックマークカード"
+cheat61_code = "32fd015C+0036"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 首位进行系卡片 损害保险カード"
+cheat62_code = "32fd015C+0037"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 首位进行系卡片 リトルデビルカード"
+cheat63_code = "32fd015C+0038"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 首位进行系卡片 デビルカード"
+cheat64_code = "32fd015C+0039"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 首位进行系卡片 キングデビルカード"
+cheat65_code = "32fd015C+003A"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 首位进行系卡片 デビル派遣カード"
+cheat66_code = "32fd015C+003B"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 首位进行系卡片 おはらいカード"
+cheat67_code = "32fd015C+003C"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 首位进行系卡片 幸福な王子カード"
+cheat68_code = "32fd015C+003D"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 首位进行系卡片 减反政策カード"
+cheat69_code = "32fd015C+003E"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 首位进行系卡片 とりかえしカード"
+cheat70_code = "32fd015C+003F"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 首位进行系卡片 规模缩小カード"
+cheat71_code = "32fd015C+0040"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 首位进行系卡片 豪速球カード"
+cheat72_code = "32fd015C+0041"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 首位进行系卡片 ワクチンカード"
+cheat73_code = "32fd015C+0042"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 首位进行系卡片 ウィルスカード"
+cheat74_code = "32fd015C+0043"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 首位进行系卡片 ハッカード"
+cheat75_code = "32fd015C+0044"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 首位进行系卡片 エンジェルカード"
+cheat76_code = "32fd015C+0045"
+cheat76_enable = false
+
+cheat77_desc = "direct_v1 首位进行系卡片 シャッフルカード"
+cheat77_code = "32fd015C+0046"
+cheat77_enable = false
+
+cheat78_desc = "direct_v1 首位进行系卡片 とっかえっこカード"
+cheat78_code = "32fd015C+0047"
+cheat78_enable = false
+
+cheat79_desc = "direct_v1 首位进行系卡片 场所がえカード"
+cheat79_code = "32fd015C+0048"
+cheat79_enable = false
+
+cheat80_desc = "direct_v1 首位进行系卡片 モモトラマンカード"
+cheat80_code = "32fd015C+0049"
+cheat80_enable = false
+
+cheat81_desc = "direct_v1 首位进行系卡片 おまもりカード"
+cheat81_code = "32fd015C+004A"
+cheat81_enable = false
+
+cheat82_desc = "direct_v1 首位进行系卡片 テレポートカード"
+cheat82_code = "32fd015C+004B"
+cheat82_enable = false
+
+cheat83_desc = "direct_v1 首位进行系卡片 目的地变更?カード"
+cheat83_code = "32fd015C+004C"
+cheat83_enable = false
+
+cheat84_desc = "direct_v1 首位进行系卡片 贫乏神直击カード"
+cheat84_code = "32fd015C+004D"
+cheat84_enable = false
+
+cheat85_desc = "direct_v1 首位进行系卡片 あっちいけカード"
+cheat85_code = "32fd015C+004E"
+cheat85_enable = false
+
+cheat86_desc = "direct_v1 首位进行系卡片 徐行运转カード"
+cheat86_code = "32fd015C+004F"
+cheat86_enable = false
+
+cheat87_desc = "direct_v1 首位进行系卡片 素晴らしいカード"
+cheat87_code = "32fd015C+0050"
+cheat87_enable = false
+
+cheat88_desc = "direct_v1 首位进行系卡片 二刀流カード"
+cheat88_code = "32fd015C+0051"
+cheat88_enable = false
+
+cheat89_desc = "direct_v1 首位进行系卡片 たらればカード"
+cheat89_code = "32fd015C+0052"
+cheat89_enable = false
+
+cheat90_desc = "direct_v1 首位进行系卡片 路面电ラリーカード"
+cheat90_code = "32fd015C+0053"
+cheat90_enable = false
+
+cheat91_desc = "direct_v1 首位进行系卡片 一获千金カード"
+cheat91_code = "32fd015C+0054"
+cheat91_enable = false
+
+cheat92_desc = "direct_v1 首位进行系卡片 福引きカード"
+cheat92_code = "32fd015C+0055"
+cheat92_enable = false
+
+cheat93_desc = "direct_v1 首位进行系卡片 宝くじカード"
+cheat93_code = "32fd015C+0056"
+cheat93_enable = false
+
+cheat94_desc = "direct_v1 首位进行系卡片 福袋カード"
+cheat94_code = "32fd015C+0057"
+cheat94_enable = false
+
+cheat95_desc = "direct_v1 首位进行系卡片 カード交换カード"
+cheat95_code = "32fd015C+0058"
+cheat95_enable = false
+
+cheat96_desc = "direct_v1 首位进行系卡片 ポイントカード"
+cheat96_code = "32fd015C+0059"
+cheat96_enable = false
+
+cheat97_desc = "direct_v1 首位进行系卡片 渡りに舟カード"
+cheat97_code = "32fd015C+005A"
+cheat97_enable = false
+
+cheat98_desc = "direct_v1 首位进行系卡片 ビンゴカード"
+cheat98_code = "32fd015C+005B"
+cheat98_enable = false
+
+cheat99_desc = "direct_v1 首位进行系卡片 いただきますカード"
+cheat99_code = "32fd015C+005C"
+cheat99_enable = false
+
+cheat100_desc = "direct_v1 首位进行系卡片 へっちゃらカード"
+cheat100_code = "32fd015C+005D"
+cheat100_enable = false
+
+cheat101_desc = "direct_v1 首位进行系卡片 ワープ驿カード"
+cheat101_code = "32fd015C+005E"
+cheat101_enable = false
+
+cheat102_desc = "direct_v1 首位进行系卡片 足踏みカード"
+cheat102_code = "32fd015C+005F"
+cheat102_enable = false
+
+cheat103_desc = "direct_v1 首位进行系卡片 猪突猛进カード"
+cheat103_code = "32fd015C+0060"
+cheat103_enable = false
+
+cheat104_desc = "direct_v1 首位进行系卡片 ミレニアムカード"
+cheat104_code = "32fd015C+0061"
+cheat104_enable = false
+
+cheat105_desc = "direct_v1 首位进行系卡片 すずめの泪カード"
+cheat105_code = "32fd015C+0062"
+cheat105_enable = false
+
+cheat106_desc = "direct_v1 首位进行系卡片 里扫りカード"
+cheat106_code = "32fd015C+0063"
+cheat106_enable = false
+
+cheat107_desc = "direct_v1 首位进行系卡片 阴阳师カード"
+cheat107_code = "32fd015C+0064"
+cheat107_enable = false
+
+cheat108_desc = "direct_v1 首位进行系卡片 最后の切り札カード"
+cheat108_code = "32fd015C+0065"
+cheat108_enable = false
+
+cheat109_desc = "direct_v1 首位进行系卡片 铁道买收カード"
+cheat109_code = "32fd015C+0066"
+cheat109_enable = false
+
+cheat110_desc = "direct_v1 首位进行系卡片 武器よさらばカード"
+cheat110_code = "32fd015C+0067"
+cheat110_enable = false
+
+cheat111_desc = "direct_v1 首位进行系卡片 三三七拍子カード"
+cheat111_code = "32fd015C+0068"
+cheat111_enable = false
+
+cheat112_desc = "direct_v1 首位进行系卡片 1か8かカード"
+cheat112_code = "32fd015C+0069"
+cheat112_enable = false
+
+cheat113_desc = "direct_v1 首位进行系卡片 1374カード"
+cheat113_code = "32fd015C+006A"
+cheat113_enable = false
+
+cheat114_desc = "direct_v1 首位进行系卡片 スタッカートカード"
+cheat114_code = "32fd015C+006B"
+cheat114_enable = false
+
+cheat115_desc = "direct_v1 首位进行系卡片 近距离カード"
+cheat115_code = "32fd015C+006C"
+cheat115_enable = false
+
+cheat116_desc = "direct_v1 首位进行系卡片 どっち飞ぶ?カード"
+cheat116_code = "32fd015C+006D"
+cheat116_enable = false
+
+cheat117_desc = "direct_v1 2P资金 最大"
+cheat117_code = "32fd0240+00FF+02010241+00C9+02010242+009A+02010243+003B"
+cheat117_enable = false
+
+cheat118_desc = "direct_v1 2P资金 最小"
+cheat118_code = "32fd0240+0000+02010241+0000+02010242+0000+02010243+0000"
+cheat118_enable = false
+
+cheat119_desc = "direct_v1 3P资金 最大"
+cheat119_code = "32fd0330+00FF+02010331+00C9+02010332+009A+02010333+003B"
+cheat119_enable = false
+
+cheat120_desc = "direct_v1 3P资金 最小"
+cheat120_code = "32fd0330+0000+02010331+0000+02010332+0000+02010333+0000"
+cheat120_enable = false
+
+cheat121_desc = "direct_v1 4P资金 最大"
+cheat121_code = "32fd0420+00FF+02010421+00C9+02010422+009A+02010423+003B"
+cheat121_enable = false
+
+cheat122_desc = "direct_v1 4P资金 最小"
+cheat122_code = "32fd0420+0000+02010421+0000+02010422+0000+02010423+0000"
+cheat122_enable = false
+
+cheat123_desc = "direct_v1 快速结束"
+cheat123_code = "33001AB4+0023"
+cheat123_enable = false

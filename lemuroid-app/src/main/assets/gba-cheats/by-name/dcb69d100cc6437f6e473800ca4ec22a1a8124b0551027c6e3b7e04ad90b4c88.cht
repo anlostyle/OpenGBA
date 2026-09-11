@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "33005490+0000+33005491+0000+33005492+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 钱"
+cheat1_code = "330053F0+00E7+330053F1+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 只数"
+cheat2_code = "33005448+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 隐身"
+cheat3_code = "33005A0C+00C8"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 无敌"
+cheat4_code = "33005A0E+00E7+33005A0F+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 得分"
+cheat5_code = "33005450+007F+33005451+0096+33005452+0098"
+cheat5_enable = false

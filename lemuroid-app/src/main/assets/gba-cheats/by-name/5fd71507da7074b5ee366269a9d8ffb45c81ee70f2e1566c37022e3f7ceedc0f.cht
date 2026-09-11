@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 金钱"
+cheat0_code = "32fc0454+00FF+32fc0455+00C9+32fc0456+009A+32fc0457+003B"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 能力 最强"
+cheat1_code = "32fc04B0+007F+32fc04B1+007F+32fc04B2+007F+32fc04B3+007F+32fc04B4+007F+32fc04B5+007F+32fc04B6+007F+32fc04B7+007F+32fc04B8+00E7+32fc04B9+0003+32fc04BA+00E7+32fc04BB+0003+32fc04BC+00E7+32fc04BD+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 能力 超强(不建议)"
+cheat2_code = "32fc04B0+0080+32fc04B1+0080+32fc04B2+0080+32fc04B3+0080+32fc04B4+0080+32fc04B5+0080+32fc04B6+0080+32fc04B7+0080+32fc04B8+00E7+32fc04B9+0003+32fc04BA+00E7+32fc04BB+0003+32fc04BC+00E7+32fc04BD+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 敌人出现人数（15人电脑CPU要高） 标准8人"
+cheat3_code = "330049D1+0008"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 敌人出现人数（15人电脑CPU要高） 最多15人"
+cheat4_code = "330049D1+000F"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 主角能力全满"
+cheat5_code = "32fc0414+007F+32fc0415+007F+32fc0416+007F+32fc0417+007F+32fc0418+007F+32fc0419+007F+32fc041A+007F+32fc041B+007F+32fc041C+00FF+32fc041D+007F+32fc041E+00E7+32fc041F+0003+32fc0420+00E7+32fc0421+0003"
+cheat5_enable = false

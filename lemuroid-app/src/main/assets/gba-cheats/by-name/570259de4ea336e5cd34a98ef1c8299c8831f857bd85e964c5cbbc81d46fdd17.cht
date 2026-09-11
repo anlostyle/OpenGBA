@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 资金"
+cheat0_code = "32fc2400+003F+32fc2401+0042+32fc2402+000F"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 入住人数"
+cheat1_code = "32fc4410+000F+32fc4411+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 建筑物数量限制取消"
+cheat2_code = "32fc4612+0000+32fc4614+0000+32fc4616+0000+32fc461A+0000+32fc461C+0000+32fc461E+0000+32fc4620+0000+32fc4622+0000+32fc4624+0000+32fc4626+0000+32fc4630+0000+32fc4632+0000+32fc4634+0000+32fc4640+0000+32fc4646+0000+32fc4648+0000+32fc464A+0000+32fc464C+0000+32fc464E+0000"
+cheat2_enable = false

@@ -1,13 +1,17 @@
 package com.swordfish.lemuroid.app.mobile.shared.compose.ui
 
-import android.os.Build
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 private val LightColorScheme =
     lightColorScheme(
@@ -44,35 +48,79 @@ private val LightColorScheme =
 
 private val DarkColorScheme =
     darkColorScheme(
-        primary = md_theme_dark_primary,
-        onPrimary = md_theme_dark_onPrimary,
-        primaryContainer = md_theme_dark_primaryContainer,
-        onPrimaryContainer = md_theme_dark_onPrimaryContainer,
-        secondary = md_theme_dark_secondary,
-        onSecondary = md_theme_dark_onSecondary,
-        secondaryContainer = md_theme_dark_secondaryContainer,
-        onSecondaryContainer = md_theme_dark_onSecondaryContainer,
-        tertiary = md_theme_dark_tertiary,
-        onTertiary = md_theme_dark_onTertiary,
-        tertiaryContainer = md_theme_dark_tertiaryContainer,
-        onTertiaryContainer = md_theme_dark_onTertiaryContainer,
-        error = md_theme_dark_error,
-        errorContainer = md_theme_dark_errorContainer,
-        onError = md_theme_dark_onError,
-        onErrorContainer = md_theme_dark_onErrorContainer,
-        background = md_theme_dark_background,
-        onBackground = md_theme_dark_onBackground,
-        surface = md_theme_dark_surface,
-        onSurface = md_theme_dark_onSurface,
-        surfaceVariant = md_theme_dark_surfaceVariant,
-        onSurfaceVariant = md_theme_dark_onSurfaceVariant,
-        outline = md_theme_dark_outline,
-        inverseOnSurface = md_theme_dark_inverseOnSurface,
-        inverseSurface = md_theme_dark_inverseSurface,
-        inversePrimary = md_theme_dark_inversePrimary,
-        surfaceTint = md_theme_dark_surfaceTint,
-        outlineVariant = md_theme_dark_outlineVariant,
-        scrim = md_theme_dark_scrim,
+        primary = PixelGreen,
+        onPrimary = PixelInk,
+        primaryContainer = Color(0xFF354D1B),
+        onPrimaryContainer = PixelGreen,
+        secondary = PixelPaper,
+        onSecondary = PixelInk,
+        secondaryContainer = PixelPanelLight,
+        onSecondaryContainer = PixelPaper,
+        tertiary = PixelAmber,
+        onTertiary = PixelInk,
+        tertiaryContainer = Color(0xFF604717),
+        onTertiaryContainer = PixelPaper,
+        error = PixelRed,
+        errorContainer = Color(0xFF93000A),
+        onError = PixelInk,
+        onErrorContainer = Color(0xFFFFDAD6),
+        background = PixelInk,
+        onBackground = PixelPaper,
+        surface = PixelInk,
+        onSurface = PixelPaper,
+        surfaceVariant = PixelPanel,
+        onSurfaceVariant = PixelMuted,
+        outline = PixelOutline,
+        inverseOnSurface = PixelInk,
+        inverseSurface = PixelPaper,
+        inversePrimary = Color(0xFF5F7F21),
+        surfaceTint = PixelGreen,
+        outlineVariant = PixelOutline,
+        scrim = Color(0xFF000000),
+        surfaceBright = PixelPanelLight,
+        surfaceDim = PixelInk,
+        surfaceContainer = PixelPanel,
+        surfaceContainerHigh = PixelPanelLight,
+        surfaceContainerHighest = Color(0xFF2A3C46),
+        surfaceContainerLow = Color(0xFF10191E),
+        surfaceContainerLowest = PixelShadow,
+    )
+
+private val PixelTypography =
+    Typography().let { base ->
+        base.copy(
+            headlineLarge =
+                base.headlineLarge.copy(
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Black,
+                    letterSpacing = 0.sp,
+                ),
+            headlineMedium =
+                base.headlineMedium.copy(
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Black,
+                    letterSpacing = 0.sp,
+                ),
+            titleLarge = base.titleLarge.copy(fontWeight = FontWeight.Bold),
+            titleMedium = base.titleMedium.copy(fontWeight = FontWeight.Bold),
+            labelLarge =
+                base.labelLarge.copy(
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Bold,
+                    letterSpacing = 0.sp,
+                ),
+            labelMedium = base.labelMedium.copy(fontFamily = FontFamily.Monospace),
+            labelSmall = base.labelSmall.copy(fontFamily = FontFamily.Monospace),
+        )
+    }
+
+private val PixelShapes =
+    Shapes(
+        extraSmall = CutCornerShape(2.dp),
+        small = CutCornerShape(3.dp),
+        medium = CutCornerShape(4.dp),
+        large = CutCornerShape(6.dp),
+        extraLarge = CutCornerShape(8.dp),
     )
 
 @Composable
@@ -80,16 +128,14 @@ fun AppTheme(
     darkTheme: Boolean = true,
     content: @Composable () -> Unit,
 ) {
-    val dynamicColor = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
-    val colors =
-        when {
-            dynamicColor && darkTheme -> dynamicDarkColorScheme(LocalContext.current)
-            dynamicColor && !darkTheme -> dynamicLightColorScheme(LocalContext.current)
-            darkTheme -> DarkColorScheme
-            else -> LightColorScheme
-        }
+    // Keep the handheld palette stable instead of inheriting the phone's wallpaper colors.
+    val colors = if (darkTheme) DarkColorScheme else LightColorScheme
 
-    MaterialTheme(colorScheme = colors) {
+    MaterialTheme(
+        colorScheme = colors,
+        typography = PixelTypography,
+        shapes = PixelShapes,
+    ) {
         content()
     }
 }

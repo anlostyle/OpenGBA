@@ -212,11 +212,18 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 this.putExtra(GameMenuContract.EXTRA_FAST_FORWARD_SUPPORTED, system.fastForwardSupport)
                 this.putExtra(
                     GameMenuContract.EXTRA_FAST_FORWARD,
-                    (baseGameScreenViewModel.retroGameView.retroGameView?.frameSpeed ?: 1) > 1,
+                    baseGameScreenViewModel.isPersistentFastForwardEnabled(),
                 )
+                this.putExtra(
+                    GameMenuContract.EXTRA_FAST_FORWARD_SPEED,
+                    baseGameScreenViewModel.getFastForwardSpeed(),
+                )
+                this.putExtra(GameMenuContract.EXTRA_SCREEN_FILTER, baseGameScreenViewModel.getScreenFilter())
+                this.putExtra(GameMenuContract.EXTRA_CURRENT_SAVE_SLOT, baseGameScreenViewModel.getCurrentSaveSlot())
                 this.putExtra(GameMenuContract.EXTRA_CURRENT_TILT_CONFIG, currentTiltConfiguration)
                 // TODO PADS... Make sure to avoid passing this if a physical pad is connected.
                 this.putExtra(GameMenuContract.EXTRA_TILT_ALL_CONFIGS, tiltConfigurations.toTypedArray())
+                this.putExtra(GameMenuContract.EXTRA_CHEATS, baseGameScreenViewModel.getCheatCodes())
             }
         startActivityForResult(intent, DIALOG_REQUEST)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -250,6 +257,14 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                     is GameViewModelSideEffects.UiEffect.SaveQuickSave -> performSaveQuickSave()
                     is GameViewModelSideEffects.UiEffect.LoadQuickSave -> performLoadQuickSave()
                     is GameViewModelSideEffects.UiEffect.ToggleFastForward -> performToggleFastForward()
+                    is GameViewModelSideEffects.UiEffect.StartFastForward ->
+                        baseGameScreenViewModel.setHeldFastForward(true)
+                    is GameViewModelSideEffects.UiEffect.StopFastForward ->
+                        baseGameScreenViewModel.setHeldFastForward(false)
+                    is GameViewModelSideEffects.UiEffect.StartRewind -> baseGameScreenViewModel.startRewind()
+                    is GameViewModelSideEffects.UiEffect.StopRewind -> baseGameScreenViewModel.stopRewind()
+                    is GameViewModelSideEffects.UiEffect.StartForward -> baseGameScreenViewModel.startForward()
+                    is GameViewModelSideEffects.UiEffect.StopForward -> baseGameScreenViewModel.stopForward()
                 }
             }
     }
@@ -370,6 +385,12 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                     baseGameScreenViewModel.reset()
                 }
             }
+            if (data?.getBooleanExtra(GameMenuContract.RESULT_QUICK_SAVE, false) == true) {
+                baseGameScreenViewModel.saveQuickSave()
+            }
+            if (data?.getBooleanExtra(GameMenuContract.RESULT_QUICK_LOAD, false) == true) {
+                baseGameScreenViewModel.loadQuickSave()
+            }
             if (data?.hasExtra(GameMenuContract.RESULT_SAVE) == true) {
                 GlobalScope.launch {
                     baseGameScreenViewModel.saveSlot(data.getIntExtra(GameMenuContract.RESULT_SAVE, 0))
@@ -379,6 +400,9 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 GlobalScope.launch {
                     baseGameScreenViewModel.loadSlot(data.getIntExtra(GameMenuContract.RESULT_LOAD, 0))
                 }
+            }
+            if (data?.hasExtra(GameMenuContract.RESULT_DELETE) == true) {
+                baseGameScreenViewModel.deleteSlot(data.getIntExtra(GameMenuContract.RESULT_DELETE, 0))
             }
             if (data?.getBooleanExtra(GameMenuContract.RESULT_QUIT, false) == true) {
                 baseGameScreenViewModel.requestFinish()
@@ -397,17 +421,28 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 }
             }
             if (data?.hasExtra(GameMenuContract.RESULT_ENABLE_FAST_FORWARD) == true) {
-                baseGameScreenViewModel.retroGameView.retroGameView?.apply {
-                    val fastForwardEnabled =
-                        data.getBooleanExtra(
-                            GameMenuContract.RESULT_ENABLE_FAST_FORWARD,
-                            false,
-                        )
-                    this.frameSpeed = if (fastForwardEnabled) 2 else 1
-                }
+                baseGameScreenViewModel.setFastForward(
+                    data.getBooleanExtra(GameMenuContract.RESULT_ENABLE_FAST_FORWARD, false),
+                )
+            }
+            if (data?.hasExtra(GameMenuContract.RESULT_FAST_FORWARD_SPEED) == true) {
+                baseGameScreenViewModel.setFastForwardSpeed(
+                    data.getIntExtra(
+                        GameMenuContract.RESULT_FAST_FORWARD_SPEED,
+                        BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
+                    ),
+                )
+            }
+            if (data?.hasExtra(GameMenuContract.RESULT_SCREEN_FILTER) == true) {
+                baseGameScreenViewModel.setScreenFilter(
+                    data.getStringExtra(GameMenuContract.RESULT_SCREEN_FILTER).orEmpty(),
+                )
             }
             if (data?.getBooleanExtra(GameMenuContract.RESULT_EDIT_TOUCH_CONTROLS, false) == true) {
                 baseGameScreenViewModel.showEditControls(true)
+            }
+            if (data?.hasExtra(GameMenuContract.RESULT_CHEATS) == true) {
+                baseGameScreenViewModel.applyCheats(data.getStringExtra(GameMenuContract.RESULT_CHEATS).orEmpty())
             }
             if (data?.hasExtra(GameMenuContract.RESULT_CHANGE_TILT_CONFIG) == true) {
                 val tiltConfig = data.serializable<TiltConfiguration>(GameMenuContract.RESULT_CHANGE_TILT_CONFIG)

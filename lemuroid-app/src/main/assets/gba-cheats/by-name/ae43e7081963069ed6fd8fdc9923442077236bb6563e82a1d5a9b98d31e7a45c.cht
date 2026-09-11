@@ -1,0 +1,53 @@
+cheats = 13
+
+cheat0_desc = "direct_v1 体力"
+cheat0_code = "3300344D+0090"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 无敌"
+cheat1_code = "33003433+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 DC标志"
+cheat2_code = "3300007B+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 任务指数"
+cheat3_code = "3300007E+0001"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 时间"
+cheat4_code = "33000080+0000+33000081+0000"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 黄钻石"
+cheat5_code = "33000084+0063"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 蓝钻石"
+cheat6_code = "33000085+0063"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 红宝石"
+cheat7_code = "33000086+0063"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 迷宫时间"
+cheat8_code = "330033DE+0070+330033DF+0017"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 迷宫人数"
+cheat9_code = "330033E0+0004"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 BOSS战我方体力"
+cheat10_code = "33003014+007F+33003015+0070+33003016+007F+33003017+0070"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 BOSS战对方体力"
+cheat11_code = "33003884+0000+33003885+0000+33003886+0000+33003887+0000"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 BOSS战全装备"
+cheat12_code = "33003407+0004+33003408+0000+33003409+0001+3300340A+0005+3300340B+0002+3300340C+0003"
+cheat12_enable = false

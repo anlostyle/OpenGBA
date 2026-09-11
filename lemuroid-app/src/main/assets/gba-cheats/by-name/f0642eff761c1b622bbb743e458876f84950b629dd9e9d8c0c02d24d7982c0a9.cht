@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 棍的耐久度"
+cheat0_code = "32fc9818+000A"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血"
+cheat1_code = "32fe6A6C+00E8+32fe6A6D+0003+32fcB9F0+0012"
+cheat1_enable = false

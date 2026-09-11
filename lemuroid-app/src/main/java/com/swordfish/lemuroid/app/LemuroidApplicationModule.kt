@@ -136,7 +136,7 @@ abstract class LemuroidApplicationModule {
         fun retrogradeDb(app: LemuroidApplication) =
             Room.databaseBuilder(app, RetrogradeDatabase::class.java, RetrogradeDatabase.DB_NAME)
                 .addCallback(GameSearchDao.CALLBACK)
-                .addMigrations(GameSearchDao.MIGRATION, Migrations.VERSION_8_9)
+                .addMigrations(GameSearchDao.MIGRATION, Migrations.VERSION_8_9, Migrations.VERSION_9_10)
                 .fallbackToDestructiveMigration()
                 .build()
 
@@ -337,10 +337,7 @@ abstract class LemuroidApplicationModule {
         @Provides
         @PerApp
         @JvmStatic
-        fun shortcutsGenerator(
-            context: Context,
-            retrofit: Retrofit,
-        ) = ShortcutsGenerator(context, retrofit)
+        fun shortcutsGenerator(context: Context) = ShortcutsGenerator(context)
 
         @Provides
         @PerApp
@@ -348,8 +345,7 @@ abstract class LemuroidApplicationModule {
         fun channelHandler(
             context: Context,
             retrogradeDatabase: RetrogradeDatabase,
-            retrofit: Retrofit,
-        ) = ChannelHandler(context, retrogradeDatabase, retrofit)
+        ) = ChannelHandler(context, retrogradeDatabase)
 
         @Provides
         @PerApp

@@ -29,14 +29,14 @@ enum class GameMenuRoute(
         titleId = R.string.game_menu_title,
         parent = null,
     ),
-    SAVE(
-        route = "save",
-        titleId = R.string.game_menu_save,
+    STATES(
+        route = "states",
+        titleId = R.string.game_menu_states,
         parent = HOME,
     ),
-    LOAD(
-        route = "load",
-        titleId = R.string.game_menu_load,
+    CHEATS(
+        route = "cheats",
+        titleId = R.string.game_menu_cheats,
         parent = HOME,
     ),
     OPTIONS(

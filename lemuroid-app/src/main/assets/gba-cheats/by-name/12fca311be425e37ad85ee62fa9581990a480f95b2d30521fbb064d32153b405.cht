@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 人数"
+cheat0_code = "330067EF+0063"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 关卡全开"
+cheat1_code = "330067E2+0006+020467E3+0006"
+cheat1_enable = false

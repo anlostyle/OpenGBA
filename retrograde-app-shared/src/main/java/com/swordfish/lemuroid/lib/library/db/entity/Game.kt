@@ -31,6 +31,8 @@ import java.io.Serializable
         Index("id", unique = true),
         Index("fileUri", unique = true),
         Index("title"),
+        Index("displayTitle"),
+        Index("romCrc"),
         Index("systemId"),
         Index("lastIndexedAt"),
         Index("lastPlayedAt"),
@@ -43,6 +45,9 @@ data class Game(
     val fileName: String,
     val fileUri: String,
     val title: String,
+    val displayTitle: String = "",
+    val romCrc: String? = null,
+    val metadataCrcMatched: Boolean = false,
     val systemId: String,
     val developer: String?,
     val coverFrontUrl: String?,
@@ -50,6 +55,9 @@ data class Game(
     val lastPlayedAt: Long? = null,
     val isFavorite: Boolean = false,
 ) : Serializable {
+    val displayName: String
+        get() = displayTitle.ifBlank { fileName.substringBeforeLast('.', fileName) }
+
     companion object {
         val DIFF_CALLBACK =
             object : DiffUtil.ItemCallback<Game>() {

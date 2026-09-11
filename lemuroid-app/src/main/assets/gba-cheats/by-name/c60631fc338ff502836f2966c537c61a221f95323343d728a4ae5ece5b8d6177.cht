@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 money"
+cheat0_code = "32fc2B48+003F+02002B49+0042+02002B4A+000F"
+cheat0_enable = false

@@ -6,6 +6,7 @@ import android.view.InputDevice
 import android.view.KeyEvent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
@@ -16,6 +17,7 @@ import com.swordfish.lemuroid.app.mobile.feature.input.GamePadBindingActivity
 import com.swordfish.lemuroid.app.mobile.feature.input.GamePadShortcutBindingActivity
 import com.swordfish.lemuroid.app.shared.input.InputBindingUpdater
 import com.swordfish.lemuroid.app.shared.input.InputKey
+import com.swordfish.lemuroid.app.shared.input.RetroKey
 import com.swordfish.lemuroid.app.shared.input.ShortcutBindingUpdater
 import com.swordfish.lemuroid.app.shared.input.lemuroiddevice.getLemuroidInputDevice
 import com.swordfish.lemuroid.app.shared.settings.GameShortcut
@@ -38,7 +40,12 @@ fun InputDevicesSettingsScreen(
     LemuroidSettingsPage(modifier = modifier.fillMaxSize()) {
         EnabledDeviceCategory(state)
         state.bindings.forEach { (device, bindings) ->
-            DeviceBindingCategory(device, bindings)
+            DeviceBindingCategory(
+                device = device,
+                bindings = bindings,
+                onClearBinding = viewModel::clearBinding,
+                onClearShortcutBinding = viewModel::clearShortcutBinding,
+            )
         }
         GeneralOptionsCategory(viewModel)
     }
@@ -48,6 +55,8 @@ fun InputDevicesSettingsScreen(
 private fun DeviceBindingCategory(
     device: InputDevice,
     bindings: InputDevicesSettingsViewModel.BindingsView,
+    onClearBinding: (InputDevice, RetroKey) -> Unit,
+    onClearShortcutBinding: (InputDevice, GameShortcut) -> Unit,
 ) {
     val context = LocalContext.current
     val customizableKeys = device.getLemuroidInputDevice().getCustomizableKeys()
@@ -59,6 +68,16 @@ private fun DeviceBindingCategory(
             LemuroidSettingsMenuLink(
                 title = { Text(text = retroKey.displayName(LocalContext.current)) },
                 subtitle = { Text(text = inputKey.displayName()) },
+                action =
+                    if (inputKey.keyCode != KeyEvent.KEYCODE_UNKNOWN) {
+                        {
+                            TextButton(onClick = { onClearBinding(device, retroKey) }) {
+                                Text(stringResource(R.string.settings_gamepad_clear_binding))
+                            }
+                        }
+                    } else {
+                        null
+                    },
                 onClick = {
                     val intent =
                         Intent(context, GamePadBindingActivity::class.java).apply {
@@ -71,7 +90,7 @@ private fun DeviceBindingCategory(
         }
 
         bindings.shortcuts.forEach {
-            DeviceShortcutBinding(context, device, it)
+            DeviceShortcutBinding(context, device, it) { onClearShortcutBinding(device, it) }
         }
     }
 }
@@ -81,10 +100,28 @@ private fun DeviceShortcutBinding(
     context: Context,
     device: InputDevice,
     shortcut: GameShortcut,
+    onClear: (GameShortcut) -> Unit,
 ) {
     LemuroidSettingsMenuLink(
         title = { Text(text = shortcut.type.displayName()) },
-        subtitle = { Text(text = shortcut.name) },
+        subtitle = {
+            Text(
+                text =
+                    shortcut.name.ifEmpty {
+                        stringResource(R.string.settings_gamepad_unbound)
+                    },
+            )
+        },
+        action =
+            if (shortcut.keys.isNotEmpty()) {
+                {
+                    TextButton(onClick = { onClear(shortcut) }) {
+                        Text(stringResource(R.string.settings_gamepad_clear_binding))
+                    }
+                }
+            } else {
+                null
+            },
         onClick = {
             val intent =
                 Intent(context, GamePadShortcutBindingActivity::class.java).apply {

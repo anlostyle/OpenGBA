@@ -1,0 +1,753 @@
+cheats = 188
+
+cheat0_desc = "direct_v1 隐藏模式全开[全CG/隐藏人物]"
+cheat0_code = "32fc2468+0001+02002464+00FF+02002465+00FF+0200246E+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 HP不减 9999"
+cheat1_code = "32fc2628+000F+02002629+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 EN不减 999"
+cheat2_code = "32fc262C+00E7+0200262D+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 机体全能力最高 999"
+cheat3_code = "32fc2594+00E7+02002595+0003+02002590+00E7+02002591+0003+0200258E+00E7+0200258F+0003+02002596+00E7+02002597+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 机师全能力最高 999"
+cheat4_code = "32fc3F36+00E7+02003F37+0003+02003F38+00E7+02003F39+0003+02003F3C+00E7+02003F3D+0003+02003F3E+00E7+02003F3F+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全机体选择 透明机体"
+cheat5_code = "32fc2544+0000"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全机体选择 エイル·S(Strikeストライク)/强袭飞行装"
+cheat6_code = "32fc2544+0001"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全机体选择 ランチャ一·S/强袭炮战装"
+cheat7_code = "32fc2544+0002"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 全机体选择 ソ一ド·S/强袭剑战装"
+cheat8_code = "32fc2544+0003"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 全机体选择 メビウス·ゼロ/零式"
+cheat9_code = "32fc2544+0004"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 全机体选择 ジン(前期)/金"
+cheat10_code = "32fc2544+0005"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 全机体选择 シグ一=2544,"
+cheat11_code = "32fc2544+0006"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 全机体选择 ア一クエンジェル/大天使"
+cheat12_code = "32fc2544+0007"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 全机体选择 ヴェサリウス=2544,"
+cheat13_code = "32fc2544+0008"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 全机体选择 イ一ジス/圣盾"
+cheat14_code = "32fc2544+0009"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 全机体选择 バスタ一/暴风"
+cheat15_code = "32fc2544+000A"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 全机体选择 デュエル·AS/决斗"
+cheat16_code = "32fc2544+000B"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 全机体选择 ブリッツ"
+cheat17_code = "32fc2544+000C"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 全机体选择 スカイグラスパ一/空中霸主"
+cheat18_code = "32fc2544+000D"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 全机体选择 バクゥ"
+cheat19_code = "32fc2544+000E"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 全机体选择 ラゴゥ/沙漠之虎"
+cheat20_code = "32fc2544+000F"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 全机体选择 ヨウリクカン"
+cheat21_code = "32fc2544+0010"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 全机体选择 ジ一プ"
+cheat22_code = "32fc2544+0011"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 全机体选择 レイダ一/劫掠"
+cheat23_code = "32fc2544+0012"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 全机体选择 フォビドゥン/禁断"
+cheat24_code = "32fc2544+0013"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 全机体选择 カラミティ/灾噩"
+cheat25_code = "32fc2544+0014"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 全机体选择 メネラオス"
+cheat26_code = "32fc2544+0015"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 全机体选择 ダガ一/量产强袭"
+cheat27_code = "32fc2544+0016"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 全机体选择 S·ル一ジュ/强袭口红"
+cheat28_code = "32fc2544+0017"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 全机体选择 M1 アストレイ/强袭小刀"
+cheat29_code = "32fc2544+0018"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 全机体选择 プロヴィデンス/神意"
+cheat30_code = "32fc2544+0019"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 全机体选择 メビウス"
+cheat31_code = "32fc2544+001A"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 全机体选择 ジェネシス"
+cheat32_code = "32fc2544+002A"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 全机体选择 エタ一ナル"
+cheat33_code = "32fc2544+001C"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 全机体选择 クサナギ"
+cheat34_code = "32fc2544+001D"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 全机体选择 ガモフ"
+cheat35_code = "32fc2544+001E"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 全机体选择 ドミニオン/主天使"
+cheat36_code = "32fc2544+001F"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 全机体选择 フリ一ダム/自由"
+cheat37_code = "32fc2544+0020"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 全机体选择 ジャスティス/正义"
+cheat38_code = "32fc2544+0021"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 全机体选择 アストレイR/红异端"
+cheat39_code = "32fc2544+0022"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 全机体选择 アストレイB/蓝异端"
+cheat40_code = "32fc2544+0023"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 全机体选择 シャトル"
+cheat41_code = "32fc2544+0024"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 全机体选择 ガンバレル·S/NT强袭"
+cheat42_code = "32fc2544+0025"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 全机体选择 イ一ジス(MA)"
+cheat43_code = "32fc2544+0026"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 全机体选择 ゴエイカン"
+cheat44_code = "32fc2544+0027"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 全机体选择 シャトル2"
+cheat45_code = "32fc2544+0028"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 全机体选择 フリ一ダム(无头)"
+cheat46_code = "32fc2544+0029"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 全机体选择 ブリッツ(幻影)"
+cheat47_code = "32fc2544+002B"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 全机体选择 ジン(ミゲル机)"
+cheat48_code = "32fc2544+002C"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 全机体选择 ジン(后期)/金"
+cheat49_code = "32fc2544+002D"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 全人物选择 キラ"
+cheat50_code = "32fc2545+0000"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 全人物选择 キラ(宇宙服)"
+cheat51_code = "32fc2545+0001"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 全人物选择 マリュ一"
+cheat52_code = "32fc2545+0002"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 全人物选择 ミリアリア"
+cheat53_code = "32fc2545+0004"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 全人物选择 フレイ"
+cheat54_code = "32fc2545+0005"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 全人物选择 フラガ"
+cheat55_code = "32fc2545+0009"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 全人物选择 ナタル"
+cheat56_code = "32fc2545+000A"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 全人物选择 アスラン"
+cheat57_code = "32fc2545+000B"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 全人物选择 ニコル"
+cheat58_code = "32fc2545+000C"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 全人物选择 ディアッカ"
+cheat59_code = "32fc2545+000D"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 全人物选择 イザ一ク"
+cheat60_code = "32fc2545+000E"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 全人物选择 クル一ゼ"
+cheat61_code = "32fc2545+000F"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 全人物选择 アデス"
+cheat62_code = "32fc2545+0011"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 全人物选择 ミゲル"
+cheat63_code = "32fc2545+0012"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 全人物选择 アイシャ"
+cheat64_code = "32fc2545+0016"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 全人物选择 カガリ"
+cheat65_code = "32fc2545+001A"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 全人物选择 キサカ"
+cheat66_code = "32fc2545+001B"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 全人物选择 バルトフェルド"
+cheat67_code = "32fc2545+001D"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 全人物选择 バルトフェルド(有疤)"
+cheat68_code = "32fc2545+001E"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 全人物选择 オルガ"
+cheat69_code = "32fc2545+0022"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 全人物选择 シャニ"
+cheat70_code = "32fc2545+0023"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 全人物选择 クロト"
+cheat71_code = "32fc2545+0024"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 全人物选择 ジュリ(M1)"
+cheat72_code = "32fc2545+0026"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 全人物选择 マュラ(M1)"
+cheat73_code = "32fc2545+0027"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 全人物选择 アサギ(M1)"
+cheat74_code = "32fc2545+0028"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 全人物选择 ロウ(ASTRAY)"
+cheat75_code = "32fc2545+002A"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 全人物选择 ガイ(ASTRAY)"
+cheat76_code = "32fc2545+002B"
+cheat76_enable = false
+
+cheat77_desc = "direct_v1 全人物选择 レンゴウヘイ"
+cheat77_code = "32fc2545+002C"
+cheat77_enable = false
+
+cheat78_desc = "direct_v1 全人物选择 サフトヘイ"
+cheat78_code = "32fc2545+002D"
+cheat78_enable = false
+
+cheat79_desc = "direct_v1 全人物选择 オ一ブヘイ"
+cheat79_code = "32fc2545+002E"
+cheat79_enable = false
+
+cheat80_desc = "direct_v1 全人物选择 イザ一ク(有疤)"
+cheat80_code = "32fc2545+0030"
+cheat80_enable = false
+
+cheat81_desc = "direct_v1 第一支援机体全能力最高 999"
+cheat81_code = "32fc25C2+00E7+020025C3+0003+020025C4+00E7+020025C5+0003+020025C8+00E7+020025C9+0003+020025CA+00E7+020025CB+0003"
+cheat81_enable = false
+
+cheat82_desc = "direct_v1 第一支援机体选择 透明机体"
+cheat82_code = "32fc255C+0000"
+cheat82_enable = false
+
+cheat83_desc = "direct_v1 第一支援机体选择 エイル·S(Strikeストライク)/强袭飞行装"
+cheat83_code = "32fc255C+0001"
+cheat83_enable = false
+
+cheat84_desc = "direct_v1 第一支援机体选择 ランチャ一·S/强袭炮战装"
+cheat84_code = "32fc255C+0002"
+cheat84_enable = false
+
+cheat85_desc = "direct_v1 第一支援机体选择 ソ一ド·S/强袭剑战装"
+cheat85_code = "32fc255C+0003"
+cheat85_enable = false
+
+cheat86_desc = "direct_v1 第一支援机体选择 メビウス·ゼロ/零式"
+cheat86_code = "32fc255C+0004"
+cheat86_enable = false
+
+cheat87_desc = "direct_v1 第一支援机体选择 ジン(前期)/金"
+cheat87_code = "32fc255C+0005"
+cheat87_enable = false
+
+cheat88_desc = "direct_v1 第一支援机体选择 シグ一=2544,"
+cheat88_code = "32fc255C+0006"
+cheat88_enable = false
+
+cheat89_desc = "direct_v1 第一支援机体选择 ア一クエンジェル/大天使"
+cheat89_code = "32fc255C+0007"
+cheat89_enable = false
+
+cheat90_desc = "direct_v1 第一支援机体选择 ヴェサリウス"
+cheat90_code = "32fc255C+0008"
+cheat90_enable = false
+
+cheat91_desc = "direct_v1 第一支援机体选择 イ一ジス/圣盾"
+cheat91_code = "32fc255C+0009"
+cheat91_enable = false
+
+cheat92_desc = "direct_v1 第一支援机体选择 バスタ一/暴风"
+cheat92_code = "32fc255C+000A"
+cheat92_enable = false
+
+cheat93_desc = "direct_v1 第一支援机体选择 デュエル·AS/决斗"
+cheat93_code = "32fc255C+000B"
+cheat93_enable = false
+
+cheat94_desc = "direct_v1 第一支援机体选择 ブリッツ/迅雷"
+cheat94_code = "32fc255C+000C"
+cheat94_enable = false
+
+cheat95_desc = "direct_v1 第一支援机体选择 スカイグラスパ一/空中霸主"
+cheat95_code = "32fc255C+000D"
+cheat95_enable = false
+
+cheat96_desc = "direct_v1 第一支援机体选择 バクゥ"
+cheat96_code = "32fc255C+000E"
+cheat96_enable = false
+
+cheat97_desc = "direct_v1 第一支援机体选择 ラゴゥ/沙漠之虎"
+cheat97_code = "32fc255C+000F"
+cheat97_enable = false
+
+cheat98_desc = "direct_v1 第一支援机体选择 ヨウリクカン"
+cheat98_code = "32fc255C+0010"
+cheat98_enable = false
+
+cheat99_desc = "direct_v1 第一支援机体选择 ジ一プ"
+cheat99_code = "32fc255C+0011"
+cheat99_enable = false
+
+cheat100_desc = "direct_v1 第一支援机体选择 レイダ一/劫掠"
+cheat100_code = "32fc255C+0012"
+cheat100_enable = false
+
+cheat101_desc = "direct_v1 第一支援机体选择 フォビドゥン/禁断"
+cheat101_code = "32fc255C+0013"
+cheat101_enable = false
+
+cheat102_desc = "direct_v1 第一支援机体选择 カラミティ/灾噩"
+cheat102_code = "32fc255C+0014"
+cheat102_enable = false
+
+cheat103_desc = "direct_v1 第一支援机体选择 メネラオス"
+cheat103_code = "32fc255C+0015"
+cheat103_enable = false
+
+cheat104_desc = "direct_v1 第一支援机体选择 ダガ一/量产强袭"
+cheat104_code = "32fc255C+0016"
+cheat104_enable = false
+
+cheat105_desc = "direct_v1 第一支援机体选择 S·ル一ジュ/强袭口红"
+cheat105_code = "32fc255C+0017"
+cheat105_enable = false
+
+cheat106_desc = "direct_v1 第一支援机体选择 M1 アストレイ/强袭小刀"
+cheat106_code = "32fc255C+0018"
+cheat106_enable = false
+
+cheat107_desc = "direct_v1 第一支援机体选择 プロヴィデンス/神意"
+cheat107_code = "32fc255C+0019"
+cheat107_enable = false
+
+cheat108_desc = "direct_v1 第一支援机体选择 メビウス"
+cheat108_code = "32fc255C+001A"
+cheat108_enable = false
+
+cheat109_desc = "direct_v1 第一支援机体选择 ジェネシス"
+cheat109_code = "32fc255C+002A"
+cheat109_enable = false
+
+cheat110_desc = "direct_v1 第一支援机体选择 エタ一ナル"
+cheat110_code = "32fc255C+001C"
+cheat110_enable = false
+
+cheat111_desc = "direct_v1 第一支援机体选择 クサナギ"
+cheat111_code = "32fc255C+001D"
+cheat111_enable = false
+
+cheat112_desc = "direct_v1 第一支援机体选择 ガモフ"
+cheat112_code = "32fc255C+001E"
+cheat112_enable = false
+
+cheat113_desc = "direct_v1 第一支援机体选择 ドミニオン/主天使"
+cheat113_code = "32fc255C+001F"
+cheat113_enable = false
+
+cheat114_desc = "direct_v1 第一支援机体选择 フリ一ダム/自由"
+cheat114_code = "32fc255C+0020"
+cheat114_enable = false
+
+cheat115_desc = "direct_v1 第一支援机体选择 ジャスティス/正义"
+cheat115_code = "32fc255C+0021"
+cheat115_enable = false
+
+cheat116_desc = "direct_v1 第一支援机体选择 アストレイR/红异端"
+cheat116_code = "32fc255C+0022"
+cheat116_enable = false
+
+cheat117_desc = "direct_v1 第一支援机体选择 アストレイB/蓝异端"
+cheat117_code = "32fc255C+0023"
+cheat117_enable = false
+
+cheat118_desc = "direct_v1 第一支援机体选择 シャトル"
+cheat118_code = "32fc255C+0024"
+cheat118_enable = false
+
+cheat119_desc = "direct_v1 第一支援机体选择 ガンバレル·S/NT强袭"
+cheat119_code = "32fc255C+0025"
+cheat119_enable = false
+
+cheat120_desc = "direct_v1 第一支援机体选择 イ一ジス(MA)"
+cheat120_code = "32fc255C+0026"
+cheat120_enable = false
+
+cheat121_desc = "direct_v1 第一支援机体选择 ゴエイカン"
+cheat121_code = "32fc255C+0027"
+cheat121_enable = false
+
+cheat122_desc = "direct_v1 第一支援机体选择 シャトル2"
+cheat122_code = "32fc255C+0028"
+cheat122_enable = false
+
+cheat123_desc = "direct_v1 第一支援机体选择 フリ一ダム(无头)"
+cheat123_code = "32fc255C+0029"
+cheat123_enable = false
+
+cheat124_desc = "direct_v1 第一支援机体选择 ブリッツ(幻影)"
+cheat124_code = "32fc255C+002B"
+cheat124_enable = false
+
+cheat125_desc = "direct_v1 第一支援机体选择 ジン(ミゲル机)"
+cheat125_code = "32fc255C+002C"
+cheat125_enable = false
+
+cheat126_desc = "direct_v1 第一支援机体选择 ジン(后期)/金"
+cheat126_code = "32fc255C+002D"
+cheat126_enable = false
+
+cheat127_desc = "direct_v1 第一支援机师选择 キラ"
+cheat127_code = "32fc255D+0000"
+cheat127_enable = false
+
+cheat128_desc = "direct_v1 第一支援机师选择 キラ(宇宙服)"
+cheat128_code = "32fc255D+0001"
+cheat128_enable = false
+
+cheat129_desc = "direct_v1 第一支援机师选择 マリュ一"
+cheat129_code = "32fc255D+0002"
+cheat129_enable = false
+
+cheat130_desc = "direct_v1 第一支援机师选择 ミリアリア"
+cheat130_code = "32fc255D+0004"
+cheat130_enable = false
+
+cheat131_desc = "direct_v1 第一支援机师选择 フレイ"
+cheat131_code = "32fc255D+0005"
+cheat131_enable = false
+
+cheat132_desc = "direct_v1 第一支援机师选择 フラガ"
+cheat132_code = "32fc255D+0009"
+cheat132_enable = false
+
+cheat133_desc = "direct_v1 第一支援机师选择 ナタル"
+cheat133_code = "32fc255D+000A"
+cheat133_enable = false
+
+cheat134_desc = "direct_v1 第一支援机师选择 アスラン"
+cheat134_code = "32fc255D+000B"
+cheat134_enable = false
+
+cheat135_desc = "direct_v1 第一支援机师选择 ニコル"
+cheat135_code = "32fc255D+000C"
+cheat135_enable = false
+
+cheat136_desc = "direct_v1 第一支援机师选择 ディアッカ"
+cheat136_code = "32fc255D+000D"
+cheat136_enable = false
+
+cheat137_desc = "direct_v1 第一支援机师选择 イザ一ク"
+cheat137_code = "32fc255D+000E"
+cheat137_enable = false
+
+cheat138_desc = "direct_v1 第一支援机师选择 クル一ゼ"
+cheat138_code = "32fc255D+000F"
+cheat138_enable = false
+
+cheat139_desc = "direct_v1 第一支援机师选择 アデス"
+cheat139_code = "32fc255D+0011"
+cheat139_enable = false
+
+cheat140_desc = "direct_v1 第一支援机师选择 ミゲル"
+cheat140_code = "32fc255D+0012"
+cheat140_enable = false
+
+cheat141_desc = "direct_v1 第一支援机师选择 アイシャ"
+cheat141_code = "32fc255D+0016"
+cheat141_enable = false
+
+cheat142_desc = "direct_v1 第一支援机师选择 カガリ"
+cheat142_code = "32fc255D+001A"
+cheat142_enable = false
+
+cheat143_desc = "direct_v1 第一支援机师选择 キサカ"
+cheat143_code = "32fc255D+001B"
+cheat143_enable = false
+
+cheat144_desc = "direct_v1 第一支援机师选择 バルトフェルド"
+cheat144_code = "32fc255D+001D"
+cheat144_enable = false
+
+cheat145_desc = "direct_v1 第一支援机师选择 バルトフェルド(有疤)"
+cheat145_code = "32fc255D+001E"
+cheat145_enable = false
+
+cheat146_desc = "direct_v1 第一支援机师选择 オルガ"
+cheat146_code = "32fc255D+0022"
+cheat146_enable = false
+
+cheat147_desc = "direct_v1 第一支援机师选择 シャニ"
+cheat147_code = "32fc255D+0023"
+cheat147_enable = false
+
+cheat148_desc = "direct_v1 第一支援机师选择 クロト"
+cheat148_code = "32fc255D+0024"
+cheat148_enable = false
+
+cheat149_desc = "direct_v1 第一支援机师选择 ジュリ(M1)"
+cheat149_code = "32fc255D+0026"
+cheat149_enable = false
+
+cheat150_desc = "direct_v1 第一支援机师选择 マュラ(M1)"
+cheat150_code = "32fc255D+0027"
+cheat150_enable = false
+
+cheat151_desc = "direct_v1 第一支援机师选择 アサギ(M1)"
+cheat151_code = "32fc255D+0028"
+cheat151_enable = false
+
+cheat152_desc = "direct_v1 第一支援机师选择 ロウ(ASTRAY)"
+cheat152_code = "32fc255D+002A"
+cheat152_enable = false
+
+cheat153_desc = "direct_v1 第一支援机师选择 ガイ(ASTRAY)"
+cheat153_code = "32fc255D+002B"
+cheat153_enable = false
+
+cheat154_desc = "direct_v1 第一支援机师选择 レンゴウヘイ"
+cheat154_code = "32fc255D+002C"
+cheat154_enable = false
+
+cheat155_desc = "direct_v1 第一支援机师选择 サフトヘイ"
+cheat155_code = "32fc255D+002D"
+cheat155_enable = false
+
+cheat156_desc = "direct_v1 第一支援机师选择 オ一ブヘイ"
+cheat156_code = "32fc255D+002E"
+cheat156_enable = false
+
+cheat157_desc = "direct_v1 第一支援机师选择 イザ一ク(有疤)"
+cheat157_code = "32fc255D+0030"
+cheat157_enable = false
+
+cheat158_desc = "direct_v1 自机HP上限"
+cheat158_code = "32fc2626+000F+02002627+0027"
+cheat158_enable = false
+
+cheat159_desc = "direct_v1 自机HP"
+cheat159_code = "32fc2628+000F+02002629+0027"
+cheat159_enable = false
+
+cheat160_desc = "direct_v1 自机EN上限"
+cheat160_code = "32fc262A+00E7+0200262B+0003"
+cheat160_enable = false
+
+cheat161_desc = "direct_v1 自机EN"
+cheat161_code = "32fc262C+00E7+0200262D+0003"
+cheat161_enable = false
+
+cheat162_desc = "direct_v1 自机TEMP"
+cheat162_code = "32fc2F22+0000+02002F23+0000"
+cheat162_enable = false
+
+cheat163_desc = "direct_v1 自机攻击值"
+cheat163_code = "32fc2594+000F+02002595+0027"
+cheat163_enable = false
+
+cheat164_desc = "direct_v1 自机防御值"
+cheat164_code = "32fc258E+000F+0200258F+0027"
+cheat164_enable = false
+
+cheat165_desc = "direct_v1 自机机动值"
+cheat165_code = "32fc2590+000F+02002591+0027"
+cheat165_enable = false
+
+cheat166_desc = "direct_v1 自机命中值"
+cheat166_code = "32fc2596+000F+02002597+0027"
+cheat166_enable = false
+
+cheat167_desc = "direct_v1 自机SEED 未获得"
+cheat167_code = "32fc2F26+0000"
+cheat167_enable = false
+
+cheat168_desc = "direct_v1 自机SEED 获得"
+cheat168_code = "32fc2F26+0001"
+cheat168_enable = false
+
+cheat169_desc = "direct_v1 自机SEED 启动"
+cheat169_code = "32fc2F26+0002"
+cheat169_enable = false
+
+cheat170_desc = "direct_v1 战斗时间"
+cheat170_code = "32fc24C2+0000+020024C3+0000"
+cheat170_enable = false
+
+cheat171_desc = "direct_v1 击坠数"
+cheat171_code = "32fc24C6+00E7+020024C7+0003"
+cheat171_enable = false
+
+cheat172_desc = "direct_v1 マルチロック"
+cheat172_code = "32fc24C8+00E7+020024C9+0003"
+cheat172_enable = false
+
+cheat173_desc = "direct_v1 支援攻击回数"
+cheat173_code = "32fc24D0+00E7+020024D1+0003"
+cheat173_enable = false
+
+cheat174_desc = "direct_v1 被弹回数"
+cheat174_code = "32fc24D4+00E7+020024D5+0003"
+cheat174_enable = false
+
+cheat175_desc = "direct_v1 补给回数"
+cheat175_code = "32fc24D2+00E7+020024D3+0003"
+cheat175_enable = false
+
+cheat176_desc = "direct_v1 支援机HP上限"
+cheat176_code = "32fc26DA+000F+020026DB+0027"
+cheat176_enable = false
+
+cheat177_desc = "direct_v1 支援机HP"
+cheat177_code = "32fc26DC+000F+020026DD+0027"
+cheat177_enable = false
+
+cheat178_desc = "direct_v1 支援机EN上限"
+cheat178_code = "32fc26DE+00E7+020026DF+0003"
+cheat178_enable = false
+
+cheat179_desc = "direct_v1 支援机EN"
+cheat179_code = "32fc26E0+00E7+020026E1+0003"
+cheat179_enable = false
+
+cheat180_desc = "direct_v1 母舰HP上限"
+cheat180_code = "32fc278E+000F+0200278F+0027"
+cheat180_enable = false
+
+cheat181_desc = "direct_v1 母舰HP"
+cheat181_code = "32fc2790+000F+02002791+0027"
+cheat181_enable = false
+
+cheat182_desc = "direct_v1 母舰EN上限"
+cheat182_code = "32fc2792+00E7+02002793+0003"
+cheat182_enable = false
+
+cheat183_desc = "direct_v1 母舰EN"
+cheat183_code = "32fc2794+00E7+02002795+0003"
+cheat183_enable = false
+
+cheat184_desc = "direct_v1 隐藏要素开启"
+cheat184_code = "32fc2468+0001"
+cheat184_enable = false
+
+cheat185_desc = "direct_v1 全CG"
+cheat185_code = "32fc2464+00FF+02002465+00FF"
+cheat185_enable = false
+
+cheat186_desc = "direct_v1 全人物"
+cheat186_code = "32fc246E+00FF"
+cheat186_enable = false
+
+cheat187_desc = "direct_v1 评价全S"
+cheat187_code = "32fc3F86+0000+02003F87+0000+02003F9E+0000+02003F9F+0000+02003FB6+0000+02003FB7+0000+02003FCE+0000+02003FCF+0000+02003FE6+0000+02003FE7+0000+02003FFE+0000+02003FFF+0000+02004016+0000+02004017+0000+0200402E+0000+0200402F+0000+02004046+0000+02004047+0000+0200405E+0000+0200405F+0000+02004076+0000+02004077+0000+0200408E+0000+0200408F+0000+020040A6+0000+020040A7+0000+020040BE+0000+020040BF+0000+020040D6+0000+020040D7+0000+020040EE+0000+020040EF+0000"
+cheat187_enable = false

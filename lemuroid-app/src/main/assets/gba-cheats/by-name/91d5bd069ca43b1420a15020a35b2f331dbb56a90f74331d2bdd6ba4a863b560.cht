@@ -1,0 +1,597 @@
+cheats = 149
+
+cheat0_desc = "direct_v1 第1关过后可选所有关卡"
+cheat0_code = "32feFE0C+0001+32feFE0D+0001+32feFE0E+0001+32feFE0F+0001+32feFE10+0001+32feFE11+0001+32feFE12+0001+32feFE13+0001+32feFE14+0001+32feFE15+0001+32feFE16+0001+32feFE17+0001+32feFE18+0001+32feFE19+0001+32feFE1A+0001+32feFE1B+0001+32feFE1C+0001+32feFE1D+0001+32feFE1E+0001+32feFE1F+0001+32feFE20+0001+32feFE21+0001+32feFE22+0001+32feFE23+0001+32feFE24+0001+32feFE25+0001+32feFE26+0001+32feFE27+0001+32feFE28+0001+32feFE29+0001+32feFE2A+0001+32feFE2B+0001+32feFE2C+0001+32feFE2D+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 pt全满"
+cheat1_code = "32fcC420+000F+32fcC421+0027"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 全战场&编辑素材入手"
+cheat2_code = "32fe8046+00FF+32fe8049+00FF+32fe804B+00FF+32fe804C+00FF+32fe804F+00FF+32fe8052+00FF+32fe8053+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 资金最大"
+cheat3_code = "32fe32C0+003F+32fe32C1+0042+32fe32C2+000F"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 全单位弹数不减"
+cheat4_code = "32fe2695+0005+32fe26A1+0005+32fe26AD+0005+32fe26B9+0005+32fe26C5+0005+32fe26D1+0005+32fe26DD+0005+32fe26E9+0005+32fe26F5+0005"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 全单位燃料不减"
+cheat5_code = "32fe2696+0063+32fe26A2+0063+32fe26AE+0063+32fe26BA+0063+32fe26C6+0063+32fe26D2+0063+32fe26DE+0063+32fe26EA+0063"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 全单位hp不减"
+cheat6_code = "32fe2694+0064+32fe26A0+0064+32fe26AC+0064+32fe26B8+0064+32fe26C4+0064+32fe26D0+0064+32fe26DC+0064+32fe26E8+0064"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 作战单位1变更 步兵"
+cheat7_code = "32fe2690+0001"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 作战单位1变更 导弹兵"
+cheat8_code = "32fe2690+0002"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 作战单位1变更 MD坦克"
+cheat9_code = "32fe2690+0003"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 作战单位1变更 坦克"
+cheat10_code = "32fe2690+0005"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 作战单位1变更 RECON"
+cheat11_code = "32fe2690+0006"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 作战单位1变更 APC"
+cheat12_code = "32fe2690+0007"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 作战单位1变更 蜘蛛战车"
+cheat13_code = "32fe2690+0008"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 作战单位1变更 自走加农"
+cheat14_code = "32fe2690+000A"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 作战单位1变更 自走火箭车"
+cheat15_code = "32fe2690+000B"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 作战单位1变更 高射机枪"
+cheat16_code = "32fe2690+000E"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 作战单位1变更 导弹车"
+cheat17_code = "32fe2690+000F"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 作战单位1变更 战斗机"
+cheat18_code = "32fe2690+0010"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 作战单位1变更 轰炸机"
+cheat19_code = "32fe2690+0011"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 作战单位1变更 战斗直升机"
+cheat20_code = "32fe2690+0013"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 作战单位1变更 运输直升机"
+cheat21_code = "32fe2690+0014"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 作战单位1变更 军舰"
+cheat22_code = "32fe2690+0015"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 作战单位1变更 驱逐舰"
+cheat23_code = "32fe2690+0016"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 作战单位1变更 登陆艇"
+cheat24_code = "32fe2690+0017"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 作战单位1变更 潜艇"
+cheat25_code = "32fe2690+0018"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 作战单位2变更 步兵"
+cheat26_code = "32fe269C+0001"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 作战单位2变更 导弹兵"
+cheat27_code = "32fe269C+0002"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 作战单位2变更 MD坦克"
+cheat28_code = "32fe269C+0003"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 作战单位2变更 坦克"
+cheat29_code = "32fe269C+0005"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 作战单位2变更 RECON"
+cheat30_code = "32fe269C+0006"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 作战单位2变更 APC"
+cheat31_code = "32fe269C+0007"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 作战单位2变更 蜘蛛战车"
+cheat32_code = "32fe269C+0008"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 作战单位2变更 自走加农"
+cheat33_code = "32fe269C+000A"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 作战单位2变更 自走火箭车"
+cheat34_code = "32fe269C+000B"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 作战单位2变更 高射机枪"
+cheat35_code = "32fe269C+000E"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 作战单位2变更 导弹车"
+cheat36_code = "32fe269C+000F"
+cheat36_enable = false
+
+cheat37_desc = "direct_v1 作战单位2变更 战斗机"
+cheat37_code = "32fe269C+0010"
+cheat37_enable = false
+
+cheat38_desc = "direct_v1 作战单位2变更 轰炸机"
+cheat38_code = "32fe269C+0011"
+cheat38_enable = false
+
+cheat39_desc = "direct_v1 作战单位2变更 战斗直升机"
+cheat39_code = "32fe269C+0013"
+cheat39_enable = false
+
+cheat40_desc = "direct_v1 作战单位2变更 运输直升机"
+cheat40_code = "32fe269C+0014"
+cheat40_enable = false
+
+cheat41_desc = "direct_v1 作战单位2变更 军舰"
+cheat41_code = "32fe269C+0015"
+cheat41_enable = false
+
+cheat42_desc = "direct_v1 作战单位2变更 驱逐舰"
+cheat42_code = "32fe269C+0016"
+cheat42_enable = false
+
+cheat43_desc = "direct_v1 作战单位2变更 登陆艇"
+cheat43_code = "32fe269C+0017"
+cheat43_enable = false
+
+cheat44_desc = "direct_v1 作战单位2变更 潜艇"
+cheat44_code = "32fe269C+0018"
+cheat44_enable = false
+
+cheat45_desc = "direct_v1 作战单位3变更 步兵"
+cheat45_code = "32fe26A8+0001"
+cheat45_enable = false
+
+cheat46_desc = "direct_v1 作战单位3变更 导弹兵"
+cheat46_code = "32fe26A8+0002"
+cheat46_enable = false
+
+cheat47_desc = "direct_v1 作战单位3变更 MD坦克"
+cheat47_code = "32fe26A8+0003"
+cheat47_enable = false
+
+cheat48_desc = "direct_v1 作战单位3变更 坦克"
+cheat48_code = "32fe26A8+0005"
+cheat48_enable = false
+
+cheat49_desc = "direct_v1 作战单位3变更 RECON"
+cheat49_code = "32fe26A8+0006"
+cheat49_enable = false
+
+cheat50_desc = "direct_v1 作战单位3变更 APC"
+cheat50_code = "32fe26A8+0007"
+cheat50_enable = false
+
+cheat51_desc = "direct_v1 作战单位3变更 蜘蛛战车"
+cheat51_code = "32fe26A8+0008"
+cheat51_enable = false
+
+cheat52_desc = "direct_v1 作战单位3变更 自走加农"
+cheat52_code = "32fe26A8+000A"
+cheat52_enable = false
+
+cheat53_desc = "direct_v1 作战单位3变更 自走火箭车"
+cheat53_code = "32fe26A8+000B"
+cheat53_enable = false
+
+cheat54_desc = "direct_v1 作战单位3变更 高射机枪"
+cheat54_code = "32fe26A8+000E"
+cheat54_enable = false
+
+cheat55_desc = "direct_v1 作战单位3变更 导弹车"
+cheat55_code = "32fe26A8+000F"
+cheat55_enable = false
+
+cheat56_desc = "direct_v1 作战单位3变更 战斗机"
+cheat56_code = "32fe26A8+0010"
+cheat56_enable = false
+
+cheat57_desc = "direct_v1 作战单位3变更 轰炸机"
+cheat57_code = "32fe26A8+0011"
+cheat57_enable = false
+
+cheat58_desc = "direct_v1 作战单位3变更 战斗直升机"
+cheat58_code = "32fe26A8+0013"
+cheat58_enable = false
+
+cheat59_desc = "direct_v1 作战单位3变更 运输直升机"
+cheat59_code = "32fe26A8+0014"
+cheat59_enable = false
+
+cheat60_desc = "direct_v1 作战单位3变更 军舰"
+cheat60_code = "32fe26A8+0015"
+cheat60_enable = false
+
+cheat61_desc = "direct_v1 作战单位3变更 驱逐舰"
+cheat61_code = "32fe26A8+0016"
+cheat61_enable = false
+
+cheat62_desc = "direct_v1 作战单位3变更 登陆艇"
+cheat62_code = "32fe26A8+0017"
+cheat62_enable = false
+
+cheat63_desc = "direct_v1 作战单位3变更 潜艇"
+cheat63_code = "32fe26A8+0018"
+cheat63_enable = false
+
+cheat64_desc = "direct_v1 作战单位4变更 步兵"
+cheat64_code = "32fe26B4+0001"
+cheat64_enable = false
+
+cheat65_desc = "direct_v1 作战单位4变更 导弹兵"
+cheat65_code = "32fe26B4+0002"
+cheat65_enable = false
+
+cheat66_desc = "direct_v1 作战单位4变更 MD坦克"
+cheat66_code = "32fe26B4+0003"
+cheat66_enable = false
+
+cheat67_desc = "direct_v1 作战单位4变更 坦克"
+cheat67_code = "32fe26B4+0005"
+cheat67_enable = false
+
+cheat68_desc = "direct_v1 作战单位4变更 RECON"
+cheat68_code = "32fe26B4+0006"
+cheat68_enable = false
+
+cheat69_desc = "direct_v1 作战单位4变更 APC"
+cheat69_code = "32fe26B4+0007"
+cheat69_enable = false
+
+cheat70_desc = "direct_v1 作战单位4变更 蜘蛛战车"
+cheat70_code = "32fe26B4+0008"
+cheat70_enable = false
+
+cheat71_desc = "direct_v1 作战单位4变更 自走加农"
+cheat71_code = "32fe26B4+000A"
+cheat71_enable = false
+
+cheat72_desc = "direct_v1 作战单位4变更 自走火箭车"
+cheat72_code = "32fe26B4+000B"
+cheat72_enable = false
+
+cheat73_desc = "direct_v1 作战单位4变更 高射机枪"
+cheat73_code = "32fe26B4+000E"
+cheat73_enable = false
+
+cheat74_desc = "direct_v1 作战单位4变更 导弹车"
+cheat74_code = "32fe26B4+000F"
+cheat74_enable = false
+
+cheat75_desc = "direct_v1 作战单位4变更 战斗机"
+cheat75_code = "32fe26B4+0010"
+cheat75_enable = false
+
+cheat76_desc = "direct_v1 作战单位4变更 轰炸机"
+cheat76_code = "32fe26B4+0011"
+cheat76_enable = false
+
+cheat77_desc = "direct_v1 作战单位4变更 战斗直升机"
+cheat77_code = "32fe26B4+0013"
+cheat77_enable = false
+
+cheat78_desc = "direct_v1 作战单位4变更 运输直升机"
+cheat78_code = "32fe26B4+0014"
+cheat78_enable = false
+
+cheat79_desc = "direct_v1 作战单位4变更 军舰"
+cheat79_code = "32fe26B4+0015"
+cheat79_enable = false
+
+cheat80_desc = "direct_v1 作战单位4变更 驱逐舰"
+cheat80_code = "32fe26B4+0016"
+cheat80_enable = false
+
+cheat81_desc = "direct_v1 作战单位4变更 登陆艇"
+cheat81_code = "32fe26B4+0017"
+cheat81_enable = false
+
+cheat82_desc = "direct_v1 作战单位4变更 潜艇"
+cheat82_code = "32fe26B4+0018"
+cheat82_enable = false
+
+cheat83_desc = "direct_v1 作战单位5变更 步兵"
+cheat83_code = "32fe26C0+0001"
+cheat83_enable = false
+
+cheat84_desc = "direct_v1 作战单位5变更 导弹兵"
+cheat84_code = "32fe26C0+0002"
+cheat84_enable = false
+
+cheat85_desc = "direct_v1 作战单位5变更 MD坦克"
+cheat85_code = "32fe26C0+0003"
+cheat85_enable = false
+
+cheat86_desc = "direct_v1 作战单位5变更 坦克"
+cheat86_code = "32fe26C0+0005"
+cheat86_enable = false
+
+cheat87_desc = "direct_v1 作战单位5变更 RECON"
+cheat87_code = "32fe26C0+0006"
+cheat87_enable = false
+
+cheat88_desc = "direct_v1 作战单位5变更 APC"
+cheat88_code = "32fe26C0+0007"
+cheat88_enable = false
+
+cheat89_desc = "direct_v1 作战单位5变更 蜘蛛战车"
+cheat89_code = "32fe26C0+0008"
+cheat89_enable = false
+
+cheat90_desc = "direct_v1 作战单位5变更 自走加农"
+cheat90_code = "32fe26C0+000A"
+cheat90_enable = false
+
+cheat91_desc = "direct_v1 作战单位5变更 自走火箭车"
+cheat91_code = "32fe26C0+000B"
+cheat91_enable = false
+
+cheat92_desc = "direct_v1 作战单位5变更 高射机枪"
+cheat92_code = "32fe26C0+000E"
+cheat92_enable = false
+
+cheat93_desc = "direct_v1 作战单位5变更 导弹车"
+cheat93_code = "32fe26C0+000F"
+cheat93_enable = false
+
+cheat94_desc = "direct_v1 作战单位5变更 战斗机"
+cheat94_code = "32fe26C0+0010"
+cheat94_enable = false
+
+cheat95_desc = "direct_v1 作战单位5变更 轰炸机"
+cheat95_code = "32fe26C0+0011"
+cheat95_enable = false
+
+cheat96_desc = "direct_v1 作战单位5变更 战斗直升机"
+cheat96_code = "32fe26C0+0013"
+cheat96_enable = false
+
+cheat97_desc = "direct_v1 作战单位5变更 运输直升机"
+cheat97_code = "32fe26C0+0014"
+cheat97_enable = false
+
+cheat98_desc = "direct_v1 作战单位5变更 军舰"
+cheat98_code = "32fe26C0+0015"
+cheat98_enable = false
+
+cheat99_desc = "direct_v1 作战单位5变更 驱逐舰"
+cheat99_code = "32fe26C0+0016"
+cheat99_enable = false
+
+cheat100_desc = "direct_v1 作战单位5变更 登陆艇"
+cheat100_code = "32fe26C0+0017"
+cheat100_enable = false
+
+cheat101_desc = "direct_v1 作战单位5变更 潜艇"
+cheat101_code = "32fe26C0+0018"
+cheat101_enable = false
+
+cheat102_desc = "direct_v1 作战单位6变更 步兵"
+cheat102_code = "32fe26CC+0001"
+cheat102_enable = false
+
+cheat103_desc = "direct_v1 作战单位6变更 导弹兵"
+cheat103_code = "32fe26CC+0002"
+cheat103_enable = false
+
+cheat104_desc = "direct_v1 作战单位6变更 MD坦克"
+cheat104_code = "32fe26CC+0003"
+cheat104_enable = false
+
+cheat105_desc = "direct_v1 作战单位6变更 坦克"
+cheat105_code = "32fe26CC+0005"
+cheat105_enable = false
+
+cheat106_desc = "direct_v1 作战单位6变更 RECON"
+cheat106_code = "32fe26CC+0006"
+cheat106_enable = false
+
+cheat107_desc = "direct_v1 作战单位6变更 APC"
+cheat107_code = "32fe26CC+0007"
+cheat107_enable = false
+
+cheat108_desc = "direct_v1 作战单位6变更 蜘蛛战车"
+cheat108_code = "32fe26CC+0008"
+cheat108_enable = false
+
+cheat109_desc = "direct_v1 作战单位6变更 自走加农"
+cheat109_code = "32fe26CC+000A"
+cheat109_enable = false
+
+cheat110_desc = "direct_v1 作战单位6变更 自走火箭车"
+cheat110_code = "32fe26CC+000B"
+cheat110_enable = false
+
+cheat111_desc = "direct_v1 作战单位6变更 高射机枪"
+cheat111_code = "32fe26CC+000E"
+cheat111_enable = false
+
+cheat112_desc = "direct_v1 作战单位6变更 导弹车"
+cheat112_code = "32fe26CC+000F"
+cheat112_enable = false
+
+cheat113_desc = "direct_v1 作战单位6变更 战斗机"
+cheat113_code = "32fe26CC+0010"
+cheat113_enable = false
+
+cheat114_desc = "direct_v1 作战单位6变更 轰炸机"
+cheat114_code = "32fe26CC+0011"
+cheat114_enable = false
+
+cheat115_desc = "direct_v1 作战单位6变更 战斗直升机"
+cheat115_code = "32fe26CC+0013"
+cheat115_enable = false
+
+cheat116_desc = "direct_v1 作战单位6变更 运输直升机"
+cheat116_code = "32fe26CC+0014"
+cheat116_enable = false
+
+cheat117_desc = "direct_v1 作战单位6变更 军舰"
+cheat117_code = "32fe26CC+0015"
+cheat117_enable = false
+
+cheat118_desc = "direct_v1 作战单位6变更 驱逐舰"
+cheat118_code = "32fe26CC+0016"
+cheat118_enable = false
+
+cheat119_desc = "direct_v1 作战单位6变更 登陆艇"
+cheat119_code = "32fe26CC+0017"
+cheat119_enable = false
+
+cheat120_desc = "direct_v1 作战单位6变更 潜艇"
+cheat120_code = "32fe26CC+0018"
+cheat120_enable = false
+
+cheat121_desc = "direct_v1 去雾"
+cheat121_code = "33003FCD+0000"
+cheat121_enable = false
+
+cheat122_desc = "direct_v1 第一势力指挥槽不减"
+cheat122_code = "32fe32E1+00FF+32fe32E2+00FF"
+cheat122_enable = false
+
+cheat123_desc = "direct_v1 第二势力指挥槽不减"
+cheat123_code = "32fe331D+00FF+32fe331E+00FF"
+cheat123_enable = false
+
+cheat124_desc = "direct_v1 第三势力指挥槽不减"
+cheat124_code = "32fe3359+00FF+32fe335A+00FF"
+cheat124_enable = false
+
+cheat125_desc = "direct_v1 第二势力资金最大"
+cheat125_code = "32fe32FC+003F+32fe32FD+0042+32fe32FE+000F"
+cheat125_enable = false
+
+cheat126_desc = "direct_v1 第三势力资金最大"
+cheat126_code = "32fe3338+003F+32fe3339+0042+32fe333A+000F"
+cheat126_enable = false
+
+cheat127_desc = "direct_v1 可用全部OC 和 出现黄金DES模式"
+cheat127_code = "32fe805A+00FF+32fe805B+00FF+32fe805C+00FF+32fe805D+00FF+32fe805E+00FF+32fe805F+00FF"
+cheat127_enable = false
+
+cheat128_desc = "direct_v1 出现HARD模式+音乐欣赏模式+全图片"
+cheat128_code = "32fe8030+00FF+32fe8031+0001"
+cheat128_enable = false
+
+cheat129_desc = "direct_v1 Days 1"
+cheat129_code = "33004080+0001"
+cheat129_enable = false
+
+cheat130_desc = "direct_v1 Days 2"
+cheat130_code = "33004080+0002"
+cheat130_enable = false
+
+cheat131_desc = "direct_v1 Days 3"
+cheat131_code = "33004080+0003"
+cheat131_enable = false
+
+cheat132_desc = "direct_v1 Days 4"
+cheat132_code = "33004080+0004"
+cheat132_enable = false
+
+cheat133_desc = "direct_v1 Days 14"
+cheat133_code = "33004080+000E"
+cheat133_enable = false
+
+cheat134_desc = "direct_v1 Money 1P"
+cheat134_code = "32fe32C0+003F+32fe32C1+0042+32fe32C2+000F"
+cheat134_enable = false
+
+cheat135_desc = "direct_v1 Money 2P"
+cheat135_code = "32fe32FC+003F+32fe32FD+0042+32fe32FE+000F"
+cheat135_enable = false
+
+cheat136_desc = "direct_v1 Money 1P+2P"
+cheat136_code = "32fe32C0+003F+32fe32C1+0042+32fe32C2+000F+32fe32FC+003F+32fe32FD+0042+32fe32FE+000F"
+cheat136_enable = false
+
+cheat137_desc = "direct_v1 Money 3P"
+cheat137_code = "32fe3338+003F+32fe3339+0042+32fe333A+000F"
+cheat137_enable = false
+
+cheat138_desc = "direct_v1 Money 1P+2P+3P"
+cheat138_code = "32fe32C0+003F+32fe32C1+0042+32fe32C2+000F+32fe32FC+003F+32fe32FD+0042+32fe32FE+000F+32fe3338+003F+32fe3339+0042+32fe333A+000F"
+cheat138_enable = false
+
+cheat139_desc = "direct_v1 零伤亡"
+cheat139_code = "32fe32FB+0000+32fe32FB+0000"
+cheat139_enable = false
+
+cheat140_desc = "direct_v1 敌方资金为零 当敌方为2P时"
+cheat140_code = "32fe32FC+0000+32fe32FD+0000+32fe32FE+0000"
+cheat140_enable = false
+
+cheat141_desc = "direct_v1 敌方资金为零 当敌方为3P时"
+cheat141_code = "32fe3338+0000+32fe3339+0000+32fe333A+0000"
+cheat141_enable = false
+
+cheat142_desc = "direct_v1 敌方资金为零 当敌方为4P时"
+cheat142_code = "32fe3374+0000+32fe3375+0000+32fe3376+0000"
+cheat142_enable = false
+
+cheat143_desc = "direct_v1 无限CO POWER"
+cheat143_code = "32fe32E2+0000+32fe32E3+0040+32fe32E4+007A+32fe32E5+0010"
+cheat143_enable = false
+
+cheat144_desc = "direct_v1 无限BATTLE POINTS"
+cheat144_code = "32fcC420+000F+32fcC421+0027"
+cheat144_enable = false
+
+cheat145_desc = "direct_v1 无限移动"
+cheat145_code = "32fe2691+0000+32fe269D+0000+32fe26A9+0000+32fe26B5+0000+32fe26C1+0000+32fe26CD+0000+32fe26D9+0000+32fe26E5+0000+32fe26F1+0000"
+cheat145_enable = false
+
+cheat146_desc = "direct_v1 无敌"
+cheat146_code = "32fe2694+0064+32fe26A0+0064+32fe26AC+0064+32fe26AC+0064+32fe26B8+0064+32fe26C4+0064+32fe26D0+0064+32fe26DC+0064"
+cheat146_enable = false
+
+cheat147_desc = "direct_v1 无限燃料"
+cheat147_code = "32fe2696+0063+32fe26AE+0063+32fe26BA+0063+32fe26C6+0063+32fe26D2+0063+32fe26DE+0063+32fe26EA+0063+32fe26F6+0063"
+cheat147_enable = false
+
+cheat148_desc = "direct_v1 无限弹药"
+cheat148_code = "32fe2695+0063+32fe26A1+0063+32fe26AD+0063+32fe26B9+0063+32fe26C5+0063+32fe26D1+0063+32fe26DD+0063+32fe26E9+0063"
+cheat148_enable = false

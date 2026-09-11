@@ -1,0 +1,21 @@
+cheats = 5
+
+cheat0_desc = "direct_v1 主角等级"
+cheat0_code = "32fc8A40+0063+02008A41+0003"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 主角HP最大值"
+cheat1_code = "32fc8A52+00E7+02008A53+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 主角HP值"
+cheat2_code = "32fc8A4E+00E7+02008A4F+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 主角MP最大值"
+cheat3_code = "32fc8A54+00E7+02008A55+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 主角MP值"
+cheat4_code = "32fc8A50+00E7+02008A51+0003"
+cheat4_enable = false

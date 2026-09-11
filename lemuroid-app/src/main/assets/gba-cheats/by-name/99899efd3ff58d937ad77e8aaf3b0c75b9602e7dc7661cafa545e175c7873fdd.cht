@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 子弹数"
+cheat0_code = "3300770A+0090"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血"
+cheat1_code = "330040F6+0064+02044161+0064+020476FF+0064"
+cheat1_enable = false

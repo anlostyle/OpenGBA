@@ -1,0 +1,29 @@
+cheats = 7
+
+cheat0_desc = "direct_v1 血"
+cheat0_code = "32fdF01C+0064+32fdC6F0+0064+32fdCDE0+0064+32fdD888+0064+32fdDBE0+0064+32feDF48+0064+32fd8400+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 小药包"
+cheat1_code = "32fc7A7E+0020+32fc7A7F+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 大药包"
+cheat2_code = "32fc7A80+0020+32fc7A81+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 乌兹枪弹(得到后使用)"
+cheat3_code = "32fc7A74+0084+32fc7A75+0003"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 金枪(得到后使用)"
+cheat4_code = "32fc7A78+0084+32fc7A79+0003"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 加速(某些关)"
+cheat5_code = "32fdF188+0064+32fdC85C+0064+32fdCF4C+0064+32fdD9F4+0064+32fdDD4C+0064+32feE0B4+0064+32fd856C+0064+32fe1394+0064"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 最强金枪(最后几关)"
+cheat6_code = "32ff0988+0064+32fe2040+0064+32fe8C74+0064+32fe4220+0064+32fd3854+0064"
+cheat6_enable = false

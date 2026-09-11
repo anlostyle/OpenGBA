@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 turbo"
+cheat0_code = "32fd3137+0024"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 trick"
+cheat1_code = "32fd3138+002C+02013139+0001"
+cheat1_enable = false

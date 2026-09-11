@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 生命不减"
+cheat0_code = "32fc22C0+0009"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 体力不减"
+cheat1_code = "32fc216E+000F"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 体力上限"
+cheat2_code = "32fc216F+000F"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 无敌"
+cheat3_code = "32fc4C85+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 羊 MAX"
+cheat4_code = "32fc21AF+0005"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 红果实 MAX"
+cheat5_code = "32fc21CD+00FE"
+cheat5_enable = false

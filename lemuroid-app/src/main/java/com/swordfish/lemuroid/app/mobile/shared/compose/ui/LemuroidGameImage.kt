@@ -17,6 +17,7 @@ import com.swordfish.lemuroid.lib.library.db.entity.Game
 fun LemuroidGameImage(
     modifier: Modifier = Modifier,
     game: Game,
+    aspectRatio: Float = 0.72f,
 ) {
     val fallbackDrawable =
         remember(game) {
@@ -30,11 +31,11 @@ fun LemuroidGameImage(
             ImageRequest.Builder(LocalContext.current)
                 .data(game.coverFrontUrl)
                 .build(),
-        contentDescription = game.title,
+        contentDescription = game.displayName,
         modifier =
             modifier
                 .fillMaxWidth()
-                .aspectRatio(1.0f),
+                .aspectRatio(aspectRatio),
         fallback = fallbackPainter,
         error = fallbackPainter,
         contentScale = ContentScale.Crop,

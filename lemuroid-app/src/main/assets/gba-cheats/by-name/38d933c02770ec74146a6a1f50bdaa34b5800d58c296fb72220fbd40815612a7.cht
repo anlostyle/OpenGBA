@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 快速升级"
+cheat0_code = "33002B78+0006+02042B8C+0006"
+cheat0_enable = false

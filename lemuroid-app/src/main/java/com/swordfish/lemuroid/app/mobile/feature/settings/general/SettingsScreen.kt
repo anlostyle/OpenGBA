@@ -1,19 +1,27 @@
 package com.swordfish.lemuroid.app.mobile.feature.settings.general
 
+import android.content.Intent
 import android.net.Uri
+import android.provider.Settings
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.documentfile.provider.DocumentFile
 import androidx.navigation.NavController
+import com.swordfish.lemuroid.BuildConfig
 import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.mobile.feature.main.MainRoute
 import com.swordfish.lemuroid.app.mobile.feature.main.navigateToRoute
 import com.swordfish.lemuroid.app.shared.library.LibraryIndexScheduler
+import com.swordfish.lemuroid.app.shared.update.AppUpdateManager
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidCardSettingsGroup
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsList
 import com.swordfish.lemuroid.app.utils.android.settings.LemuroidSettingsMenuLink
@@ -24,6 +32,7 @@ import com.swordfish.lemuroid.app.utils.android.settings.booleanPreferenceState
 import com.swordfish.lemuroid.app.utils.android.settings.indexPreferenceState
 import com.swordfish.lemuroid.app.utils.android.settings.intPreferenceState
 import com.swordfish.lemuroid.app.utils.android.stringListResource
+import kotlinx.coroutines.launch
 
 @Composable
 fun SettingsScreen(
@@ -60,6 +69,60 @@ fun SettingsScreen(
             isSaveSyncSupported = state.isSaveSyncSupported,
             navController = navController,
         )
+        UpdateSettings()
+    }
+}
+
+@Composable
+private fun UpdateSettings() {
+    val context = LocalContext.current
+    val manager = remember { AppUpdateManager(context.applicationContext) }
+    val scope = rememberCoroutineScope()
+    var status by remember { mutableStateOf<String?>(null) }
+
+    LemuroidCardSettingsGroup(
+        title = { Text(text = stringResource(id = R.string.settings_category_update)) },
+    ) {
+        LemuroidSettingsMenuLink(
+            title = {
+                Text(
+                    text =
+                        "${stringResource(id = R.string.settings_title_app_update)}  " +
+                            "v${BuildConfig.VERSION_NAME}",
+                )
+            },
+            subtitle = {
+                Text(
+                    text = status ?: stringResource(id = R.string.settings_description_app_update),
+                )
+            },
+            onClick = {
+                if (!manager.canRequestPackageInstalls()) {
+                    status = context.getString(R.string.settings_update_install_permission)
+                    context.startActivity(manager.installPermissionIntent())
+                    return@LemuroidSettingsMenuLink
+                }
+
+                status = context.getString(R.string.settings_update_checking)
+                scope.launch {
+                    manager.checkForUpdate().fold(
+                        onSuccess = { update ->
+                            if (update == null) {
+                                status = context.getString(R.string.settings_update_none)
+                            } else {
+                                status = context.getString(R.string.settings_update_available, update.versionName)
+                                manager.downloadAndInstall(update).onFailure {
+                                    status = context.getString(R.string.settings_update_failed, it.message.orEmpty())
+                                }
+                            }
+                        },
+                        onFailure = {
+                            status = context.getString(R.string.settings_update_failed, it.message.orEmpty())
+                        },
+                    )
+                }
+            },
+        )
     }
 }
 
@@ -69,6 +132,8 @@ private fun MiscSettings(
     isSaveSyncSupported: Boolean,
     navController: NavController,
 ) {
+    val context = LocalContext.current
+
     LemuroidCardSettingsGroup(
         title = { Text(text = stringResource(id = R.string.settings_category_misc)) },
     ) {
@@ -102,6 +167,15 @@ private fun MiscSettings(
                 Text(text = stringResource(id = R.string.settings_description_advanced_settings))
             },
             onClick = { navController.navigateToRoute(MainRoute.SETTINGS_ADVANCED) },
+        )
+        LemuroidSettingsMenuLink(
+            title = { Text(text = stringResource(id = R.string.settings_title_restore_system_launcher)) },
+            subtitle = {
+                Text(text = stringResource(id = R.string.settings_description_restore_system_launcher))
+            },
+            onClick = {
+                context.startActivity(Intent(Settings.ACTION_HOME_SETTINGS))
+            },
         )
     }
 }

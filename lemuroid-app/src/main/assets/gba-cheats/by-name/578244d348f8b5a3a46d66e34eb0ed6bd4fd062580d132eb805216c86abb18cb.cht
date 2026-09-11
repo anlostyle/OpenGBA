@@ -1,0 +1,93 @@
+cheats = 23
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "32fdAAF8+000F+0201AAF9+0027"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 得分"
+cheat1_code = "32fdA83C+0080+0201A83D+0096+0201A83E+0098"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 TH CAREER$9999999"
+cheat2_code = "32fc0D64+007F+02000D65+0096+02000D66+0098"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 TH CASH$9999999"
+cheat3_code = "32fc0D68+007F+02000D69+0096+02000D6A+0098"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 TH 全能力"
+cheat4_code = "32fc0D81+000A+02000D82+000A+02000D83+000A+02000D84+000A+02000D85+000A+02000D86+000A+02000D87+000A+02000D88+000A+02000D89+000A+02000D8A+000A"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 Mindy CAREER$9999999"
+cheat5_code = "32fc142C+007F+0200142D+0096+0200142E+0098"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 Mindy CASH$9999999"
+cheat6_code = "32fc1430+007F+02001431+0096+02001432+0098"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 Mindy全能力"
+cheat7_code = "32fc1449+000A+0200144A+000A+0200144B+000A+0200144C+000A+0200144D+000A+0200144E+000A+0200144F+000A+02001450+000A+02001451+000A+02001452+000A"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 Mindy使用中的人物 Tony Hawk"
+cheat8_code = "33001D64+0000"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 Mindy使用中的人物 Bob Burnquist"
+cheat9_code = "33001D64+0001"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 Mindy使用中的人物 Steve Caballero"
+cheat10_code = "33001D64+0002"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 Mindy使用中的人物 Kareem Campbell"
+cheat11_code = "33001D64+0003"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 Mindy使用中的人物 Rune Glifberg"
+cheat12_code = "33001D64+0004"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 Mindy使用中的人物 Eric Koston"
+cheat13_code = "33001D64+0005"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 Mindy使用中的人物 Bucky Lasek"
+cheat14_code = "33001D64+0006"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 Mindy使用中的人物 Rodney Mullen"
+cheat15_code = "33001D64+0007"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 Mindy使用中的人物 Chad Muska"
+cheat16_code = "33001D64+0008"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 Mindy使用中的人物 Andrew Reynolds"
+cheat17_code = "33001D64+0009"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 Mindy使用中的人物 Geoff Rowley"
+cheat18_code = "33001D64+000A"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 Mindy使用中的人物 Elissa Steamer"
+cheat19_code = "33001D64+000B"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 Mindy使用中的人物 Jamie Thomas"
+cheat20_code = "33001D64+000C"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 Mindy使用中的人物 Spider-Man"
+cheat21_code = "33001D64+000D"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 Mindy使用中的人物 Mindy"
+cheat22_code = "33001D64+000E"
+cheat22_enable = false

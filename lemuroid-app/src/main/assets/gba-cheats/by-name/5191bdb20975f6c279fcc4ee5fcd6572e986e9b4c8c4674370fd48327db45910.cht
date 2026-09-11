@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 AB飞机架数"
+cheat0_code = "330027B1+0032"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 AB导弹"
+cheat1_code = "330027B4+0032"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 OR时间"
+cheat2_code = "330027A8+0000+020427A9+0017"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 SP时间"
+cheat3_code = "3300278C+0000+0204278D+000E"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 SP人数"
+cheat4_code = "3300278F+0004"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 SU时间"
+cheat5_code = "330027A8+0000+020427A9+000C"
+cheat5_enable = false

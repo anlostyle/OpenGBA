@@ -1,0 +1,149 @@
+cheats = 37
+
+cheat0_desc = "direct_v1 无限时间"
+cheat0_code = "33002442+003B+33002443+000E"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 P1 角色 *HEIHACHI"
+cheat1_code = "330042B3+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 P1 角色 JIN"
+cheat2_code = "330042B3+0000"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 P1 角色 PAUL"
+cheat3_code = "330042B3+0001"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 P1 角色 HWOARANG"
+cheat4_code = "330042B3+0002"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 P1 角色 LAW"
+cheat5_code = "330042B3+0003"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 P1 角色 NINA"
+cheat6_code = "330042B3+0004"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 P1 角色 GUNJACK"
+cheat7_code = "330042B3+0005"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 P1 角色 YOSHIMITSU"
+cheat8_code = "330042B3+0006"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 P1 角色 KING"
+cheat9_code = "330042B3+0007"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 P1 角色 XIAOYU"
+cheat10_code = "330042B3+0008"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 P1 第一人-体力值"
+cheat11_code = "330047A2+008C+330047A4+008C"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 P1 第二人-体力值"
+cheat12_code = "33004D32+008C+33004D34+008C"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 P1 第三人-体力值"
+cheat13_code = "330052C2+008C+330052C4+008C"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 P2 角色 *HEIHACHI"
+cheat14_code = "33005363+0009"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 P2 角色 JIN"
+cheat15_code = "33005363+0000"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 P2 角色 PAUL"
+cheat16_code = "33005363+0001"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 P2 角色 HWOARANG"
+cheat17_code = "33005363+0002"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 P2 角色 LAW"
+cheat18_code = "33005363+0003"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 P2 角色 NINA"
+cheat19_code = "33005363+0004"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 P2 角色 GUNJACK"
+cheat20_code = "33005363+0005"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 P2 角色 YOSHIMITSU"
+cheat21_code = "33005363+0006"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 P2 角色 KING"
+cheat22_code = "33005363+0007"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 P2 角色 XIAOYU"
+cheat23_code = "33005363+0008"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 P2 第一人-体力值"
+cheat24_code = "33005852+008C+33005854+008C"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 P2 第二人-体力值"
+cheat25_code = "33005DE2+008C+33005DE4+008C"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 P2 第三人-体力值"
+cheat26_code = "33006372+008C+33006374+008C"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 选择关卡 .NONE."
+cheat27_code = "32fc0000+0000"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 选择关卡 第一关"
+cheat28_code = "3300244A+0000"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 选择关卡 第二关"
+cheat29_code = "3300244A+0001"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 选择关卡 第三关"
+cheat30_code = "3300244A+0002"
+cheat30_enable = false
+
+cheat31_desc = "direct_v1 选择关卡 第四关"
+cheat31_code = "3300244A+0003"
+cheat31_enable = false
+
+cheat32_desc = "direct_v1 选择关卡 第五关"
+cheat32_code = "3300244A+0004"
+cheat32_enable = false
+
+cheat33_desc = "direct_v1 选择关卡 第六关"
+cheat33_code = "3300244A+0005"
+cheat33_enable = false
+
+cheat34_desc = "direct_v1 选择关卡 第七关"
+cheat34_code = "3300244A+0006"
+cheat34_enable = false
+
+cheat35_desc = "direct_v1 选择关卡 第八关"
+cheat35_code = "3300244A+0007"
+cheat35_enable = false
+
+cheat36_desc = "direct_v1 选择关卡 第九关"
+cheat36_code = "3300244A+0008"
+cheat36_enable = false

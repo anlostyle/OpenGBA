@@ -1,0 +1,33 @@
+cheats = 8
+
+cheat0_desc = "direct_v1 红心"
+cheat0_code = "33001BA0+0090"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 红心上限"
+cheat1_code = "33001BA2+0090"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 黄星"
+cheat2_code = "33001BA5+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 水滴"
+cheat3_code = "33001BA6+0006"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 苹果"
+cheat4_code = "33001BB2+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 香蕉"
+cheat5_code = "33001BB4+0063"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 葡萄"
+cheat6_code = "33001BB6+0063"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 甜瓜"
+"
+cheat7_enable = false

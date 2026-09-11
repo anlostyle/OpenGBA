@@ -34,7 +34,7 @@ fun LemuroidSmallGameImage(
             ImageRequest.Builder(LocalContext.current)
                 .data(game.coverFrontUrl)
                 .build(),
-        contentDescription = game.title,
+        contentDescription = game.displayName,
         modifier =
             modifier
                 .fillMaxWidth()

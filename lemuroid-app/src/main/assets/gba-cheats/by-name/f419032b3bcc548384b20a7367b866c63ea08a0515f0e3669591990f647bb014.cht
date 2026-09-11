@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 HP不减"
+cheat0_code = "33005025+0062"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 子弹不减"
+cheat1_code = "330050A2+0099"
+cheat1_enable = false

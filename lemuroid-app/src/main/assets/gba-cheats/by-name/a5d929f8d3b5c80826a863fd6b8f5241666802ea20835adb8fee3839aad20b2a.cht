@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 无限移动"
+cheat0_code = "33004EAA+0002"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 全能力"
+cheat1_code = "330051F4+00E7+020451F5+0003+020451F6+00E7+020451F7+0003+020451F8+00E7+020451F9+0003+020451FA+00E7+020451FB+0003"
+cheat1_enable = false

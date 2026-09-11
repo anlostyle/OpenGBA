@@ -11,6 +11,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
@@ -30,6 +32,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -49,6 +52,7 @@ import com.swordfish.lemuroid.app.mobile.feature.gamemenu.states.GameMenuStatesV
 import com.swordfish.lemuroid.app.mobile.shared.compose.ui.AppTheme
 import com.swordfish.lemuroid.app.shared.GameMenuContract
 import com.swordfish.lemuroid.app.shared.coreoptions.LemuroidCoreOption
+import com.swordfish.lemuroid.app.shared.game.BaseGameScreenViewModel
 import com.swordfish.lemuroid.app.shared.input.InputDeviceManager
 import com.swordfish.lemuroid.common.kotlin.serializable
 import com.swordfish.lemuroid.lib.android.RetrogradeComponentActivity
@@ -78,10 +82,14 @@ class GameMenuActivity : RetrogradeComponentActivity() {
         val audioEnabled: Boolean,
         val fastForwardSupported: Boolean,
         val fastForwardEnabled: Boolean,
+        val fastForwardSpeed: Int,
+        val screenFilter: String,
+        val currentSaveSlot: Int,
         val numDisks: Int,
         val currentDisk: Int,
         val currentTiltConfiguration: TiltConfiguration,
         val allTiltConfigurations: List<TiltConfiguration>,
+        val cheats: String,
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -116,6 +124,16 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                     extras?.getBoolean(GameMenuContract.EXTRA_FAST_FORWARD_SUPPORTED, false) ?: false,
                 fastForwardEnabled =
                     extras?.getBoolean(GameMenuContract.EXTRA_FAST_FORWARD, false) ?: false,
+                fastForwardSpeed =
+                    extras?.getInt(
+                        GameMenuContract.EXTRA_FAST_FORWARD_SPEED,
+                        BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
+                    ) ?: BaseGameScreenViewModel.DEFAULT_FAST_FORWARD_SPEED,
+                screenFilter = extras?.getString(GameMenuContract.EXTRA_SCREEN_FILTER) ?: "auto",
+                currentSaveSlot =
+                    extras?.getInt(GameMenuContract.EXTRA_CURRENT_SAVE_SLOT, 0)
+                        ?.coerceIn(0, StatesManager.MAX_STATES - 1)
+                        ?: 0,
                 numDisks =
                     extras?.getInt(GameMenuContract.EXTRA_DISKS, 0) ?: 0,
                 currentDisk =
@@ -127,6 +145,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                     intent.serializable<Array<TiltConfiguration>>(GameMenuContract.EXTRA_TILT_ALL_CONFIGS)
                         ?.toList()
                         ?: emptyList(),
+                cheats = extras?.getString(GameMenuContract.EXTRA_CHEATS).orEmpty(),
             )
 
         setContent {
@@ -134,7 +153,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
         }
     }
 
-    @OptIn(ExperimentalMaterial3Api::class)
+    @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
     @Composable
     private fun GameMenuScreen(gameMenuRequest: GameMenuRequest) {
         AppTheme {
@@ -149,8 +168,22 @@ class GameMenuActivity : RetrogradeComponentActivity() {
 
             SideMenu {
                 TopAppBar(
-                    title = { Text(stringResource(currentRoute.titleId)) },
+                    title = {
+                        Column {
+                            Text(stringResource(currentRoute.titleId))
+                            Text(
+                                text = gameMenuRequest.game.displayName,
+                                modifier = Modifier.basicMarquee(),
+                                style = MaterialTheme.typography.labelSmall,
+                                maxLines = 1,
+                            )
+                        }
+                    },
                     windowInsets = WindowInsets(0.dp),
+                    colors =
+                        TopAppBarDefaults.topAppBarColors(
+                            containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.88f),
+                        ),
                     navigationIcon = {
                         AnimatedContent(targetState = currentRoute.canGoBack(), label = "Back") { canGoBack ->
                             if (canGoBack) {
@@ -184,7 +217,7 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                     composable(GameMenuRoute.HOME) {
                         GameMenuHomeScreen(navController, gameMenuRequest, ::onResult)
                     }
-                    composable(GameMenuRoute.SAVE) {
+                    composable(GameMenuRoute.STATES) {
                         GameMenuStatesScreen(
                             viewModel(
                                 factory =
@@ -192,31 +225,23 @@ class GameMenuActivity : RetrogradeComponentActivity() {
                                         application,
                                         gameMenuRequest,
                                         statesManager,
-                                        false,
                                         statesPreviewManager,
                                     ),
                             ),
-                            onStateClicked = {
+                            currentSlot = gameMenuRequest.currentSaveSlot,
+                            onSave = {
                                 onResult { putExtra(GameMenuContract.RESULT_SAVE, it) }
+                            },
+                            onLoad = {
+                                onResult { putExtra(GameMenuContract.RESULT_LOAD, it) }
+                            },
+                            onDelete = {
+                                onResult { putExtra(GameMenuContract.RESULT_DELETE, it) }
                             },
                         )
                     }
-                    composable(GameMenuRoute.LOAD) {
-                        GameMenuStatesScreen(
-                            viewModel(
-                                factory =
-                                    GameMenuStatesViewModel.Factory(
-                                        application,
-                                        gameMenuRequest,
-                                        statesManager,
-                                        true,
-                                        statesPreviewManager,
-                                    ),
-                            ),
-                            onStateClicked = {
-                                onResult { putExtra(GameMenuContract.RESULT_LOAD, it) }
-                            },
-                        )
+                    composable(GameMenuRoute.CHEATS) {
+                        GameMenuCheatsScreen(gameMenuRequest, ::onResult)
                     }
                     composable(GameMenuRoute.OPTIONS) {
                         GameMenuCoreOptionsScreen(
@@ -239,10 +264,12 @@ class GameMenuActivity : RetrogradeComponentActivity() {
         ) {
             val panelWidth =
                 remember(maxWidth) {
-                    minOf(maxWidth * 0.8f, 400f.dp)
+                    maxWidth * (5f / 12f)
                 }
 
             Surface(
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.88f),
+                contentColor = MaterialTheme.colorScheme.onSurface,
                 modifier =
                     Modifier
                         .padding()

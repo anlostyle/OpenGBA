@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 气力"
+cheat0_code = "32fe5FC5+0064"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 血"
+cheat1_code = "32fe5FC1+0064"
+cheat1_enable = false

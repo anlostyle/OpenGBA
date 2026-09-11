@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 时间70"
+cheat0_code = "330043F9+0010"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 生命5"
+cheat1_code = "32fcA048+000A"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 总时间"
+cheat2_code = "330043E5+0010"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 炮弹10"
+cheat3_code = "330043D7+000A"
+cheat3_enable = false

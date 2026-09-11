@@ -1,0 +1,125 @@
+cheats = 31
+
+cheat0_desc = "direct_v1 金钱"
+cheat0_code = "32fc158C+007F+32fc158D+0096+32fc158E+0098"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 钓鱼点数"
+cheat1_code = "32fc15B6+00FF+32fc15B7+00FF"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 不遇敌"
+cheat2_code = "32fcFDF1+0048"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 传送全开"
+cheat3_code = "32fc06A4+00FF+32fc06A5+0000+32fc06A6+00FF+32fc06A7+0000"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 通关附加项开启(慎用)"
+cheat4_code = "32fc0402+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 HP上限"
+cheat5_code = "32fc1012+000F+32fc1013+0027"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 HP"
+cheat6_code = "32fc1014+00F2+32fc1015+0007"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 能力最高"
+cheat7_code = "32fc1016+00E7+32fc1017+0003+32fc1018+00E7+32fc1019+0003+32fc101A+00E7+32fc101B+0003+32fc101C+00E7+32fc101D+0003+32fc101E+00E7+32fc101F+0003+32fc1020+00E7+32fc1021+0003+32fc1022+00E7+32fc1023+0003+32fc1024+00E7+32fc1025+0003+32fc1026+00E7+32fc1027+0003+32fc1028+00E7+32fc1029+0003+32fc102A+00E7+32fc102B+0003+32fc102C+00E7+32fc102D+0003+32fc102E+00E7+32fc102F+0003+32fc1030+00E7+32fc1031+0003+32fc1032+00E7+32fc1033+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 升级点数"
+cheat8_code = "32fc103A+00E7+32fc103B+0003"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 主角EXP"
+cheat9_code = "32fc1040+00FF+32fc1041+00E0+32fc1042+00F5+32fc1043+0005"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 召唤兽EXP"
+cheat10_code = "32fc105C+00FF+32fc105D+00E0+32fc105E+00F5+32fc105F+0005"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 召唤兽MAG"
+cheat11_code = "32fc1058+00E7+32fc1059+0003"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 首位魔法数量"
+cheat12_code = "32fc106A+0063+32fc106B+0063"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 首位武器DUR"
+cheat13_code = "32fc10AA+00FF+32fc10AB+00FF"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 首位武器TEC"
+cheat14_code = "32fc10AD+00FF"
+cheat14_enable = false
+
+cheat15_desc = "direct_v1 首位武器ATK"
+cheat15_code = "32fc10B4+00E7+32fc10B5+0003"
+cheat15_enable = false
+
+cheat16_desc = "direct_v1 首位武器DEF"
+cheat16_code = "32fc10B6+00E7+32fc10B7+0003"
+cheat16_enable = false
+
+cheat17_desc = "direct_v1 首位武器AGL"
+cheat17_code = "32fc10B8+00E7+32fc10B9+0003"
+cheat17_enable = false
+
+cheat18_desc = "direct_v1 全道具"
+cheat18_code = "32fc1490+0063+32fc1491+0063+32fc1492+0063+32fc1493+0063+32fc1494+0063+32fc1495+0063+32fc1496+0063+32fc1497+0063+32fc1498+0063+32fc1499+0063+32fc149A+0063+32fc149B+0063+32fc149C+0063+32fc149D+0063+32fc149E+0063+32fc149F+0063+32fc14A0+0063+32fc14A1+0063+32fc14A2+0063+32fc14A3+0063+32fc14A4+0063+32fc14A5+0063+32fc14A6+0063+32fc14A7+0063+32fc14A8+0063+32fc14A9+0063+32fc14AA+0063+32fc14AB+0063+32fc14AC+0063+32fc14AD+0063+32fc14AE+0063+32fc14AF+0063+32fc14B0+0063+32fc14B1+0063+32fc14B2+0063+32fc14B3+0063+32fc14B4+0063+32fc14B5+0063+32fc14B6+0063+32fc14B7+0063+32fc14B8+0063+32fc14B9+0063+32fc14BA+0063+32fc14BB+0063+32fc14BC+0063+32fc14BD+0063+32fc14BE+0063+32fc14BF+0063+32fc14C0+0063+32fc14C1+0063+32fc14C2+0063+32fc14C3+0063+32fc14C4+0063+32fc14C5+0063+32fc14C6+0063+32fc14C7+0063+32fc14C8+0063+32fc14C9+0063+32fc14CA+0063+32fc14CB+0063+32fc14CC+0063+32fc14CD+0063+32fc14CE+0063+32fc14CF+0063+32fc14D0+0063+32fc14D1+0063+32fc14D2+0063+32fc14D3+0063+32fc14D4+0063+32fc14D5+0063+32fc14D6+0063+32fc14D7+0063+32fc14D8+0063+32fc14D9+0063+32fc14DA+0063+32fc14DB+0063+32fc14DC+0063+32fc14DD+0063+32fc14DE+0063+32fc14DF+0063+32fc14E0+0063+32fc14E1+0063+32fc14E2+0063+32fc14E3+0063+32fc14E4+0063+32fc14E5+0063+32fc14E6+0063+32fc14E7+0063+32fc14E8+0063+32fc14E9+0063+32fc14EA+0063+32fc14EB+0063+32fc14EC+0063+32fc14ED+0063+32fc14EE+0063+32fc14EF+0063+32fc14F0+0063+32fc14F1+0063+32fc14F2+0063+32fc14F3+0063+32fc14F4+0063+32fc14F5+0063+32fc14F6+0063+32fc14F7+0063+32fc14F8+0063+32fc14F9+0063+32fc14FA+0063+32fc14FB+0063+32fc14FC+0063+32fc14FD+0063+32fc14FE+0063+32fc14FF+0063+32fc1500+0063+32fc1501+0063+32fc1502+0063+32fc1503+0063+32fc1504+0063+32fc1505+0063+32fc1506+0063+32fc1507+0063+32fc1508+0063+32fc1509+0063+32fc150A+0063+32fc150B+0063+32fc150C+0063+32fc150D+0063+32fc150E+0063+32fc150F+0063+32fc1510+0063+32fc1511+0063+32fc1512+0063+32fc1513+0063+32fc1514+0063+32fc1515+0063+32fc1516+0063+32fc1517+0063+32fc1518+0063+32fc1519+0063+32fc151A+0063+32fc151B+0063+32fc151C+0063+32fc151D+0063+32fc151E+0063+32fc151F+0063+32fc1520+0063"
+cheat18_enable = false
+
+cheat19_desc = "direct_v1 全贵重品"
+cheat19_code = "32fc1526+0001+32fc1527+0001+32fc1528+0001+32fc1529+0001+32fc152A+0001+32fc152B+0001+32fc152C+0001+32fc152D+0001+32fc152E+0001+32fc152F+0001+32fc1530+0001+32fc1531+0001+32fc1532+0001+32fc1533+0001+32fc1534+0001+32fc1535+0001+32fc1536+0001+32fc1537+0001+32fc1538+0001+32fc1539+0001+32fc153A+0001+32fc153B+0001+32fc153C+0001+32fc153D+0001+32fc153E+0001+32fc153F+0001+32fc1540+0001+32fc1541+0001+32fc1542+0001"
+cheat19_enable = false
+
+cheat20_desc = "direct_v1 全秘传"
+cheat20_code = "32fc155F+00FF+32fc1560+00FF+32fc1561+00FF+32fc1562+00FF+32fc1563+00FF+32fc1564+00FF+32fc1565+00FF+32fc1566+00FF+32fc1567+00FF+32fc1568+00FF+32fc1569+00FF+32fc156A+00FF+32fc156B+00FF+32fc156C+00FF+32fc156D+00FF+32fc156E+00FF+32fc156F+00FF+32fc1570+00FF+32fc1571+00FF+32fc1572+00FF+32fc1573+00FF+32fc1574+00FF+32fc1575+00FF+32fc1576+00FF+32fc1577+00FF"
+cheat20_enable = false
+
+cheat21_desc = "direct_v1 全图鉴"
+cheat21_code = "32fc1579+00FF+32fc157A+00FF+32fc157B+00FF+32fc157C+00FF+32fc157D+00FF+32fc157E+00FF+32fc157F+00FF+32fc1580+00FF+32fc1581+00FF+32fc1582+00FF+32fc1583+00FF+32fc1584+00FF+32fc1585+00FF+32fc1586+00FF+32fc1587+00FF+32fc1588+00FF"
+cheat21_enable = false
+
+cheat22_desc = "direct_v1 战斗中我方HP"
+cheat22_code = "330005FC+000F+330005FD+0027"
+cheat22_enable = false
+
+cheat23_desc = "direct_v1 战斗中我方HP上限"
+cheat23_code = "33000600+000F+33000601+0027"
+cheat23_enable = false
+
+cheat24_desc = "direct_v1 战斗中我方武器耐久"
+cheat24_code = "33000614+009C+33000615+0063"
+cheat24_enable = false
+
+cheat25_desc = "direct_v1 战斗中我方武器耐久上限"
+cheat25_code = "33000618+009C+33000619+0063"
+cheat25_enable = false
+
+cheat26_desc = "direct_v1 战斗中我方魔法召唤数"
+cheat26_code = "330005F7+0006"
+cheat26_enable = false
+
+cheat27_desc = "direct_v1 战斗中我方变身状态"
+cheat27_code = "3300055C+0001"
+cheat27_enable = false
+
+cheat28_desc = "direct_v1 战斗中我方最终奥义发动可能"
+cheat28_code = "33000662+0019"
+cheat28_enable = false
+
+cheat29_desc = "direct_v1 战斗中敌人HP"
+cheat29_code = "33000918+0000+33000919+0000+33000C34+0000+33000C35+0000+33000F50+0000+33000F51+0000+3300126C+0000+3300126D+0000"
+cheat29_enable = false
+
+cheat30_desc = "direct_v1 战斗中BOSS耐久"
+cheat30_code = "33000930+0000+33000931+0000"
+cheat30_enable = false

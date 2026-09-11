@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "[法庭答辩次数]ON"
+cheat0_code = "330037BF+0005"
+cheat0_enable = false
+
+cheat1_desc = "[所有章节全开]ON"
+cheat1_code = "330037BD+0003+330037BE+000F"
+cheat1_enable = false

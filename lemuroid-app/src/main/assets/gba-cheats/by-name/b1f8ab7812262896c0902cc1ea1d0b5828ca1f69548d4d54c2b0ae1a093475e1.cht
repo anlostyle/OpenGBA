@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 血"
+cheat0_code = "32fc3158+0096+02003178+0096"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 子弹数"
+cheat1_code = "32fc3184+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 点"
+cheat2_code = "32fc317C+0003"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 只数"
+cheat3_code = "32fc00B8+0009"
+cheat3_enable = false

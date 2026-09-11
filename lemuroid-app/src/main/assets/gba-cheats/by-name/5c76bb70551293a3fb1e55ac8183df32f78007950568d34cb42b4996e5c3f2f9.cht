@@ -1,0 +1,61 @@
+cheats = 15
+
+cheat0_desc = "direct_v1 HP"
+cheat0_code = "330009D1+0058+020409D2+0002"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 状态"
+cheat1_code = "330009C8+00E7+020409C9+0003+020409CA+00E7+020409CB+0003+020409CC+00E7+020409CD+0003+020409CE+00E7+020409CF+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 钱"
+cheat2_code = "330009D4+009F+020409D5+0086+020409D6+0001"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 关卡全开"
+cheat3_code = "33000B50+001B"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 等级"
+cheat4_code = "330009D9+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 经验"
+cheat5_code = "330009BE+002C+020409BF+0001"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 生命(数值仅适用99级时)"
+cheat6_code = "330009D1+00A0+020409D2+0028"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 全能力"
+cheat7_code = "330009C8+00E7+020409C9+0003+020409CA+00E7+020409CB+0003+020409CC+00E7+020409CD+0003+020409CE+00E7+020409CF+0003"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 金钱"
+cheat8_code = "330009D4+009F+020409D5+0086+020409D6+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 钥匙"
+cheat9_code = "330009D8+0009"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 药瓶"
+cheat10_code = "330009DF+0090"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 辅助道具1数量"
+cheat11_code = "330009E8+00FF"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 全辅助道具1"
+cheat12_code = "330009E6+007F"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 辅助道具2数量"
+cheat13_code = "330009E9+00FF"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 全辅助道具2"
+cheat14_code = "330009E7+0003"
+cheat14_enable = false

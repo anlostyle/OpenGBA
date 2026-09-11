@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 全卡片"
+cheat0_code = "33002970+00FF+33002971+00FF+33002972+00FF+33002973+00FF"
+cheat0_enable = false

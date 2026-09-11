@@ -1,0 +1,61 @@
+cheats = 15
+
+cheat0_desc = "direct_v1 关卡全开"
+cheat0_code = "33000116+000F"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 小游戏全开"
+cheat1_code = "330003D4+000F"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 生命"
+cheat2_code = "33000130+0009"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 人数"
+cheat3_code = "33000134+0009"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 炸弹"
+cheat4_code = "33000474+0005"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 子弹"
+cheat5_code = "33000472+00FF+02040473+00FF"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 隐身"
+cheat6_code = "33000446+00FF"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 枪种类 初始枪"
+cheat7_code = "33000474+0000"
+cheat7_enable = false
+
+cheat8_desc = "direct_v1 枪种类 绿色喷雾枪"
+cheat8_code = "33000474+0001"
+cheat8_enable = false
+
+cheat9_desc = "direct_v1 枪种类 黄色喷火枪"
+cheat9_code = "33000474+0002"
+cheat9_enable = false
+
+cheat10_desc = "direct_v1 枪种类 蓝色冰枪"
+cheat10_code = "33000474+0003"
+cheat10_enable = false
+
+cheat11_desc = "direct_v1 枪种类 红色激光枪"
+cheat11_code = "33000474+0004"
+cheat11_enable = false
+
+cheat12_desc = "direct_v1 枪种类 黄色"
+cheat12_code = "33000474+0005"
+cheat12_enable = false
+
+cheat13_desc = "direct_v1 枪种类 紫色"
+cheat13_code = "33000474+0006"
+cheat13_enable = false
+
+cheat14_desc = "direct_v1 枪种类 散弹枪"
+cheat14_code = "33000474+0007"
+cheat14_enable = false

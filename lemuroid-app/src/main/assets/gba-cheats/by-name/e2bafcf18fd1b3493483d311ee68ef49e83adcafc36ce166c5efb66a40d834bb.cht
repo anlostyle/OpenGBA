@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 绿宝石数"
+cheat0_code = "32ff1B61+0009+32ff1B62+0009+32ff1B63+0009+33001432+002C+33001433+0001"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 只数"
+cheat1_code = "32ff2039+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 精灵数"
+cheat2_code = "32ff1E49+0064"
+cheat2_enable = false

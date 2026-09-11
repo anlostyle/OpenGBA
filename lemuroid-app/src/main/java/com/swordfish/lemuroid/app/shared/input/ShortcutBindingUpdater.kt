@@ -13,7 +13,7 @@ import kotlinx.coroutines.runBlocking
 class ShortcutBindingUpdater(private val inputDeviceManager: InputDeviceManager, intent: Intent) {
     val extras = parseExtras(intent)
 
-    private var firstKeyCodeInCombo: Int? = null
+    private val pressedKeys = linkedSetOf<Int>()
 
     fun getTitle(context: Context): String {
         return context.getString(R.string.shortcut_binding_update_title, extras.shortcutType.displayName())
@@ -32,24 +32,27 @@ class ShortcutBindingUpdater(private val inputDeviceManager: InputDeviceManager,
     }
 
     private fun onKeyDown(event: KeyEvent): Boolean {
-        return isTargetedDevice(event.device)
+        if (!isTargetedDevice(event.device) || event.repeatCount != 0) return false
+        pressedKeys += event.device.normalizeInputKeyCode(event.keyCode)
+        return true
     }
 
     private fun onKeyUp(event: KeyEvent): Boolean {
         if (!isTargetedDevice(event.device)) return false
+        val keyCode = event.device.normalizeInputKeyCode(event.keyCode)
+        if (keyCode !in pressedKeys) return true
+        val inputKeys = pressedKeys.map(::InputKey).toSet()
+        pressedKeys.remove(keyCode)
 
-        if (firstKeyCodeInCombo == null) {
-            firstKeyCodeInCombo = event.keyCode
-            return false // wait for second key
-        } else {
-            if (firstKeyCodeInCombo == event.keyCode) return false // ignore same key press
-            val combo = Pair(InputKey(firstKeyCodeInCombo!!), InputKey(event.keyCode))
-            // TODO runBlocking here should go away.
-            runBlocking {
-                inputDeviceManager.updateShortcutBinding(event.device, extras.shortcutType, combo)
-            }
-            return true
+        // TODO runBlocking here should go away.
+        runBlocking {
+            inputDeviceManager.updateShortcutBinding(
+                event.device,
+                extras.shortcutType,
+                inputKeys,
+            )
         }
+        return true
     }
 
     private fun isTargetedDevice(device: InputDevice?): Boolean {

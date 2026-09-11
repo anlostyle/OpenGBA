@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 无损害"
+cheat0_code = "32fd2B68+0000+02012B69+0000"
+cheat0_enable = false

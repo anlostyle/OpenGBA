@@ -1,6 +1,7 @@
 package com.swordfish.lemuroid.app.mobile.feature.game
 
 import android.graphics.RectF
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -37,6 +38,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.layoutId
@@ -44,6 +46,7 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.window.Dialog
@@ -63,6 +66,34 @@ import com.swordfish.touchinput.radial.ui.LemuroidButtonPressFeedback
 import gg.padkit.PadKit
 import gg.padkit.config.HapticFeedbackType
 import gg.padkit.inputstate.InputState
+
+private const val GBA_ASPECT_RATIO = 3f / 2f
+
+private fun centeredAspectViewport(
+    fullScreen: Rect,
+    gameArea: Rect,
+): RectF {
+    val areaWidth = gameArea.width
+    val areaHeight = gameArea.height
+    val areaRatio = areaWidth / areaHeight
+    val viewportWidth: Float
+    val viewportHeight: Float
+    if (areaRatio > GBA_ASPECT_RATIO) {
+        viewportHeight = areaHeight
+        viewportWidth = viewportHeight * GBA_ASPECT_RATIO
+    } else {
+        viewportWidth = areaWidth
+        viewportHeight = viewportWidth / GBA_ASPECT_RATIO
+    }
+    val left = gameArea.left + (areaWidth - viewportWidth) / 2f
+    val top = gameArea.top + (areaHeight - viewportHeight) / 2f
+    return RectF(
+        (left - fullScreen.left) / fullScreen.width,
+        (top - fullScreen.top) / fullScreen.height,
+        (left + viewportWidth - fullScreen.left) / fullScreen.width,
+        (top + viewportHeight - fullScreen.top) / fullScreen.height,
+    )
+}
 
 @Composable
 fun MobileGameScreen(viewModel: BaseGameScreenViewModel) {
@@ -137,15 +168,17 @@ fun MobileGameScreen(viewModel: BaseGameScreenViewModel) {
 
             LaunchedEffect(fullPos, viewPos) {
                 val gameView = viewModel.retroGameView.retroGameViewFlow()
-                if (fullPos == null || viewPos == null) return@LaunchedEffect
-                val viewport =
-                    RectF(
-                        (viewPos.left - fullPos.left) / fullPos.width,
-                        (viewPos.top - fullPos.top) / fullPos.height,
-                        (viewPos.right - fullPos.left) / fullPos.width,
-                        (viewPos.bottom - fullPos.top) / fullPos.height,
-                    )
-                gameView.viewport = viewport
+                if (
+                    fullPos == null ||
+                    viewPos == null ||
+                    fullPos.width <= 0f ||
+                    fullPos.height <= 0f ||
+                    viewPos.width <= 0f ||
+                    viewPos.height <= 0f
+                ) {
+                    return@LaunchedEffect
+                }
+                gameView.viewport = centeredAspectViewport(fullPos, viewPos)
             }
 
             ConstraintLayout(
@@ -204,6 +237,21 @@ fun MobileGameScreen(viewModel: BaseGameScreenViewModel) {
                     }
                 }
             }
+        }
+
+        val fastForwardMultiplier = viewModel.fastForwardMultiplier.collectAsState(1).value
+        if (fastForwardMultiplier > 1) {
+            Text(
+                text = "×$fastForwardMultiplier",
+                modifier =
+                    Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(12.dp)
+                        .background(Color.Black.copy(alpha = 0.72f))
+                        .padding(horizontal = 8.dp, vertical = 4.dp),
+                color = Color.White,
+                fontWeight = FontWeight.Bold,
+            )
         }
 
         val isLoading =

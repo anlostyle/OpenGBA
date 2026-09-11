@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 TITLES"
+cheat0_code = "330025A6+0090"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 time"
+cheat1_code = "33002599+0000"
+cheat1_enable = false

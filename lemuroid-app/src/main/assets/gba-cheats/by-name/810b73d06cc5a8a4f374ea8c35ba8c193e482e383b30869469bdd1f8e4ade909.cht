@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 HP"
+cheat0_code = "33003648+0096"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 MP"
+cheat1_code = "3300364A+0096"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 EXP?"
+cheat2_code = "3300364E+009F"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 HP+"
+cheat3_code = "33003657+0063"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 MP+"
+cheat4_code = "33003658+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 金钱"
+cheat5_code = "3300364C+00FF+0204364D+00FF"
+cheat5_enable = false

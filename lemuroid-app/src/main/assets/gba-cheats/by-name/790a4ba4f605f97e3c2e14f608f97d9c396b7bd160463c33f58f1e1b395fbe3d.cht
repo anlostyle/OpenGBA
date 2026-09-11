@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 时间"
+cheat0_code = "32fdF0E4+0070+0201F0E5+0017"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 得分"
+cheat1_code = "32fdF0E0+0060+0201F0E1+00EA"
+cheat1_enable = false

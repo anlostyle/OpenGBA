@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 HP&命数"
+cheat0_code = "32fc5588+0030"
+cheat0_enable = false

@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 其中一个队员的体力"
+cheat0_code = "32fc133F+00FF+32fc1467+00FF"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 己方HP"
+cheat1_code = "32fc10EE+00FF+32fc10EF+00FF+32fc1216+00FF+32fc1217+00FF+32fc133E+00FF+32fc133F+00FF+32fc1466+00FF+32fc1467+00FF"
+cheat1_enable = false

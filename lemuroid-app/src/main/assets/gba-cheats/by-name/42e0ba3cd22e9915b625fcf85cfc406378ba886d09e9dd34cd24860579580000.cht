@@ -1,0 +1,33 @@
+cheats = 8
+
+cheat0_desc = "direct_v1 选择关卡"
+cheat0_code = "33000510+0028"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 Stage Challenge模式中无限时间"
+cheat1_code = "33002DB8+0003+02042DB9+003B"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 Puzzle模式中Normal全完成"
+cheat2_code = "33003FF0+00FF+02043FF1+00FF+02043FF2+00FF+02043FF3+00FF"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 Puzzle模式中Original全完成"
+cheat3_code = "33004000+00FF+02044001+00FF+02044002+00FF+02044003+00FF"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 Stage Challenge模式中Normal全完成"
+cheat4_code = "330042A8+00FF+020442A9+00FF+020442AA+00FF+020442AB+00FF"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 Stage Challenge模式中Original全完成"
+cheat5_code = "330042AC+00FF+020442AD+00FF+020442AE+00FF+020442AF+00FF"
+cheat5_enable = false
+
+cheat6_desc = "direct_v1 时间"
+cheat6_code = "3300114E+0063"
+cheat6_enable = false
+
+cheat7_desc = "direct_v1 命"
+cheat7_code = "33001151+0005"
+cheat7_enable = false

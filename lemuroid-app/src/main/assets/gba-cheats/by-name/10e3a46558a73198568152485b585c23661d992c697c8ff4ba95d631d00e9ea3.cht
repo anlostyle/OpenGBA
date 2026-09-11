@@ -1,0 +1,25 @@
+cheats = 6
+
+cheat0_desc = "direct_v1 无限使用武器"
+cheat0_code = "32ff728A+0001+020384D8+0000"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 生命"
+cheat1_code = "32fc18A0+00E7+020018A1+0003+020018A2+00E7+020018A3+0003+02037294+00E7+02037295+0003"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 钱"
+cheat2_code = "32fc18F4+003F+020018F5+0042+020018F6+000F"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 战斗时快速集气"
+cheat3_code = "32fc6CCD+0040"
+cheat3_enable = false
+
+cheat4_desc = "direct_v1 BUG FRAG"
+cheat4_code = "32fc18F8+0063"
+cheat4_enable = false
+
+cheat5_desc = "direct_v1 stardchip"
+cheat5_code = "32fc9418+0063"
+cheat5_enable = false

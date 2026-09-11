@@ -1,0 +1,17 @@
+cheats = 4
+
+cheat0_desc = "direct_v1 血"
+cheat0_code = "32fe5C38+0005+020349E0+0005"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 隐身"
+cheat1_code = "32fe5C0C+0064+020349B4+0064"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 泡泡数"
+cheat2_code = "32fc2F74+0063"
+cheat2_enable = false
+
+cheat3_desc = "direct_v1 星星数"
+cheat3_code = "32fc2F78+0063"
+cheat3_enable = false

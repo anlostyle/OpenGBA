@@ -17,6 +17,7 @@ import com.swordfish.lemuroid.lib.library.db.entity.Game
 fun LemuroidGameTexts(
     modifier: Modifier = Modifier,
     game: Game,
+    showSubtitle: Boolean = true,
 ) {
     val context = LocalContext.current
     val subtitle =
@@ -24,7 +25,7 @@ fun LemuroidGameTexts(
             GameUtils.getGameSubtitle(context, game)
         }
 
-    LemuroidTexts(modifier, game.title, subtitle)
+    LemuroidTexts(modifier, game.displayName, subtitle, showSubtitle)
 }
 
 @Composable
@@ -32,21 +33,27 @@ fun LemuroidTexts(
     modifier: Modifier = Modifier,
     title: String,
     subtitle: String,
+    showSubtitle: Boolean = true,
 ) {
     Column(
-        modifier = modifier.padding(8.dp),
+        modifier = modifier.padding(if (showSubtitle) 8.dp else 5.dp),
     ) {
         Text(
             text = title,
             style = MaterialTheme.typography.titleSmall,
-            maxLines = 1,
+            color = PixelPaper,
+            minLines = 2,
+            maxLines = 2,
             overflow = TextOverflow.Ellipsis,
         )
-        Text(
-            text = subtitle,
-            style = MaterialTheme.typography.labelSmall,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-        )
+        if (showSubtitle) {
+            Text(
+                text = subtitle,
+                style = MaterialTheme.typography.labelSmall,
+                color = PixelMuted,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
     }
 }

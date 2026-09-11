@@ -6,4 +6,5 @@ data class GameMetadata(
     val romName: String?,
     val developer: String?,
     val thumbnail: String?,
+    val crcMatched: Boolean = false,
 )

@@ -6,9 +6,9 @@ import android.view.KeyEvent
 import com.swordfish.lemuroid.app.shared.input.InputDeviceManager
 import com.swordfish.lemuroid.app.shared.input.InputKey
 import com.swordfish.lemuroid.app.shared.input.RetroKey
-import com.swordfish.lemuroid.app.shared.input.bindingsOf
 import com.swordfish.lemuroid.app.shared.input.inputKeysOf
 import com.swordfish.lemuroid.app.shared.input.inputclass.getInputClass
+import com.swordfish.lemuroid.app.shared.input.normalizeInputKeyCode
 import com.swordfish.lemuroid.app.shared.input.retroKeysOf
 import com.swordfish.lemuroid.app.shared.input.supportsAllKeys
 import com.swordfish.lemuroid.app.shared.settings.GameShortcutType
@@ -21,15 +21,7 @@ class LemuroidInputDeviceGamePad(private val device: InputDevice) : LemuroidInpu
                     InputKey(it.keyCode) to getDefaultBindingForKey(device, it)
                 }
 
-        val defaultOverride =
-            bindingsOf(
-                KeyEvent.KEYCODE_BUTTON_A to KeyEvent.KEYCODE_BUTTON_B,
-                KeyEvent.KEYCODE_BUTTON_B to KeyEvent.KEYCODE_BUTTON_A,
-                KeyEvent.KEYCODE_BUTTON_X to KeyEvent.KEYCODE_BUTTON_Y,
-                KeyEvent.KEYCODE_BUTTON_Y to KeyEvent.KEYCODE_BUTTON_X,
-            )
-
-        return allAvailableInputs + defaultOverride
+        return allAvailableInputs
     }
 
     private fun getDefaultBindingForKey(
@@ -37,7 +29,7 @@ class LemuroidInputDeviceGamePad(private val device: InputDevice) : LemuroidInpu
         it: RetroKey,
     ): RetroKey {
         val defaultBinding =
-            if (device.hasKeys(it.keyCode).first()) {
+            if (device.hasKeys(device.normalizeInputKeyCode(it.keyCode)).first()) {
                 RetroKey(it.keyCode)
             } else {
                 RetroKey(KeyEvent.KEYCODE_UNKNOWN)

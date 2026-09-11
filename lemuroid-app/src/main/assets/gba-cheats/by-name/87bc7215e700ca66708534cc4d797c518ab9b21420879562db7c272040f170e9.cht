@@ -1,0 +1,13 @@
+cheats = 3
+
+cheat0_desc = "direct_v1 只数"
+cheat0_code = "33001E9C+0009"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 雷"
+cheat1_code = "33001EA1+0009"
+cheat1_enable = false
+
+cheat2_desc = "direct_v1 武器加强"
+cheat2_code = "33002336+0001"
+cheat2_enable = false

@@ -1,0 +1,5 @@
+cheats = 1
+
+cheat0_desc = "direct_v1 导弹不减"
+cheat0_code = "33004DD8+0063"
+cheat0_enable = false

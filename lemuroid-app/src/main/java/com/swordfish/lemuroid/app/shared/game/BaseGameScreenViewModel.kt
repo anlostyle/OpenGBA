@@ -11,6 +11,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.swordfish.lemuroid.R
 import com.swordfish.lemuroid.app.mobile.feature.game.GameService
 import com.swordfish.lemuroid.app.mobile.feature.settings.SettingsManager
 import com.swordfish.lemuroid.app.shared.game.viewmodel.GameViewModelInput
@@ -22,6 +23,7 @@ import com.swordfish.lemuroid.app.shared.game.viewmodel.GameViewModelTouchContro
 import com.swordfish.lemuroid.app.shared.input.InputDeviceManager
 import com.swordfish.lemuroid.app.shared.rumble.RumbleManager
 import com.swordfish.lemuroid.app.shared.settings.ControllerConfigsManager
+import com.swordfish.lemuroid.app.shared.settings.HDModeQuality
 import com.swordfish.lemuroid.app.shared.settings.HapticFeedbackMode
 import com.swordfish.lemuroid.common.longAnimationDuration
 import com.swordfish.lemuroid.lib.controller.ControllerConfig
@@ -29,6 +31,7 @@ import com.swordfish.lemuroid.lib.core.CoreVariablesManager
 import com.swordfish.lemuroid.lib.game.GameLoader
 import com.swordfish.lemuroid.lib.library.GameSystem
 import com.swordfish.lemuroid.lib.library.SystemCoreConfig
+import com.swordfish.lemuroid.lib.library.SystemID
 import com.swordfish.lemuroid.lib.library.db.entity.Game
 import com.swordfish.lemuroid.lib.saves.SavesManager
 import com.swordfish.lemuroid.lib.saves.StatesManager
@@ -41,24 +44,33 @@ import gg.padkit.inputstate.InputState
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.util.ArrayDeque
 
 class BaseGameScreenViewModel(
     private val appContext: Context,
-    game: Game,
+    private val game: Game,
     settingsManager: SettingsManager,
     inputDeviceManager: InputDeviceManager,
     controllerConfigsManager: ControllerConfigsManager,
-    system: GameSystem,
+    private val system: GameSystem,
     systemCoreConfig: SystemCoreConfig,
-    sharedPreferences: SharedPreferences,
+    private val sharedPreferences: SharedPreferences,
     savesManager: SavesManager,
     statesManager: StatesManager,
     statesPreviewManager: StatesPreviewManager,
     coreVariablesManager: CoreVariablesManager,
     rumbleManager: RumbleManager,
 ) : ViewModel(), DefaultLifecycleObserver {
+    companion object {
+        val FAST_FORWARD_SPEEDS = listOf(2, 3, 5)
+        const val DEFAULT_FAST_FORWARD_SPEED = 2
+        private const val FAST_FORWARD_SPEED_PREFERENCE = "opengba_fast_forward_speed"
+        private const val CURRENT_SAVE_SLOT_PREFERENCE = "opengba_current_save_slot_"
+    }
+
     class Factory(
         private val appContext: Context,
         private val game: Game,
@@ -117,6 +129,7 @@ class BaseGameScreenViewModel(
             tilt,
             sideEffects,
             viewModelScope,
+            ::commitTimeline,
         )
     private val touchControls =
         GameViewModelTouchControls(
@@ -142,7 +155,24 @@ class BaseGameScreenViewModel(
             sideEffects,
         )
 
+    private val rewindStates = ArrayDeque<ByteArray>()
+    private var rewindCaptureJob: kotlinx.coroutines.Job? = null
+    private var rewindHoldJob: kotlinx.coroutines.Job? = null
+    private var rewinding = false
+    private var rewindOrigin: ByteArray? = null
+    private var fastForwardSpeed =
+        sharedPreferences.getInt(FAST_FORWARD_SPEED_PREFERENCE, DEFAULT_FAST_FORWARD_SPEED)
+            .takeIf { it in FAST_FORWARD_SPEEDS }
+            ?: DEFAULT_FAST_FORWARD_SPEED
+    private var persistentFastForward = false
+    private var heldFastForward = false
+    private var currentSaveSlot =
+        sharedPreferences.getInt(CURRENT_SAVE_SLOT_PREFERENCE + game.fileUri, 0)
+            .coerceIn(0, StatesManager.MAX_STATES - 1)
+    private var cheatCodes = emptyList<String>()
+
     val loadingState = MutableStateFlow(false)
+    val fastForwardMultiplier = MutableStateFlow(1)
 
     private inline fun withLoading(block: () -> Unit) {
         loadingState.value = true
@@ -187,6 +217,8 @@ class BaseGameScreenViewModel(
                 saves.restoreAutoSaveAsync(it)
             }
         }
+        updateFastForward()
+        startRewindCapture()
         return result
     }
 
@@ -239,44 +271,231 @@ class BaseGameScreenViewModel(
 
     suspend fun saveSlot(index: Int) {
         if (loadingState.value) return
+        var saved = false
         withLoading {
-            saves.saveSlot(index)
+            saved = saves.saveSlot(index)
         }
+        if (saved) setCurrentSaveSlot(index)
     }
 
     suspend fun loadSlot(index: Int) {
         if (loadingState.value) return
+        commitTimeline()
+        var loaded = false
         withLoading {
-            saves.loadSlot(index)
+            loaded = saves.loadSlot(index)
+        }
+        if (loaded) setCurrentSaveSlot(index)
+    }
+
+    fun deleteSlot(index: Int) {
+        if (loadingState.value) return
+        viewModelScope.launch {
+            var deleted = false
+            withLoading {
+                deleted = saves.deleteSlot(index)
+            }
+            val message =
+                if (deleted) R.string.game_toast_state_deleted else R.string.game_toast_state_delete_failed
+            sideEffects.showToast(appContext.getString(message, index + 1))
         }
     }
 
     fun saveQuickSave() {
         Timber.d("Saving quick save")
         if (loadingState.value) return
-        withLoading {
-            saves.saveQuickSave()
+        viewModelScope.launch {
+            withLoading {
+                saves.saveQuickSave(currentSaveSlot)
+            }
         }
     }
 
     fun loadQuickSave() {
         Timber.d("Loading quick save")
         if (loadingState.value) return
-        withLoading {
-            saves.loadQuickSave()
+        commitTimeline()
+        viewModelScope.launch {
+            withLoading {
+                saves.loadQuickSave(currentSaveSlot)
+            }
         }
     }
 
+    fun getCurrentSaveSlot(): Int = currentSaveSlot
+
+    private fun setCurrentSaveSlot(index: Int) {
+        if (index !in 0 until StatesManager.MAX_STATES) return
+        currentSaveSlot = index
+        sharedPreferences.edit()
+            .putInt(CURRENT_SAVE_SLOT_PREFERENCE + game.fileUri, index)
+            .apply()
+    }
+
     fun toggleFastForward() {
-        Timber.d("Loading quick save")
-        retroGameView.retroGameView?.apply {
-            frameSpeed = if (frameSpeed == 1) 2 else 1
+        Timber.d("Toggling fast forward")
+        persistentFastForward = !persistentFastForward
+        updateFastForward()
+    }
+
+    fun setFastForward(enabled: Boolean) {
+        persistentFastForward = enabled
+        updateFastForward()
+    }
+
+    fun setHeldFastForward(enabled: Boolean) {
+        heldFastForward = enabled
+        updateFastForward()
+    }
+
+    fun isPersistentFastForwardEnabled(): Boolean = persistentFastForward
+
+    fun getFastForwardSpeed(): Int = fastForwardSpeed
+
+    fun setFastForwardSpeed(speed: Int) {
+        if (loadingState.value || speed !in FAST_FORWARD_SPEEDS) return
+        fastForwardSpeed = speed
+        sharedPreferences.edit().putInt(FAST_FORWARD_SPEED_PREFERENCE, speed).apply()
+        updateFastForward()
+    }
+
+    private fun updateFastForward() {
+        val multiplier = if (persistentFastForward || heldFastForward) fastForwardSpeed else 1
+        retroGameView.retroGameView?.frameSpeed = multiplier
+        fastForwardMultiplier.value = multiplier
+    }
+
+    fun getScreenFilter(): String {
+        val filters = appContext.resources.getStringArray(R.array.pref_key_shader_filter_values)
+        return sharedPreferences
+            .getString(appContext.getString(R.string.pref_key_shader_filter), filters.first())
+            ?.takeIf { it in filters }
+            ?: filters.first()
+    }
+
+    fun setScreenFilter(filter: String) {
+        val filters = appContext.resources.getStringArray(R.array.pref_key_shader_filter_values)
+        if (loadingState.value || filter !in filters) return
+        val view = retroGameView.retroGameView ?: return
+        view.shader =
+            ShaderChooser.getShaderForSystem(
+                appContext,
+                false,
+                HDModeQuality.LOW,
+                filter,
+                system,
+            )
+        sharedPreferences.edit()
+            .putString(appContext.getString(R.string.pref_key_shader_filter), filter)
+            .putBoolean(appContext.getString(R.string.pref_key_hd_mode), false)
+            .apply()
+    }
+
+    fun getCheatCodes(): String = cheatCodes.joinToString("\n")
+
+    fun applyCheats(rawCodes: String) {
+        if (loadingState.value) return
+        commitTimeline()
+        val nextCodes =
+            rawCodes
+                .lineSequence()
+                .map(String::trim)
+                .filter(String::isNotEmpty)
+                .map { it.take(1024) }
+                .take(512)
+                .toList()
+        retroGameView.retroGameView?.let { view ->
+            cheatCodes.forEachIndexed { index, code ->
+                runCatching { view.setCheat(index, false, code, true) }
+            }
+            nextCodes.forEachIndexed { index, code ->
+                runCatching { view.setCheat(index, true, code, true) }
+            }
         }
+        cheatCodes = nextCodes
+    }
+
+    fun startRewind() {
+        if (loadingState.value || rewindHoldJob != null) return
+        if (rewindOrigin == null) {
+            rewindOrigin =
+                runCatching { retroGameView.retroGameView?.serializeState(true) }
+                    .getOrNull()
+                    ?.takeIf { it.isNotEmpty() }
+        }
+        if (rewindOrigin == null) return
+        rewinding = true
+        rewindHoldJob = viewModelScope.launch {
+            while (isActive) {
+                rewindStep()
+                delay(100)
+            }
+        }
+    }
+
+    fun stopRewind() {
+        rewinding = false
+        rewindHoldJob?.cancel()
+        rewindHoldJob = null
+    }
+
+    fun startForward() {
+        if (loadingState.value) return
+        stopRewind()
+        val origin = rewindOrigin ?: return
+        if (retroGameView.retroGameView?.unserializeState(origin, true) == true) {
+            rewindOrigin = null
+            rewindStates.clear()
+            rewindStates.addLast(origin)
+        }
+    }
+
+    fun stopForward() = Unit
+
+    private fun startRewindCapture() {
+        if (system.id != SystemID.GBA || rewindCaptureJob != null) return
+        rewindCaptureJob = viewModelScope.launch {
+            retroGameView.waitRetroGameViewInitialized()
+            // libretro cores may not have allocated their state buffer until the first frame.
+            retroGameView.waitGLEvent<GLRetroView.GLRetroEvents.FrameRendered>()
+            while (isActive) {
+                if (!rewinding && rewindOrigin == null) {
+                    retroGameView.retroGameView?.let { view ->
+                        runCatching { view.serializeState(true) }
+                            .getOrNull()
+                            ?.takeIf { it.isNotEmpty() }
+                            ?.let {
+                                // ponytail: fixed 60-state window (~30s); tune only after measuring real state sizes.
+                                if (rewindStates.size >= 60) rewindStates.removeFirst()
+                                rewindStates.addLast(it)
+                            }
+                    }
+                }
+                delay(500)
+            }
+        }
+    }
+
+    private fun rewindStep() {
+        if (rewindStates.size < 2) return
+        val current = rewindStates.removeLast()
+        val target = rewindStates.last()
+        if (retroGameView.retroGameView?.unserializeState(target, true) != true) {
+            rewindStates.addLast(current)
+        }
+    }
+
+    private fun commitTimeline() {
+        rewindOrigin = null
     }
 
     suspend fun reset() =
         withLoading {
             try {
+                persistentFastForward = false
+                heldFastForward = false
+                updateFastForward()
+                commitTimeline()
                 delay(appContext.longAnimationDuration().toLong())
                 retroGameView.retroGameViewFlow().reset()
             } catch (e: Throwable) {

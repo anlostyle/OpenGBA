@@ -1,0 +1,9 @@
+cheats = 2
+
+cheat0_desc = "direct_v1 弹药无限"
+cheat0_code = "32fc0054+0009"
+cheat0_enable = false
+
+cheat1_desc = "direct_v1 CASH MAX"
+cheat1_code = "32fdA128+003F+0201A129+0042+0201A12A+000F"
+cheat1_enable = false
