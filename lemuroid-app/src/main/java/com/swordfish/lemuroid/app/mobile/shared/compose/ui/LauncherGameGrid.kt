@@ -3,7 +3,6 @@ package com.swordfish.lemuroid.app.mobile.shared.compose.ui
 import android.view.KeyEvent
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.focusable
 import androidx.compose.foundation.focusGroup
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -170,7 +169,6 @@ private fun LauncherGameCard(
             modifier
                 .height(152.dp)
                 .focusRequester(focusRequester)
-                .focusable()
                 .onFocusChanged {
                     focused = it.isFocused
                     if (it.isFocused) onFocused()
