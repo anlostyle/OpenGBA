@@ -33,6 +33,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.fredporciuncula.flow.preferences.FlowSharedPreferences
+import com.swordfish.lemuroid.app.mobile.feature.apps.AppsScreen
+import com.swordfish.lemuroid.app.mobile.feature.apps.AppsViewModel
 import com.swordfish.lemuroid.app.mobile.feature.favorites.FavoritesScreen
 import com.swordfish.lemuroid.app.mobile.feature.favorites.FavoritesViewModel
 import com.swordfish.lemuroid.app.mobile.feature.games.GamesScreen
@@ -292,6 +294,23 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                 leftNavigationRequester = navigationFocusRequester,
                                 onGameClick = onGameClick,
                                 onGameLongClick = onGameLongClick,
+                                onPageChanged = onPageChanged,
+                            )
+                        }
+                        composable(MainRoute.APPS) {
+                            AppsScreen(
+                                modifier = Modifier,
+                                viewModel =
+                                    viewModel(
+                                        factory = AppsViewModel.Factory(applicationContext),
+                                    ),
+                                leftNavigationRequester = navigationFocusRequester,
+                                onAppClick = { app ->
+                                    packageManager.getLaunchIntentForPackage(app.packageName)?.let { launchIntent ->
+                                        launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                        startActivity(launchIntent)
+                                    }
+                                },
                                 onPageChanged = onPageChanged,
                             )
                         }

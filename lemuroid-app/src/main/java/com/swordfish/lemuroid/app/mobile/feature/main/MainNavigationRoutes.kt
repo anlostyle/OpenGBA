@@ -3,11 +3,13 @@ package com.swordfish.lemuroid.app.mobile.feature.main
 import androidx.annotation.StringRes
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Apps
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.VideogameAsset
+import androidx.compose.material.icons.outlined.Apps
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.VideogameAsset
@@ -62,6 +64,10 @@ enum class MainRoute(
         route = "search",
         titleId = R.string.title_search,
         parent = SYSTEMS,
+    ),
+    APPS(
+        route = "apps",
+        titleId = R.string.title_apps,
     ),
     SETTINGS(
         route = "settings/home",
@@ -122,5 +128,6 @@ enum class MainNavigationRoutes(
     HOME(MainRoute.HOME, R.string.launcher_continue, Icons.Filled.Home, Icons.Outlined.Home),
     SYSTEMS(MainRoute.SYSTEMS, R.string.title_systems, Icons.Filled.VideogameAsset, Icons.Outlined.VideogameAsset),
     FAVORITES(MainRoute.FAVORITES, R.string.favorites, Icons.Filled.Favorite, Icons.Filled.FavoriteBorder),
+    APPS(MainRoute.APPS, R.string.title_apps, Icons.Filled.Apps, Icons.Outlined.Apps),
     SETTINGS(MainRoute.SETTINGS, R.string.title_settings, Icons.Filled.Settings, Icons.Outlined.Settings),
 }
