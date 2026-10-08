@@ -34,7 +34,7 @@ class AppsViewModel(context: Context) : ViewModel() {
             .queryIntentActivities(intent, 0)
             .asSequence()
             .mapNotNull { it.activityInfo?.applicationInfo }
-            .filter { it.packageName != context.packageName }
+            .filter { !isSameAppFamily(it.packageName, context.packageName) }
             .distinctBy { it.packageName }
             .map { appInfo ->
                 LauncherApp(
@@ -46,4 +46,11 @@ class AppsViewModel(context: Context) : ViewModel() {
             .sortedWith(compareBy { it.label.lowercase(Locale.getDefault()) })
             .toList()
     }
+
+    // Debug builds append an applicationId suffix, so multiple variants of the
+    // same app can be installed side by side. Treat them as a single app.
+    private fun isSameAppFamily(
+        a: String,
+        b: String,
+    ): Boolean = a == b || a.startsWith("$b.") || b.startsWith("$a.")
 }
