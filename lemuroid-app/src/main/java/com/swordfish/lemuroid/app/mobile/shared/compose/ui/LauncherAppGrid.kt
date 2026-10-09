@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,6 +40,7 @@ import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
@@ -69,31 +71,41 @@ fun LauncherAppGrid(
     val pageItemCount = (apps.size - pageStart).coerceIn(0, LAUNCHER_PAGE_SIZE)
     val slots = remember(pageStart, pageItemCount) { List(pageItemCount) { it } }
 
+    val gridState = rememberLazyGridState()
+    val swipeThreshold = with(LocalDensity.current) { 64.dp.toPx() }
+
+    fun changePage(
+        direction: Int,
+        slot: Int,
+    ): Boolean {
+        val nextPage = (safePage + direction).coerceIn(0, (pageCount - 1).coerceAtLeast(0))
+        if (nextPage == safePage) return false
+        page = nextPage
+        focusedSlot = slot
+        refocusAfterPaging = true
+        return true
+    }
+
     LaunchedEffect(pageCount, safePage) {
         if (page != safePage) page = safePage
         onPageChanged(if (pageCount == 0) 0 else safePage + 1, pageCount)
     }
 
     LazyVerticalGrid(
+        state = gridState,
         modifier =
             modifier
                 .fillMaxSize()
                 .focusGroup()
-                .onPreviewKeyEvent { event ->
-                    if (event.type != KeyEventType.KeyUp) return@onPreviewKeyEvent false
-                    val direction =
-                        when (event.nativeKeyEvent.keyCode) {
-                            KeyEvent.KEYCODE_BUTTON_L1 -> -1
-                            KeyEvent.KEYCODE_BUTTON_R1 -> 1
-                            else -> return@onPreviewKeyEvent false
-                        }
-                    val nextPage = (safePage + direction).coerceIn(0, (pageCount - 1).coerceAtLeast(0))
-                    if (nextPage != safePage) {
-                        page = nextPage
-                        refocusAfterPaging = true
-                    }
-                    true
-                },
+                .launcherPagingInput(
+                    gridState = gridState,
+                    pageKey = safePage,
+                    pageCount = pageCount,
+                    pageItemCount = pageItemCount,
+                    focusedSlot = focusedSlot,
+                    swipeThreshold = swipeThreshold,
+                    changePage = ::changePage,
+                ),
         columns = GridCells.Fixed(4),
         contentPadding = PaddingValues(start = 23.dp, top = 13.dp, end = 23.dp, bottom = 11.dp),
         horizontalArrangement = Arrangement.spacedBy(23.dp),
