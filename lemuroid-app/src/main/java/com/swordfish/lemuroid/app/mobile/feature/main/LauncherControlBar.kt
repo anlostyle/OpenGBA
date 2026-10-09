@@ -48,7 +48,8 @@ fun LauncherControlBar(currentRoute: MainRoute) {
             currentRoute == MainRoute.SYSTEMS ||
             currentRoute == MainRoute.SYSTEM_GAMES ||
             currentRoute == MainRoute.FAVORITES ||
-            currentRoute == MainRoute.SEARCH
+            currentRoute == MainRoute.SEARCH ||
+            currentRoute == MainRoute.APPS
         ) {
             PixelKeyPairHint(
                 firstKey = "L",
