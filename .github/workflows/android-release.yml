@@ -21,10 +21,12 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - uses: android-actions/setup-android@v3
-
+      # The ubuntu runner image ships an Android SDK; android-actions/setup-android
+      # now fails there ("Failed to find package 'tools'"), so use the preinstalled one.
       - name: Install Android SDK packages
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+        run: |
+          yes | sdkmanager --licenses > /dev/null || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
       - name: Prepare GBA-only core bundle
         run: ./scripts/prepare-gba-bundle.sh
