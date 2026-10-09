@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,8 +32,12 @@ import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.ui.input.pointer.pointerInput
+import kotlin.math.abs
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
@@ -84,29 +89,82 @@ fun LauncherGameGrid(
     val pageItemCount = (games.itemCount - pageStart).coerceIn(0, LAUNCHER_PAGE_SIZE)
     val slots = remember(pageStart, pageItemCount) { List(pageItemCount) { it } }
 
+    val gridState = rememberLazyGridState()
+    val swipeThreshold = with(LocalDensity.current) { 64.dp.toPx() }
+
+    fun changePage(
+        direction: Int,
+        slot: Int = focusedSlot,
+    ): Boolean {
+        val nextPage = (safePage + direction).coerceIn(0, (pageCount - 1).coerceAtLeast(0))
+        if (nextPage == safePage) return false
+        page = nextPage
+        focusedSlot = slot
+        refocusAfterPaging = true
+        return true
+    }
+
     LaunchedEffect(pageCount, safePage) {
         if (page != safePage) page = safePage
         onPageChanged(if (pageCount == 0) 0 else safePage + 1, pageCount)
     }
 
     LazyVerticalGrid(
+        state = gridState,
         modifier =
             modifier
                 .fillMaxSize()
                 .focusGroup()
+                .pointerInput(safePage, pageCount) {
+                    // Observe swipes without consuming them, so taps and in-page scrolling still work.
+                    awaitPointerEventScope {
+                        while (true) {
+                            val down = awaitPointerEvent(PointerEventPass.Initial).changes.firstOrNull { it.pressed } ?: continue
+                            var dx = 0f
+                            var dy = 0f
+                            var last = down.position
+                            while (true) {
+                                val change =
+                                    awaitPointerEvent(PointerEventPass.Initial).changes.firstOrNull { it.id == down.id }
+                                        ?: break
+                                dx += change.position.x - last.x
+                                dy += change.position.y - last.y
+                                last = change.position
+                                if (!change.pressed) break
+                            }
+                            if (abs(dx) >= swipeThreshold && abs(dx) > abs(dy)) {
+                                changePage(if (dx < 0) 1 else -1)
+                            } else if (abs(dy) >= swipeThreshold) {
+                                if (dy < 0 && !gridState.canScrollForward) {
+                                    changePage(1)
+                                } else if (dy > 0 && !gridState.canScrollBackward) {
+                                    changePage(-1)
+                                }
+                            }
+                        }
+                    }
+                }
                 .onPreviewKeyEvent { event ->
+                    val keyCode = event.nativeKeyEvent.keyCode
+                    if (event.type == KeyEventType.KeyDown) {
+                        // D-pad past the first/last row turns the page, keeping the column.
+                        val column = focusedSlot % 4
+                        return@onPreviewKeyEvent when (keyCode) {
+                            KeyEvent.KEYCODE_DPAD_DOWN ->
+                                (focusedSlot >= 4 || pageItemCount <= focusedSlot + 4) && changePage(1, column)
+                            KeyEvent.KEYCODE_DPAD_UP ->
+                                focusedSlot < 4 && changePage(-1, 4 + column)
+                            else -> false
+                        }
+                    }
                     if (event.type != KeyEventType.KeyUp) return@onPreviewKeyEvent false
                     val direction =
-                        when (event.nativeKeyEvent.keyCode) {
+                        when (keyCode) {
                             KeyEvent.KEYCODE_BUTTON_L1 -> -1
                             KeyEvent.KEYCODE_BUTTON_R1 -> 1
                             else -> return@onPreviewKeyEvent false
                         }
-                    val nextPage = (safePage + direction).coerceIn(0, (pageCount - 1).coerceAtLeast(0))
-                    if (nextPage != safePage) {
-                        page = nextPage
-                        refocusAfterPaging = true
-                    }
+                    changePage(direction)
                     true
                 },
         columns = GridCells.Fixed(4),

@@ -23,7 +23,7 @@ OpenGBA 是一款开源的 **GBA 掌机启动器**：单 APK、只面向 Game Bo
 
 ```bash
 git submodule update --init
-./gradlew :lemuroid-app:assembleFreeDebug
+./gradlew :lemuroid-app:assembleFreeBundleDebug
 ```
 
 需要 JDK 17 与 Android SDK。发布签名密钥未包含在仓库中，仓库内的 `debug.keystore` 仅用于调试构建。
