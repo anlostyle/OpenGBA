@@ -152,6 +152,7 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                     ?: MainRoute.HOME
             val pageIndicatorState = remember { mutableStateOf<String?>(null) }
             val navigationFocusRequester = remember { FocusRequester() }
+            val navigationHasFocus = remember { mutableStateOf(false) }
 
             LaunchedEffect(currentRoute) {
                 mainViewModel.changeRoute(currentRoute)
@@ -195,7 +196,15 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
                                 event.nativeKeyEvent.keyCode == KeyEvent.KEYCODE_BUTTON_B &&
                                 currentRoute != MainRoute.HOME
                             ) {
-                                navController.popBackStack()
+                                // B first returns focus to the navigation rail; only from there does
+                                // it leave the current tab (otherwise the rail re-selects the tab
+                                // right after we popped to Home).
+                                val focusedRail =
+                                    wideLayout &&
+                                        !navigationHasFocus.value &&
+                                        runCatching { navigationFocusRequester.requestFocus() }
+                                            .getOrDefault(false)
+                                if (!focusedRail) navController.popBackStack()
                                 true
                             } else {
                                 false
@@ -213,7 +222,12 @@ class MainActivity : RetrogradeComponentActivity(), BusyActivity {
 
                 Row(modifier = Modifier.fillMaxWidth().weight(1f)) {
                     if (wideLayout) {
-                        MainNavigationRail(currentRoute, navController, navigationFocusRequester)
+                        MainNavigationRail(
+                            currentRoute,
+                            navController,
+                            navigationFocusRequester,
+                            onFocusChanged = { navigationHasFocus.value = it },
+                        )
                     }
 
                     NavHost(

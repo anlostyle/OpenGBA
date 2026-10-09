@@ -41,6 +41,7 @@ fun MainNavigationRail(
     currentRoute: MainRoute?,
     navController: NavHostController,
     selectedItemFocusRequester: FocusRequester,
+    onFocusChanged: (Boolean) -> Unit = {},
 ) {
     Column(
         modifier =
@@ -48,7 +49,10 @@ fun MainNavigationRail(
                 .fillMaxHeight()
                 .width(46.dp)
                 .background(PixelPanel)
-                .focusRestorer()
+                // Entering the rail lands on the selected tab, not the first one, so the
+                // first D-pad press never switches tabs by itself.
+                .focusRestorer(selectedItemFocusRequester)
+                .onFocusChanged { onFocusChanged(it.hasFocus) }
                 .focusGroup(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly,
