@@ -7,6 +7,9 @@ OpenGBA 是一款开源的 **GBA 掌机启动器**：单 APK、只面向 Game Bo
 ## 功能
 
 - 开机自动续玩 / 首页游戏库（最近游玩、收藏、全部游戏），支持实体按键与触摸
+- 游戏库翻页：L/R、十字键越过首行/末行、触屏左右滑动
+- 应用抽屉：作为默认主屏幕时，也能打开系统里的其他应用
+- 主题配色：GBA 绿、珊瑚橙、靛蓝、复古 DMG、蜜桃、黑冰，对应 KONKR Pocket Advance 的官方机身配色（设置 → 常规 → 主题配色）
 - 长按快进、快速回溯
 - 即时存档 / 读档，多存档槽
 - 金手指（`.cht`）：内置 mGBA 金手指库，按 ROM 的 CRC 精确匹配；也可在 ROM 旁放置同名 `.cht`
@@ -17,7 +20,7 @@ OpenGBA 是一款开源的 **GBA 掌机启动器**：单 APK、只面向 Game Bo
 
 最新 APK 见 [Releases](https://github.com/anlostyle/OpenGBA/releases)。
 
-> 说明：触摸、方向键等交互在 960×640 的 KPA 掌机上验证；其他设备未经系统测试。
+> 说明：触摸、方向键等交互在 960×640 的 KPA（AYANEO KONKR Pocket Advance）上验证；其他设备未经系统测试。
 
 ## 构建
 
