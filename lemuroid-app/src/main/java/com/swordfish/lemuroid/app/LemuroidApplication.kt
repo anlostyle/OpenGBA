@@ -1,5 +1,6 @@
 package com.swordfish.lemuroid.app
 
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelTheme
 import android.annotation.SuppressLint
 import android.content.Context
 import androidx.startup.AppInitializer
@@ -25,6 +26,7 @@ class LemuroidApplication : DaggerApplication(), HasWorkerInjector, ImageLoaderF
     @SuppressLint("CheckResult")
     override fun onCreate() {
         super.onCreate()
+        PixelTheme.init(this)
 
         val initializeComponent =
             if (isMainProcess()) {

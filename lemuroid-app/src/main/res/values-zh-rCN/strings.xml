@@ -250,4 +250,13 @@
     <string name="tilt_configuration_buttons_l_r">L - R</string>
     <string name="tilt_configuration_buttons_l1_r1">L1-R1</string>
     <string name="tilt_configuration_buttons_l2_r2">L2-R2</string>
+    <string name="settings_title_pixel_palette">主题配色</string>
+    <string-array name="pixel_palette_display_names">
+        <item>GBA 绿</item>
+        <item>珊瑚橙</item>
+        <item>靛蓝</item>
+        <item>复古 DMG</item>
+        <item>蜜桃</item>
+        <item>黑冰</item>
+    </string-array>
 </resources>

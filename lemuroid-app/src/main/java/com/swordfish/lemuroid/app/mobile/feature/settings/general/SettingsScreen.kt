@@ -1,5 +1,7 @@
 package com.swordfish.lemuroid.app.mobile.feature.settings.general
 
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelPalette
+import com.swordfish.lemuroid.app.mobile.shared.compose.ui.PixelTheme
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
@@ -215,6 +217,16 @@ private fun GeneralSettings() {
     LemuroidCardSettingsGroup(
         title = { Text(text = stringResource(id = R.string.settings_category_general)) },
     ) {
+        LemuroidSettingsList(
+            state =
+                indexPreferenceState(
+                    PixelTheme.PREF_KEY,
+                    PixelPalette.GBA.id,
+                    PixelPalette.entries.map { it.id },
+                ),
+            title = { Text(text = stringResource(id = R.string.settings_title_pixel_palette)) },
+            items = stringListResource(R.array.pixel_palette_display_names),
+        )
         LemuroidSettingsSwitch(
             state = booleanPreferenceState(R.string.pref_key_autosave, true),
             title = { Text(text = stringResource(id = R.string.settings_title_enable_autosave)) },

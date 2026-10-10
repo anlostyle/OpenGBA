@@ -1,13 +1,16 @@
 package com.swordfish.lemuroid.app.mobile.shared.compose.ui
 
 import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -46,45 +49,46 @@ private val LightColorScheme =
         scrim = md_theme_light_scrim,
     )
 
-private val DarkColorScheme =
-    darkColorScheme(
-        primary = PixelGreen,
-        onPrimary = PixelInk,
-        primaryContainer = Color(0xFF354D1B),
-        onPrimaryContainer = PixelGreen,
-        secondary = PixelPaper,
-        onSecondary = PixelInk,
-        secondaryContainer = PixelPanelLight,
-        onSecondaryContainer = PixelPaper,
-        tertiary = PixelAmber,
-        onTertiary = PixelInk,
-        tertiaryContainer = Color(0xFF604717),
-        onTertiaryContainer = PixelPaper,
-        error = PixelRed,
-        errorContainer = Color(0xFF93000A),
-        onError = PixelInk,
-        onErrorContainer = Color(0xFFFFDAD6),
-        background = PixelInk,
-        onBackground = PixelPaper,
-        surface = PixelInk,
-        onSurface = PixelPaper,
-        surfaceVariant = PixelPanel,
-        onSurfaceVariant = PixelMuted,
-        outline = PixelOutline,
-        inverseOnSurface = PixelInk,
-        inverseSurface = PixelPaper,
-        inversePrimary = Color(0xFF5F7F21),
-        surfaceTint = PixelGreen,
-        outlineVariant = PixelOutline,
+// Built from the active launcher palette so settings, dialogs and menus follow it too.
+private fun pixelColorScheme(palette: PixelPalette): ColorScheme {
+    val base = if (palette.isLight) lightColorScheme() else darkColorScheme()
+    return base.copy(
+        primary = palette.accent,
+        onPrimary = palette.ink,
+        primaryContainer = lerp(palette.panel, palette.accent, 0.3f),
+        onPrimaryContainer = palette.accent,
+        secondary = palette.paper,
+        onSecondary = palette.ink,
+        secondaryContainer = palette.panelLight,
+        onSecondaryContainer = palette.paper,
+        tertiary = palette.amber,
+        onTertiary = palette.ink,
+        tertiaryContainer = lerp(palette.panel, palette.amber, 0.3f),
+        onTertiaryContainer = palette.paper,
+        error = palette.red,
+        onError = palette.ink,
+        background = palette.ink,
+        onBackground = palette.paper,
+        surface = palette.ink,
+        onSurface = palette.paper,
+        surfaceVariant = palette.panel,
+        onSurfaceVariant = palette.muted,
+        outline = palette.outline,
+        inverseOnSurface = palette.ink,
+        inverseSurface = palette.paper,
+        inversePrimary = lerp(palette.accent, palette.ink, 0.4f),
+        surfaceTint = palette.accent,
+        outlineVariant = palette.outline,
         scrim = Color(0xFF000000),
-        surfaceBright = PixelPanelLight,
-        surfaceDim = PixelInk,
-        surfaceContainer = PixelPanel,
-        surfaceContainerHigh = PixelPanelLight,
-        surfaceContainerHighest = Color(0xFF2A3C46),
-        surfaceContainerLow = Color(0xFF10191E),
-        surfaceContainerLowest = PixelShadow,
+        surfaceBright = palette.panelLight,
+        surfaceDim = palette.ink,
+        surfaceContainer = palette.panel,
+        surfaceContainerHigh = palette.panelLight,
+        surfaceContainerHighest = lerp(palette.panelLight, palette.paper, 0.06f),
+        surfaceContainerLow = lerp(palette.ink, palette.panel, 0.5f),
+        surfaceContainerLowest = palette.shadow,
     )
+}
 
 private val PixelTypography =
     Typography().let { base ->
@@ -129,7 +133,8 @@ fun AppTheme(
     content: @Composable () -> Unit,
 ) {
     // Keep the handheld palette stable instead of inheriting the phone's wallpaper colors.
-    val colors = if (darkTheme) DarkColorScheme else LightColorScheme
+    val palette = PixelTheme.palette
+    val colors = if (darkTheme) remember(palette) { pixelColorScheme(palette) } else LightColorScheme
 
     MaterialTheme(
         colorScheme = colors,

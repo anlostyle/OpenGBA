@@ -301,4 +301,13 @@
     <string name="tilt_configuration_buttons_l1_r1">L1 - R1</string>
     <string name="tilt_configuration_buttons_l2_r2">L2 - R2</string>
 
+    <string name="settings_title_pixel_palette">Color theme</string>
+    <string-array name="pixel_palette_display_names">
+        <item>GBA Green</item>
+        <item>Coral Orange</item>
+        <item>Indigo</item>
+        <item>Retro DMG</item>
+        <item>Peach</item>
+        <item>Onyx Ice</item>
+    </string-array>
 </resources>

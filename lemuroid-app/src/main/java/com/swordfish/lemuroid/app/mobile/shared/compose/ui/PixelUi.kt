@@ -30,16 +30,18 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 
-val PixelInk = Color(0xFF091014)
-val PixelPanel = Color(0xFF0F191E)
-val PixelPanelLight = Color(0xFF22323B)
-val PixelPaper = Color(0xFFF1E7C9)
-val PixelGreen = Color(0xFFA8D944)
-val PixelAmber = Color(0xFFF2A93B)
-val PixelRed = Color(0xFFD86A55)
-val PixelMuted = Color(0xFF91A1A8)
-val PixelOutline = Color(0xFF344751)
-val PixelShadow = Color(0xFF030709)
+// Launcher colors come from the active palette. They are snapshot state, so every screen
+// that reads them recomposes/redraws when the user switches palette.
+val PixelInk: Color get() = PixelTheme.palette.ink
+val PixelPanel: Color get() = PixelTheme.palette.panel
+val PixelPanelLight: Color get() = PixelTheme.palette.panelLight
+val PixelPaper: Color get() = PixelTheme.palette.paper
+val PixelGreen: Color get() = PixelTheme.palette.accent
+val PixelAmber: Color get() = PixelTheme.palette.amber
+val PixelRed: Color get() = PixelTheme.palette.red
+val PixelMuted: Color get() = PixelTheme.palette.muted
+val PixelOutline: Color get() = PixelTheme.palette.outline
+val PixelShadow: Color get() = PixelTheme.palette.shadow
 
 val PixelShape =
     object : Shape {
